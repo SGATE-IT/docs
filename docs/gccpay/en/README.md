@@ -1,5 +1,5 @@
 # GCCPAY Payment API Document
-{docsify-updated}
+
 ## Introduction
 
 > System overview: The GCCPAY payment system is used to complete the payment collection of merchants. The main process of docking is that the merchant creates a payment order through the interface, and guides the payer (buyer) to the GCCPAY payment page. After completing the payment, GCCPAY will guide the payer's browser to redirect to the merchant page,GCCPAY will also notify the merchant through the server.
@@ -29,29 +29,23 @@ PS: Please review the newest API Document in GCCPAY our official website: https:
 
 **Post content**
 - V1.0.0
-
   - The first draft of the payment system Open API
       
 - V1.0.1
-    - Added [Notification Callback] module
+  - Added [Notification Callback] module
 
 * V1.1.0
-
   - Added iframe docking method
-  
-  
-    - Added code demo
-  
-  
-  
-    - Added [Merchant Information Query] method
+  - Added code demo
+  - Added [Merchant Information Query] method
   
 
 * V1.1.1
-
   - Add [tip], [payerInfo] and [payLink] in [Query Payment Order] method
     
 
 * V1.1.2
-
   - Add the 'lockPayMethod' parameter to the URL of the payment link which can control the payment method displayed on the cashier page.
+
+
+[footer](../../_common/en/_footer.md ':include')

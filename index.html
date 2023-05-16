@@ -14,42 +14,65 @@
 
   <script>
     window.$docsify = {
-      name: 'Document',
+      name: '<span id="doc-name">Document</span>',
       repo: '',
+      logo: '',
+      nameLink: 'javascript:void(0);',
 
       // 自动加载菜单
       loadSidebar: true,
       loadNavbar: true,
-      autoHeader: true,
+      autoHeader: false,
 
       // 文档更新时间
-      formatUpdated: '{MM}/{DD} {HH}:{mm}',
+      formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}',
+
+      // 侧边栏
+      subMaxLevel: 2,
 
       // 搜索
       search: {
+        noData: {
+          '/zh-cn/': '没有结果!',
+          '/en/': 'No results!',
+          '/': 'No results!',
+        },
         placeholder: {
           '/zh-cn/': '搜索',
-          '/en/': 'Type to search'
+          '/en/': 'Type to search',
+          '/': 'Type to search'
         }
       },
 
       // 插件
       plugins: [
+        // 钩子
+        function(hook) {
+          hook.doneEach(function() {
+            // 每次路由切换时数据全部加载完成后调用，没有参数。
+
+            // 动态修改文档标题
+            let urlHash = window.location.hash;
+            let urlHashArr = urlHash.split('/');
+            if (urlHashArr.length > 2) {
+              let name = urlHashArr[2].toUpperCase();
+              let nameObj = document.getElementById('doc-name');
+              nameObj.innerHTML = name;
+            }
+          });
+        },
 
         //  git上编辑
-        // EditOnGithubPlugin.create(
-        //   'https://github.com/SGATE-IT/docs/blob/main/docs/',
-        //   null,
-        //   function(file) {
-        //     if (file.indexOf('en') === -1) {
-        //       return '编辑'
-        //     } else {
-        //       return 'edit on git'
-        //     }
-        //   }
-        // )
         EditOnGithubPlugin.create(
-          'https://github.com/SGATE-IT/docs/blob/main/'
+          'https://github.com/SGATE-IT/docs/blob/main/',
+          null,
+          function(file) {
+            if (file.indexOf('zh-cn') === -1) {
+              return '📝 Edit on GitHub'
+            } else {
+              return '📝 在GitHub上编辑'
+            }
+          }
         )
 
       ]
@@ -59,7 +82,14 @@
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
 
+  <!-- emoji -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+
+  <!-- 搜索插件 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+
+  <!-- 代码复制 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+
 </body>
 </html>

@@ -38,21 +38,16 @@
   - 新增【通知回调】模块
 
 * V1.1.0
-
   - 新增iframe对接方式
-  
-  
-    - 新增代码样例
-  
-  
-  
-    - 新增商户信息查询接口
+  - 新增代码样例
+  - 新增商户信息查询接口
   
 
 * V1.1.1
-
   - 【查询支付订单】接口新增【tip】、【payerInfo】和【payLink】字段
 
 * V1.1.2
-
   - 支付链接URL新增lockPayMethod参数，对收银台的展示的支付方式进行控制
+
+
+[footer](../../_common/zh-cn/_footer.md ':include')

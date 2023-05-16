@@ -1,1 +1,1 @@
-* [GCCPAY](docs/gccpay/en/README.md)
+* [GCCPAY Payment API](docs/gccpay/en/README.md)
