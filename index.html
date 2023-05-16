@@ -18,6 +18,7 @@
       repo: '',
       logo: '',
       nameLink: 'javascript:void(0);',
+      auto2top: true,
 
       // 自动加载菜单
       loadSidebar: true,
@@ -41,13 +42,24 @@
           '/zh-cn/': '搜索',
           '/en/': 'Type to search',
           '/': 'Type to search'
-        }
+        },
+        hideOtherSidebarContent: true,
+        depth: 2
       },
 
       // 插件
       plugins: [
         // 钩子
         function(hook) {
+
+          hook.beforeEach(function(content) {
+            // 每次开始解析 Markdown 内容时调用
+            localStorage.removeItem('docsify.search.expires');
+            localStorage.removeItem('docsify.search.index');
+
+            return content;
+          });
+
           hook.doneEach(function() {
             // 每次路由切换时数据全部加载完成后调用，没有参数。
 
@@ -90,6 +102,9 @@
 
   <!-- 代码复制 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+
+  <!-- 代码高亮 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-json.min.js"></script>
 
 </body>
 </html>
