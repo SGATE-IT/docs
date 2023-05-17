@@ -22,7 +22,6 @@ Document last updated time: {docsify-updated}
 
         `
       }
-
       return content;
     });
 });

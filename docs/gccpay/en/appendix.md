@@ -35,6 +35,5 @@ Git : https://github.com/SGATE-IT/gccpay-client-demo
 | The United Arab Emirates | AED          | 0.1                       | 29000                      |
 | Oman                     | OMR          | 0.1                       | 3000                       |
 | Qatar                    | QAR          | 0.1                       | 29000                      |
-| Egypt                    | EGP          | 0.1                       | 238000                     |
 
 !> PS: All limits are gateway transaction limits. If the user's bank card has a limit and is less than the gateway transaction limit, the user's bank card limit shall prevail
