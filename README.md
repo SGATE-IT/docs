@@ -1,5 +1,7 @@
 
-![logo](/docs/_media/logo_dark.png ':size=220x110')
+<div style="text-align: center;">
+    <img src="/docs/_media/gccpay-banner.png" style="width: 400px;">
+</div>
 
 ## About us
 
