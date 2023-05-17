@@ -48,6 +48,3 @@
 
 * V1.1.2
   - 支付链接URL新增lockPayMethod参数，对收银台的展示的支付方式进行控制
-
-
-[footer](../../_common/zh-cn/_footer.md ':include')

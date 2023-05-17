@@ -46,6 +46,3 @@ PS: Please review the newest API Document in GCCPAY our official website: https:
 
 * V1.1.2
   - Add the 'lockPayMethod' parameter to the URL of the payment link which can control the payment method displayed on the cashier page.
-
-
-[footer](../../_common/en/_footer.md ':include')

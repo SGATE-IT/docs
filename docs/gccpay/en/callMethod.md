@@ -83,5 +83,3 @@ When the HTTP response status code is `4xx` or `5xx`, the call fails.
     ]
 }
 ```
-
-[footer](../../_common/zh-cn/_footer.md ':include')

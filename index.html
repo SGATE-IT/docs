@@ -49,31 +49,6 @@
 
       // 插件
       plugins: [
-        // 钩子
-        function(hook) {
-
-          hook.beforeEach(function(content) {
-            // 每次开始解析 Markdown 内容时调用
-            localStorage.removeItem('docsify.search.expires');
-            localStorage.removeItem('docsify.search.index');
-
-            return content;
-          });
-
-          hook.doneEach(function() {
-            // 每次路由切换时数据全部加载完成后调用，没有参数。
-
-            // 动态修改文档标题
-            let urlHash = window.location.hash;
-            let urlHashArr = urlHash.split('/');
-            if (urlHashArr.length > 2) {
-              let name = urlHashArr[2].toUpperCase();
-              let nameObj = document.getElementById('doc-name');
-              nameObj.innerHTML = name;
-            }
-          });
-        },
-
         //  git上编辑
         EditOnGithubPlugin.create(
           'https://github.com/SGATE-IT/docs/blob/main/',
@@ -86,10 +61,14 @@
             }
           }
         )
-
       ]
     }
   </script>
+
+  <!-- 安装自定义插件 -->
+  <script src="/_plugins/title.js"></script>
+  <script src="/_plugins/footer.js"></script>
+  <script src="/_plugins/search.js"></script>
 
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>

@@ -85,6 +85,3 @@ HTTP中header：
     ]
 }
 ```
-
-
-[footer](../../_common/zh-cn/_footer.md ':include')
