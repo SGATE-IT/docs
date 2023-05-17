@@ -1,2 +1,9 @@
 * [简介](docs/gccpay/zh-cn/README.md)
 * [调用方法](docs/gccpay/zh-cn/callMethod.md)
+* 创建支付订单
+  * [通过GCCPAY提供的收银台链接创建订单](docs/gccpay/zh-cn/apis/createOrder.md)
+  * [通过iframe的方式创建订单](docs/gccpay/zh-cn/apis/createIframeOrder.md)
+* [查询支付订单](docs/gccpay/zh-cn/apis/queryOrder.md)
+* [回调通知](docs/gccpay/zh-cn/apis/callbackNotification.md)
+* [商户信息查询](docs/gccpay/zh-cn/apis/queryMerchantInfo.md)
+* [附录](docs/gccpay/zh-cn/appendix.md)
