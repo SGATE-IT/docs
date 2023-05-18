@@ -7,7 +7,6 @@ Before login to GCCPAY Payment System, our support staff will send your account 
 
 ## Reset GCCPAY Payment System Account
 
-
 ![img](../_media/login-1.png ':size=50%')
 ![img](../_media/login-2.png ':size=40%')
 

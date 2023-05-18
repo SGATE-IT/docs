@@ -12,4 +12,4 @@ The GCCPAY Payment System includes merchant module, transaction module and clear
 
 ![img](./_media/function-introduction.png ':size=70%')
 
-You can manage all payment transactions through the system. The following are specific functions.
+You can manage all payment transactions through the system. 

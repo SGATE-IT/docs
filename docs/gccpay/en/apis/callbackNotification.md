@@ -20,7 +20,9 @@
 
 **The rules of callback notification**
 
-1. If merchants do not support the URL callback notification needed, then the callback notification function will not be triggered.
-2. If GCCPAY does not receive callback notification response, then multiple requests will be made. The rules are as follows:
-   - The time intervals of the first 10 requests are：0, 0, 2, 5, 10, 17, 25, 34, 46, 60 second
-   - After the 11 times, the interval between each subsequent notification is 2500 seconds, and the max number of notifications is 205
+1. If merchant do not support notification URL, then it will not trigger callback notification function
+2. If the notification can not receive correct response, then GCCPAY will retry it, the rule is as follows:
+
+   - If merchant does not respond to callback notification, then GCCPAY will retries 3 times every 5 seconds
+
+   - If merchant's response is error, then GCCPAY will retries 1 time every 15 minutes
