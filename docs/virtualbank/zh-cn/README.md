@@ -1,19 +1,6 @@
 # VIRTUALBANK
 
-### **全局变量**
-
-- `host`：http api 域名
-
-- 测试域名：[http://vbank.test.sgate.sa/](http://vbank.test.sgate.sa/admin/auth/login)
-- 生产域名：[https://vbank.sgate.sa/](http://vbank.test.sgate.sa/admin/auth/login)
-
-### **响应消息格式**
-
-- `application/json`
-
-| 字段名称   | 类型   | 说明                       |
-| ---------- | ------ | -------------------------- |
-| code       | int    | 状态码（见附录）           |
-| message    | string | 响应信息                   |
-| data       | string | 加密数据                   |
-| request_id | string | 请求ID，每次请求返回的唯一 |
+| 版本号 | 修订日期  | 修订人 | 修订详情         |
+| ------ | --------- | ------ | ---------------- |
+| 0.1    | 2023/3/29 | 董丙诺 | 初稿             |
+| 1.0    | 2023/6/2  | 董丙诺 | 调整安全认证机制 |

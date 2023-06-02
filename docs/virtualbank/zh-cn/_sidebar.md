@@ -1,22 +1,30 @@
-* [说明](docs/virtualbank/zh-cn/README.md)
+* [变更记录](docs/virtualbank/zh-cn/README.md)
 
-- 安全
+- 接口规则
 
-  - [请求安全机制](docs/virtualbank/zh-cn/safety/requestSafety.md)
-- 银行
+  - [规则说明](docs/virtualbank/zh-cn/apiRule/illustrate.md)
+  - [证书/密钥](docs/virtualbank/zh-cn/apiRule/key.md)
+  - [敏感信息处理](docs/virtualbank/zh-cn/apiRule/sensitive.md)
+  - [签名](docs/virtualbank/zh-cn/apiRule/sign.md)
+  - [成功请求/响应头](docs/virtualbank/zh-cn/apiRule/header.md)
+  - [响应消息格式](docs/virtualbank/zh-cn/apiRule/result.md)
 
-  - [查询支持银行列表](docs/virtualbank/zh-cn/banks/banks.md)
-- 客户
+- [接口字典](docs/virtualbank/zh-cn/api/api.md)
 
-  - [查询客户列表](docs/virtualbank/zh-cn/custom/queryCustom.md)
-  - [查询单个客户](docs/virtualbank/zh-cn/custom/detailCustom.md)
-  - [创建客户](docs/virtualbank/zh-cn/custom/createCustom.md)
-- 代付工单
+  - 客户
+    - [查询客户列表](docs/virtualbank/zh-cn/api/custom/list.md)
+    - [查询单个客户](docs/virtualbank/zh-cn/api/custom/detail.md)
+    - [创建客户](docs/virtualbank/zh-cn/api/custom/create.md)
+    - [更新客户](docs/virtualbank/zh-cn/api/custom/update.md)
+    - [完善客户资料](docs/virtualbank/zh-cn/api/custom/file.md)
 
-  - [创建代付工单](docs/virtualbank/zh-cn/payee/createPayee.md)
-  - [查询代付工单列表](docs/virtualbank/zh-cn/payee/queryPayee.md)
-  - [查询单个代付工单](docs/virtualbank/zh-cn/payee/detailPayee.md)
-- 附录
+  - 银行
+    - [查询支持的银行列表](docs/virtualbank/zh-cn/api/banks/list.md)
 
-  - [状态码 CODE](docs/virtualbank/zh-cn/appendix/code.md)
-  - [RSA Demo](docs/virtualbank/zh-cn/appendix/rsaDemo.md)
+  - 代付工单
+    - [创建代付工单](docs/virtualbank/zh-cn/api/payCustomTicket/create.md)
+    - [查询代付工单列表](docs/virtualbank/zh-cn/api/payCustomTicket/list.md)
+    - [查询单个代付工单](docs/virtualbank/zh-cn/api/payCustomTicket/detail.md)
+
+- [附录](docs/virtualbank/zh-cn/appendix/appendix.md)
+  

@@ -1,29 +1,18 @@
-# 查询支持银行列表
+# 查询支持的银行列表
 
-### **请求URL**
+**请求URL**
 
 - `{{host}}/openApi/v1/payee/banks`
 
-### **请求方式**
 
-- POST
 
-### **请求参数**
+**请求方式**
 
-未加密参数示例：
+- GET
 
-```json
-{
-    "timestamp":1680070775,
-    "params":{
 
-    }
-}
-```
 
-### **返回示例**
-
-> data  字段为解密后数据展示
+**返回示例**
 
 ```json
 {
@@ -44,7 +33,7 @@
         },
         {
             "bankcode": "11652",
-            "bankname": "alinma bank"
+            "bankname": "Alinma Bank"
         },
         {
             "bankcode": "116cf",
@@ -60,7 +49,7 @@
         },
         {
             "bankcode": "11846",
-            "bankname": "alawwal bank"
+            "bankname": "Alawwal bank"
         },
         {
             "bankcode": "118c3",
@@ -81,8 +70,14 @@
         {
             "bankcode": "11ab7",
             "bankname": "Gulf International Bank Saudi Aribia (GIB-SA)"
+        },
+        {
+            "bankcode": "11b34",
+            "bankname": "STC Pay"
         }
     ],
-    "requestId": "95E202816D044ADC7F2473892E941893"
+    "sensitiveFields": {},
+    "requestId": "062F83E35AB2E241EF0895292C8B9631"
 }
 ```
+
