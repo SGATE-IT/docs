@@ -25,7 +25,6 @@
         "amount": 2000.33,
         "realAmount": 2000.33,
         "fee": 100.02,
-        "feeModel": 2,
         "status": 0,
         "confirmtime": 0,
         "custominfo": {
@@ -63,7 +62,6 @@
 | amount      | double(16,2) | 薪水                       |
 | realAmount  | double(16,2) | 实际发放薪水               |
 | fee         | double(16,2) | 手续费                     |
-| feeModel    | number       | 手续费模式（见附录）       |
 | status      | number       | 代付工单状态（见附录）     |
 | confirmtime | number       | 确认时间                   |
 | custominfo  | object       | 代付工单创建时客户数据快照 |

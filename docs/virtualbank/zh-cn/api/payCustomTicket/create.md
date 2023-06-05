@@ -30,8 +30,7 @@
     {
         "customid":"12110",
         "payeeuid":"TEST12345679013",
-        "amount":2300.46,
-        "feeModel":2
+        "amount":2300.46
     }
 ]
 ```
@@ -43,7 +42,6 @@
 | customid | y    | string       | -      | 客户ID                                       |
 | payeeuid | y    | string       | -      | 自定义支付ID，要求全局唯一，长度不得超过64位 |
 | amount   | y    | double(16,2) | -      | 薪水，精确到小数点后两位                     |
-| feeModel | n    | number       | 1      | 手续费模式（见附录）                         |
 
 
 
