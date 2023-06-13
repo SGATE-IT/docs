@@ -21,8 +21,8 @@
 | startTime   | n    | number | -      | 客户创建开始时间，秒级时间戳                        |
 | endTime     | n    | number | -      | 客户创建结束时间，秒级时间戳                        |
 | customids   | n    | array  | -      | 查询客户ID，多个ID以英文逗号分割，示例：1187, 2f131 |
-| identity    | n    | string | -      | 身份证号（敏感信息，需商户私钥加密处理）            |
-| account     | n    | string | -      | 账户（敏感信息，需商户私钥加密处理）                |
+| identity    | n    | string | -      | 身份证号（敏感信息，需**系统公钥**加密处理）            |
+| account     | n    | string | -      | 账户（敏感信息，需**系统公钥**加密处理）                |
 | bankcode    | n    | string | -      | 银行CODE                                            |
 | ibanaccount | n    | string | -      | IBAN                                                |
 | name_e      | n    | string | -      | 客户英文名称，支持模糊查询                          |
@@ -85,12 +85,12 @@
 | customid    | string | 客户ID                                          |
 | name_e      | string | 客户英文名称                                    |
 | name_a      | string | 客户阿拉伯文名称                                |
-| identity    | string | 身份证号（敏感信息，使用系统私钥加密处理）      |
-| identitypic | string | 身份证照片URL（敏感信息，使用系统私钥加密处理） |
-| signpic     | string | 签名照片URL（敏感信息，使用系统私钥加密处理）   |
+| identity    | string | 身份证号（敏感信息，使用**商户公钥**加密处理）      |
+| identitypic | string | 身份证照片URL（敏感信息，使用**商户公钥**加密处理） |
+| signpic     | string | 签名照片URL（敏感信息，使用**商户公钥**加密处理）   |
 | bankname    | string | 银行名称                                        |
 | bankcode    | string | 银行CODE                                        |
-| account     | string | 账户（敏感信息，使用系统私钥加密处理）          |
+| account     | string | 账户（敏感信息，使用**商户公钥**加密处理）          |
 | ibanaccount | string | IBAN                                            |
 | status      | number | 客户状态（见附录）                              |
 | created_at  | number | 创建时间                                        |

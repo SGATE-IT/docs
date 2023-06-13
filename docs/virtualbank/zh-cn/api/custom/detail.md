@@ -53,12 +53,12 @@
 | customid    | string | 客户ID                                          |
 | name_e      | string | 客户英文名称                                    |
 | name_a      | string | 客户阿拉伯文名称                                |
-| identity    | string | 身份证号（敏感信息，使用系统私钥加密处理）      |
-| identitypic | string | 身份证照片URL（敏感信息，使用系统私钥加密处理） |
-| signpic     | string | 签名照片URL（敏感信息，使用系统私钥加密处理）   |
+| identity    | string | 身份证号（敏感信息，使用**商户公钥**加密处理）      |
+| identitypic | string | 身份证照片URL（敏感信息，使用**商户公钥**加密处理） |
+| signpic     | string | 签名照片URL（敏感信息，使用**商户公钥**加密处理）   |
 | bankname    | string | 银行名称                                        |
 | bankcode    | string | 银行CODE                                        |
-| account     | string | 账户（敏感信息，使用系统私钥加密处理）          |
+| account     | string | 账户（敏感信息，使用**商户公钥**加密处理）          |
 | ibanaccount | string | IBAN                                            |
 | status      | number | 客户状态（见附录）                              |
 | created_at  | number | 创建时间                                        |

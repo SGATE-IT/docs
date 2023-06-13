@@ -31,12 +31,12 @@
             "customid": "12381",
             "name_e": "dbnuo4",
             "name_a": "dbnuo4",
-            "identity": "FYFfRfrOqK65LyhPkFmevuPyat2lvWbV8jz8NkkB5a09VQVjiVayMFWQ3Qvp/7Xaps2qffMsoUJjf/vflBdq3knfnRfHKBvghsY+vrcMQ+7HeRkkq5gaHqOgyBt5Zpq1STZnee8gT+p7MT05nAZBdHOx0ozAY8Q3ahg5gqghuYzelQHh4tiua0DdRegNu8PwvU4wEIxFCQarrQJotI62i5L3vJrsg/foyFF4g/MWD5wI+8rgnzSECeJEFQmySXHSj7Hq2i22LFM+pXuUco4Ev6CmIg0LsYFb2LtiWw5drGspeDSN9HD2xh+TpqQUubQ8eFIAh7ZgCfcxjfp9BI71MA==",
+            "identity": "ZmlW51H0+UlmhISoCn5OsjpbsiGZrGeBhtThg2g1139ppRmhZiaAXKN4quU0NBKIV4wPb3E15EFOY7yxm6LIrLTtOa7rJjepyJCe3Okw9luqm/aCCdSD/lAjRv/eEyl51xZpKvi/RGOJf1APhDRRFTaWj+LPbPq0I6lmjL7FVeiAX5MmzNQEX/QxC+XD4X3Uo6KTd2LnLb6RZIabIAOzK4ctHEnr47k3FHO1IM73laLKDu1sAwvD3LZeTesDVCHp7ZGG2qLxkfT06g/PfijOrEUgfZkvtD3b6tkL3uX1Ks7tM/V5Hz7SE+ryOAmDYvjfN0bKWuGVQ11zFyDlkzdyDA==",
             "identitypic": "",
             "signpic": "",
             "bankname": "",
             "bankcode": "",
-            "account": "xq7CI8bXWls776jb8mwW3rpsz0KQeG93Z/XkS9y+XDx6nqtQbPMD2ygzSxzm5GInbXb6zzgBE+r0Iaoctg/ESe1ULCELhOLHS4xIPQE9MS07HP4ykrX5/YEKvNrtB6dDqHi48M8tnbX5KcGr733FFLlPxc9Qeb3eC/2OJEEu3oLIFSCUg8/LMBSXJF1pYgnGhPho6LiSJFF2eRQcnfKaIwWBGgEk0gpF81WhwywIP9NXwofdve9Phs9NbcDxTIQzC7Tfs63x9AAz0+iTKeYh6jGpbG/0WR/JLuPzyi41Z2gXGc9i8kYHnjRB4tfbXoIQpwkLcg6DTitDkdBdXgMTDQ==",
+            "account": "I4dSjGZVkVk6TVCIny1RbeyURLrNsMuOpWgpGE5BGeCfZ7lkpoLb0oAMH0rT3O+omcusWBc++55u5bJ0s1aot7wH3DHqNrYmWX5MFphTcp4khoZrm34dAWDcBQxOjyEg6pbekqJ0AESe7kCnbUMerQ/TbkomR0yK4Ybm5jlVt25G5f6dJDIyl0Aqy1isLOSwnnTOiltsMB7s/ykAlLnlwGHbWVNTXpkZWEJP30/qrQ7x908vcHq81lcgWiM6HVXxL8lgTOFbxI86jh2zmEb5tXTUuEID7H0iXOChKV/2la2bQ5AdEV5pebdGrb+Ck/7r8wCj1GVHUhwl0kfCOdl25g==",
             "ibanaccount": "SC11BJ2ss349897123879",
             "status": 1,
             "created_at": 1680075971,
@@ -45,8 +45,15 @@
         "created_at": 1681208811,
         "updated_at": 1683858559
     },
-    "sensitiveFields": {},
-    "requestId": "C421730813A20AFBD38D6B9D0265566B"
+    "sensitiveFields": {
+        "custominfo": [
+            "identity",
+            "identitypic",
+            "signpic",
+            "account"
+        ]
+    },
+    "requestId": "F6FA02DD5E2BDE846C2100BBF31B040A"
 }
 ```
 
@@ -64,7 +71,7 @@
 | fee         | double(16,2) | 手续费                     |
 | status      | number       | 代付工单状态（见附录）     |
 | confirmtime | number       | 确认时间                   |
-| custominfo  | object       | 代付工单创建时客户数据快照 |
+| custominfo  | object       | 代付工单创建时客户数据快照，数据结构同客户数据 |
 | created_at  | number       | 创建时间                   |
 | updated_at  | number       | 更新时间                   |
 

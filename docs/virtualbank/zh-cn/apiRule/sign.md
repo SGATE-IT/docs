@@ -10,30 +10,34 @@
 
 
 
-请求签名的生成流程：**构建数据** --> **获取数据摘要** --> **加签**
+请求签名的生成流程：**构建签名数据** --> **获取签名数据摘要** --> **使用商户私钥对数据摘要签名**
 
 
 
-### 构建数据
+### 构建签名数据
 
 
 
 签名应构建以下数据结构进行处理（**以下示例为格式化的 JSON 数据展示，实际数据应在一行**）。
 
+!> 签名数据结构应保证KEY顺序不变
+
+!> 签名数据转为JSON时，中文不转为unicode、不转义反斜杠
+
 ```json
 {
-    "api_key": "QH4Bf8O2RWcgpojN",
-    "timestamp": 1680070775,
-  	"nonce_str": "sy7zJR9PBI83X8alLDIf",
-  	"url": "/openApi/v1/payee/custom/list?pageNo=1",
-  	"method": "GET",
-    "body": ""
+  "api_key": "QH4Bf8O2RWcgpojN",
+  "timestamp": 1680070775,
+  "nonce_str": "sy7zJR9PBI83X8alLDIf",
+  "url": "/openApi/v1/payee/custom/list?pageNo=1",
+  "method": "GET",
+  "body": ""
 }
 ```
 
-
-
 * api_key
+
+数据类型：`string`
 
 系统分配的商户 API KEY。
 
@@ -41,17 +45,23 @@
 
 * timestamp
 
+数据类型：`int`
+
 请求时的秒级时间戳。
 
 
 
 * nonce_str
 
+数据类型：`string`
+
 签名随机字符串。
 
 
 
 * url
+
+数据类型：`string`
 
 去除 HOST 的 URL 信息，需要保留 URL 上的请求参数，URL 需要与实际请求地址一致（URL 同请求地址，参数的 value 需要 urlencode 处理）。
 
@@ -62,6 +72,8 @@
 
 
 * method
+
+数据类型：`string`
 
 请求方法。
 
@@ -79,8 +91,7 @@
 
 
 
-### 获取数据摘要
-
+### 获取签名数据摘要
 
 
 当准备好签名数据时，使用 MD5 算法，进行数据摘要，示例：
@@ -90,11 +101,9 @@ md5('{"api_key":"QH4Bf8O2RWcgpojN","timestamp":1680070775,"nonce_str":"sy7zJR9PB
 ```
 
 
+### 使用商户私钥对数据摘要签名
 
-### 加签
-
-使用商户私钥对数据摘要进行加签。
-
+使用**商户私钥**对数据摘要进行**签名**，签名结果应为**base64**格式字符串。
 
 
 ## 响应签名
