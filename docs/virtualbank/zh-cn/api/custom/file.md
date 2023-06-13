@@ -1,5 +1,7 @@
 # 完善客户资料
 
+?> 目前客户强制需要完善的资料为身份证照片，当客户完善身份证照片后，客户状态自动转变为待审核状态。
+
 **请求URL**
 
 - `{{host}}/openApi/v1/payee/custom/file/{{customid}}`
@@ -12,7 +14,6 @@
 - POST
 
 
-
 **请求参数**
 
 | 参数名 | 必选 | 类型   | 默认值 | 说明                                                         |
@@ -20,8 +21,6 @@
 | file   | y    | file   | -      | 文件必须是图片 (jpeg, png, bmp, gif, svg, or webp)，文件大小不能超过2048kb |
 | md5    | y    | string | -      | 文件的MD5值                                                  |
 | type   | y    | string | -      | 文件的类型：identitypic=身份证照片，signpic=签名照片         |
-
-
 
 **返回示例**
 
