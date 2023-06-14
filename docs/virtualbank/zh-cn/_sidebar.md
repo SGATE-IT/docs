@@ -5,7 +5,7 @@
   - [规则说明](docs/virtualbank/zh-cn/apiRule/illustrate.md)
   - [证书/密钥](docs/virtualbank/zh-cn/apiRule/key.md)
   - [敏感信息处理](docs/virtualbank/zh-cn/apiRule/sensitive.md)
-  - [签名](docs/virtualbank/zh-cn/apiRule/sign.md)
+  - [签名规则](docs/virtualbank/zh-cn/apiRule/sign.md)
   - [成功请求/响应头](docs/virtualbank/zh-cn/apiRule/header.md)
   - [响应消息格式](docs/virtualbank/zh-cn/apiRule/result.md)
 

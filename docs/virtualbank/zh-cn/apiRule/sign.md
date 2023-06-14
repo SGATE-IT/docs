@@ -20,9 +20,9 @@
 
 签名应构建以下数据结构进行处理（**以下示例为格式化的 JSON 数据展示，实际数据应在一行**）。
 
-!> 签名数据结构应保证KEY顺序不变
+?> 签名数据结构应保证KEY顺序不变
 
-!> 签名数据转为JSON时，中文不转为unicode、不转义反斜杠
+?> 签名数据转为JSON时，应保持原数据输出（中文不转为unicode、不转义反斜杠）
 
 ```json
 {
@@ -83,7 +83,7 @@
 
   固定字符串类型
 
-  * POST请求：body 中以 Raw JSON 形式上报的数据。
+  * POST请求：body 中以 Raw JSON 形式上报的原始数据。
 
   * GET 请求：body 为空字符串。
 
@@ -100,10 +100,9 @@
 md5('{"api_key":"QH4Bf8O2RWcgpojN","timestamp":1680070775,"nonce_str":"sy7zJR9PBI83X8alLDIf","url":"/openApi/v1/payee/custom/list?pageNo=1","body":""}');
 ```
 
-
 ### 使用商户私钥对数据摘要签名
 
-使用**商户私钥**对数据摘要进行**签名**，签名结果应为**base64**格式字符串。
+使用**商户私钥**对数据摘要进行**签名**，签名结果应使用**Base64**对结果进行编码。
 
 
 ## 响应签名
@@ -113,7 +112,7 @@ md5('{"api_key":"QH4Bf8O2RWcgpojN","timestamp":1680070775,"nonce_str":"sy7zJR9PB
 构建数据说明：
 
 * api_key：同请求签名中的数据一致。
-* timestamp：发起响应时的时间戳。
+* timestamp：发起响应时的秒级时间戳。
 * nonce_str：随机生成字符串。
 * url：同请求签名中的数据一致。
 * method：同请求签名中的数据一致。
