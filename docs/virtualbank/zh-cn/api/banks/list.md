@@ -70,14 +70,10 @@
         {
             "bankcode": "11ab7",
             "bankname": "Gulf International Bank Saudi Aribia (GIB-SA)"
-        },
-        {
-            "bankcode": "11b34",
-            "bankname": "STC Pay"
         }
     ],
     "sensitiveFields": {},
-    "requestId": "062F83E35AB2E241EF0895292C8B9631"
+    "requestId": "C66318F367852434B45337CD9F833E27"
 }
 ```
 

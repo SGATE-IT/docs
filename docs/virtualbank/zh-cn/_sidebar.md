@@ -12,11 +12,11 @@
 - [接口字典](docs/virtualbank/zh-cn/api/api.md)
 
   - 客户
+    - [创建客户](docs/virtualbank/zh-cn/api/custom/create.md)
     - [查询客户列表](docs/virtualbank/zh-cn/api/custom/list.md)
     - [查询单个客户](docs/virtualbank/zh-cn/api/custom/detail.md)
-    - [创建客户](docs/virtualbank/zh-cn/api/custom/create.md)
     - [更新客户](docs/virtualbank/zh-cn/api/custom/update.md)
-    - [完善客户资料](docs/virtualbank/zh-cn/api/custom/file.md)
+    - [更新客户资料](docs/virtualbank/zh-cn/api/custom/file.md)
 
   - 银行
     - [查询支持的银行列表](docs/virtualbank/zh-cn/api/banks/list.md)

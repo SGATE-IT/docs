@@ -1,48 +1,34 @@
 # 创建客户
 
-支持批量创建客户，如果单个客户的身份证号+账户在商户下已经存在，则会覆盖已经存在的客户数据，反之则会创建新的客户数据。
+**客户状态说明**
 
-创建客户的初始状态为待完善资料，商户完善客户资料后转变为待审核状态。
-
-如果单个客户的身份证号+账户在商户下已经存在，并且覆盖的客户当前已完善资料则会转变为待审核状态。
-
-
+创建客户的初始状态为**待完善资料**，商户完善客户资料后转变为**待审核**，待审核状态后，系统审核人员可对该数据进行**审核成功**、**审核失败**、**封禁**操作。
 
 **请求URL**
 
 - `{{host}}/openApi/v1/payee/custom/create`
-
-
 
 **请求方式**
 
 - POST
 
 
-
 **请求参数**
 
-数组格式，每一个元素代表一个需要创建的客户信息，敏感信息需要使用**系统公钥**进行加密。参数示例：
+> 客户账户信息如果是银行账户bankcode、cardno、ibanaccount必传。如果客户账户为STCPay账户则stcaccount必传。
+
+敏感信息需要使用**系统公钥**进行加密。参数示例：
 
 ```json
-[
-    {
-        "name_e":"test11",
-        "name_a":"test11",
-        "identity": "abnXuZoj/ny7c3m9c/8vtkAu8Kk82eesPLVshSgZpHRsBU6cs4Jv6uK/30mpGAUqnxhutV3MwedCmMJbt3ftQqqDx3LDN+i0nWox3DCvcmR08N0IfFFqB8FszLvyWVNXmETR1PWVj51OqgY59Jx9xU/rMvdZTCFLzhRb22x5K1qBVsgdtHVNo1iD9hYR/V9KJsUzzOmuwledWWf6ryBIYPORd7Czz5wYr4Eu95i7kgFvhQ+MIeC8tUKvB7BfYhO6gPkYLcDhfap5ZbZd986GigzRKMDZGhU4SLNO9xmR7fOFQ8C96/WMpiM7/QlsO04yGHW81D3kdrOJ0MNGWMvExQ==",
-        "bankcode":"1174c",
-        "account": "YTjtZuTtYpnx2Wd425XQjxbUsULmr2M463XRVrR21/0yvgQCVhiwIopgQZrsynlSxDAmrq7l+gUOiH2nPZmwOB5J7cS/zow2nmNRr2warKjcHXuNJF1LDuSq3MYDPd0VIkaARHOZtOZOZsVB1KPHxvfd1wgLSXcOM9IHos4Xr06HyceytxkPAVwQ49jv/PgrwlGL5FHf218DK0LLydidB/UdnxWHPEOhPO07VOxgFlB78+dY4m91QKRC7kKob0ysuHc2/RiLyoPZ/OcC8dIxWiIEHLOEXBZj96DYCQrSOjdg+QCQ5701us4R2LsglVwBU7S5551AcZ7lwRtDsRGuxA==",
-        "ibanaccount":"12345678911"
-    },
-    {
-        "name_e":"test22",
-        "name_a":"test22",
-        "identity": "YnZ4SBGR01y81jKpcfdr1jIdZJKbQGe2QedT0gKvB4e52ts5ghaXSXXz8cq0eb6O9kSSZT9w+kGT24ZoQ4T3n0Ze2jD2oMwj6u/QLnJa0Dra0HvIwyiZkn6+PUPumXTQ9S3ImrTEKPS875+qji70+tV2glsI4E2606wITmxD+ZknLCnpi9PeyXczLYbe/fNZmfRIYJxVf9m5BMnXjUWoVBbeUWLciVyc/xzhVnMrx5MmUz8g5pc1Ejln4l/ri4/3xwAXlZaUHGtKlk7uuTiSJOBFdphC6Sd+jT86UKRZLaGbq40Wx/n+fy/RbrqlEeTAquX/ytJdBJxhxkAiMcGiPQ==",
-        "bankcode":"1174c",
-        "account": "LOujnE3eHbAMKw7FXjilQG/wE2Y5qAKpeeGfFw7Owlvaajw/cBShx+BtBeiNr04Ncy8QpBvDp9hA0PEQi5dycbkL5RnbRyBu6kPVby+iD2u7Twp9ZMt1SEpOABazdQB3PcmjRXY2Jrx9iL72aQ5WxaC6CvqsQYYk6neEuTCqTNhmYfvI0/ElP1QmoysHMdo0iTluWg9fIuwBnbdsYvsYtJ0+RL0igbNYuSOexjJ96y0uKE1axP1anlpcakpPgignI9VYPwlIee2FhWmAHkxUTZGq/bPvqbD7Os3pmemI22t2/R3E8q2cw5lS5YV/AySUMmPTbKp7bznwwWezCFJVWw==",
-        "ibanaccount":"123456789"
-    }
-]
+{
+    "name_e":"usera",
+    "name_a":"usera",
+    "mercustomid":"u001",
+    "identity":"z9LnjQJuvqDnaWsrLgrO1GxT2z7fww/sxNxWjrMTinFgT5dNrn1CbpRMy99qc1GnyqzlwBytZf6oa4fOQO5kHQwR4DVMRpmii81MqgAuWBQJktCG5mAgd5yzUO2kLZyHDfy5J7Y2pMyqmFzvMPiD1tIxPezgcExXEKxcPKs1tvOr+7zgTbNtnvfm1VW+BzIVmJYmaXBW4ZhEdJqz+dxdSyZIdUdbV1oc46xiuIxZOn3hxYMy0XnGjNJNT9TSW299pSSDBpVbCoWg9u4okMI222adQyikyfz+TlSsVNTHnnB8C+rf+Kjc6ZPszCdu+KTjiYOTkRlJIUbHe0bM02pOjg==",
+    "bankcode":"1174c",
+    "cardno":"Zh4EkxILOkTNwk4PcEerZjpmmTu6IorKDC1jpm4l3hMuEI4zWJ2pyafiTDNaIoN6VOh8ivWxJBeOD2N6uXiPwJ6qyreVMhDsYa8nHK58l2JM6BC1teG0Q61ZPknXloB6aaDgDSQetbdomggAH+cu7masFnLU+YmI1umP/p7DhePYjT69Yq3vJ2wBEUp0dVIaINB0c4uB/bapmWb3zmBcSW1To2RopXlNIggjk1qdLUtxXmaYdzkyRJbevpBHARaA/BwIm3e1/ZwO+WUETBmhci96ciPBuf/NzyhUp9UHPgNoajdAwwdN5FUEA9E1KE6uwHdWMAICy/pWzsaOjoQpOQ==",
+    "ibanaccount":"1234567892"
+}
 ```
 
 说明：
@@ -51,11 +37,12 @@
 | ----------- | ---- | ------ | ------ | ------------------------------------------ |
 | name_e      | y    | string | -      | 客户英文名称                               |
 | name_a      | y    | string | -      | 客户阿拉伯文名称                           |
+| mercustomid      | y    | string | -      | 商户客户ID ，要求商户下唯一        |
 | identity    | y    | string | -      | 身份证号（敏感信息，使用**系统公钥**加密处理） |
-| bankcode    | y    | string | -      | 银行CODE                                   |
-| account     | y    | string | -      | 账户（敏感信息，使用**系统公钥**加密处理）     |
-| ibanaccount | y    | string | -      | IBAN                                       |
-
+| bankcode    | n    | string | -      | 银行CODE                                   |
+| cardno     | n   | string | -      | 银行账户（敏感信息，使用**系统公钥**加密处理）     |
+| ibanaccount | n   | string | -      | IBAN                                       |
+| stcaccount | n    | string | -      | STCPay账户（敏感信息，使用**系统公钥**加密处理） |
 
 
 **返回示例**
@@ -64,9 +51,56 @@
 {
     "code": 200,
     "message": "Request succeeded.",
-    "data": {},
-    "sensitiveFields": {},
-    "requestId": "65A91020D96D4A0C8D303D37B0953640"
+    "data": {
+        "customid": "12ad4",
+        "mercustomid": "u004",
+        "name_e": "usera",
+        "name_a": "usera",
+        "identity": "s0YhJVboAqQj8kLCkTqCttAwpP39nR5VaaTy8pWFwSQDjSYei7YqZAbcoeckAD40bgliH9sSXre9PafDDpHfdkKX22X0lvJzIcpL8PGSpWQT2XloHjKxExRhiq/AgzEnwV9kq66b2hqi56O2djjzYOXOz/BpYKqvqWG7ak47OLV2hDR6r0hzhZsdvvvCeo21lMafUGd6hmf6TElqDntIfgFNTGSbxkV3kKlXnNX0hdHPmGtnfqbIuxo+yAHeJdffxA/6iHzSsW92t/bvtB9hV5ON+v4s/VpVZCRYmj0AIs9bQ+Ed+hNXtlmLuyaxfRdYVG6nl1MhVGJG0QioO4sNag==",
+        "identitypic": "",
+        "signpic": "",
+        "bankname": "Riyad Bank",
+        "bankcode": "1174c",
+        "cardno": "W0jEosfhj/TfHAjjxyIaCWHZVfdwL/2rsXj4xoXzuPWZN2nKLYmlogABKjuNF9930fmyCyt3cGZD4MRgwjf8/ZZKb0HqQLAtw+rfc/2PRViXkdq4vr3iTGyH4W7MW4n0yw6rREZUf+9/R96zyqA5iky0A0kz2suAiKBQjsQGZ1PBCGYPxmzDnpolk76Bhvpm2YNgQnvRCLUQIOCIdq4Aj9rmV0MzfhilTZ3MhIe4WqW7eubFwq0+3CF484uSVemkdRYPVZ17umbCDTRENdzkTKUIZwxTxRTMfHyUr5Sx75RyBpJDzoReluIKnX9tzQ/jb+/V4Eiv39FD4l5/Zp8trA==",
+        "ibanaccount": "1234567892",
+        "stcaccount": "",
+        "status": 4,
+        "statusdesc": "2023-06-15 06:12:54",
+        "demand_perfection": [
+            "identitypic"
+        ],
+        "created_at": 1686809574,
+        "updated_at": 1686809574
+    },
+    "sensitiveFields": [
+        "identity",
+        "identitypic",
+        "signpic",
+        "stcaccount",
+        "cardno"
+    ],
+    "requestId": "91A8340E7AEE8EC99D06EB46DF92A19F"
 }
 ```
 
+**返回参数说明**
+
+| 参数名      | 类型   | 说明                                            |
+| ----------- | ------ | ----------------------------------------------- |
+| customid    | string | 系统客户ID                                          |
+| mercustomid    | string | 商户客户ID                 |
+| name_e      | string | 客户英文名称                                    |
+| name_a      | string | 客户阿拉伯文名称                                |
+| identity    | string | 身份证号（敏感信息，使用**商户公钥**加密处理）      |
+| identitypic | string | 身份证照片URL（敏感信息，使用**商户公钥**加密处理） |
+| signpic     | string | 签名照片URL（敏感信息，使用**商户公钥**加密处理）   |
+| bankname    | string | 银行名称                                        |
+| bankcode    | string | 银行CODE                                        |
+| cardno    | string | 银行账户（敏感信息，使用**商户公钥**加密处理）          |
+| ibanaccount | string | IBAN                                            |
+| stcaccount | string | STCPay账户（敏感信息，使用**商户公钥**加密处理）        |
+| status      | number | 客户状态（见附录）                              |
+| statusdesc  | number | 客户状态说明                              |
+| demand_perfection      | array | 用户当前待完善哪些资料                  |
+| created_at  | number | 创建时间                                        |
+| updated_at  | number | 更新时间                                        |
