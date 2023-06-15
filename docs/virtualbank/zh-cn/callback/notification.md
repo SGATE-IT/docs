@@ -28,6 +28,31 @@
 | data    | array | 事件数据，根据事件变化                |
 | time    | number | 事件时间，秒级时间戳                |
 
+**回调数据签名**
+
+回调请求会增加系统规定的[请求头](http://docs.sgate.sa/#/docs/virtualbank/zh-cn/apiRule/header)信息，回调数据会使用**系统私钥**进行签名，[签名规则](http://docs.sgate.sa/#/docs/virtualbank/zh-cn/apiRule/sign)同请求接口的方式一致。
+
+请求头数据示例：
+
+```json
+{
+    "V-Timestamp":1686831994,
+    "V-Signature":"jkECqHHhr0DxyM7mp\/I\/7n56OwoMvp4aPTvODQNfVScqOORG2UIQrMcr6F4MnjM+Zh++UFHLERXAKQSuozi4fAnqxA9iC0c9QUqYqluUQ4LVV0Ql6fgoqvRhU3i4EZrrXa7neaQW06hqbDGOt2VPX\/\/MxHJbickvTZooOkoqdekyc22XXFQpoEOm5NQFoZP\/HflAZSTSIiOdx4YGhGs65NGy8gMkdnUFJhtrzjKVefVMX9GchN\/l3Oq35vNnbjTC6Ce9NDbiu3aKfOswjX\/u8l0\/hcbsxpAZabbo+\/ZNwXMftL6a7gxnysO0P9pypJatNViTY4z1Vt2hUEOgjpJyjw==",
+    "V-Nonce-Str":"i7yCJYTbSaBj32th",
+    "V-Api-Version":1,
+    "V-Api-Key":"xxxxxxxxxxxxxxxxxxx"
+}
+```
+
+签名构建数据说明：
+
+* api_key：商户的API KEY。
+* timestamp：发起请求时的秒级时间戳。
+* nonce_str：随机生成字符串。
+* url：去除 HOST 的通知地址 URL 信息。
+* method：`POST`。
+* body：回调数据JSON。
+
 ## 事件：客户状态变化
 
 **事件标识**: `CUSTOM_STATUS_CHANGE`
