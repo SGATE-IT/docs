@@ -11,6 +11,9 @@
 
 - [接口字典](docs/virtualbank/zh-cn/api/api.md)
 
+  - 商户
+    - [查询余额](docs/virtualbank/zh-cn/api/merchant/balance.md)
+
   - 客户
     - [创建客户](docs/virtualbank/zh-cn/api/custom/create.md)
     - [查询客户列表](docs/virtualbank/zh-cn/api/custom/list.md)
