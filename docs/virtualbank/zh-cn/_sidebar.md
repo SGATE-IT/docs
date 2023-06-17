@@ -29,6 +29,9 @@
     - [查询代付工单列表](docs/virtualbank/zh-cn/api/payCustomTicket/list.md)
     - [查询单个代付工单](docs/virtualbank/zh-cn/api/payCustomTicket/detail.md)
 
+  - 对账单
+    - [下载对账单](docs/virtualbank/zh-cn/api/statement/statement.md)
+
 - [回调通知](docs/virtualbank/zh-cn/callback/notification.md)
 
 - [附录](docs/virtualbank/zh-cn/appendix/appendix.md)
