@@ -45,5 +45,6 @@
 | Custom_Name_A         | 客户阿语名称   |
 | Custom_Bank_Name      | 客户银行名称   |
 | Custom_Bank_Code      | 客户银行号     |
+| Custom_Card_No        | 客户银行卡号     |
 | Custom_Iban           | 客户IBAN       |
 | Custom_STCPay_Account | 客户Stcpay账号 |
