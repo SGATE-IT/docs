@@ -89,8 +89,8 @@
 | fee         | double(16,2) | 手续费                     |
 | status      | number       | 代付工单状态（见附录）     |
 | statusdesc      | string       | 状态说明     |
-| confirmtime | number       | 打款完成时间                   |
+| confirmtime | number       | 打款完成时间(UTC时区)                   |
 | custominfo  | object       | 代付工单创建时客户数据快照，数据结构同客户数据 |
-| created_at  | number       | 创建时间                   |
-| updated_at  | number       | 更新时间                   |
+| created_at  | number       | 创建时间(UTC时区)                   |
+| updated_at  | number       | 更新时间(UTC时区)                   |
 
