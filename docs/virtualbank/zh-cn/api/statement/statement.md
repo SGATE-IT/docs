@@ -1,6 +1,6 @@
 # 下载对账单
 
-> 在UTC时区 D+1 日 1:00 AM 生成 D 日的对账文件，文件名称为：GCCRECO_{MerchantName}_{MerchantID}_{YYYYMMDD}。其中{YYYYMMDD}为交易日期（D-1日）
+> 在UTC时区 D+1 日 1:00 AM 生成 D 日的对账文件，文件名称为：`GCCRECO_{MerchantName}_{MerchantID}_{YYYYMMDD}`。其中{YYYYMMDD}为交易日期（D-1日）
 
 !> 文件响应成功的**HTTP状态码（非code）**为`200`，如果文件正在处理中响应的**HTTP状态码（非code）**为`202`
 
