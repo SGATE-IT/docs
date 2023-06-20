@@ -40,7 +40,7 @@
 | mercustomid      | y    | string | -      | 商户客户ID ，要求商户下唯一        |
 | identity    | y    | string | -      | 身份证号（敏感信息，使用**系统公钥**加密处理） |
 | bankcode    | n    | string | -      | 银行CODE                                   |
-| cardno     | n   | string | -      | 银行账户（敏感信息，使用**系统公钥**加密处理）<br> 银行账户要求16～19位纯数字     |
+| cardno     | n   | string | -      | 银行账户（敏感信息，使用**系统公钥**加密处理）     |
 | ibanaccount | n   | string | -      | IBAN                                       |
 | stcaccount | n    | string | -      | STCPay账户（敏感信息，使用**系统公钥**加密处理） |
 
