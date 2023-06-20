@@ -88,3 +88,55 @@
     "time":1686832475
 }
 ```
+
+## 事件：代付单状态变化
+
+**事件标识**: `SALARY_STATUS_CHANGE`
+
+创建代付单后，代付单后续状态发生变动触发此事件。
+
+响应数据为变化状态后的代付单信息。数据结构与查询代付单详情接口保持一致示例：
+
+```json
+{
+    "event":"SALARY_STATUS_CHANGE",
+    "data":{
+        "ticketid":"12381",
+        "customid":"119bd",
+        "mercustomid":"dbn001",
+        "payeeuid":"PPP123127",
+        "currency":"SAR",
+        "paymentmethod":"STCPay",
+        "amount":1600,
+        "realamount":1520,
+        "fee":80,
+        "status":2,
+        "statusdesc":"2023-06-20 04:04:31",
+        "confirmtime":0,
+        "custominfo":{
+            "customid":"119bd",
+            "mercustomid":"dbn001",
+            "name_e":"dbn001eupd1",
+            "name_a":"dbn001a",
+            "identity":"iZHmTnEt8LgXPTzsAB2CNWK79LOFtUMBi4BGfy+avx9aaEuEH2E7M/SpY+NvhqJiEjFgPliYsDBteLS/xoqmO6VscaXN4R0kgiZrewepg2byrq6a3L0dfpJ33RfrSym7bFqzDt4rv2o7S48ZWFHH4ensrA0jn0EEP7dFVTvLAHLqmwU75ZX9BxDI0x8CKL5Vgr7lW+zkLs/t3j3gH10/A+1l9seDxF//7CsxvZ3S4yJyXD/mYajLRV10ur9crNyxwDkXjc6l+1cb4pAXvOiGNP6LNgAz18W7qcnLAvp0YdjIjkmEbI0aLzwvNHb3kYgCrt8t0D5lx8yPWUxP3/Qc4w==",
+            "identitypic":"Sjt+0Afwyq8SUDilSCJKHuzBAjtiLEUWUXObec/sNmtib4yRf0gB/p3x1qwArCS1w4PjNmaLK1eep2/z0de7P1TzopO1IJ+VSJFUn/WBgZGdLJj5J+MZZJG9w3B/1Vk/L0q0OqF0tuQhhDNeL33lHMeoSV5JCzaXcaHfYGgEeyGA4NVjwYKQqjPFrctQIcmdXEdM0gnMGyudaW4gaEcTfFbaZm6lJW924+dqhiXGaCU4pHmiW+nSpiDKvG0rJwkiWeDP7QNCnoYgeDJStqP+nYBi73alWDWq6O0KRCWag79XLdK88XXXwaUb7glJTVhIIvbwWL8IuV9eqYpAATYUng==",
+            "signpic":"",
+            "bankname":"Riyad Bank",
+            "bankcode":"1174c",
+            "cardno":"BSTmd+lmtJOK3Y3IV9lZIOgnZ+zObv9T03eKvvhFAHObUHUovDwhcmxLWaT7tFId0D24crPblm9iACIePrgVOjABTZty5Jgjwa2cuQSrS0to3MO6RLB+2bNwyblrT/Cid0Y+RQjAfcL9tJsfI6QdzOeToejltk+rpZ+L0DQqq2vLUoC8pZcNYxaillur2V+6SyeubcgP0OseRJx+2w72SqTMkhmlO0CUXjqR7hMohUdyRJXo5g4jv2DRwon5eIt4NAL1P4DFbWjw5eiUi+4EiRcBRQVr85OJj7LnQ+9Nn3I1o8O8YTXiDa2W6yQn5+9aB+EJ1FxDjF+ZR0z9h8KvkQ==",
+            "ibanaccount":"123456789",
+            "stcaccount":"KjPJhusxCMXytxNc8FlorfIysY85RaZl1C1HV/qPrVsnASVXDyupZDZqIvSv9MH4a4c0iyWBXlnFSUN+GvTKsOagQKoXxWKx84oPcnuVEZMrk+h+8bC4etzZ+D+5SgbyUOFAWZUgI6hNw4AxM4KgQEm3xp7ytPPkQGHm619e1zHETECbjEkaehND5wNT6AZ61iC7sHIKH7hVrmQSbWMDuUCR3BLo7p01A7lAgRfiQZMfDyqSuBlwybhXJzdFSlfzTay58xGCSd0GLuz8WQYfSaDJLXVluTYguk4ftdcdBwMRlDfBX6rsIdoLw+1Udh6WPDXKr89pCPCW8FHPrhT4Vg==",
+            "status":1,
+            "statusdesc":"ok",
+            "demand_perfection":[
+
+            ],
+            "created_at":1687170362,
+            "updated_at":1687171990
+        },
+        "created_at":1687233871,
+        "updated_at":1687233906
+    },
+    "time":1687233906
+}
+```

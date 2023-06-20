@@ -31,7 +31,7 @@
 | name_a      | n    | string | -      | 客户阿拉伯文名称 |
 | identity    | n    | string | -      | 身份证号（敏感信息，使用**系统公钥**加密处理） |
 | bankcode    | n    | string | -      | 银行CODE                                   |
-| cardno     | n    | string | -      | 银行账户（敏感信息，使用**系统公钥**加密处理）     |
+| cardno     | n    | string | -      | 银行账户（敏感信息，使用**系统公钥**加密处理）<br> 银行账户要求16～19位纯数字     |
 | ibanaccount | n    | string | -      | IBAN             |
 | stcaccount | n    | string | -      | STCPay账户（敏感信息，使用**系统公钥**加密处理）             |
 

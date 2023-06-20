@@ -1,8 +1,8 @@
 # 下载对账单
 
-> UTC时区每日零点开始生成前一天商户对账文件，文件生成需要一定时间，请根据时间滞后进行文件下载
+> 在UTC时区 D+1 日 1:00 AM 生成 D 日的对账文件，文件名称为：GCCRECO_{MerchantName}_{MerchantID}_{YYYYMMDD}。其中{YYYYMMDD}为交易日期（D-1日）
 
-!> 文件响应成功的HTTP状态码为`200`，如果文件正在处理中响应的HTTP状态码为`202`
+!> 文件响应成功的**HTTP状态码（非code）**为`200`，如果文件正在处理中响应的**HTTP状态码（非code）**为`202`
 
 **请求URL**
 
@@ -22,7 +22,9 @@
 
 **返回说明**
 
-返回文件响应，文件格式为 `xlsx`;
+HTTP状态码为`200`返回为文件响应，文件格式为 `xlsx`;
+
+HTTP状态码为`202`返回JSON数据，HTTP状态码为`202`时应当放弃当前请求后续处理，延后一定时间重新发起下载请求。
 
 **对账文件表头**
 
@@ -45,6 +47,6 @@
 | Custom_Name_A         | 客户阿语名称   |
 | Custom_Bank_Name      | 客户银行名称   |
 | Custom_Bank_Code      | 客户银行号     |
-| Custom_Card_No        | 客户银行卡号     |
+| Custom_Card_No        | 客户银行卡号（卡号脱敏，只显示前六后四，中间用*代替）     |
 | Custom_Iban           | 客户IBAN       |
 | Custom_STCPay_Account | 客户Stcpay账号 |
