@@ -40,7 +40,7 @@
   - `{RETURN_URL}`：在用户支付完成后，返回界面的 URL 地址，RETURN_URL 需要进行 URLencode
   - `{LANGUAGE}`：收银台页面默认语言，可选 EN（英语），AR（阿拉伯语）
 
-1. 创建自己的收银台界面，收银台界面中嵌入 iframe 框架，iframe 的 src 指向步骤 1 构造的 URL
+2. 创建自己的收银台界面，收银台界面中嵌入 iframe 框架，iframe 的 src 指向步骤 1 构造的 URL
 
    * 示例代码：
 
