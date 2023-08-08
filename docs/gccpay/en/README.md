@@ -1,9 +1,9 @@
-# GCCPAY Payment API Document
+# SGate Payment API Document
 
 ## Introduction
 
-> System overview: The GCCPAY payment system is used to complete the payment collection of merchants. The main process of docking is that the merchant creates a payment order through the interface, and guides the payer (buyer) to the GCCPAY payment page. After completing the payment, GCCPAY will guide the payer's browser to redirect to the merchant page,GCCPAY will also notify the merchant through the server.
-PS: Please review the newest API Document in GCCPAY our official website: https://gccpay.com/documents/api-summary
+> System overview: The SGate payment system is used to complete the payment collection of merchants. The main process of docking is that the merchant creates a payment order through the interface, and guides the payer (buyer) to the SGate payment page. After completing the payment, SGate will guide the payer's browser to redirect to the merchant page,SGate will also notify the merchant through the server.
+PS: Please review the newest API Document in SGate our official website: https://gccpay.com/documents/api-summary
 
 ## Update History
 

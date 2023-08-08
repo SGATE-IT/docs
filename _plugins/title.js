@@ -8,7 +8,7 @@ window.$docsify.plugins.push((hook) => {
         let nameObj = document.getElementById('doc-name');
         if (urlHashArr.length > 2) {
             let name = urlHashArr[2].toUpperCase();
-            nameObj.innerHTML = name;
+            nameObj.innerHTML = name === 'GCCPAY' ? 'SGate' : naem;
         } else {
             nameObj.innerHTML = window.$docsify.name;
         }
