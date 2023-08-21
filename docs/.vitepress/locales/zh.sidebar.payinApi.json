@@ -1,0 +1,77 @@
+{
+    "/zh/payinApi/": [
+        {
+          "text": "收单 API 文档",
+          "items": [
+            {
+              "text": "简介",
+              "link": "/zh/payinApi/index"
+            },
+            {
+              "text": "名词解释",
+              "link": "/zh/payinApi/glossary/glossary"
+            },
+            {
+              "text": "调用方法",
+              "link": "/zh/payinApi/callMethod/callMethod"
+            },
+            {
+              "text": "商户",
+              "collapsed": false,
+              "items": [
+                { "text": "商户查询", "link": "/zh/payinApi/merchant/merchantQuery"}
+              ]
+            },
+            {
+              "text": "交易",
+              "collapsed": false,
+              "items": [
+                {
+                  "text": "支付",
+                  "collapsed": false,
+                  "items": [
+                    { "text": "收银台", "link": "/zh/payinApi/payment/paymentCashier" },
+                    { "text": "直接支付", "link": "/zh/payinApi/payment/directOrder" },
+                  { "text": "查询订单", "link": "/zh/payinApi/payment/orderQuery" }
+                  ]
+                },
+                {
+                  "text": "退款",
+                  "collapsed": false,
+                  "items": [
+                    { "text": "发起退款", "link": "/zh/payinApi/refund/refundCreate" },
+                    { "text": "查询退款", "link": "/zh/payinApi/refund/refundQuery" }
+                  ]
+                },
+                {
+                  "text": "物流 & 售后",
+                  "collapsed": true,
+                  "items": [
+                    { "text": "设置境内物流信息", "link": "/zh/payinApi/logisticsAfterSale/logistics" },
+                    { "text": "设置海外物流信息", "link": "/zh/payinApi/logisticsAfterSale/overseasLogistics" },
+                    { "text": "设置投递状态", "link": "/zh/payinApi/logisticsAfterSale/deliveryStatus" },
+                    { "text": "设置售后状态", "link": "/zh/payinApi/logisticsAfterSale/afterSaleStatus" }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "日终文件清算",
+              "link": "/zh/payinApi/statement/statement"
+            },
+            {
+              "text": "回调通知",
+              "link": "/zh/payinApi/callback/callbackNotification"
+            },
+            {
+              "text": "附录",
+              "link": "/zh/payinApi/appendix/appendix"
+            },
+            {
+              "text": "更新历史",
+              "link": "/zh/payinApi/history/history"
+            }
+          ]
+        }
+      ]
+}

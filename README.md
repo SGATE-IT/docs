@@ -1,6 +1,6 @@
 
 <div style="text-align: center;">
-    <img src="/docs/_media/sgate.png" style="width: 110px;">
+    <img src="./docs/src/public/images/logo.png" style="width: 110px;">
 </div>
 
 ## About us

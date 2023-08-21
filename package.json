@@ -1,23 +1,13 @@
 {
-  "name": "docs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "devDependencies": {
+    "vitepress": "^1.0.0-rc.4"
+  },
+  "overrides": {
+    "@vitejs/plugin-vue": "4.2.3"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "docsify serve ./"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/SGATE-IT/docs.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SGATE-IT/docs/issues"
-  },
-  "homepage": "https://github.com/SGATE-IT/docs#readme",
-  "dependencies": {
-    "docsify-cli": "^4.4.4"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   }
 }
