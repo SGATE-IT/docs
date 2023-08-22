@@ -32,6 +32,9 @@ export default {
     lastUpdated: {
       text: "上次更新时间"
     },
+    darkModeSwitchLabel: "日/夜间模式",
+    sidebarMenuLabel: "菜单",
+    returnToTopLabel: "返回顶部",
     editLink: {
       pattern: 'https://github.com/SGATE-IT/docs/edit/vitepress/docs/src/:path',
       text: "编辑此页面"
