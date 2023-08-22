@@ -1,0 +1,13 @@
+{
+    "/zh/payinSystem/": [
+        {
+            "text": "收单系统手册",
+            "items": [
+                {
+                    "text": "简介",
+                    "link": "/zh/payinSystem/index"
+                }
+            ]
+        }
+    ]
+}

@@ -10,20 +10,20 @@
 
 #### 服务器信息
 
-- 沙箱环境服务器地址：`sandbox.gcc-pay.com`
+- 沙箱环境服务器地址：`sandbox.sgate.sa`
 
 #### 文件获取规则
 
 - 获取文件列表：
 
 ```shell
-curl "ftp://{USER}:{PASSWORD}@sandbox.gcc-pay.com/" -v --ssl --list-only
+curl "ftp://{USER}:{PASSWORD}@sandbox.sgate.sa/" -v --ssl --list-only
 ```
 
 - 下载对账文件
 
 ```shell
-curl "ftp://{USER}:{PASSWORD}@sandbox.gcc-pay.com/GCCRECO_{MERCHANR_ID}_{YYYYMMDD}_{SESSION_ID}" -v --ssl -o GCCRECO_{MERCHANR_ID}_{YYYYMMDD}_{SESSION_ID}
+curl "ftp://{USER}:{PASSWORD}@sandbox.sgate.sa/GCCRECO_{MERCHANR_ID}_{YYYYMMDD}_{SESSION_ID}" -v --ssl -o GCCRECO_{MERCHANR_ID}_{YYYYMMDD}_{SESSION_ID}
 ```
 
 - `{USER}`：商户在 SGate 系统对账 FTP 账户

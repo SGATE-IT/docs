@@ -1,4 +1,6 @@
 const sidebarPayinApi = require("./zh.sidebar.payinApi.json");
+const sidebarPayinSystem = require("./zh.sidebar.payinSystem.json");
+const sidebarPayoutApi = require("./zh.sidebar.payoutApi.json");
 
 export default {
   label: "简体中文",
@@ -7,22 +9,32 @@ export default {
   themeConfig: {
     nav: [
       { text: "首页", link: "/zh/" },
-      {
-        text: '收单',
-        activeMatch: "/payin[A-Za-z]*/",
-        items: [
-          { text: "收单 API 文档", link: "/zh/payinApi/", activeMatch: "/payinApi/" },
-          { text: "收单系统手册", link: "/zh/payinSystem/", activeMatch: "/payinSystem/" },
-        ]
-      },
+      // {
+      //   text: "收单",
+      //   activeMatch: "/payin[A-Za-z]*/",
+      //   items: [
+      //     { text: "收单 API 文档", link: "/zh/payinApi/", activeMatch: "/payinApi/" },
+      //     { text: "收单系统手册", link: "/zh/payinSystem/", activeMatch: "/payinSystem/" },
+      //   ]
+      // },
+      { text: "收单", link: "/zh/payinApi/", activeMatch: "/payinApi/" },
       { text: "付款", link: "/zh/payoutApi/", activeMatch: "/payoutApi/" },
     ],
     sidebar: {
-      ...sidebarPayinApi
+      ...sidebarPayinApi,
+      ...sidebarPayinSystem,
+      ...sidebarPayoutApi
     },
     docFooter: {
       prev: "上一页",
       next: "下一页",
+    },
+    lastUpdated: {
+      text: "上次更新时间"
+    },
+    editLink: {
+      pattern: 'https://github.com/SGATE-IT/docs/edit/vitepress/docs/src/:path',
+      text: "编辑此页面"
     },
     outline: "deep",
     outlineTitle: "文档导读",

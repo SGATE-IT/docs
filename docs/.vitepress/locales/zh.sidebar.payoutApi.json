@@ -1,0 +1,92 @@
+{
+    "/zh/payoutApi/": [
+        {
+            "text": "付款 API 文档",
+            "items": [
+                {
+                    "text": "简介",
+                    "link": "/zh/payoutApi/index"
+                },
+                {
+                    "text": "接口规则",
+                    "collapsed": true,
+                    "items": [
+                        { "text": "规则说明", "link": "/zh/payoutApi/apiRule/illustrate" },
+                        { "text": "证书/密钥", "link": "/zh/payoutApi/apiRule/certificateKey" },
+                        { "text": "敏感信息处理", "link": "/zh/payoutApi/apiRule/sensitive" },
+                        { "text": "签名规则", "link": "/zh/payoutApi/apiRule/sign" },
+                        { "text": "请求/响应头", "link": "/zh/payoutApi/apiRule/header" },
+                        { "text": "响应消息格式", "link": "/zh/payoutApi/apiRule/result" },
+                        { "text": "服务器信息", "link": "/zh/payoutApi/apiRule/service" }
+                    ]
+                },
+                {
+                    "text": "接口字典",
+                    "collapsed": false,
+                    "items": [
+                        {
+                            "text": "商户",
+                            "collapsed": false,
+                            "items": [
+                                { "text": "查询余额", "link": "/zh/payoutApi/merchant/balance" }
+                            ]
+                        },
+                        {
+                            "text": "客户",
+                            "collapsed": false,
+                            "items": [
+                                { "text": "创建客户", "link": "/zh/payoutApi/custom/customCreate" },
+                                { "text": "查询客户列表", "link": "/zh/payoutApi/custom/customList" },
+                                { "text": "查询单个客户", "link": "/zh/payoutApi/custom/customDetail" },
+                                { "text": "更新客户", "link": "/zh/payoutApi/custom/customUpdate" },
+                                { "text": "更新客户资料", "link": "/zh/payoutApi/custom/customUpdateFile" }
+                            ]
+                        },
+                        {
+                            "text": "银行",
+                            "collapsed": false,
+                            "items": [
+                                { "text": "查询银行列表", "link": "/zh/payoutApi/banks/bankList" }
+                            ]
+                        },
+                        {
+                            "text": "代付工单",
+                            "collapsed": false,
+                            "items": [
+                                { "text": "创建代付工单", "link": "/zh/payoutApi/payout/payoutCreate" },
+                                { "text": "查询代付工单列表", "link": "/zh/payoutApi/payout/payoutList" },
+                                { "text": "查询单个代付工单", "link": "/zh/payoutApi/payout/payoutDetail" }
+                            ]
+                        },
+                        {
+                            "text": "对账单",
+                            "collapsed": false,
+                            "items": [
+                                { "text": "下载对账单", "link": "/zh/payoutApi/statement/statement" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "回调通知",
+                    "link": "/zh/payoutApi/notification/notification"
+                },
+                {
+                    "text": "附录",
+                    "collapsed": true,
+                    "items": [
+                        { "text": "状态码", "link": "/zh/payoutApi/appendix/statusCode" },
+                        { "text": "客户状态", "link": "/zh/payoutApi/appendix/customStatus" },
+                        { "text": "代付工单状态", "link": "/zh/payoutApi/appendix/paymentStatus" },
+                        { "text": "付款方式", "link": "/zh/payoutApi/appendix/paymentMethod" },
+                        { "text": "支持币种", "link": "/zh/payoutApi/appendix/currency" }
+                    ]
+                },
+                {
+                    "text": "更新历史",
+                    "link": "/zh/payoutApi/history/history"
+                }
+            ]
+        }
+    ]
+}
