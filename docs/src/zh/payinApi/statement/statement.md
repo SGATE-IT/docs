@@ -1,12 +1,13 @@
-# 日终文件清算
+# 对账文件
 
-## 对账文件传输
+## 文件传输
 
 ### 文件生成时间
 
 在 D 日 01:00:00 AM（GMT+3）生成 D-1 日对账文件
 
 ### 文件获取
+<br>
 
 #### 服务器信息
 
@@ -23,16 +24,16 @@ curl "ftp://{USER}:{PASSWORD}@sandbox.sgate.sa/" -v --ssl --list-only
 - 下载对账文件
 
 ```shell
-curl "ftp://{USER}:{PASSWORD}@sandbox.sgate.sa/GCCRECO_{MERCHANR_ID}_{YYYYMMDD}_{SESSION_ID}" -v --ssl -o GCCRECO_{MERCHANR_ID}_{YYYYMMDD}_{SESSION_ID}
+curl "ftp://{USER}:{PASSWORD}@sandbox.sgate.sa/{YYYYMMDD}/GCCRECO_{MERCHANR_ID}_{YYYYMMDD}_{SESSION_ID}.csv" -v --ssl -o "GCCRECO_{MERCHANR_ID}_{YYYYMMDD}_{SESSION_ID}.csv"
 ```
 
-- `{USER}`：商户在 SGate 系统对账 FTP 账户
-- `{PASSWORD}`：商户在 SGate 系统对账 FTP 账户密码
-- `{MERCHANR_ID}`：商户在 SGate 系统中的商户号
-- `{YYYYMMDD}`：交易日期: D-1 日
-- `{SESSION_ID}`：对账场次号，取值为 01-09，无多场次对账则默认取值为 01
+1. `{USER}`：商户在 SGate 系统对账 FTP 账户
+2. `{PASSWORD}`：商户在 SGate 系统对账 FTP 账户密码
+3. `{MERCHANR_ID}`：商户在 SGate 系统中的商户号
+4. `{YYYYMMDD}`：交易日期: D-1 日，格式：`yyyy-MM-dd`，示例：`2023-08-21`
+5. `{SESSION_ID}`：对账场次号，取值为 01-09，无多场次对账则默认取值为 01
 
-## 对账文件基本信息
+## 文件基本信息
 
 ### 文件格式及编码方式
 
@@ -43,7 +44,7 @@ curl "ftp://{USER}:{PASSWORD}@sandbox.sgate.sa/GCCRECO_{MERCHANR_ID}_{YYYYMMDD}_
 
 对账文件名称：`GCCRECO_{MERCHANR_ID}_{YYYYMMDD}_{SESSION_ID}`
 - `{MERCHANR_ID}`：商户在 SGate 系统中的商户号
-- `{YYYYMMDD}`：交易日期: D-1 日
+- `{YYYYMMDD}`：交易日期: D-1 日，格式：`yyyy-MM-dd`，示例：`2023-08-21`
 - `{SESSION_ID}`：对账场次号，取值为 01-09，无多场次对账则默认取值为 01
 
 ### 数据类型
@@ -53,7 +54,7 @@ curl "ftp://{USER}:{PASSWORD}@sandbox.sgate.sa/GCCRECO_{MERCHANR_ID}_{YYYYMMDD}_
 | 1    | T（Text）    | 文本字段，可使用字母及中文等，可以为空 |
 | 2    | N（Numeric） | 数字字段，不可为空                     |
 
-## 对账文件内容
+## 文件内容
 
 ### 文件明细记录
 

@@ -35,10 +35,10 @@ export default {
     darkModeSwitchLabel: "日/夜间模式",
     sidebarMenuLabel: "菜单",
     returnToTopLabel: "返回顶部",
-    editLink: {
-      pattern: 'https://github.com/SGATE-IT/docs/edit/vitepress/docs/src/:path',
-      text: "编辑此页面"
-    },
+    // editLink: {
+    //   pattern: 'https://github.com/SGATE-IT/docs/edit/vitepress/docs/src/:path',
+    //   text: "编辑此页面"
+    // },
     outline: "deep",
     outlineTitle: "文档导读",
     search: {

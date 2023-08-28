@@ -1,0 +1,235 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="960px" height="720px" viewBox="-0.5 -0.5 960 720" style="overflow: visible;">
+    <defs></defs>
+    <g>
+        <rect x="387" y="42" width="30" height="675" rx="4.5" ry="4.5" fill="#9ac7bf"
+            stroke="#000000" pointer-events="all"></rect>
+        <rect x="382" y="2" width="40" height="20" fill="none" stroke="none" pointer-events="all"></rect>
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 38px; height: 1px; padding-top: 12px; margin-left: 383px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                            商户</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+        <rect x="767" y="42" width="30" height="675" rx="4.5" ry="4.5" fill="#ffce9f"
+            stroke="#000000" pointer-events="all"></rect>
+        <rect x="762" y="2" width="40" height="20" fill="none" stroke="none" pointer-events="all"></rect>
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 38px; height: 1px; padding-top: 12px; margin-left: 763px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                            SGate</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+        <path d="M 37 77 L 380.63 77" fill="none" stroke="#cb4100" stroke-miterlimit="10"
+            pointer-events="stroke"></path>
+        <path d="M 385.88 77 L 378.88 80.5 L 380.63 77 L 378.88 73.5 Z" fill="#cb4100"
+            stroke="#cb4100" stroke-miterlimit="10" pointer-events="all"></path>
+        <rect x="167" y="47" width="90" height="20" fill="none" stroke="none" pointer-events="all"></rect>
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 57px; margin-left: 168px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">1.
+                            创建支付交易</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+        <path d="M 767 166.48 L 423.37 165.52" fill="none" stroke="#cb4100" stroke-miterlimit="10"
+            pointer-events="stroke"></path>
+        <path d="M 418.12 165.5 L 425.13 162.02 L 423.37 165.52 L 425.11 169.02 Z" fill="#cb4100"
+            stroke="#cb4100" stroke-miterlimit="10" pointer-events="all"></path>
+        <rect x="563" y="144" width="90" height="20" fill="none" stroke="none" pointer-events="all"></rect>
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 154px; margin-left: 564px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">3.
+                            返回订单详情</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+        <path d="M 767 567.98 L 423.37 567.02" fill="none" stroke="#cb4100" stroke-miterlimit="10"
+            pointer-events="stroke"></path>
+        <path d="M 418.12 567 L 425.13 563.52 L 423.37 567.02 L 425.11 570.52 Z" fill="#cb4100"
+            stroke="#cb4100" stroke-miterlimit="10" pointer-events="all"></path>
+        <rect x="462" y="537" width="270" height="20" fill="none" stroke="none" pointer-events="all"></rect>
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 268px; height: 1px; padding-top: 547px; margin-left: 463px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">9.
+                            返回支付结果</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+        <path d="M 37 392.12 L 761.62 390.9" fill="none" stroke="#cb4100" stroke-miterlimit="10"
+            pointer-events="stroke"></path>
+        <path d="M 766.87 390.89 L 759.88 394.4 L 761.62 390.9 L 759.87 387.4 Z" fill="#cb4100"
+            stroke="#cb4100" stroke-miterlimit="10" pointer-events="all"></path>
+        <rect x="177.99" y="362" width="110" height="20" fill="none" stroke="none"
+            pointer-events="all"></rect>
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 108px; height: 1px; padding-top: 372px; margin-left: 179px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">7.
+                            进行 3DS 验证</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+        <rect x="7" y="42" width="30" height="675" rx="4.5" ry="4.5" fill="#f19c99" stroke="#000000"
+            pointer-events="all"></rect>
+        <rect x="2" y="2" width="40" height="20" fill="none" stroke="none" pointer-events="all"></rect>
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 38px; height: 1px; padding-top: 12px; margin-left: 3px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                            客户</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+        <path d="M 417 107 L 760.63 107" fill="none" stroke="#cb4100" stroke-miterlimit="10"
+            pointer-events="stroke"></path>
+        <path d="M 765.88 107 L 758.88 110.5 L 760.63 107 L 758.88 103.5 Z" fill="#cb4100"
+            stroke="#cb4100" stroke-miterlimit="10" pointer-events="all"></path>
+        <rect x="562" y="77" width="90" height="20" fill="none" stroke="none" pointer-events="all"></rect>
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 87px; margin-left: 563px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">2.
+                            创建支付订单</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+        <path d="M 418 235 L 761.63 235" fill="none" stroke="#cb4100" stroke-miterlimit="10"
+            pointer-events="stroke"></path>
+        <path d="M 766.88 235 L 759.88 238.5 L 761.63 235 L 759.88 231.5 Z" fill="#cb4100"
+            stroke="#cb4100" stroke-miterlimit="10" pointer-events="all"></path>
+        <rect x="563" y="207" width="90" height="20" fill="none" stroke="none" pointer-events="all"></rect>
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 217px; margin-left: 564px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">4.
+                            补充支付信息</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+        <path d="M 768 269.48 L 424.37 268.52" fill="none" stroke="#cb4100" stroke-miterlimit="10"
+            pointer-events="stroke"></path>
+        <path d="M 419.12 268.5 L 426.13 265.02 L 424.37 268.52 L 426.11 272.02 Z" fill="#cb4100"
+            stroke="#cb4100" stroke-miterlimit="10" pointer-events="all"></path>
+        <rect x="564" y="247" width="90" height="20" fill="none" stroke="none" pointer-events="all"></rect>
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 94px; height: 1px; padding-top: 257px; margin-left: 565px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">5.
+                            返回 3DS 链接</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+        <path d="M 388 299.48 L 44.37 298.52" fill="none" stroke="#cb4100" stroke-miterlimit="10"
+            pointer-events="stroke"></path>
+        <path d="M 39.12 298.5 L 46.13 295.02 L 44.37 298.52 L 46.11 302.02 Z" fill="#cb4100"
+            stroke="#cb4100" stroke-miterlimit="10" pointer-events="all"></path>
+        <rect x="184" y="277" width="108" height="20" fill="none" stroke="none" pointer-events="all"></rect>
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 106px; height: 1px; padding-top: 287px; margin-left: 185px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">6.
+                            跳转至 3DS 链接</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+        <path d="M 797 447 L 852 447 Q 862 447 862 457 L 862 486 Q 862 496 852 496 L 803.37 496"
+            fill="none" stroke="#cb4100" stroke-miterlimit="10" pointer-events="stroke"></path>
+        <path d="M 798.12 496 L 805.12 492.5 L 803.37 496 L 805.12 499.5 Z" fill="#cb4100"
+            stroke="#cb4100" stroke-miterlimit="10" pointer-events="all"></path>
+        <rect x="847" y="463" width="110" height="20" fill="none" stroke="none" pointer-events="all"></rect>
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 108px; height: 1px; padding-top: 473px; margin-left: 848px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">8.
+                            进行支付</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+        <path d="M 387 639.48 L 43.37 638.52" fill="none" stroke="#cb4100" stroke-miterlimit="10"
+            pointer-events="stroke"></path>
+        <path d="M 38.12 638.5 L 45.13 635.02 L 43.37 638.52 L 45.11 642.02 Z" fill="#cb4100"
+            stroke="#cb4100" stroke-miterlimit="10" pointer-events="all"></path>
+        <rect x="183" y="617" width="108" height="20" fill="none" stroke="none" pointer-events="all"></rect>
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 106px; height: 1px; padding-top: 627px; margin-left: 184px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">10.
+                            展示支付结果</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+    </g>
+</svg>

@@ -7,8 +7,12 @@
 :::
 
 ::: tip 提示
-接口返回里的 redirectURL 就是后续要引导用户浏览器去往的地址，用户验证支付完毕后会自动跳转回到前面请求指定的 returnURL
+请求参数 returnURL 为支付完成后返回的商户结果页，返回参数 redirectURL 为 3DS 验证页面
 :::
+
+### 流程说明
+
+![img](/images/payinApi_zh/direct-order.svg)
 
 ## 直接支付 API
 

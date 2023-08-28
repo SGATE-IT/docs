@@ -64,12 +64,12 @@
                             "items": [
                                 { "text": "下载对账单", "link": "/zh/payoutApi/statement/statement" }
                             ]
+                        },
+                        {
+                            "text": "回调通知",
+                            "link": "/zh/payoutApi/notification/notification"
                         }
                     ]
-                },
-                {
-                    "text": "回调通知",
-                    "link": "/zh/payoutApi/notification/notification"
                 },
                 {
                     "text": "附录",
@@ -81,10 +81,6 @@
                         { "text": "付款方式", "link": "/zh/payoutApi/appendix/paymentMethod" },
                         { "text": "支持币种", "link": "/zh/payoutApi/appendix/currency" }
                     ]
-                },
-                {
-                    "text": "更新历史",
-                    "link": "/zh/payoutApi/history/history"
                 }
             ]
         }

@@ -11,7 +11,7 @@ export default defineConfig({
       { rel: 'icon', href: '/images/logo.png' }
     ]
   ],
-  lastUpdated: true,
+  lastUpdated: false,
   srcDir: './src',
   locales: {
     root: zhConfig,
