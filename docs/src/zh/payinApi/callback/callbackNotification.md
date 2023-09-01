@@ -11,7 +11,7 @@
    | _type    | string   | 回调类型：<br> payment：完成支付 <br> refund：完成退款 | "payment"                        |
 
 ## 流程说明
-select * from risk_pg_order order by createdAt desc limit 0,1\G;
+
 ![img](/images/payinApi_zh/callback-notification.svg)
 
 1. 商户调用 SGate “创建订单“ 或 "发起退款" 接口创建交易
