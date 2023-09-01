@@ -1,6 +1,6 @@
 # 服务器信息
 
-- **API 服务地址：**`{HOST}/api_v1`
+- **API 服务地址：**`{HOST}/openApi/v1`
   - `HOST`: 域名
     - 沙箱环境域名：`http://vbank.test.sgate.sa`
     - 生产环境域名：`https://vbank.sgate.sa`
