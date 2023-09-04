@@ -2,7 +2,7 @@
 
 ## 功能简述
 
-在 UTC 时区 D+1 日 1:00 AM 生成 D 日的对账文件:
+在 Asia/Riyadh (+03, +0300) 时区 D+1 日 1:00 AM 生成 D 日的对账文件:
 
 - 文件名称为：`GCCRECO_{MERCHANT_NAME}_{MERCHANT_ID}_{YYYYMMDD}`
   - `MERCHANT_NAME`: 商户名称

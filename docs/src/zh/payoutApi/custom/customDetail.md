@@ -28,8 +28,8 @@
 商户客户 ID 和系统客户 ID 传其中一个，如果都不传接口会响应参数缺失错误。
 :::
 
-| **参数**    | **必填** | **类型** | **默认值** | **描述**   |
-| ----------- | -------- | -------- | ---------- | ---------- |
+| **参数**    | **必填** | **类型** | **默认值** | **描述**    |
+| ----------- | -------- | -------- | ---------- | ----------- |
 | mercustomid | 否       | string   | -          | 商户客户 ID |
 | customid    | 否       | string   | -          | 系统客户 ID |
 
@@ -56,8 +56,8 @@
 | status            | number   | [客户状态](/zh/payoutApi/appendix/customStatus)                                                      |
 | statusdesc        | number   | 客户状态说明                                                                                         |
 | demand_perfection | array    | 用户当前待完善哪些资料                                                                               |
-| created_at        | number   | 创建时间（UTC时区）                                                                                  |
-| updated_at        | number   | 更新时间（UTC时区）                                                                                  |
+| created_at        | number   | 创建时间                                                                                             |
+| updated_at        | number   | 更新时间                                                                                             |
 
 **响应参数示例**
 

@@ -70,8 +70,8 @@
 | status            | number   | [客户状态](/zh/payoutApi/appendix/customStatus)                                                      |
 | statusdesc        | number   | 客户状态说明                                                                                         |
 | demand_perfection | array    | 用户当前待完善哪些资料                                                                               |
-| created_at        | number   | 创建时间（UTC 时区）                                                                                 |
-| updated_at        | number   | 更新时间（UTC 时区）                                                                                 |
+| created_at        | number   | 创建时间                                                                                             |
+| updated_at        | number   | 更新时间                                                                                             |
 
 **响应参数示例**
 

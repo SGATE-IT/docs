@@ -54,10 +54,10 @@
 | fee           | float    | 手续费                                               |
 | status        | number   | [代付工单状态](/zh/payoutApi/appendix/paymentStatus) |
 | statusdesc    | string   | 状态说明                                             |
-| confirmtime   | number   | 打款完成时间（UTC时区）                              |
+| confirmtime   | number   | 打款完成时间                                         |
 | custominfo    | object   | 代付工单创建时客户数据快照，数据结构同客户数据       |
-| created_at    | number   | 创建时间（UTC时区）                                  |
-| updated_at    | number   | 更新时间（UTC时区）                                  |
+| created_at    | number   | 创建时间                                             |
+| updated_at    | number   | 更新时间                                             |
 
 **响应参数示例**
 
