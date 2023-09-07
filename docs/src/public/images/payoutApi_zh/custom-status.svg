@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="-95 166 797 500" width="797" height="500">
+  <defs>
+    <font-face font-family="STHeiti" font-size="10" panose-1="2 1 6 0 4 1 1 1 1 1" units-per-em="1000" underline-position="-133" underline-thickness="20" slope="0" x-height="598" cap-height="787" ascent="860.0006" descent="-139.99939" font-weight="700">
+      <font-face-src>
+        <font-face-name name="STHeiti"/>
+      </font-face-src>
+    </font-face>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="#cb4100">
+      <g>
+        <path d="M 8 0 L 0 -3 L 0 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <font-face font-family="PingFang SC" font-size="10" panose-1="2 11 4 0 0 0 0 0 0 0" units-per-em="1000" underline-position="-150" underline-thickness="58" slope="0" x-height="600" cap-height="860" ascent="1060.0021" descent="-340.0007" font-weight="400">
+      <font-face-src>
+        <font-face-name name="PingFangSC-Regular"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.18\n2023-09-07 09:29:25 +0000</metadata>
+  <g id="Canvas_1" fill="none" stroke-dasharray="none" fill-opacity="1" stroke="none" stroke-opacity="1">
+    <title>Canvas 1</title>
+    <g id="Canvas_1_Layer_1">
+      <title>Layer 1</title>
+      <g id="Graphic_2">
+        <path d="M 447.5 171.5 L 510.5 171.5 C 517.952 171.5 524 179.564 524 189.5 C 524 199.436 517.952 207.5 510.5 207.5 L 447.5 207.5 C 440.048 207.5 434 199.436 434 189.5 C 434 179.564 440.048 171.5 447.5 171.5 Z" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(448 184.5)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="21" y="9">开始</tspan>
+        </text>
+      </g>
+      <g id="Graphic_3">
+        <rect x="434" y="280.5" width="90" height="36" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(439 293.5)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="0" y="9">状态：待完善资料</tspan>
+        </text>
+      </g>
+      <g id="Line_4">
+        <line x1="479" y1="207.5" x2="479" y2="270.6" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_5">
+        <rect x="611" y="280.5" width="90" height="36" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(616 293.5)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="20" y="9">更新信息</tspan>
+        </text>
+      </g>
+      <g id="Graphic_6">
+        <path d="M 656 379.5 L 701 397.5 L 656 415.5 L 611 397.5 Z" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(628.15 392.14)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="8.75" y="9">判断封禁</tspan>
+        </text>
+      </g>
+      <g id="Line_7">
+        <line x1="524" y1="298.5" x2="601.1" y2="298.5" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_8">
+        <line x1="656" y1="316.5" x2="656" y2="369.6" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_9">
+        <path d="M 447.5 629 L 510.5 629 C 517.952 629 524 637.064 524 647 C 524 656.936 517.952 665 510.5 665 L 447.5 665 C 440.048 665 434 656.936 434 647 C 434 637.064 440.048 629 447.5 629 Z" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(448 642)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="21" y="9">结束</tspan>
+        </text>
+      </g>
+      <g id="Line_11">
+        <path d="M 656 415.5 L 655.5 648 L 533.8997 647.0753" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_12">
+        <text transform="translate(662.5 516.5)" fill="#cb4100">
+          <tspan font-family="PingFang SC" font-size="10" font-weight="400" fill="#cb4100" x="0" y="11">是</tspan>
+        </text>
+      </g>
+      <g id="Line_13">
+        <path d="M 611 397.5 L 479 397 L 479 326.4" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_15">
+        <rect x="257" y="280.5" width="90" height="36" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(262 293.5)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="20" y="9">完善资料</tspan>
+        </text>
+      </g>
+      <g id="Line_17">
+        <line x1="434" y1="298.5" x2="356.9" y2="298.5" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_18">
+        <rect x="257" y="379.5" width="90" height="36" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(262 392.5)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="10" y="9">状态：待审核</tspan>
+        </text>
+      </g>
+      <g id="Line_19">
+        <line x1="302" y1="316.5" x2="302" y2="369.6" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_20">
+        <path d="M 9.5 379.5 L 54.5 397.5 L 9.5 415.5 L -35.5 397.5 Z" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(-18.35 392.14)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="18.75" y="9">审核</tspan>
+        </text>
+      </g>
+      <g id="Graphic_21">
+        <rect x="257" y="456.5" width="90" height="36" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(262 469.5)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="20" y="9">更新信息</tspan>
+        </text>
+      </g>
+      <g id="Line_24">
+        <line x1="302" y1="415.5" x2="302" y2="446.6" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_25">
+        <path d="M 347 562.5 L 434 562 L 434 398 L 356.89984 397.5569" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_26">
+        <line x1="257" y1="397.5" x2="64.4" y2="397.5" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_27">
+        <rect x="-35.5" y="280.5" width="90" height="36" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(-30.5 293.5)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="5" y="9">状态：审核失败</tspan>
+        </text>
+      </g>
+      <g id="Line_29">
+        <line x1="9.5" y1="379.5" x2="9.5" y2="326.4" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_31">
+        <text transform="translate(12 345.5)" fill="#cb4100">
+          <tspan font-family="PingFang SC" font-size="10" font-weight="400" fill="#cb4100" x="0" y="11">拒绝</tspan>
+        </text>
+      </g>
+      <g id="Graphic_32">
+        <rect x="-35.5" y="456.5" width="90" height="36" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(-30.5 469.5)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="5" y="9">状态：审核成功</tspan>
+        </text>
+      </g>
+      <g id="Graphic_34">
+        <rect x="-35.5" y="171.5" width="90" height="36" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(-30.5 184.5)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="20" y="9">更新信息</tspan>
+        </text>
+      </g>
+      <g id="Line_35">
+        <line x1="9.5" y1="280.5" x2="9.5" y2="217.4" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_37">
+        <line x1="9.5" y1="415.5" x2="9.5" y2="446.6" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_38">
+        <text transform="translate(12 423.5)" fill="#cb4100">
+          <tspan font-family="PingFang SC" font-size="10" font-weight="400" fill="#cb4100" x="0" y="11">通过</tspan>
+        </text>
+      </g>
+      <g id="Line_39">
+        <line x1="54.5" y1="474.5" x2="247.1" y2="474.5" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_40">
+        <rect x="-35.5" y="544.5" width="90" height="36" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(-30.5 557.5)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="15" y="9">状态：封禁</tspan>
+        </text>
+      </g>
+      <g id="Graphic_42">
+        <rect x="-35.5" y="629" width="90" height="36" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(-30.5 642)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="30" y="9">解封</tspan>
+        </text>
+      </g>
+      <g id="Line_43">
+        <line x1="9.5" y1="492.5" x2="9.5" y2="534.6" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_44">
+        <line x1="9.5" y1="580.5" x2="9.5" y2="619.1" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_45">
+        <path d="M -35.5 647 L -94.5 647 L -93.5 474 L -45.39963 474.41466" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_46">
+        <path d="M 302 544.5 L 347 562.5 L 302 580.5 L 257 562.5 Z" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(274.15 557.14)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="8.75" y="9">判断封禁</tspan>
+        </text>
+      </g>
+      <g id="Line_47">
+        <line x1="302" y1="492.5" x2="302" y2="534.6" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_48">
+        <path d="M 302 580.5 L 301.5 648 L 424.1003 647.0747" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_49">
+        <text transform="translate(548.5 400)" fill="#cb4100">
+          <tspan font-family="PingFang SC" font-size="10" font-weight="400" fill="#cb4100" x="0" y="11">否</tspan>
+        </text>
+      </g>
+      <g id="Graphic_50">
+        <text transform="translate(439 467.5)" fill="#cb4100">
+          <tspan font-family="PingFang SC" font-size="10" font-weight="400" fill="#cb4100" x="0" y="11">否</tspan>
+        </text>
+      </g>
+      <g id="Graphic_51">
+        <text transform="translate(304.5 611)" fill="#cb4100">
+          <tspan font-family="PingFang SC" font-size="10" font-weight="400" fill="#cb4100" x="0" y="11">是</tspan>
+        </text>
+      </g>
+      <g id="Graphic_52">
+        <path d="M 155.75 171.5 L 200.75 189.5 L 155.75 207.5 L 110.75 189.5 Z" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(127.9 184.14)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="8.75" y="9">判断封禁</tspan>
+        </text>
+      </g>
+      <g id="Graphic_53">
+        <path d="M 270.5 171.5 L 333.5 171.5 C 340.952 171.5 347 179.564 347 189.5 C 347 199.436 340.952 207.5 333.5 207.5 L 270.5 207.5 C 263.048 207.5 257 199.436 257 189.5 C 257 179.564 263.048 171.5 270.5 171.5 Z" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(271 184.5)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="21" y="9">结束</tspan>
+        </text>
+      </g>
+      <g id="Line_54">
+        <line x1="54.5" y1="189.5" x2="100.85" y2="189.5" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_55">
+        <line x1="200.75" y1="189.5" x2="247.1" y2="189.5" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_56">
+        <text transform="translate(221 171.5)" fill="#cb4100">
+          <tspan font-family="PingFang SC" font-size="10" font-weight="400" fill="#cb4100" x="0" y="11">是</tspan>
+        </text>
+      </g>
+      <g id="Line_57">
+        <path d="M 155.75 207.5 L 155.5 348 L 292.1013 345.77904" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_58">
+        <text transform="translate(158.5 256)" fill="#cb4100">
+          <tspan font-family="PingFang SC" font-size="10" font-weight="400" fill="#cb4100" x="0" y="11">否</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>
