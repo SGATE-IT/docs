@@ -133,7 +133,7 @@
 ::: details 点击查看响应参数示例
 ```json
 {
-  "id": "M448726T2022123112531745487632", // 支付订单ID,orderId
+  "id": "M448726T2022123112531745487632", // 支付订单ID, orderId
   "clientId": "CLT9208307", // ClientID
   "merchantId": "M448726", // 商户ID
   "status": "pending", // 订单状态
@@ -165,6 +165,7 @@
 `https://sandbox.sgate.sa/order/{ORDER_ID}?ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}`
 
 #### 指定具体支付方式收银台链接 URL
+<br>
 
 ##### 卡支付
 
