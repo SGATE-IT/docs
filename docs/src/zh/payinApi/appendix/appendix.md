@@ -32,3 +32,7 @@ GitHub：https://github.com/SGATE-IT/gccpay-client-demo
 ::: tip 提示
 所有限额为网关交易限额，如果用户银行卡有限额且小于网关交易限额，则以用户银行卡限额为准
 :::
+
+::: tip 提示
+STCPay 单笔支付不能超过 500 SAR
+:::
