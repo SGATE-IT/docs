@@ -1,0 +1,88 @@
+{
+    "/en/payoutApi/": [
+        {
+            "text": "Payment API Document",
+            "items": [
+                {
+                    "text": "Introduction",
+                    "link": "/en/payoutApi/index"
+                },
+                {
+                    "text": "API Rules",
+                    "collapsed": true,
+                    "items": [
+                        { "text": "Rule Description", "link": "/en/payoutApi/apiRule/illustrate" },
+                        { "text": "Certificate/Key", "link": "/en/payoutApi/apiRule/certificateKey" },
+                        { "text": "Sensitive Information Processing", "link": "/en/payoutApi/apiRule/sensitive" },
+                        { "text": "Signature Rules", "link": "/en/payoutApi/apiRule/sign" },
+                        { "text": "Request/Response Header", "link": "/en/payoutApi/apiRule/header" },
+                        { "text": "Response Message Format", "link": "/en/payoutApi/apiRule/result" },
+                        { "text": "Server Information", "link": "/en/payoutApi/apiRule/service" }
+                    ]
+                },
+                {
+                    "text": "API Dictionary",
+                    "collapsed": false,
+                    "items": [
+                        {
+                            "text": "Merchant",
+                            "collapsed": false,
+                            "items": [
+                                { "text": "Query Balance", "link": "/en/payoutApi/merchant/balance" }
+                            ]
+                        },
+                        {
+                            "text": "Custom",
+                            "collapsed": false,
+                            "items": [
+                                { "text": "Create Customer", "link": "/en/payoutApi/custom/customCreate" },
+                                { "text": "Query Customer List", "link": "/en/payoutApi/custom/customList" },
+                                { "text": "Query individual customers", "link": "/en/payoutApi/custom/customDetail" },
+                                { "text": "Update Customers", "link": "/en/payoutApi/custom/customUpdate" },
+                                { "text": "Update Customer Information", "link": "/en/payoutApi/custom/customUpdateFile" }
+                            ]
+                        },
+                        {
+                            "text": "Bank",
+                            "collapsed": false,
+                            "items": [
+                                { "text": "Query Bank List", "link": "/en/payoutApi/banks/bankList" }
+                            ]
+                        },
+                        {
+                            "text": "Payment Order",
+                            "collapsed": false,
+                            "items": [
+                                { "text": "Create Payment Order", "link": "/en/payoutApi/payout/payoutCreate" },
+                                { "text": "Query List of Payment Orders", "link": "/en/payoutApi/payout/payoutList" },
+                                { "text": "Query Single Payment Order", "link": "/en/payoutApi/payout/payoutDetail" }
+                            ]
+                        },
+                        {
+                            "text": "Statement",
+                            "collapsed": false,
+                            "items": [
+                                { "text": "Download Statement", "link": "/en/payoutApi/statement/statement" }
+                            ]
+                        },
+                        {
+                            "text": "Callback Notification",
+                            "link": "/en/payoutApi/notification/notification"
+                        }
+                    ]
+                },
+                {
+                    "text": "Appendix",
+                    "collapsed": true,
+                    "items": [
+                        { "text": "Status Code", "link": "/en/payoutApi/appendix/statusCode" },
+                        { "text": "Customer Status", "link": "/en/payoutApi/appendix/customStatus" },
+                        { "text": "Payment Order Status", "link": "/en/payoutApi/appendix/paymentStatus" },
+                        { "text": "Payment Method", "link": "/en/payoutApi/appendix/paymentMethod" },
+                        { "text": "Support Currency", "link": "/en/payoutApi/appendix/currency" }
+                    ]
+                }
+            ]
+        }
+    ]
+}

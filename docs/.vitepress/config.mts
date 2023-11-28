@@ -15,7 +15,7 @@ export default defineConfig({
   srcDir: './src',
   locales: {
     root: zhConfig,
-    // en: enConfig,
+    en: enConfig,
   },
   themeConfig: {
     logo: '/images/logo.png',

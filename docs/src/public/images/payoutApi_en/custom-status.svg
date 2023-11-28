@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="-95 166 719 500" width="719" height="500">
+  <defs>
+    <font-face font-family="STHeiti" font-size="10" panose-1="2 1 6 0 4 1 1 1 1 1" units-per-em="1000" underline-position="-133" underline-thickness="20" slope="0" x-height="598" cap-height="787" ascent="860.0006" descent="-139.99939" font-weight="700">
+      <font-face-src>
+        <font-face-name name="STHeiti"/>
+      </font-face-src>
+    </font-face>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="#cb4100">
+      <g>
+        <path d="M 8 0 L 0 -3 L 0 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <font-face font-family="PingFang SC" font-size="10" panose-1="2 11 4 0 0 0 0 0 0 0" units-per-em="1000" underline-position="-150" underline-thickness="58" slope="0" x-height="600" cap-height="860" ascent="1060.0021" descent="-340.0007" font-weight="400">
+      <font-face-src>
+        <font-face-name name="PingFangSC-Regular"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.18\n2023-11-28 09:30:19 +0000</metadata>
+  <g id="Canvas_1" stroke="none" fill="none" stroke-opacity="1" fill-opacity="1" stroke-dasharray="none">
+    <title>Canvas 1</title>
+    <g id="Canvas_1_Layer_1">
+      <title>Layer 1</title>
+      <g id="Graphic_2">
+        <path d="M 498 171.5 L 561 171.5 C 568.452 171.5 574.5 179.564 574.5 189.5 C 574.5 199.436 568.452 207.5 561 207.5 L 498 207.5 C 490.548 207.5 484.5 199.436 484.5 189.5 C 484.5 179.564 490.548 171.5 498 171.5 Z" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(498.5 184.5)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="17.465" y="9">Begin</tspan>
+        </text>
+      </g>
+      <g id="Graphic_3">
+        <rect x="484.5" y="280.5" width="90" height="36" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(489.5 283.5)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="24.34" y="9">Status: </tspan>
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="6.125" y="19">Information to </tspan>
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="8.765" y="29">be improved</tspan>
+        </text>
+      </g>
+      <g id="Line_4">
+        <line x1="529.5" y1="207.5" x2="529.5" y2="270.6" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_5">
+        <rect x="484.5" y="379.5" width="90" height="36" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(489.5 387.5)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="21.53" y="9">Update </tspan>
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="12.475" y="19">information</tspan>
+        </text>
+      </g>
+      <g id="Graphic_9">
+        <path d="M 498 629 L 561 629 C 568.452 629 574.5 637.064 574.5 647 C 574.5 656.936 568.452 665 561 665 L 498 665 C 490.548 665 484.5 656.936 484.5 647 C 484.5 637.064 490.548 629 498 629 Z" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(498.5 642)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="21.845" y="9">End</tspan>
+        </text>
+      </g>
+      <g id="Graphic_15">
+        <rect x="257" y="280.5" width="90" height="36" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(262 288.5)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="19.97" y="9">Improve </tspan>
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="12.475" y="19">information</tspan>
+        </text>
+      </g>
+      <g id="Line_17">
+        <line x1="484.5" y1="298.5" x2="356.9" y2="298.5" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_18">
+        <rect x="257" y="379.5" width="90" height="36" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(262 387.5)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="2.99" y="9">Status: Pending </tspan>
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="27.425" y="19">audit</tspan>
+        </text>
+      </g>
+      <g id="Line_19">
+        <line x1="302" y1="316.5" x2="302" y2="369.6" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_20">
+        <path d="M 9.5 379.5 L 54.5 397.5 L 9.5 415.5 L -35.5 397.5 Z" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(-18.35 392.14)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="8.475" y="9">Auditing</tspan>
+        </text>
+      </g>
+      <g id="Graphic_21">
+        <rect x="257" y="456.5" width="90" height="36" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(262 464.5)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="21.53" y="9">Update </tspan>
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="12.475" y="19">information</tspan>
+        </text>
+      </g>
+      <g id="Line_24">
+        <line x1="302" y1="415.5" x2="302" y2="446.6" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_25">
+        <path d="M 355 562.5 L 434 562 L 434 398 L 356.89984 397.5569" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_26">
+        <line x1="257" y1="397.5" x2="64.4" y2="397.5" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_27">
+        <rect x="-35.5" y="280.5" width="90" height="36" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(-30.5 288.5)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="10.23" y="9">Status: Audit </tspan>
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="26.34" y="19">failed</tspan>
+        </text>
+      </g>
+      <g id="Line_29">
+        <line x1="9.5" y1="379.5" x2="9.5" y2="326.4" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_31">
+        <text transform="translate(13 347)" fill="#cb4100">
+          <tspan font-family="PingFang SC" font-size="10" font-weight="400" fill="#cb4100" x="0" y="11">Reject</tspan>
+        </text>
+      </g>
+      <g id="Graphic_32">
+        <rect x="-35.5" y="456.5" width="90" height="36" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(-30.5 464.5)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="10.23" y="9">Status: Audit </tspan>
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="15.81" y="19">successful</tspan>
+        </text>
+      </g>
+      <g id="Graphic_34">
+        <rect x="-35.5" y="171.5" width="90" height="36" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(-30.5 179.5)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="21.53" y="9">Update </tspan>
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="12.475" y="19">information</tspan>
+        </text>
+      </g>
+      <g id="Line_35">
+        <line x1="9.5" y1="280.5" x2="9.5" y2="217.4" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_37">
+        <line x1="9.5" y1="415.5" x2="9.5" y2="446.6" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_38">
+        <text transform="translate(17.5 425.5)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="7105427e-21" y="9">Successful</tspan>
+        </text>
+      </g>
+      <g id="Line_39">
+        <line x1="54.5" y1="474.5" x2="247.1" y2="474.5" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_40">
+        <rect x="-35.5" y="544.5" width="90" height="36" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(-30.5 552.5)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="24.34" y="9">Status: </tspan>
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="15.43" y="19">Prohibited</tspan>
+        </text>
+      </g>
+      <g id="Graphic_42">
+        <rect x="-35.5" y="629" width="90" height="36" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(-30.5 642)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="12.185" y="9">Deblocking</tspan>
+        </text>
+      </g>
+      <g id="Line_43">
+        <line x1="9.5" y1="492.5" x2="9.5" y2="534.6" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_44">
+        <line x1="9.5" y1="580.5" x2="9.5" y2="619.1" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_45">
+        <path d="M -35.5 647 L -94.5 647 L -93.5 474 L -45.39963 474.41466" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_46">
+        <path d="M 302 539.5 L 355 562.5 L 302 585.5 L 249 562.5 Z" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(268.31 552.04)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="10.015" y="9">Judge the </tspan>
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="24.875" y="19">ban</tspan>
+        </text>
+      </g>
+      <g id="Line_47">
+        <line x1="302" y1="492.5" x2="302" y2="529.6" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_48">
+        <path d="M 302 585.5 L 301.5 648 L 474.60015 647.0541" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_50">
+        <text transform="translate(440.405 467.5)" fill="#cb4100">
+          <tspan font-family="PingFang SC" font-size="10" font-weight="400" fill="#cb4100" x="0" y="11">N</tspan>
+        </text>
+      </g>
+      <g id="Graphic_51">
+        <text transform="translate(306.19 611)" fill="#cb4100">
+          <tspan font-family="PingFang SC" font-size="10" font-weight="400" fill="#cb4100" x="0" y="11">Y</tspan>
+        </text>
+      </g>
+      <g id="Graphic_52">
+        <path d="M 153.875 166.5 L 203.25 189.5 L 153.875 212.5 L 104.5 189.5 Z" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(122.83125 179.04)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="7.29625" y="9">Judge the </tspan>
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="22.15625" y="19">ban</tspan>
+        </text>
+      </g>
+      <g id="Graphic_53">
+        <path d="M 270.5 171.5 L 333.5 171.5 C 340.952 171.5 347 179.564 347 189.5 C 347 199.436 340.952 207.5 333.5 207.5 L 270.5 207.5 C 263.048 207.5 257 199.436 257 189.5 C 257 179.564 263.048 171.5 270.5 171.5 Z" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(271 184.5)" fill="#cb4100">
+          <tspan font-family="STHeiti" font-size="10" font-weight="700" fill="#cb4100" x="21.845" y="9">End</tspan>
+        </text>
+      </g>
+      <g id="Line_54">
+        <line x1="54.5" y1="189.5" x2="94.6" y2="189.5" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_55">
+        <line x1="203.25" y1="189.5" x2="247.1" y2="189.5" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_56">
+        <text transform="translate(222.69 171.5)" fill="#cb4100">
+          <tspan font-family="PingFang SC" font-size="10" font-weight="400" fill="#cb4100" x="0" y="11">Y</tspan>
+        </text>
+      </g>
+      <g id="Line_57">
+        <path d="M 153.875 212.5 L 153.5 346 L 292.10003 345.64356" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_58">
+        <text transform="translate(159.905 256)" fill="#cb4100">
+          <tspan font-family="PingFang SC" font-size="10" font-weight="400" fill="#cb4100" x="0" y="11">N</tspan>
+        </text>
+      </g>
+      <g id="Line_60">
+        <path d="M 574.5 298.5 L 623.5 297 L 622.5 397 L 584.39946 397.3969" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_61">
+        <line x1="529.5" y1="379.5" x2="529.5" y2="326.4" marker-end="url(#FilledArrow_Marker)" stroke="#cb4100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

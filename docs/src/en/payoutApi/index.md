@@ -1,0 +1,3 @@
+# Payment API Document
+
+The SGate payment system is used to complete merchant payments. The main process of integration is for merchants to create payees through an interface (reporting basic and account information of payees). After the payee is approved, the merchant can make payment to the payee. After the system review is completed, payment can be made. The final status of the payment will be notified to the merchant through the server.
