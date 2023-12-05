@@ -31,7 +31,8 @@
                   "collapsed": false,
                   "items": [
                     { "text": "收银台", "link": "/en/payinApi/payment/paymentCashier" },
-                    { "text": "查询订单", "link": "/en/payinApi/payment/orderQuery" }
+                    { "text": "查询订单", "link": "/en/payinApi/payment/orderQuery" },
+                    { "text": "查询交易", "link": "/en/payinApi/payment/transactionQuery" }
                   ]
                 },
                 {
