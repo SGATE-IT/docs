@@ -73,7 +73,7 @@
 | ibanaccount       | string   | IBAN                                                                                                 |
 | stcaccount        | string   | STCPay 账户（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理）    |
 | status            | number   | [客户状态](/zh/payoutApi/appendix/customStatus)                                                      |
-| statusdesc        | number   | 客户状态说明                                                                                         |
+| statusdesc        | string   | 客户状态说明                                                                                         |
 | demand_perfection | array    | 用户当前待完善哪些资料                                                                               |
 | created_at        | number   | 创建时间                                                                                             |
 | updated_at        | number   | 更新时间                                                                                             |

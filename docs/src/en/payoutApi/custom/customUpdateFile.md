@@ -68,7 +68,7 @@ The response parameters are as follows：
 | ibanaccount       | string   | IBAN                                                                                                                                                 |
 | stcaccount        | string   | STCPay account (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))      |
 | status            | number   | [customer status](/en/payoutApi/appendix/customStatus)                                                                                               |
-| statusdesc        | number   | Customer Status Description                                                                                                                          |
+| statusdesc        | string   | Customer Status Description                                                                                                                          |
 | demand_perfection | array    | What information does the user currently need to improve                                                                                             |
 | created_at        | number   | Creation time                                                                                                                                        |
 | updated_at        | number   | Update time                                                                                                                                          |
