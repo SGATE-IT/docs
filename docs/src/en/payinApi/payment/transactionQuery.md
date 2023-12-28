@@ -39,7 +39,6 @@
 | id                     | string   | 订单的交易 ID，系统自动生成，全局唯一              | "M000001T2022101023455774363043_1"                                                                                      |
 | clientId               | string   | 创建订单通过的 Client 的 ID                        | "CLT0000001"                                                                                                            |
 | orderId                | string   | 订单所属商户 ID                                    | "M000001T2022101023455774363043"                                                                                        |
-| channelOrderId         | string   | 渠道订单 ID                                        |                                                                                                                         |
 | merchantId             | string   | 商户 ID                                            | "M000001"                                                                                                               |
 | amount                 | number   | 订单金额，注意这里是数字类型，浮点数，最多两位小数 | 3.23                                                                                                                    |
 | currency               | string   | 货币类型货币种类，三位大写字母                     | "SAR",  "AED", "BHD",  "EGP",   "KWD", "OMR", "QAR"                                                                     |
@@ -87,7 +86,6 @@
     "merchantFeeSnapId":"FS2551345",
     "cleared":"no",
     "status":"initial",
-    "channelOrderId":"11656203468",
     "payerDigest":"{\"mobile\":\"******0713\"}",
     "successfullyNotifiedAt":null,
     "notificationTimes":105,

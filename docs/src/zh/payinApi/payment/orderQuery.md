@@ -54,7 +54,6 @@
 | ticket            | string   | 订单支付操作票据，引导付款人进行付款时，URL 必须包含此参数                                                                                                        | "Q6XU......Aw89"                                |
 | name              | string   | 订单描述信息，商户创建订单时提交的参数                                                                                                                            | "购买面值 100 的游戏充值卡"                     |
 | merchantOrderId   | string   | 商户支付订单 ID                                                                                                                                                   | "2022102218233400123"                           |
-| channelOrderId    | string   | 渠道 ID                                                                                                                                                           |                                                 |
 | notificationURL   | string   | 订单支付成功通知地址                                                                                                                                              |                                                 |
 | needTax           | boolean  | 是否需要缴纳税费                                                                                                                                                  | false                                           |
 | exchangeRate      | string   | 汇率                                                                                                                                                              | "15"                                            |
@@ -93,7 +92,6 @@
   "ticket": "QnTkb04gg5RzB6fPKlfKH9AJgTW7PYQKCYnP0Wwdz0uiQZjSt8UjsHtBJbBBmTMc", // 票据凭证，用于验证订单ID
   "name": "Order test for desc", // 订单描述
   "merchantOrderId": "TEST1672491207", // 商户端订单ID
-  "channelOrderId": null, // 支付渠道ID
   "notificationURL": null, // 回调地址
   "needTax": false, // 是否需要缴纳税费
   "exchangeRate": null, // 汇率

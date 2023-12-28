@@ -62,7 +62,6 @@
 | feeId          | string   | 支付渠道 ID                                                                                                                                                                                        | "F12341234"                                                                            |
 | orderId        | string   | 所属订单 ID                                                                                                                                                                                        | "M000001T2022101023455774363043"                                                       |
 | merchantId     | string   | 订单所属商户 ID                                                                                                                                                                                    | "M000001"                                                                              |
-| channelOrderId | string   | 渠道 ID                                                                                                                                                                                            | "TEST45723451235437"                                                                   |
 | amount         | number   | 订单金额，注意这里是数字类型，浮点数，最多两位小数                                                                                                                                                 | 3.23                                                                                   |
 | currency       | string   | 货币类型货币种类，三位大写字母                                                                                                                                                                     | "SAR"<br>"AED"<br>"BHD"<br>"EGP"<br>"EUR"<br>"GBP"<br>"KWD"<br>"OMR"<br>"QAR"<br>"USD" |
 | paymentMethod  | string   | 支付方式： <br> stcpay <br> mastercard <br> applePay <br> tap                                                                                                                                      | "mastercard"                                                                           |
@@ -80,7 +79,6 @@
   "feeId": "F12341234", // 支付渠道ID
   "orderId": "M104563T202308040110111111", // 所属订单ID
   "merchantId": "M104563", // 订单所属商户ID
-  "channelOrderId": "TEST45723451235437",
   "amount": 11.5, // 订单金额
   "currency": "SAR", // 货币类型
   "paymentMethod": "mastercard", // 支付方式

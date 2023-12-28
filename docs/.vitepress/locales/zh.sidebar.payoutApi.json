@@ -59,6 +59,14 @@
                             ]
                         },
                         {
+                            "text": "OTP",
+                            "collapsed": true,
+                            "items": [
+                                { "text": "发送 OTP 验证码", "link": "/zh/payoutApi/otp/sendOtp" },
+                                { "text": "验证 OTP 验证码", "link": "/zh/payoutApi/otp/checkOtp" }
+                            ]
+                        },
+                        {
                             "text": "对账单",
                             "collapsed": false,
                             "items": [
