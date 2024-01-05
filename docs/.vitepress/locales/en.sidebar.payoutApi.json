@@ -59,6 +59,14 @@
                             ]
                         },
                         {
+                            "text": "OTP",
+                            "collapsed": true,
+                            "items": [
+                                { "text": "Send OTP Code", "link": "/en/payoutApi/otp/sendOtp" },
+                                { "text": "Verify OTP Code", "link": "/en/payoutApi/otp/checkOtp" }
+                            ]
+                        },
+                        {
                             "text": "Statement",
                             "collapsed": false,
                             "items": [

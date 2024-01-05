@@ -33,7 +33,7 @@ The response parameters are as follows：
 | bankcode           | string   | Bank CODE       |
 | bankname           | string   | Bank name       |
 
-**响应参数示例**
+**Response parameter Example**
 
 ```json
 {

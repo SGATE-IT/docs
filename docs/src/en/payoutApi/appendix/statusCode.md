@@ -23,32 +23,32 @@
 
 ### Secure
 
-| Code | Description                                                  |
-| ---- | ------------------------------------------------------------ |
-| 1200 | No APIKEY                                                    |
-| 1201 | APIKEY error                                                 |
-| 1202 | Merchant key error                                           |
+| Code | Description                                                           |
+| ---- | --------------------------------------------------------------------- |
+| 1200 | No APIKEY                                                             |
+| 1201 | APIKEY error                                                          |
+| 1202 | Merchant key error                                                    |
 | 1203 | Parameter decryption failed (sensitive information decryption failed) |
-| 1204 | Request expiration                                           |
-| 1205 | IP illegal                                                   |
-| 1206 | System encryption error                                      |
-| 1207 | ID not available                                             |
-| 1208 | Missing request header                                       |
-| 1209 | Request header validation failed                             |
-| 1210 | Invalid API version                                          |
-| 1211 | User Agent verification failed                               |
-| 1212 | Trigger frequency limit                                      |
-| 1213 | Signature verification failed                                |
+| 1204 | Request expiration                                                    |
+| 1205 | IP illegal                                                            |
+| 1206 | System encryption error                                               |
+| 1207 | ID not available                                                      |
+| 1208 | Missing request header                                                |
+| 1209 | Request header validation failed                                      |
+| 1210 | Invalid API version                                                   |
+| 1211 | User Agent verification failed                                        |
+| 1212 | Trigger frequency limit                                               |
+| 1213 | Signature verification failed                                         |
 
 ### Customer
 
-| Code | Description                                                  |
-| ---- | ------------------------------------------------------------ |
+| Code | Description                                                            |
+| ---- | ---------------------------------------------------------------------- |
 | 1300 | The current status of the customer is not available for this operation |
-| 1301 | Request for duplicate business customer ID                   |
-| 1302 | Duplicate customer ID under merchant                         |
-| 1303 | Please configure the payment account                         |
-| 1304 | Bank account error                                           |
+| 1301 | Request for duplicate business customer ID                             |
+| 1302 | Duplicate customer ID under merchant                                   |
+| 1303 | Please configure the payment account                                   |
+| 1304 | Bank account error                                                     |
 
 ### Payment
 
@@ -68,3 +68,18 @@
 | 1500 | File upload failed                                   |
 | 1501 | File MD5 is inconsistent                             |
 | 1502 | The reconciliation file is currently being processed |
+
+### OTP
+
+| Status Code | Description                                |
+| ----------- | ------------------------------------------ |
+| 1600        | Send OTP failed                            |
+| 1601        | Message gateway exception                  |
+| 1602        | Message gateway failed to push information |
+| 1603        | Product name not configured                |
+| 1604        | The product name does not exist            |
+| 1605        | OTP type is invalid                        |
+| 1606        | OTP verification failed                    |
+| 1607        | OTP code is invalid or has expired         |
+| 1608        | OTP sending number mismatch                |
+| 1609        | OTP code error                             |
