@@ -1,34 +1,34 @@
-# 回调通知
+# Callback Notification
 
-## 功能简述
+## Function Description
 
-- SGate 提供了订单支付/退款完成的通知回调，会请求对应的 Client 的接收通知 URL
-- 商户需提供接收 `GET` 请求的 URL，SGate 会在**成功完成支付交易**或**成功完成退款**后，向商户提供的 URL 发送回调通知。其中 SGate 会在 URL 上附加以下参数：
+- SGate provides notification callbacks for order payment/refund completion, and will request the corresponding Client's notification URL
+- The merchant needs to provide a URL to receive `GET` requests. SGate will send a callback notification to the URL provided by the merchant after **successful completion of payment transaction** or **successful completion of refund**. SGate appends the following parameters to the URL:
 
-   | **参数** | **类型** | **描述**                                                 | **示例**                         |
-   | -------- | -------- | -------------------------------------------------------- | -------------------------------- |
-   | _orderId | string   | 订单 ID                                                  | "M000001T2022101023455774363043" |
-   | _type    | string   | 回调类型：<br> payment：完成支付 <br> refund：完成退款 | "payment"                        |
+   | **Parameter** | **Type** | **Description**                                                            | **Example**                      |
+   | ------------- | -------- | -------------------------------------------------------------------------- | -------------------------------- |
+   | _orderId      | string   | Order ID                                                                   | "M000001T2022101023455774363043" |
+   | _type         | string   | Callback type: <br> payment: complete payment <br> refund: complete refund | "payment"                        |
 
-  * 示例：`https://merchant.com/Notification?_orderId=M000001T2022101023455774363043&_type=payment`
+  * Example: `https://merchant.com/Notification?_orderId=M000001T2022101023455774363043&_type=payment`
 
-## 流程说明
+## Flow Description
 
-![img](/images/payinApi_zh/callback-notification.svg)
+![img](/images/payinApi_en/callback-notification.svg)
 
-1. 商户调用 SGate “创建订单“ 或 "发起退款" 接口创建交易
-2. SGate 返回交易创建成功
-3. SGate 交易处理成功
-4. SGate 向商户提供的 URL 发送回调通知，通知商户交易成功
-5. 商户调用 SGate 交易对应的查询接口，进行状态确认
-6. SGate 返回商户查询的交易状态
-7. 商户确认交易状态无误后，返回回调通知，其中 body 为：`COMPLETED::{ORDER_ID}`
-   * `{ORDER_ID}`：回调通知的订单 ID
-   * 示例：`COMPLETED::M448726T2022123112531745487632`
+1. The merchant calls the SGate "Create Order" or "Initiate a Refund" interface to create a transaction.
+2. SGate returns transaction creation success
+3. SGate transaction processed successfully
+4. SGate sends a callback notification to the URL provided by the merchant to notify the merchant that the transaction is successful.
+5. The merchant calls the query interface corresponding to the SGate transaction to confirm the status.
+6. SGate returns the transaction status queried by the merchant
+7. After the merchant confirms that the transaction status is correct, a callback notification is returned, in which the body is: `COMPLETED::{ORDER_ID}`
+    * `{ORDER_ID}`: Order ID of callback notification
+    * Example: `COMPLETED::M448726T2022123112531745487632`
 
-## 回调通知规则
+## Callback Notification Rules
 
-- 如果商户没有提供接收回调通知的 URL，则不会触发回调通知功能
-- 通知回调如果没有被正确响应，则会多次请求，规则如下：
-  - 如果商户未响应回调通知，则 SGate 每隔 5 秒重试 3 次
-  - 如果商户回调通知返回错误，则 SGate 每隔 15 分钟重试 1 次
+- If the merchant does not provide a URL for receiving callback notifications, the callback notification function will not be triggered.
+- If the notification callback is not responded to correctly, it will be requested multiple times. The rules are as follows:
+   - If the merchant does not respond to the callback notification, SGate will retry 3 times every 5 seconds.
+   - If the merchant callback notification returns an error, SGate will retry every 15 minutes.

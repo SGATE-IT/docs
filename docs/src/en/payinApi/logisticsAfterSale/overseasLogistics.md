@@ -1,40 +1,40 @@
-# 设置海外物流信息
+# Set Overseas Logistics Information
 
-## 功能简述
+## Function Description
 
-- 设置海外物流信息
+- Set overseas logistics information
 
-## 设置海外物流信息 API
+## Set Overseas Logistics Information API
 
-### 请求 URL
+### Request URL
 
 - `/orders/{ORDER_ID}/overseasLogistics`
-  - `{ORDER_ID}`：您的支付 ID
+  - `{ORDER_ID}`：Your payment ID
 
-### 请求 Method
+### Request Method
 
 - `order.setOverseasLogistics`
 
-### 请求方式
+### HTTP Verb
 
 - PUT
 
-### 请求参数
+### Request Parameters
 
-请求参数如下：
+The request parameters are as follows:
 
 - **Header**
 
-  - [_查看公共参数_](/zh/payinApi/callMethod/callMethod#公共参数)
+  - [_View public parameters_](/en/payinApi/callMethod/callMethod#public-parameters)
 
 - **Request Body**
 
-| **参数**                                     | **类型** | **必填** | **描述**     | **示例** |
-| -------------------------------------------- | -------- | -------- | ------------ | -------- |
-| value                                        | object   | 是       | 海外物流信息 |          |
-| &nbsp;&nbsp;&nbsp;&nbsp;value.trackingURL    | string   | 是       | 物流追踪网址 |          |
-| &nbsp;&nbsp;&nbsp;&nbsp;value.trackingNumber | string   | 是       | 物流追踪编号 |          |
+| **Parameter**                                | **Type** | **Required** | **Description**                | **Example** |
+| -------------------------------------------- | -------- | ------------ | ------------------------------ | ----------- |
+| value                                        | object   | Y            | Overseas logistics information |             |
+| &nbsp;&nbsp;&nbsp;&nbsp;value.trackingURL    | string   | Y            | Logistics tracking website     |             |
+| &nbsp;&nbsp;&nbsp;&nbsp;value.trackingNumber | string   | Y            | Logistics tracking number      |             |
 
-### 响应参数
+### Response Parameters
 
-响应 HTTP 状态码为 `200` 即代表成功
+Response HTTP status code `200` means success

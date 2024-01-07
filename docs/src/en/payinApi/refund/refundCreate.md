@@ -1,78 +1,78 @@
-# 发起退款
+# Create Refund
 
-## 功能简述
+## Function Description
 
-- 发起订单退款
+- Initiate order refund
 
-## 流程说明
+## Flow Description
 
-![img](/images/payinApi_zh/refund.png)
+![img](/images/payinApi_en/refund.svg)
 
-## 发起退款 API
+## Create Refund API
 
-### 请求 URL
+### Request URL
 
 - `/orders/{ORDER_ID}/refunds`
-  - `{ORDER_ID}`：您的支付 ID
+  - `{ORDER_ID}`：Your payment ID
 
-### 请求 Method
+### Request Method
 
 - `order.refund`
 
-### 请求方式
+### HTTP Verb
 
 - POST
 
-### 请求参数
+### Request Parameters
 
-请求参数如下：
+The request parameters are as follows:
 
 - **Header**
 
-  - [_查看公共参数_](/zh/payinApi/callMethod/callMethod#公共参数)
+  - [_View public parameters_](/en/payinApi/callMethod/callMethod#public-parameters)
 
 - **Request Body**
 
-| **参数**         | **类型** | **必填** | **描述**                                 | **示例**               |
-| ---------------- | -------- | -------- | ---------------------------------------- | ---------------------- |
-| amount           | string   | 是       | 订单金额，浮点数字符串，小数点后最多两位 | "1.35", "99.10", "127" |
-| reason           | string   | 是       | 退款原因                                 | 退运费                 |
-| merchantRefundId | string   | 否       | 商户退款单 ID                            | "TEST934759263495634"  |
+| **Parameter**    | **Type** | **Required** | **Description**                                               | **Example**            |
+| ---------------- | -------- | ------------ | ------------------------------------------------------------- | ---------------------- |
+| amount           | string   | Yes          | Order amount, floating point string, up to two decimal places | "1.35", "99.10", "127" |
+| reason           | string   | Yes          | Reason for refund                                             | Return shipping fee    |
+| merchantRefundId | string   | No           | Merchant refund order ID                                      | "TEST934759263495634"  |
 
-### 响应参数
+### Response Parameters
 
-响应参数如下：
+The response parameters are as follows:
 
 - **Response Body**
 
-| **参数**            | **类型** | **描述**                                                                   | **样例**                                                    |
-| ------------------- | -------- | -------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| amount              | number   | 订单金额，注意这里是数字类型，浮点数，最多两位小数                         | 3.23                                                        |
-| status              | string   | 退款状态： <br> pending：退款中 <br> success：退款完成 <br> fail：退款失败 | "pending"                                                   |
-| id                  | string   | 退单 ID，全局唯一                                                          | "M948164T2023072607034709567189_R1"                         |
-| orderId             | string   | 所属订单 ID                                                                | "M948164T2023072607034709567189"                            |
-| paymentMethod       | string   | 支付方式： <br> stcpay <br> mastercard <br> applePay <br> tap              | "mastercard"                                                |
-| merchantRefundId    | string   | 商户退款单 ID                                                              | "TEST934759263495634"                                       |
-| merchantId          | string   | 商户 ID                                                                    | "M948164"                                                   |
-| originTransactionId | string   | 订单交易 ID                                                                | "M948164T2023072607034709567189_1"                          |
-| currency            | string   | 货币类型货币种类，三位大写字母                                             | "SAR"<br>"AED"<br>"BHD"<br>"EGP"<br>"KWD"<br>"OMR"<br>"QAR" |
-| createdAt           | string   | 创建时间                                                                   | "2023-07-26T04:06:33.227Z"                                  |
-| updatedAt           | string   | 更新时间                                                                   | "2023-07-26T04:06:33.227Z"                                  |
+| **Parameter**       | **Type** | **Description**                                                                                         | **Example**                                                  |
+| ------------------- | -------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| amount              | number   | Order amount, note that this is a numeric type, floating point number, up to two decimal places         | 3.23                                                         |
+| status              | string   | Refund status: <br> pending: Refund in progress <br> success: Refund completed <br> fail: Refund failed | "pending"                                                    |
+| id                  | string   | Chargeback ID, globally unique                                                                          | "M948164T2023072607034709567189_R1"                          |
+| orderId             | string   | The order ID                                                                                            | "M948164T2023072607034709567189"                             |
+| paymentMethod       | string   | Payment method: <br> stcpay <br> mastercard <br> applePay <br> tap                                      | "mastercard"                                                 |
+| merchantRefundId    | string   | Merchant refund order ID                                                                                | "TEST934759263495634"                                        |
+| merchantId          | string   | Merchant ID                                                                                             | "M948164"                                                    |
+| originTransactionId | string   | Order transaction ID                                                                                    | "M948164T2023072607034709567189_1"                           |
+| currency            | string   | currency type currency type, three uppercase letters                                                    | "SAR"<br>"AED"<br>"BHD"<br>"EGP"<br>"KWD"<br>"OMR"<br >"QAR" |
+| createdAt           | string   | Creation time                                                                                           | "2023-07-26T04:06:33.227Z"                                   |
+| updatedAt           | string   | Update time                                                                                             | "2023-07-26T04:06:33.227Z"                                   |
 
-**响应参数示例**
+**Response Parameter Example**
 
 ```json
 {
-  "amount": 7, // 订单金额
-  "status": "pending", // 退款状态
-  "id": "M948164T2023072607034709567189_R1", // 退单 ID
-  "orderId": "M948164T2023072607034709567189", // 所属订单 ID
-  "paymentMethod": "mastercard", // 支付方式
-  "merchantRefundId": "TEST934759263495634", // 商户退款单 ID
-  "merchantId": "M948164", // 商户 ID
-  "originTransactionId": "M948164T2023072607034709567189_1", // 订单交易 ID
-  "currency": "SAR", // 货币类型
-  "updatedAt": "2023-07-26T04:06:33.227Z", // 创建时间
-  "createdAt": "2023-07-26T04:06:33.227Z" // 更新时间
+  "amount": 7, // order amount
+  "status": "pending", // Refund status
+  "id": "M948164T2023072607034709567189_R1", // Chargeback ID
+  "orderId": "M948164T2023072607034709567189", // Order ID
+  "paymentMethod": "mastercard", // payment method
+  "merchantRefundId": "TEST934759263495634", // Merchant refund order ID
+  "merchantId": "M948164", // Merchant ID
+  "originTransactionId": "M948164T2023072607034709567189_1", // Order transaction ID
+  "currency": "SAR", // currency type
+  "updatedAt": "2023-07-26T04:06:33.227Z", // Creation time
+  "createdAt": "2023-07-26T04:06:33.227Z" // Update time
 }
 ```

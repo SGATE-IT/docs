@@ -28,7 +28,7 @@ The response parameters are as follows：
 
 - **Response Body**
 
-| **Parameter Name** | **Type** | **Description** |
+| **Parameter** | **Type** | **Description** |
 | ------------------ | -------- | --------------- |
 | bankcode           | string   | Bank CODE       |
 | bankname           | string   | Bank name       |

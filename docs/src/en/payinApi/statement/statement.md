@@ -1,94 +1,94 @@
-# 对账文件
+# Reconciliation Statement
 
-## 文件传输
+## File Transfer
 
-### 文件生成时间
+### File Generation Time
 
-在 D 日 01:00:00 AM（GMT+3）生成 D-1 日对账文件
+Generate D-1 day reconciliation file at 01:00:00 AM (GMT+3) on D day
 
-### 文件获取
+### File Acquisition
 <br>
 
-#### 服务器信息
+#### Server Information
 
-- 沙箱环境服务器地址：`sandbox.sgate.sa`
+- Sandbox environment server address: `sandbox.sgate.sa`
 
-#### 文件获取规则
+#### File Acquisition Rules
 
-- 获取文件列表：
+- Get a list of files:
 
 ```shell
 curl "ftp://{USER}:{PASSWORD}@sandbox.sgate.sa/" -v --ssl --list-only
 ```
 
-- 下载对账文件
+- Download reconciliation file
 
 ```shell
 curl "ftp://{USER}:{PASSWORD}@sandbox.sgate.sa/{YYYYMMDD}/GCCRECO_{MERCHANR_ID}_{YYYYMMDD}_{SESSION_ID}.csv" -v --ssl -o "GCCRECO_{MERCHANR_ID}_{YYYYMMDD}_{SESSION_ID}.csv"
 ```
 
-1. `{USER}`：商户在 SGate 系统对账 FTP 账户
-2. `{PASSWORD}`：商户在 SGate 系统对账 FTP 账户密码
-3. `{MERCHANR_ID}`：商户在 SGate 系统中的商户号
-4. `{YYYYMMDD}`：交易日期: D-1 日，格式：`yyyy-MM-dd`，示例：`2023-08-21`
-5. `{SESSION_ID}`：对账场次号，取值为 01-09，无多场次对账则默认取值为 01
+1. `{USER}`: Merchant reconciles FTP account in SGate system
+2. `{PASSWORD}`: The merchant reconciles the FTP account password in the SGate system
+3. `{MERCHANR_ID}`: Merchant’s merchant number in the SGate system
+4. `{YYYYMMDD}`: Transaction date: D-1, format: `yyyy-MM-dd`, example: `2023-08-21`
+5. `{SESSION_ID}`: Reconciliation session number, the value is 01-09. If there is no reconciliation for multiple sessions, the default value is 01
 
-## 文件基本信息
+## Basic File Information
 
-### 文件格式及编码方式
+### File Format And Encoding Method
 
-- 文件使用标准 `CSV` 格式文件，使用以半角逗号 `,` 作分隔符，列为空也会表达其存在。每行使用换行符 `\n` 作为其结尾
-- 文件使用 `UTF-8` 编码为编码方式
+- The file uses the standard `CSV` format, using half-width commas `,` as delimiters. Empty columns will also indicate their existence. Each line ends with a newline character `\n`
+- The file is encoded using `UTF-8`
 
-### 文件名称
+### File Name
 
-对账文件名称：`GCCRECO_{MERCHANR_ID}_{YYYYMMDD}_{SESSION_ID}`
-- `{MERCHANR_ID}`：商户在 SGate 系统中的商户号
-- `{YYYYMMDD}`：交易日期: D-1 日，格式：`yyyy-MM-dd`，示例：`2023-08-21`
-- `{SESSION_ID}`：对账场次号，取值为 01-09，无多场次对账则默认取值为 01
+Reconciliation file name: `GCCRECO_{MERCHANR_ID}_{YYYYMMDD}_{SESSION_ID}`
+- `{MERCHANR_ID}`: Merchant’s merchant ID in the SGate system
+- `{YYYYMMDD}`: Transaction date: D-1, format: `yyyy-MM-dd`, example: `2023-08-21`
+- `{SESSION_ID}`: Reconciliation session number, the value is 01-09. If there is no reconciliation for multiple sessions, the default value is 01
 
-### 数据类型
+### Type Of Data
 
-| 序号 | 类型         | 含义                                   |
-| ---- | ------------ | -------------------------------------- |
-| 1    | T（Text）    | 文本字段，可使用字母及中文等，可以为空 |
-| 2    | N（Numeric） | 数字字段，不可为空                     |
+| Serial number | Type        | Meaning                                                     |
+| ------------- | ----------- | ----------------------------------------------------------- |
+| 1             | T (Text)    | Text field, can use letters and Chinese, etc., can be empty |
+| 2             | N (Numeric) | Numeric field, cannot be empty                              |
 
-## 文件内容
+## Document Content
 
-### 文件明细记录
+### Document Details Record
 
-对账文件明细记录为对应商户 T-1 日所有交易状态为终态的交易信息明细
+The details of the reconciliation file are recorded as the transaction information details of all transactions in the final state on T-1 of the corresponding merchant.
 
-| 序号 | 栏位名称            | 栏位说明       | 类型 | 含义                                                                   |
-| ---- | ------------------- | -------------- | ---- | ---------------------------------------------------------------------- |
-| 1    | Merchant_ID         | 商户号         | T    | 商户在 SGate 中的商户号                                                |
-| 2    | Order_ID            | 订单号         | T    | 订单在 SGate 中的订单号                                                |
-| 3    | Merchant_Order_ID   | 商户订单号     | T    | 订单在商户中的订单号                                                   |
-| 4    | Order_Create_Time   | 订单创建时间   | T    | 订单创建时间：yyyy-MM-dd HH:mm:ss(z)<br>如：2023-01-23 13:33:28(GMT+3) |
-| 6    | Order_Complete_Time | 订单完成时间   | T    | 订单完成时间：yyyy-MM-dd HH:mm:ss(z)<br>如：2023-01-23 13:33:28(GMT+3) |
-| 8    | Amount              | 订单金额       | N    | 订单总金额                                                             |
-| 9    | Currency            | 订单金额币种   | T    | 订单总金额对应币种                                                     |
-| 10   | Trans_Type          | 交易类型       | T    | [订单交易类型](/zh/payinApi/statement/statement#订单交易类型)          |
-| 11   | Order_Status        | 订单状态       | T    | [订单状态](/zh/payinApi/statement/statement#订单状态)                  |
-| 12   | Ori_Order_ID        | 原交易订单号   | T    | 该订单的原交易在 SGate 中的订单号                                      |
-| 13   | Ori_Order_Amount    | 原交易支付金额 | N    | 该订单的原交易的金额                                                   |
-| 14   | Ori_Order_Currency  | 原交易支付币种 | T    | 该订单的原交易币种                                                     |
+| Serial number | Field name          | Field description                     | Type | Meaning                                                                                  |
+| ------------- | ------------------- | ------------------------------------- | ---- | ---------------------------------------------------------------------------------------- |
+| 1             | Merchant_ID         | Merchant ID                           | T    | Merchant’s merchant ID in SGate                                                          |
+| 2             | Order_ID            | Order number                          | T    | The order number of the order in SGate                                                   |
+| 3             | Merchant_Order_ID   | Merchant order number                 | T    | The order number of the order in the merchant                                            |
+| 4             | Order_Create_Time   | Order creation time                   | T    | Order creation time: yyyy-MM-dd HH:mm:ss(z)<br>For example: 2023-01-23 13:33:28(GMT+3)   |
+| 6             | Order_Complete_Time | Order completion time                 | T    | Order completion time: yyyy-MM-dd HH:mm:ss(z)<br>For example: 2023-01-23 13:33:28(GMT+3) |
+| 8             | Amount              | Order amount                          | N    | Total order amount                                                                       |
+| 9             | Currency            | Currency of order amount              | T    | Currency corresponding to total order amount                                             |
+| 10            | Trans_Type          | Transaction type                      | T    | [Order transaction type](/en/payinApi/statement/statement#order-transaction-type)        |
+| 11            | Order_Status        | Order status                          | T    | [Order status](/en/payinApi/statement/statement#order-status)                            |
+| 12            | Ori_Order_ID        | Original transaction order number     | T    | The order number of the original transaction of this order in SGate                      |
+| 13            | Ori_Order_Amount    | Original transaction payment amount   | N    | The amount of the original transaction for this order                                    |
+| 14            | Ori_Order_Currency  | Original transaction payment currency | T    | Original transaction currency of this order                                              |
 
-## 附录
+## Appendix
 
-### 订单状态
+### Order Status
 
-| 订单状态 | 含义       |
-| -------- | ---------- |
-| S        | 交易成功   |
-| F        | 交易失败   |
-| P        | 交易处理中 |
+| Order Status | Meaning                |
+| ------------ | ---------------------- |
+| S            | Transaction successful |
+| F            | Transaction failed     |
+| P            | Transaction processing |
 
-### 订单交易类型
+### Order Transaction Type
 
-| 交易类型 | 含义     |
-| -------- | -------- |
-| P        | 支付交易 |
-| R        | 退款交易 |
-| C        | 拒付交易 |
+| Transaction type | Meaning                |
+| ---------------- | ---------------------- |
+| P                | Payment Transaction    |
+| R                | Refund Transaction     |
+| C                | Chargeback Transaction |

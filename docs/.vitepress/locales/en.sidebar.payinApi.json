@@ -1,74 +1,74 @@
 {
     "/en/payinApi/": [
         {
-          "text": "收单 API 文档",
+          "text": "Acquiring API Document",
           "items": [
             {
-              "text": "简介",
+              "text": "Introduction",
               "link": "/en/payinApi/index"
             },
             {
-              "text": "名词解释",
+              "text": "Glossary",
               "link": "/en/payinApi/glossary/glossary"
             },
             {
-              "text": "调用方法",
+              "text": "Call Method",
               "link": "/en/payinApi/callMethod/callMethod"
             },
             {
-              "text": "商户",
+              "text": "Merchant",
               "collapsed": false,
               "items": [
-                { "text": "商户查询", "link": "/en/payinApi/merchant/merchantQuery"}
+                { "text": "Merchant Query", "link": "/en/payinApi/merchant/merchantQuery"}
               ]
             },
             {
-              "text": "交易",
+              "text": "Transaction",
               "collapsed": false,
               "items": [
                 {
-                  "text": "支付",
+                  "text": "Payment",
                   "collapsed": false,
                   "items": [
-                    { "text": "收银台", "link": "/en/payinApi/payment/paymentCashier" },
-                    { "text": "查询订单", "link": "/en/payinApi/payment/orderQuery" },
-                    { "text": "查询交易", "link": "/en/payinApi/payment/transactionQuery" }
+                    { "text": "Payment Cashierr", "link": "/en/payinApi/payment/paymentCashier" },
+                    { "text": "Query Order", "link": "/en/payinApi/payment/orderQuery" },
+                    { "text": "Query Transaction", "link": "/en/payinApi/payment/transactionQuery" }
                   ]
                 },
                 {
-                  "text": "退款",
+                  "text": "Refund",
                   "collapsed": false,
                   "items": [
-                    { "text": "发起退款", "link": "/en/payinApi/refund/refundCreate" },
-                    { "text": "查询退款", "link": "/en/payinApi/refund/refundQuery" }
+                    { "text": "Create Refund", "link": "/en/payinApi/refund/refundCreate" },
+                    { "text": "Query Refund", "link": "/en/payinApi/refund/refundQuery" }
                   ]
                 },
                 {
-                  "text": "物流 & 售后",
+                  "text": "Logistics & After-Sales",
                   "collapsed": true,
                   "items": [
-                    { "text": "设置境内物流信息", "link": "/en/payinApi/logisticsAfterSale/logistics" },
-                    { "text": "设置海外物流信息", "link": "/en/payinApi/logisticsAfterSale/overseasLogistics" },
-                    { "text": "设置投递状态", "link": "/en/payinApi/logisticsAfterSale/deliveryStatus" },
-                    { "text": "设置售后状态", "link": "/en/payinApi/logisticsAfterSale/afterSaleStatus" }
+                    { "text": "Set Domestic Logistics Information", "link": "/en/payinApi/logisticsAfterSale/logistics" },
+                    { "text": "Set Overseas Logistics Information", "link": "/en/payinApi/logisticsAfterSale/overseasLogistics" },
+                    { "text": "Set Delivery Status", "link": "/en/payinApi/logisticsAfterSale/deliveryStatus" },
+                    { "text": "Set After-Aales Status", "link": "/en/payinApi/logisticsAfterSale/afterSaleStatus" }
                   ]
                 }
               ]
             },
             {
-              "text": "回调通知",
-              "link": "/zh/payinApi/callback/callbackNotification"
+              "text": "Callback Notification",
+              "link": "/en/payinApi/callback/callbackNotification"
             },
             {
-              "text": "日终文件",
+              "text": "End Of Day File",
               "collapsed": false,
               "items": [
-                { "text": "对账文件", "link": "/en/payinApi/statement/statement" },
-                { "text": "资金账单结算文件", "link": "/en/payinApi/statement/fundStatement" }
+                { "text": "Reconciliation Statement", "link": "/en/payinApi/statement/statement" },
+                { "text": "Funds Settlement Statement", "link": "/en/payinApi/statement/fundStatement" }
               ]
             },
             {
-              "text": "附录",
+              "text": "Appendix",
               "link": "/en/payinApi/appendix/appendix"
             }
           ]

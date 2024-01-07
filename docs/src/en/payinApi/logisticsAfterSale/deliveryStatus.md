@@ -1,38 +1,38 @@
-# 设置投递状态
+# Set Delivery Status
 
-## 功能简述
+## Function Description
 
-- 设置投递状态
+- Set delivery status
 
-## 设置投递状态 API
+## Set Delivery Status API
 
-### 请求 URL
+### Request URL
 
 - `/orders/{ORDER_ID}/delivery/status`
-  - `{ORDER_ID}`：您的支付 ID
+  - `{ORDER_ID}`：Your payment ID
 
-### 请求 Method
+### Request Method
 
 - `order.setDeliveryStatus`
 
-### 请求方式
+### HTTP Verb
 
 - PUT
 
-### 请求参数
+### Request Parameters
 
-请求参数如下：
+The request parameters are as follows:
 
 - **Header**
 
-  - [_查看公共参数_](/zh/payinApi/callMethod/callMethod#公共参数)
+  - [_View public parameters_](/en/payinApi/callMethod/callMethod#public-parameters)
 
 - **Request Body**
 
-| **参数** | **类型** | **必填** | **描述**                                                                                                                                                          | **示例**  |
-| -------- | -------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| value    | string   | 是       | 投递状态： <br> pending：未发货 <br> shipping：海外已发货 <br> domesticInStock：境内待发货 <br> contacting：联系中 <br> delivering：投递中 <br> delivered：已签收 | "pending" |
+| **Parameter** | **Type** | **Required** | **Description**                                                                                                                                                                                                   | **Example** |
+| ------------- | -------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| value         | string   | Y            | Delivery status: <br> pending: not shipped<br> shipping: shipped overseas<br> domesticInStock: waiting for shipment domestically<br> contacting: in contact<br> delivering: delivering <br> delivered: signed for | "pending"   |
 
-### 响应参数
+### Response Parameters
 
-响应 HTTP 状态码为 `200` 即代表成功
+Response HTTP status code `200` means success

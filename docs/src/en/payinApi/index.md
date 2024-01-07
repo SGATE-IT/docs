@@ -1,3 +1,3 @@
-# 收单 API 文档
+# Acquiring API Document
 
-SGate 支付系统用来完成商户的收款，对接主要流程为商户通过接口创建支付订单，引导付款人（买家）到 SGate 支付页面，完成支付后 SGate 会引导付款人浏览器重新定向到商户页面，也会通过服务端通知商户。
+The SGate payment system is used to complete the merchant's collection. The main docking process is for the merchant to create a payment order through the interface and guide the payer (buyer) to the SGate payment page. After completing the payment, SGate will guide the payer's browser to redirect to the merchant page. Merchants will also be notified through the server.

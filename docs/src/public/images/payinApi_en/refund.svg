@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="833px" height="320px" viewBox="-0.5 -0.5 833 320">
+    <defs />
+    <g>
+        <path d="M 136 186 L 229.63 186" fill="none" stroke="#cb4100" stroke-miterlimit="10"
+            pointer-events="stroke" />
+        <path d="M 234.88 186 L 227.88 189.5 L 229.63 186 L 227.88 182.5 Z" fill="#cb4100"
+            stroke="#cb4100" stroke-miterlimit="10" pointer-events="all" />
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 177px; margin-left: 184px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; white-space: nowrap; ">Apply
+                            for refund</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+        <rect x="16" y="156" width="120" height="60" rx="9" ry="9" fill="#ffffff" stroke="#cb4100"
+            pointer-events="all" />
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 186px; margin-left: 17px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                            Null</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+        <path d="M 276 156 L 276 82.37" fill="none" stroke="#cb4100" stroke-miterlimit="10"
+            pointer-events="stroke" />
+        <path d="M 276 77.12 L 279.5 84.12 L 276 82.37 L 272.5 84.12 Z" fill="#cb4100"
+            stroke="#cb4100" stroke-miterlimit="10" pointer-events="all" />
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 111px; margin-left: 237px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; white-space: nowrap; ">refund
+                            failed</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+        <path d="M 356 176 L 479.63 176" fill="none" stroke="#cb4100" stroke-miterlimit="10"
+            pointer-events="stroke" />
+        <path d="M 484.88 176 L 477.88 179.5 L 479.63 176 L 477.88 172.5 Z" fill="#cb4100"
+            stroke="#cb4100" stroke-miterlimit="10" pointer-events="all" />
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 167px; margin-left: 423px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; white-space: nowrap; ">partial
+                            refund success</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+        <path d="M 296 216 L 296 276 L 756 276 L 756 222.37" fill="none" stroke="#cb4100"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 756 217.12 L 759.5 224.12 L 756 222.37 L 752.5 224.12 Z" fill="#cb4100"
+            stroke="#cb4100" stroke-miterlimit="10" pointer-events="all" />
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 297px; margin-left: 516px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; white-space: nowrap; ">Full
+                            refund successful</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+        <rect x="236" y="156" width="120" height="60" rx="9" ry="9" fill="#ffffff" stroke="#cb4100"
+            pointer-events="all" />
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 186px; margin-left: 237px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">refund
+                            processing</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+        <path d="M 466 216 L 392.37 216" fill="none" stroke="#cb4100" stroke-miterlimit="10"
+            pointer-events="stroke" />
+        <path d="M 387.12 216 L 394.12 212.5 L 392.37 216 L 394.12 219.5 Z" fill="#cb4100"
+            stroke="#cb4100" stroke-miterlimit="10" pointer-events="all" />
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 216px; margin-left: 426px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 11px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">Apply
+                            for refund again <br />after a partial refund</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+        <path d="M 486 201 L 362.37 201" fill="none" stroke="#cb4100" stroke-miterlimit="10"
+            pointer-events="stroke" />
+        <path d="M 357.12 201 L 364.12 197.5 L 362.37 201 L 364.12 204.5 Z" fill="#cb4100"
+            stroke="#cb4100" stroke-miterlimit="10" pointer-events="all" />
+        <rect x="486" y="156" width="120" height="60" rx="9" ry="9" fill="#ffffff" stroke="#cb4100"
+            pointer-events="all" />
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 186px; margin-left: 487px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">partial
+                            refund success</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+        <rect x="696" y="156" width="120" height="60" rx="9" ry="9" fill="#ffffff" stroke="#cb4100"
+            pointer-events="all" />
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 186px; margin-left: 697px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">refund
+                            success</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+        <path d="M 316 76 L 316 149.63" fill="none" stroke="#cb4100" stroke-miterlimit="10"
+            pointer-events="stroke" />
+        <path d="M 316 154.88 L 312.5 147.88 L 316 149.63 L 319.5 147.88 Z" fill="#cb4100"
+            stroke="#cb4100" stroke-miterlimit="10" pointer-events="all" />
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 114px; margin-left: 387px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; white-space: nowrap; ">Apply
+                            for refund again</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+        <rect x="236" y="16" width="120" height="60" rx="9" ry="9" fill="#ffffff" stroke="#cb4100"
+            pointer-events="all" />
+        <g transform="translate(-0.5 -0.5)">
+            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                width="100%" height="100%">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                    style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 46px; margin-left: 237px;">
+                    <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                        <div
+                            style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #cb4100; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">refund
+                            failed</div>
+                    </div>
+                </div>
+            </foreignObject>
+        </g>
+    </g>
+</svg>

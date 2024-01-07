@@ -1,38 +1,38 @@
-# 设置售后状态
+# Set After-Aales Status
 
-## 功能简述
+## Function Description
 
-- 设置售后状态
+- Set after-sales status
 
-## 设置售后状态 API
+## Set After-Aales Status API
 
-### 请求 URL
+### Request URL
 
 - `/orders/{ORDER_ID}/afterSale/status`
-  - `{ORDER_ID}`：您的支付 ID
+  - `{ORDER_ID}`：Your payment ID
 
-### 请求 Method
+### Request Method
 
 - `order.setAfterSaleStatus`
 
-### 请求方式
+### HTTP Verb
 
 - PUT
 
-### 请求参数
+### Request Parameters
 
-请求参数如下：
+The request parameters are as follows:
 
 - **Header**
 
-  - [_查看公共参数_](/zh/payinApi/callMethod/callMethod#公共参数)
+  - [_View public parameters_](/en/payinApi/callMethod/callMethod#public-parameters)
 
 - **Request Body**
 
-| **参数**                                     | **类型** | **必填** | **描述**     | **示例** |
-| -------------------------------------------- | -------- | -------- | ------------ | -------- |
-| value    | string   | 是       | 售后状态： <br> none：无 <br> applying：申请售后 <br> returning：退货中 <br> returned：退货完成 | "none"   |
+| **Parameter** | **Type** | **Required** | **Description**                                                                                                                       | **Example** |
+| ------------- | -------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| value         | string   | Y            | After-sales status: <br> none: None <br> applying: Applying for after-sales <br> Returning: Returning <br> returned: Return completed | "none"      |
 
-### 响应参数
+### Response Parameters
 
-响应 HTTP 状态码为 `200` 即代表成功
+Response HTTP status code `200` means success

@@ -8,6 +8,7 @@ export default {
   themeConfig: {
     nav: [
       { text: "Home", link: "/en/" },
+      { text: "Acquiring", link: "/en/payinApi/", activeMatch: "/payinApi/" },
       { text: "Payment", link: "/en/payoutApi/", activeMatch: "/payoutApi/" },
     ],
     sidebar: {

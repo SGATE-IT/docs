@@ -1,58 +1,58 @@
-# 调用方法
+# Call Method
 
-## 服务器信息
+## Server Information
 
-* **API 服务地址**：`{HOST}/api_v1`
-  * `HOST`: 域名
-    * 沙箱环境域名：`https://sandbox.sgate.sa`
+* **API Service Address**：`{HOST}/api_v1`
+  * `HOST`: Domain
+    * Sandbox environment domain name: `https://sandbox.sgate.sa`
 
-* **通信协议：HTTP**
+* **Communication protocol: HTTP**
 
-* **字符编码：UTF-8**
+* **Character encoding: UTF-8**
 
-## 公共参数
+## Public Parameters
 
-**公共请求参数**
+**Public Request Parameters**
 
-HTTP 中 header：
+HTTP header:
 
-| **名称**            | **类型** | **是否必填** | **说明**                          |
-| ------------------- | -------- | ------------ | --------------------------------- |
-| x-auth-signature    | String   | 是           | 签名字符串                        |
-| x-auth-key          | String   | 是           | 申请签名授权拿到的 key            |
-| x-auth-timestamp    | String   | 是           | 发起请求的时间戳 int32 秒级       |
-| x-auth-sign-method  | String   | 是           | 签名计算方式目前统一为 HmacSHA256 |
-| x-auth-sign-version | String   | 是           | 签名计算方式版本目前统一为 1      |
+| **Parameter**       | **Type** | **Required** | **Description**                                                     |
+| ------------------- | -------- | ------------ | ------------------------------------------------------------------- |
+| x-auth-signature    | String   | Y            | Signature string                                                    |
+| x-auth-key          | String   | Y            | The key obtained when applying for signature authorization          |
+| x-auth-timestamp    | String   | Y            | Timestamp of request initiated int32 seconds                        |
+| x-auth-sign-method  | String   | Y            | The signature calculation method is currently unified as HmacSHA256 |
+| x-auth-sign-version | String   | Y            | The signature calculation version is currently unified to 1         |
 
-## 鉴权机制
+## Authentication Mechanism
 
-1. 构造请求参数的头信息, 签名验证所有信息均在头信息里
-2. 签名计算方式
+1. Construct the header information of the request parameters, and the signature verification all information is in the header information
+2. Signature calculation method
 
-   1. 使用 key=value 的格式处理键值对。value 要经过 `urlencode` 处理,
-   2. 按照字典**升序**的方式排序处理后的键值对，然后用 `&` 符号链接
-   3. 再利用上面申请到的 `secret` 利用 `sha256` 来计算这个拼接后字符串的摘要信息, 输出为 `base64` 编码
-   4. 键值对如下:
+   1. Use the key=value format to process key-value pairs. value needs to be processed by `urlencode`
+   2. Sort the processed key-value pairs in **ascending order** of the dictionary, and then use `&` symbolic link
+   3. Then use the `secret` applied above and use `sha256` to calculate the summary information of the spliced string, and the output is `base64` encoding.
+   4. The key-value pairs are as follows:
 
-   | **KEY**     | **类型** | **说明**                                                                                                                                            |
-   | ----------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | uri         | String   | 请求的 url 去掉 root 的部分，例如: /users/100000/orders                                                                                             |
-   | key         | String   | 申请到的 key                                                                                                                                        |
-   | timestamp   | Int32    | 时间戳： Int32 秒级                                                                                                                                  |
-   | signMethod  | String   | `HmacSHA256` 固定                                                                                                                                   |
-   | signVersion | String   | `1` 固定                                                                                                                                            |
-   | method      | String   | 接口请求的 Method，示例："merchant.addOrder" |
+   | **KEY**     | **Type** | **Description**                                                          |
+   | ----------- | -------- | ------------------------------------------------------------------------ |
+   | uri         | String   | The requested url minus the root part, for example: /users/100000/orders |
+   | key         | String   | The applied key                                                          |
+   | timestamp   | Int32    | Timestamp: Int32 seconds                                                 |
+   | signMethod  | String   | `HmacSHA256` Fixed                                                       |
+   | signVersion | String   | `1` Fixed                                                                |
+   | method      | String   | Method requested by the interface, example: "merchant.addOrder"          |
 
-* **加签代码示例：**
+* **Signing code example:**
 
-::: details 点击查看代码示例
+::: details Click to view code example
 ::: code-group
 
 ```js [NODE]
 // ...
 const crypto = require('crypto');
 
-const secret = "您的 secret";
+const secret = "your secret";
 
 const generator = (opt, secret) => {
     const string = Object.keys(opt)
@@ -65,7 +65,7 @@ const generator = (opt, secret) => {
 
 const opt = {
     uri: "/users/100000/orders",
-    key: "您的 key",
+    key: "your key",
     timestamp: `${(Date.now() / 1000) | 0}`,
     signMethod: "HmacSHA256",
     signVersion: "1",
@@ -74,7 +74,7 @@ const opt = {
 
 let header = [
   'x-auth-signature'    => generator(opt, secret),
-  'x-auth-key'          => "您的 key",
+  'x-auth-key'          => "your key",
   'x-auth-timestamp'    => opt.timestamp,
   'x-auth-sign-method'  => 'HmacSHA256',
   'x-auth-sign-version' => "1"
@@ -85,8 +85,8 @@ let header = [
 
 ```php [PHP]
 // ...
-$secret = "您的 secret";
-$key    = "您的 key";
+$secret = "your secret";
+$key    = "your key";
 
 $time = time();
 
@@ -121,7 +121,7 @@ $header = [
 ### ...
 timestamp = str(int(time.time()))
 signArr   = {}
-signArr["key"]         = "您的 key"
+signArr["key"]         = "your key"
 signArr["method"]      = "merchant.addOrder"
 signArr["signMethod"]  = "HmacSHA256"
 signArr["signVersion"] = 1
@@ -129,12 +129,12 @@ signArr["timestamp"]   = timestamp
 signArr["uri"]         = "/users/100000/orders"
 signStr = urllib.parse.urlencode(sorted(signArr.items(),key=lambda d:d[0]))
 
-sign = base64.b64encode(hmac.new(bytes("您的 secret",encoding = "utf-8"),bytes(signStr,encoding = "utf-8"),hashlib.sha256).digest()).decode()
+sign = base64.b64encode(hmac.new(bytes("your secret",encoding = "utf-8"),bytes(signStr,encoding = "utf-8"),hashlib.sha256).digest()).decode()
 
 headers = {}
 
 headers["x-auth-signature"]    = sign
-headers["x-auth-key"]          = "您的 key"
+headers["x-auth-key"]          = "your key"
 headers["x-auth-timestamp"]    = timestamp
 headers["x-auth-sign-method"]  = "HmacSHA256"
 headers["x-auth-sign-version"] = "1"
@@ -154,7 +154,7 @@ Map<String, String> params = new TreeMap<String, String>(
 
 String timestamp = String.valueOf(System.currentTimeMillis()/1000);
 
-params.put("key", "您的 key");
+params.put("key", "your key");
 params.put("method", "merchant.addOrder");
 params.put("signMethod", "HmacSHA256");
 params.put("signVersion", String.valueOf(1));
@@ -170,17 +170,17 @@ for(Object key:params.keySet()){
     signStr = signStr + String.valueOf(key)+"="+value;
 }
 
-SecretKeySpec keySpec = new SecretKeySpec("您的 secret".getBytes(), "HmacSHA256");
+SecretKeySpec keySpec = new SecretKeySpec("your secret".getBytes(), "HmacSHA256");
 Mac mac = Mac.getInstance("HmacSHA256");
 mac.init(keySpec);
 byte[] result = mac.doFinal(signStr.getBytes());
 BASE64Encoder encoder = new BASE64Encoder();
 String sign = encoder.encode(result);
 
-HttpGet get = new HttpGet("请求地址");
+HttpGet get = new HttpGet("request address");
 
 get.addHeader("x-auth-signature", sign);
-get.addHeader("x-auth-key", "您的 key");
+get.addHeader("x-auth-key", "your key");
 get.addHeader("x-auth-timestamp", timestamp);
 get.addHeader("x-auth-sign-method", "HmacSHA256");
 get.addHeader("x-auth-sign-version", "1");
@@ -189,23 +189,23 @@ get.addHeader("x-auth-sign-version", "1");
 
 :::
 
-## 响应结果
+## Response Result
 
-**成功响应**
+**Successful Response**
 
-当 HTTP 响应状态码为 `2xx` 时，表明调用成功。
+When the HTTP response status code is `2xx`, the call is successful.
 
-**失败响应**
+**Failure Response**
 
-当 HTTP 响应状态码为 `4xx` 或 `5xx` 时，表明调用失败。
+When the HTTP response status code is `4xx` or `5xx`, it indicates that the call failed.
 
-**响应报文示例**
+**Response Parameter Example**
 
 ```json
 {
-  "code": "notAllowed", // 错误代码
-  "message": "No access", // 错误描述
-  // 详细错误信息
+  "code": "notAllowed", // Error code
+  "message": "No access", // Wrong description
+  // Detailed error message
   "data": [
     "signature error",
     {
