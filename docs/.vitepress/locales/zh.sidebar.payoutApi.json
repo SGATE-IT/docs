@@ -54,6 +54,7 @@
                             "collapsed": false,
                             "items": [
                                 { "text": "创建代付工单", "link": "/zh/payoutApi/payout/payoutCreate" },
+                                { "text": "创建快捷代付工单", "link": "/zh/payoutApi/payout/payoutRapid" },
                                 { "text": "查询代付工单列表", "link": "/zh/payoutApi/payout/payoutList" },
                                 { "text": "查询单个代付工单", "link": "/zh/payoutApi/payout/payoutDetail" }
                             ]
@@ -86,6 +87,7 @@
                         { "text": "状态码", "link": "/zh/payoutApi/appendix/statusCode" },
                         { "text": "客户状态", "link": "/zh/payoutApi/appendix/customStatus" },
                         { "text": "代付工单状态", "link": "/zh/payoutApi/appendix/paymentStatus" },
+                        { "text": "代付工单交易类型", "link": "/zh/payoutApi/appendix/tranType" },
                         { "text": "付款方式", "link": "/zh/payoutApi/appendix/paymentMethod" },
                         { "text": "支持币种", "link": "/zh/payoutApi/appendix/currency" }
                     ]

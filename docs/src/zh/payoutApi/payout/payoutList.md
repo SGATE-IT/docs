@@ -47,6 +47,7 @@
 | customid      | string   | 系统客户 ID                                          |
 | mercustomid   | string   | 商户客户 ID                                          |
 | payeeuid      | string   | 商户订单 ID                                          |
+| trantype      | string   | [交易类型](/zh/payoutApi/appendix/tranType)          |
 | currency      | string   | [货币代码](/zh/payoutApi/appendix/currency)          |
 | paymentmethod | string   | [付款方式](/zh/payoutApi/appendix/paymentMethod)     |
 | amount        | float    | 打款金额                                             |
@@ -71,6 +72,7 @@
             "customid": "12ad4",
             "mercustomid": "u004",
             "payeeuid": "TEST1234567aa12sd1",
+            "trantype": "standard",
             "currency": "SAR",
             "paymentmethod": "bankTransfer",
             "amount": 2002,

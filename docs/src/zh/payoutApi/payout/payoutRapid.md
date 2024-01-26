@@ -1,18 +1,14 @@
-# 创建代付工单
+# 创建快捷代付工单
 
 ## 功能简述
 
-- 商户为审核通过的客户创建代付工单。
+- 商户可以绕过客户创建和审核的流程，直接提交基本信息发起代付工单。
 
-::: danger 注意
-只有审核通过的客户才能成功创建代付工单。
-:::
-
-## 创建代付工单 API
+## 创建快捷代付工单 API
 
 ### 请求 URL
 
-- `/payee/payCustomTicket/create`
+- `/payee/payCustomTicket/rapid`
 
 ### 请求方式
 
@@ -29,27 +25,47 @@
 - **Request Body**
 
 ::: tip 提示
-商户客户 ID 和系统客户 ID 传其中一个，如果都不传接口会响应参数缺失错误。
+mercustomid 为商户客户 ID，系统会自动依据 mercustomid 做以下处理：
+1. 当商户下 mercustomid 已存在关联的客户，会根据提交的客户信息，对该客户信息进行更新，同时为该客户创建代付工单。
+2. 当商户下 mercustomid 不存在关联的客户，则会新创建一个新的客户，客户创建后直接为审核通过的状态，同时为该新增的客户创建代付工单。
 :::
+
+* **必须**传递的参数：
 
 | **参数**      | **必填** | **类型** | **默认值** | **描述**                                         |
 | ------------- | -------- | -------- | ---------- | ------------------------------------------------ |
-| customid      | 否       | string   | -          | 系统客户 ID                                      |
-| mercustomid   | 否       | string   | -          | 商户客户 ID                                      |
+| mercustomid   | 是       | string   | -          | 商户客户 ID                                      |
 | payeeuid      | 是       | string   | -          | 商户订单 ID，要求全局唯一，长度不得超过64位      |
 | amount        | 是       | float    | -          | 付款金额，精确到小数点后两位                     |
 | currency      | 是       | string   | -          | [货币代码](/zh/payoutApi/appendix/currency)      |
 | paymentmethod | 是       | string   | -          | [付款方式](/zh/payoutApi/appendix/paymentMethod) |
 
+* 使用 **bankTransfer** 付款方式，需要额外传递的参数：
+
+| **参数**    | **必填** | **类型** | **默认值** | **描述**                                                                                    |
+| ----------- | -------- | -------- | ---------- | ------------------------------------------------------------------------------------------- |
+| name_e      | 是       | string   | -          | 客户英文名称                                                                                |
+| name_a      | 是       | string   | -          | 客户阿拉伯文名称                                                                            |
+| bankcode    | 是       | string   | -          | 银行 CODE                                                                                   |
+| cardno      | 是       | string   | -          | 银行账户（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理） |
+| ibanaccount | 是       | string   | -          | IBAN                                                                                        |
+
+* 使用 **STCPay** 付款方式，需要额外传递的参数：
+
+| **参数**   | **必填** | **类型** | **默认值** | **描述**                                                                                       |
+| ---------- | -------- | -------- | ---------- | ---------------------------------------------------------------------------------------------- |
+| stcaccount | 是       | string   | -          | STCPay 账户（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理） |
+
 **请求参数示例**
 
 ```json
 {
-    "mercustomid":"u004",
-    "payeeuid":"TEST1234567aa12sd2",
-    "amount":2002,
+    "mercustomid":"u0043",
+    "payeeuid":"payeeuid1",
+    "amount":33.33,
     "currency":"SAR",
-    "paymentmethod":"bankTransfer"
+    "paymentmethod":"STCPay",
+    "stcaccount":"j+7ehQuYum6eK+1CgMAyVnbJLZl5bU3I1q/Egyh2BNkqLyingkjeFuX+an2mkqZ2IaK1038zNhz7lvnix+R4C7gGM/hWSwZ2/OReoO4CTKfB8KH+XyYNEKgkd+5BIE/w35ssJNgCHy7BlqZz9sm2hboz6DOZAcY/Sv7eya328yChDllr8MlUY87x+yTN+EEjiUajvFA3RB7Lx/+DcQgkx58fmlrq4JhwlqnjKJllSimnqwK9DB6nKsNQAHONLzGndl4nAaL441EGyP0tVU+roSd0uJU1hpc+Gq9HKLr1N3rt1Y7QEd9+wHwZ3EBf0dUdIq94gC1ZuZ0VU+pBRim40Q=="
 }
 ```
 
@@ -89,7 +105,7 @@
         "customid": "12ad4",
         "mercustomid": "u004",
         "payeeuid": "TEST1234567aa12sd2",
-        "trantype": "standard",
+        "trantype": "rapid",
         "currency": "SAR",
         "paymentmethod": "bankTransfer",
         "amount": 2002,
