@@ -18,7 +18,7 @@ export default {
     outline: "deep",
     outlineTitle: "Document introduction",
     footer: {
-      copyright: "All rights reserved © 2020 - 2023 SGate",
+      copyright: "All rights reserved © 2020 - 2024 SGate",
     },
   },
 };
