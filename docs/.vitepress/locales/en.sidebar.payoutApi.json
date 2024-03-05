@@ -62,7 +62,7 @@
                             "text": "OTP",
                             "collapsed": true,
                             "items": [
-                                { "text": "Send OTP Code", "link": "/en/payoutApi/otp/sendOtp" },
+                                { "text": "Create OTP Task", "link": "/en/payoutApi/otp/sendOtp" },
                                 { "text": "Verify OTP Code", "link": "/en/payoutApi/otp/checkOtp" }
                             ]
                         },

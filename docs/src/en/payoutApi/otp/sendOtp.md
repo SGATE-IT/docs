@@ -1,4 +1,4 @@
-# Send OTP Code
+# Create OTP Task
 
 ::: warning
 This feature needs to be configured and activated in the background in advance
@@ -40,7 +40,7 @@ OTP Type：
 | `{ECPIRY}`   | number   | Expiration time, in minutes |
 | `{APP_NAME}` | string   | Application name            |
 
-## Send OTP Code API
+## Create OTP Task API
 
 ### Request URL
 
