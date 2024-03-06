@@ -8,11 +8,28 @@ This feature needs to be configured and activated in the background in advance
 
 Support sending a text message containing an OTP code to Saudi phone numbers to verify their legitimacy.
 
+### Mobile Number Rules
+
+OTP type:
+
+- stcpay
+
+The following mobile number formats are supported: 5xxxxxxxx, 9665xxxxxxxx, +9665xxxxxxxx, 05xxxxxxxx
+
+For the same mobile number, use different formats to send requests. The valid mobile number shall prevail. For example:
+  
+| **Request mobile number** | **Valid mobile number** |
+| ------------------------- | ----------------------- |
+| 512345678                 | 512345678               |
+| 0512345678                | 512345678               |
+| 966512345678              | 512345678               |
+| +966512345678             | 512345678               |
+
 ### OTP Rules
 
-- Verification code: A random 6-digit number will appear with a number starting with 0.
+- Verification code: a random 6-digit number, **numbers starting with 0 will appear**.
 - Verification code validity period: 5 minutes.
-- Verification code frequency: The same phone number can only be sent once per minute.
+- Verification code frequency: The same **valid mobile phone number** can only be sent once per minute.
 
 ### Test account
 
@@ -20,9 +37,9 @@ Joint debugging testing can be conducted using a test number. The test number wi
 
 The verification code of the test number and the returned `session ID` remain unchanged.
 
-| **Phone number** | **OTP** | **sessionid**                    |
-| ---------------- | ------- | -------------------------------- |
-| 512345678        | 123456  | 10290d703f8254593ff93533f00af153 |
+| **Phone number**                                         | **OTP** | **sessionid**                    |
+| -------------------------------------------------------- | ------- | -------------------------------- |
+| 512345678<br>0512345678<br>966512345678<br>+966512345678 | 123456  | 10290d703f8254593ff93533f00af153 |
 
 ### Message template
 
@@ -61,10 +78,9 @@ request parameters as following：
 - **Request Body**
 
 | **Parameter** | **Required** | **Type** | **Default value** | **Description**                |
-| -------------- | ------------ | -------- | ----------------- | ------------------------------ |
-| mobile         | Y            | number   | -                 | Send verification phone number |
-| appname        | Y            | string   | -                 | App name                       |
-| type           | N            | string   | stcpay            | OTP Type：stcpay               |
+| ------------- | ------------ | -------- | ----------------- | ------------------------------ |
+| mobile        | Y            | string   | -                 | Send verification phone number |
+| appname       | Y            | string   | -                 | App name                       |
 
 ### Response parameters
 
@@ -72,9 +88,11 @@ The response parameters are as follows：
 
 - **Response Body**
 
-| **Parameter** | **Type** | **Description**     |
-| -------------- | -------- | ------------------- |
-| sessionid      | string   | OTP sending voucher |
+| **Parameter** | **Type** | **Description**         |
+| ------------- | -------- | ----------------------- |
+| mobile        | string   | Send mobile number      |
+| appname       | string   | product name            |
+| sessionid     | string   | OTP sending certificate |
 
 **Response parameter Example**
 
@@ -83,9 +101,11 @@ The response parameters are as follows：
     "code": 200,
     "message": "Request succeeded.",
     "data": {
+        "mobile": "+966512345678",
+        "appname": "TestApp",
         "sessionid": "10290d703f8254593ff93533f00af153"
     },
     "sensitiveFields": {},
-    "requestId": "0EEF349FEE92538582E2D1B14BC1BF45"
+    "requestId": "758EFC622B2D51B4C37353D4C8BEA374"
 }
 ```

@@ -83,5 +83,6 @@
 | 1607        | OTP code is invalid or has expired         |
 | 1608        | OTP sending number mismatch                |
 | 1609        | OTP code error                             |
-| 1610        | Unmatched OTP sending voucher              |
+| 1610        | OTP sending credentials not matched        |
 | 1611        | OTP is currently being sent                |
+| 1612        | OTP sending number format error            |
