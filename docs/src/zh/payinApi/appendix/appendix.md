@@ -34,5 +34,5 @@ GitHub：https://github.com/SGATE-IT/gccpay-client-demo
 :::
 
 ::: tip 提示
-STCPay 单笔支付不能超过 500 SAR
+STCPay 单笔支付不能超过 3000 SAR
 :::

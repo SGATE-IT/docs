@@ -34,5 +34,5 @@ All limits are gateway transaction limits. If the user's bank card has a limit a
 :::
 
 ::: tip
-STCPay single payment cannot exceed 500 SAR
+STCPay single payment cannot exceed 3000 SAR
 :::
