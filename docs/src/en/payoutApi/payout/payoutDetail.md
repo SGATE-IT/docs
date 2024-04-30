@@ -1,10 +1,10 @@
-# Query Single Payment Order
+# Query Payment Order Detail
 
 ## Function Description
 
 - Query a single payment work order
 
-## Query Single Payment Order API
+## Query Payment Order Detail API
 
 ### Request URL
 

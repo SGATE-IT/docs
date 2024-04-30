@@ -63,7 +63,7 @@ After creating a customer, this event is triggered when the customer's subsequen
 
 The response data is customer information after changing status.
 
-Consistency between customer data structure and interface for querying customer details Example:
+The response data is the customer information after the changed status. The customer data structure is consistent with the **Query Customer Details** interface, example:
 
 ```json
 {
@@ -93,7 +93,7 @@ Consistency between customer data structure and interface for querying customer 
 }
 ```
 
-## Event: Change in Status of Payment Order
+## Event: Change In Status Of Payment Order
 
 **Event Identifier**: `SALARY_STATUS_CHANGE`
 
@@ -101,7 +101,7 @@ After creating a payment order, this event is triggered when the subsequent stat
 
 The response data is the payment order information after the status changes.
 
-Example of consistency between data structure and interface for querying payment order details:
+The response data is the payment order information after the status change. The data structure is consistent with the **Query Payment Order Detail** interface, example:
 
 ```json
 {
@@ -144,5 +144,34 @@ Example of consistency between data structure and interface for querying payment
         "updated_at":1687233906
     },
     "time":1687233906
+}
+```
+
+## Event: Offline Transfer Notification
+
+**Event Identifier**: `OFFLINE_TRANSFER_NOTIFICATION`
+
+After offline payment, this event will be triggered after the bank accepts it.
+
+The response data is offline payment data. The data structure is consistent with the **Query Offline Transfer List** interface, example:
+
+```json
+{
+    "event": "OFFLINE_TRANSFER_NOTIFICATION",
+    "data": {
+        "uuid": "0FE4B054-A1FE-11ED-9A3D-F23C925C00BC",
+        "transactiontime": "2023-01-29 01:56:13",
+        "account": "SA9080000000000000000000",
+        "amount": 50,
+        "currency": "OMR",
+        "exchangeinfo": {
+            "custname": "Trust Gate",
+            "custacc": "SA9080000000000000000000",
+            "bankbic": "RJHISARI",
+            "channelreference": "2024042500060801002869000004",
+            "paymentremarks": "B2B/FRACCT/SA9080000000000000000000/Trust Gate/B2B"
+        }
+    },
+    "time": 1714448388
 }
 ```

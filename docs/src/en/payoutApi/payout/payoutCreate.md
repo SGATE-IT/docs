@@ -28,7 +28,7 @@ The request parameters are as follows：
 
 - **Request Body**
 
-::: tip 
+::: tip TIP
 If one of the merchant customer ID and system customer ID is not transmitted, the interface will respond to parameter missing errors.
 :::
 

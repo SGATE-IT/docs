@@ -1,10 +1,10 @@
-# Query individual customers
+# Query Customer Detail
 
 ## Function Description
 
-- Query individual customers
+- Query customer detail
 
-## Query Individual Customer APIs
+## Query Customer Detail API
 
 ### Request URL
 
