@@ -41,6 +41,7 @@
 | refundAmount            | number   | 发生退款的总金额                                                                                                                                                  | 0.99                                            |
 | id                      | string   | SGate 支付订单 ID，系统自动生成，全局唯一                                                                                                                         | "M000001T2022101023455774363043"                |
 | clientId                | string   | 创建订单通过的 Client 的 ID                                                                                                                                       | "CLT0000001"                                    |
+| clientIp                | string   | 客户下单时的 IP 地址                                                                                                                                              | "127.0.0.1"                                     |
 | merchantId              | string   | 订单所属商户 ID                                                                                                                                                   | "M000001"                                       |
 | payLinkId               | string   | 支付链接 ID                                                                                                                                                       | "L549641839"                                    |
 | products                | string   | 当前订单所购买的产品信息                                                                                                                                          |                                                 |
@@ -81,7 +82,8 @@
   "taxAmount": 0, // 税费
   "refundAmount": 0, // 退款金额
   "id": "M448726T2022123112531745487632", // 支付订单ID
-  "clientId": "CLT9208307", // ClientID
+  "clientId": "CLT9208307", // 客户端 ID  
+  "clientIp": "127.0.0.1", // 客户下单时的 IP 地址
   "merchantId": "M448726", // 商户ID
   "payLinkId": "L298791901", // 支付链接ID
   "products": "[{\"name\":\"Slip On Classic Beige\",\"type\":\"unknown\",\"quantity\":1,\"price\":\"12.02\",\"sku\":\"xxxx-xxxx-xx\",\"productId\":\"160603886211111111111\",\"amount\":\"12.02\",\"avatar\":\"https://xxx\",\"location\":\"SA\"}]", // 当前订单所购买的产品信息
