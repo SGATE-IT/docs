@@ -47,6 +47,7 @@ The response parameters are as follows：：
 | customid      | string   | System Customer ID                                                                                  |
 | mercustomid   | string   | Merchant Customer ID                                                                                |
 | payeeuid      | string   | Merchant Order ID                                                                                   |
+| trantype      | string   | [Transaction type](/en/payoutApi/appendix/tranType)                                                 |
 | currency      | string   | [Currency code](/en/payoutApi/appendix/currency)                                                    |
 | paymentmethod | string   | [payment method](/en/payoutApi/appendix/paymentMethod)                                              |
 | amount        | float    | Payment amount                                                                                      |
@@ -71,6 +72,7 @@ The response parameters are as follows：：
             "customid": "12ad4",
             "mercustomid": "u004",
             "payeeuid": "TEST1234567aa12sd1",
+            "trantype": "standard",
             "currency": "SAR",
             "paymentmethod": "bankTransfer",
             "amount": 2002,

@@ -42,7 +42,7 @@
     "data": [
         {
             "bankcode": "114db",
-            "bankname": "The National Commercial Bank"
+            "bankname": "Saudi National Bank(SNB)"
         },
         {
             "bankcode": "11558",
@@ -65,12 +65,8 @@
             "bankname": "Riyad Bank"
         },
         {
-            "bankcode": "117c9",
-            "bankname": "Samba Financial Group (Samba)"
-        },
-        {
             "bankcode": "11846",
-            "bankname": "Alawwal bank"
+            "bankname": "Saudi Awwal Bank(SAB)"
         },
         {
             "bankcode": "118c3",
@@ -94,6 +90,6 @@
         }
     ],
     "sensitiveFields": {},
-    "requestId": "C66318F367852434B45337CD9F833E27"
+    "requestId": "FE6C4AB918BBA32CEABA121DD97E1D2F"
 }
 ```

@@ -2,5 +2,5 @@
 
 | 交易类型 | 说明     | 描述     |
 | -------- | -------- | -------- |
-| rapid    | Rapid    | 标准代付 |
-| standard | Standard | 快捷代付 |
+| standard | Standard | 标准代付 |
+| rapid    | Rapid    | 快捷代付 |

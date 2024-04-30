@@ -49,6 +49,7 @@
 | 1302 | Duplicate customer ID under merchant                                   |
 | 1303 | Please configure the payment account                                   |
 | 1304 | Bank account error                                                     |
+| 1305 | Please fill in the customer name                                       |
 
 ### Payment
 

@@ -1,7 +1,7 @@
 # Payment Order Status
 
-| Status Value | Description |
-| ------------ | ----------- |
-| 0            | Pending     |
-| 1            | Transferred |
-| 2            | Error       |
+| Status | Explain     | Describe                       |
+| ------ | ----------- | ------------------------------ |
+| 0      | Pending     | Application has been submitted |
+| 1      | Transferred | Payment has been completed     |
+| 2      | Error       | Payment failed                 |

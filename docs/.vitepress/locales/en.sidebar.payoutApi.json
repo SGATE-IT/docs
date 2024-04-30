@@ -55,7 +55,8 @@
                             "items": [
                                 { "text": "Create Payment Order", "link": "/en/payoutApi/payout/payoutCreate" },
                                 { "text": "Query List of Payment Orders", "link": "/en/payoutApi/payout/payoutList" },
-                                { "text": "Query Single Payment Order", "link": "/en/payoutApi/payout/payoutDetail" }
+                                { "text": "Query Single Payment Order", "link": "/en/payoutApi/payout/payoutDetail" },
+                                { "text": "Create Rapid Payment Order", "link": "/en/payoutApi/payout/payoutRapid" }
                             ]
                         },
                         {
@@ -86,6 +87,7 @@
                         { "text": "Status Code", "link": "/en/payoutApi/appendix/statusCode" },
                         { "text": "Customer Status", "link": "/en/payoutApi/appendix/customStatus" },
                         { "text": "Payment Order Status", "link": "/en/payoutApi/appendix/paymentStatus" },
+                        { "text": "Payment Order Transaction Type", "link": "/en/payoutApi/appendix/tranType" },
                         { "text": "Payment Method", "link": "/en/payoutApi/appendix/paymentMethod" },
                         { "text": "Support Currency", "link": "/en/payoutApi/appendix/currency" }
                     ]

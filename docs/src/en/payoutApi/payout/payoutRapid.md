@@ -1,18 +1,14 @@
-# Create Payment Order
+# Create Rapid Payment Order
 
 ## Function Description
 
-- The merchant creates a payment order for approved customers.
+- Merchants can bypass the process of customer creation and review and directly submit basic information to initiate a payment order.
 
-::: danger
-Only approved customers can successfully create payment orders.
-:::
-
-## Create Payment Order API
+## Create Rapid Payment Order API
 
 ### Request URL
 
-- `/payee/payCustomTicket/create`
+- `/payee/payCustomTicket/rapid`
 
 ### Request Method
 
@@ -28,28 +24,48 @@ The request parameters are as follows：
 
 - **Request Body**
 
-::: tip 
-If one of the merchant customer ID and system customer ID is not transmitted, the interface will respond to parameter missing errors.
+::: tip TIP
+mercustomid is the merchant customer ID. The system will automatically perform the following processing based on mercustomid:
+1. When there is a customer associated with mercustomid under the merchant, the customer information will be updated based on the submitted customer information, and a payment work order will be created for the customer.
+2. When there is no associated customer with mercustomid under the merchant, a new customer will be created. After the customer is created, it will be in the approved status, and a payment work order will be created for the new customer.
 :::
 
-| **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                 |
-| ------------- | ------------ | -------- | ----------------- | ------------------------------------------------------------------------------- |
-| customid      | N            | string   | -                 | System Customer ID                                                              |
-| mercustomid   | N            | string   | -                 | Merchant Customer ID                                                            |
-| payeeuid      | Y            | string   | -                 | Merchant order ID must be globally unique and must not exceed 64 bits in length |
-| amount        | Y            | float    | -                 | Payment amount, accurate to two decimal places                                  |
-| currency      | Y            | string   | -                 | [Currency code](/en/payoutApi/appendix/currency)                                |
-| paymentmethod | Y            | string   | -                 | [Payment method](/en/payoutApi/appendix/paymentMethod)                          |
+* **Must** pass parameters:
+
+| **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                             |
+| ------------- | ------------ | -------- | ----------------- | ------------------------------------------------------------------------------------------- |
+| mercustomid   | Y            | string   | -                 | Merchant customer ID                                                                        |
+| payeeuid      | Y            | string   | -                 | Merchant order ID, which must be globally unique and cannot exceed 64 characters in length. |
+| amount        | Y            | float    | -                 | Payment amount, accurate to two decimal places                                              |
+| currency      | Y            | string   | -                 | [Currency code](/en/payoutApi/appendix/currency)                                            |
+| paymentmethod | Y            | string   | -                 | [Payment method](/en/payoutApi/appendix/paymentMethod)                                      |
+
+* When using **bankTransfer** payment method, additional parameters need to be passed:
+
+| **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                                                                               |
+| ------------- | ------------ | -------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| name_e        | Y            | string   | -                 | Customer English Name                                                                                                                         |
+| name_a        | Y            | string   | -                 | Customer Arabic Name                                                                                                                          |
+| bankcode      | Y            | string   | -                 | Bank CODE                                                                                                                                     |
+| cardno        | N            | string   | -                 | Bank account (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key)) |
+| ibanaccount   | Y            | string   | -                 | IBAN                                                                                                                                          |
+
+* When using **STCPay** payment method, additional parameters need to be passed:
+
+| **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                                                                                 |
+| ------------- | ------------ | -------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| stcaccount    | Y            | string   | -                 | STCPay account (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key)) |
 
 **Request Parameter Example**
 
 ```json
 {
-    "mercustomid":"u004",
-    "payeeuid":"TEST1234567aa12sd2",
-    "amount":2002,
+    "mercustomid":"u0043",
+    "payeeuid":"payeeuid1",
+    "amount":33.33,
     "currency":"SAR",
-    "paymentmethod":"bankTransfer"
+    "paymentmethod":"STCPay",
+    "stcaccount":"j+7ehQuYum6eK+1CgMAyVnbJLZl5bU3I1q/Egyh2BNkqLyingkjeFuX+an2mkqZ2IaK1038zNhz7lvnix+R4C7gGM/hWSwZ2/OReoO4CTKfB8KH+XyYNEKgkd+5BIE/w35ssJNgCHy7BlqZz9sm2hboz6DOZAcY/Sv7eya328yChDllr8MlUY87x+yTN+EEjiUajvFA3RB7Lx/+DcQgkx58fmlrq4JhwlqnjKJllSimnqwK9DB6nKsNQAHONLzGndl4nAaL441EGyP0tVU+roSd0uJU1hpc+Gq9HKLr1N3rt1Y7QEd9+wHwZ3EBf0dUdIq94gC1ZuZ0VU+pBRim40Q=="
 }
 ```
 
@@ -89,7 +105,7 @@ The response parameters are as follows:
         "customid": "12ad4",
         "mercustomid": "u004",
         "payeeuid": "TEST1234567aa12sd2",
-        "trantype": "standard",
+        "trantype": "rapid",
         "currency": "SAR",
         "paymentmethod": "bankTransfer",
         "amount": 2002,
