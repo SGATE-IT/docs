@@ -60,13 +60,6 @@
                             ]
                         },
                         {
-                            "text": "Offline Transfer",
-                            "collapsed": true,
-                            "items": [
-                                { "text": "Query Offline Transfer List", "link": "/en/payoutApi/offlineTransfer/offlineTransferList" }
-                            ]
-                        },
-                        {
                             "text": "OTP",
                             "collapsed": true,
                             "items": [

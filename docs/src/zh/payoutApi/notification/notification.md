@@ -142,32 +142,3 @@
     "time":1687233906
 }
 ```
-
-## 事件：线下付款通知
-
-**事件标识**: `OFFLINE_TRANSFER_NOTIFICATION`
-
-线下付款后，银行受理后会触发此事件。
-
-响应数据为线下付款数据。数据结构与**查询线下付款列表**接口保持一致，示例：
-
-```json
-{
-    "event": "OFFLINE_TRANSFER_NOTIFICATION",
-    "data": {
-        "uuid": "0FE4B054-A1FE-11ED-9A3D-F23C925C00BC",
-        "transactiontime": "2023-01-29 01:56:13",
-        "account": "SA9080000000000000000000",
-        "amount": 50,
-        "currency": "OMR",
-        "exchangeinfo": {
-            "custname": "Trust Gate",
-            "custacc": "SA9080000000000000000000",
-            "bankbic": "RJHISARI",
-            "channelreference": "2024042500060801002869000004",
-            "paymentremarks": "B2B/FRACCT/SA9080000000000000000000/Trust Gate/B2B"
-        }
-    },
-    "time": 1714448388
-}
-```

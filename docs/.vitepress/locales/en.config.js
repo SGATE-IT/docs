@@ -11,7 +11,7 @@ export default {
       { text: "Home", link: "/en/" },
       { text: "Acquiring", link: "/en/payinApi/", activeMatch: "/payinApi/" },
       { text: "Payment", link: "/en/payoutApi/", activeMatch: "/payoutApi/" },
-      { text: "Virtual Account", link: "/zh/virtualAccountApi/", activeMatch: "/virtualAccountApi/" },
+      { text: "Virtual Account", link: "/en/virtualAccountApi/", activeMatch: "/virtualAccountApi/" },
     ],
     sidebar: {
         ...sidebarPayoutApi,

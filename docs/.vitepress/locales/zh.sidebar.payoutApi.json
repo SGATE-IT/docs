@@ -60,13 +60,6 @@
                             ]
                         },
                         {
-                            "text": "线下付款",
-                            "collapsed": true,
-                            "items": [
-                                { "text": "查询线下付款列表", "link": "/zh/payoutApi/offlineTransfer/offlineTransferList" }
-                            ]
-                        },
-                        {
                             "text": "OTP",
                             "collapsed": true,
                             "items": [
