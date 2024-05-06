@@ -36,6 +36,10 @@ The request parameters are as follows:
 
 - **Request Body**
 
+::: danger WARN
+In the Tamara and Tabby scenarios, orders need to report `customer` and `products` data.
+:::
+
 | **Parameter**                                             | **Type**        | **Required** | **Description**                                                                                                                     | **Example**                                                                             |
 | --------------------------------------------------------- | --------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | merchantOrderId                                           | string          | Y            | Merchant payment order ID, cannot be repeated, ensure unique                                                                        | "2022102218233400123"                                                                   |
@@ -158,12 +162,15 @@ The response parameters are as follows:
 :::
 
 ### Payment Link Rules
-<br>
+
+::: danger WARN
+In the Tamara and Tabby scenarios, orders need to report `customer` and `products` data.
+:::
 
 #### Standard Checkout Payment Link URL
 
 ::: tip
-Automatically jump according to the payment method supported by the merchant.
+Standard Checkout Payment Link, automatically jump according to the payment method supported by the merchant.
 :::
 
 `https://sandbox.sgate.sa/order/{ORDER_ID}?ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}`
@@ -187,6 +194,14 @@ Automatically jump according to the payment method supported by the merchant.
 
 `https://sandbox.sgate.sa/order/{ORDER_ID}/intl-card?ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}&lockPayMethod={LOCK_PAY_METHOD}`
 
+##### Tamara Payment
+
+`https://sandbox.sgate.sa/order/{ORDER_ID}/tamara?ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}&lockPayMethod={LOCK_PAY_METHOD}`
+
+##### Tabby Payment
+
+`https://sandbox.sgate.sa/order/{ORDER_ID}/tabby?ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}&lockPayMethod={LOCK_PAY_METHOD}`
+
 ##### Parameter Description
 
 - `{ORDER_ID}`: the order ID returned after creating the order
@@ -208,6 +223,10 @@ Automatically jump according to the payment method supported by the merchant.
 
 ### Create Payment Order
 
+::: danger WARN
+In the Tamara and Tabby scenarios, orders need to report `customer` and `products` data.
+:::
+
 - Refer to [Create Order API](/en/payinApi/payment/paymentCashier.html#create-order-api) to create a payment order in the payment system
 
 #### Construct Iframe Payment Link
@@ -217,13 +236,21 @@ Automatically jump according to the payment method supported by the merchant.
 
 `https://sandbox.sgate.sa/embed/mada?orderId={ORDER_ID}&ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}`
 
-##### STCPay
+##### STCPay Payment
 
 `https://sandbox.sgate.sa/embed/stcpay?orderId={ORDER_ID}&ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}`
 
 ##### Non-SAR Currency Payment
 
 `https://sandbox.sgate.sa/embed/intl-card?orderId={ORDER_ID}&ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}`
+
+##### Tamara Payment
+
+`https://sandbox.sgate.sa/embed/tamara?orderId={ORDER_ID}&ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}`
+
+##### Tabby Payment
+
+`https://sandbox.sgate.sa/embed/tabby?orderId={ORDER_ID}&ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}`
 
 ##### Parameter Description
 

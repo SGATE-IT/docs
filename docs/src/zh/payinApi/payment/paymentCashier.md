@@ -36,6 +36,10 @@
 
 - **Request Body**
 
+::: danger 注意
+Tamara、Tabby 场景中，订单需要上报 `customer`、`products` 数据。
+:::
+
 | **参数**                                                  | **类型**        | **必填** | **描述**                                                                        | **示例**                                                                               |
 | --------------------------------------------------------- | --------------- | -------- | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | merchantOrderId                                           | string          | 是       | 商户支付订单 ID，不能重复，确保唯一                                             | "2022102218233400123"                                                                  |
@@ -158,12 +162,15 @@
 :::
 
 ### 付款链接规则
-<br>
+
+::: danger 注意
+Tamara、Tabby 场景中，订单需要上报 `customer`、`products` 数据。
+:::
 
 #### 标准收银台付款链接 URL
 
 ::: tip 提示
-根据商户支持的支付方式自动跳转。
+标准收银台付款链接，根据商户支持的支付方式自动跳转。
 :::
 
 `https://sandbox.sgate.sa/order/{ORDER_ID}?ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}`
@@ -187,6 +194,14 @@
 
 `https://sandbox.sgate.sa/order/{ORDER_ID}/intl-card?ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}&lockPayMethod={LOCK_PAY_METHOD}`
 
+##### Tamara 支付
+
+`https://sandbox.sgate.sa/order/{ORDER_ID}/tamara?ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}&lockPayMethod={LOCK_PAY_METHOD}`
+
+##### Tabby 支付
+
+`https://sandbox.sgate.sa/order/{ORDER_ID}/tabby?ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}&lockPayMethod={LOCK_PAY_METHOD}`
+
 ##### 参数说明
 
 - `{ORDER_ID}`：创建订单后返回的订单 ID
@@ -208,22 +223,33 @@
 
 ### 创建支付订单
 
+::: danger 注意
+Tamara、Tabby 场景中，订单需要上报 `customer`、`products` 数据。
+:::
+
 - 参照[创建订单 API](/zh/payinApi/payment/paymentCashier#创建订单-api) 在支付系统创建支付订单
 
 #### 构造 iframe 付款链接
-<br>
 
 ##### 卡支付
 
 `https://sandbox.sgate.sa/embed/mada?orderId={ORDER_ID}&ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}`
 
-##### STCPay
+##### STCPay 支付
 
 `https://sandbox.sgate.sa/embed/stcpay?orderId={ORDER_ID}&ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}`
 
 ##### 非 SAR 币种货币支付
 
 `https://sandbox.sgate.sa/embed/intl-card?orderId={ORDER_ID}&ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}`
+
+##### Tamara 支付
+
+`https://sandbox.sgate.sa/embed/tamara?orderId={ORDER_ID}&ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}`
+
+##### Tabby 支付
+
+`https://sandbox.sgate.sa/embed/tabby?orderId={ORDER_ID}&ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}`
 
 ##### 参数说明
 
