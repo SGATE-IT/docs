@@ -1,0 +1,50 @@
+{
+    "/en/virtualAccountApi/": [
+        {
+            "text": "Virtual Account API Document",
+            "items": [
+                {
+                    "text": "Introduction",
+                    "link": "/en/virtualAccountApi/index"
+                },
+                {
+                    "text": "API Rules",
+                    "collapsed": true,
+                    "items": [
+                        { "text": "Rule Description", "link": "/en/virtualAccountApi/apiRule/illustrate" },
+                        { "text": "Certificate/Key", "link": "/en/virtualAccountApi/apiRule/certificateKey" },
+                        { "text": "Sensitive Information Processing", "link": "/en/virtualAccountApi/apiRule/sensitive" },
+                        { "text": "Signature Rules", "link": "/en/virtualAccountApi/apiRule/sign" },
+                        { "text": "Request/Response Header", "link": "/en/virtualAccountApi/apiRule/header" },
+                        { "text": "Response Message Format", "link": "/en/virtualAccountApi/apiRule/result" },
+                        { "text": "Server Information", "link": "/en/virtualAccountApi/apiRule/service" }
+                    ]
+                },
+                {
+                    "text": "API Dictionary",
+                    "collapsed": false,
+                    "items": [
+                        {
+                            "text": "Receiving Trans",
+                            "collapsed": true,
+                            "items": [
+                                { "text": "Query Receiving Trans List", "link": "/en/virtualAccountApi/receivingTrans/receivingTransList" }
+                            ]
+                        },
+                        {
+                            "text": "Callback Notification",
+                            "link": "/en/virtualAccountApi/notification/notification"
+                        }
+                    ]
+                },
+                {
+                    "text": "Appendix",
+                    "collapsed": true,
+                    "items": [
+                        { "text": "Status Code", "link": "/en/virtualAccountApi/appendix/statusCode" }
+                    ]
+                }
+            ]
+        }
+    ]
+}

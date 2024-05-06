@@ -1,0 +1,50 @@
+{
+    "/zh/virtualAccountApi/": [
+        {
+            "text": "虚拟账户 API 文档",
+            "items": [
+                {
+                    "text": "简介",
+                    "link": "/zh/virtualAccountApi/index"
+                },
+                {
+                    "text": "接口规则",
+                    "collapsed": true,
+                    "items": [
+                        { "text": "规则说明", "link": "/zh/virtualAccountApi/apiRule/illustrate" },
+                        { "text": "证书/密钥", "link": "/zh/virtualAccountApi/apiRule/certificateKey" },
+                        { "text": "敏感信息处理", "link": "/zh/virtualAccountApi/apiRule/sensitive" },
+                        { "text": "签名规则", "link": "/zh/virtualAccountApi/apiRule/sign" },
+                        { "text": "请求/响应头", "link": "/zh/virtualAccountApi/apiRule/header" },
+                        { "text": "响应消息格式", "link": "/zh/virtualAccountApi/apiRule/result" },
+                        { "text": "服务器信息", "link": "/zh/virtualAccountApi/apiRule/service" }
+                    ]
+                },
+                {
+                    "text": "接口字典",
+                    "collapsed": false,
+                    "items": [
+                        {
+                            "text": "转账收款",
+                            "collapsed": true,
+                            "items": [
+                                { "text": "查询转账收款交易", "link": "/zh/virtualAccountApi/receivingTrans/receivingTransList" }
+                            ]
+                        },
+                        {
+                            "text": "回调通知",
+                            "link": "/zh/virtualAccountApi/notification/notification"
+                        }
+                    ]
+                },
+                {
+                    "text": "附录",
+                    "collapsed": true,
+                    "items": [
+                        { "text": "状态码", "link": "/zh/virtualAccountApi/appendix/statusCode" }
+                    ]
+                }
+            ]
+        }
+    ]
+}

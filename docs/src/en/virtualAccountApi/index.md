@@ -1,0 +1,3 @@
+# Virtual Account API Document
+
+The SGate virtual account system offers merchants a streamlined approach to establish and oversee numerous virtual bank accounts, thus enabling more efficient and effective handling of large-value transactions. With its robust security measures, encompassing encryption technology, multiple layers of identity verification, and real-time monitoring, it ensures the safeguarding of merchant funds.

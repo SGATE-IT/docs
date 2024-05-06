@@ -1,6 +1,7 @@
 const sidebarPayinApi = require("./zh.sidebar.payinApi.json");
 const sidebarPayinSystem = require("./zh.sidebar.payinSystem.json");
 const sidebarPayoutApi = require("./zh.sidebar.payoutApi.json");
+const virtualAccountApi = require("./zh.sidebar.virtualAccountApi.json");
 
 export default {
   label: "简体中文",
@@ -19,11 +20,13 @@ export default {
       // },
       { text: "收单", link: "/zh/payinApi/", activeMatch: "/payinApi/" },
       { text: "付款", link: "/zh/payoutApi/", activeMatch: "/payoutApi/" },
+      { text: "虚拟账户", link: "/zh/virtualAccountApi/", activeMatch: "/virtualAccountApi/" },
     ],
     sidebar: {
       ...sidebarPayinApi,
       ...sidebarPayinSystem,
-      ...sidebarPayoutApi
+      ...sidebarPayoutApi,
+      ...virtualAccountApi
     },
     docFooter: {
       prev: "上一页",
