@@ -48,7 +48,7 @@ Request header data example：
 
 Signature construction data description：
 
-* `api_key`：Merchant’s API KEY
+* `api_key`：Merchant API KEY
 * `timestamp`：The second level timestamp at the time the request was initiated.
 * `nonce_str`：Randomly generate a string.
 * `url`：Remove notification address URL information from HOST.
