@@ -229,36 +229,33 @@ Tamara、Tabby 场景中，订单需要上报 `customer`、`products` 数据。
 
 - 参照[创建订单 API](/zh/payinApi/payment/paymentCashier#创建订单-api) 在支付系统创建支付订单
 
-#### 构造 iframe 付款链接
+### 构造 iframe 付款链接
+<br>
 
-##### 卡支付
+#### 卡支付
 
 `https://sandbox.sgate.sa/embed/mada?orderId={ORDER_ID}&ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}`
 
-##### STCPay 支付
+#### STCPay 支付
 
 `https://sandbox.sgate.sa/embed/stcpay?orderId={ORDER_ID}&ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}`
 
-##### 非 SAR 币种货币支付
-
-`https://sandbox.sgate.sa/embed/intl-card?orderId={ORDER_ID}&ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}`
-
-##### Tamara 支付
+#### Tamara 支付
 
 `https://sandbox.sgate.sa/embed/tamara?orderId={ORDER_ID}&ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}`
 
-##### Tabby 支付
+#### Tabby 支付
 
 `https://sandbox.sgate.sa/embed/tabby?orderId={ORDER_ID}&ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}`
 
-##### 参数说明
+#### 参数说明
 
 - `{ORDER_ID}`：在成功创建支付订单后，支付系统返回的订单 ID
 - `{ORDER_TICKET}`：在成功创建支付订单后，支付系统返回的 TICKET
 - `{RETURN_URL}`：在用户支付完成后，返回界面的 URL 地址，RETURN_URL 需要进行 URLencode
 - `{LANGUAGE}`：收银台页面默认语言，可选 EN（英语），AR（阿拉伯语）
 
-#### 嵌入付款链接至 iframe 框架
+### 嵌入付款链接至 iframe 框架
 
 * 示例代码：
 

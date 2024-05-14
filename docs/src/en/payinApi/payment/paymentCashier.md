@@ -229,37 +229,33 @@ In the Tamara and Tabby scenarios, orders need to report `customer` and `product
 
 - Refer to [Create Order API](/en/payinApi/payment/paymentCashier.html#create-order-api) to create a payment order in the payment system
 
-#### Construct Iframe Payment Link
+### Construct Iframe Payment Link
 <br>
 
-##### Card Payment
+#### Card Payment
 
 `https://sandbox.sgate.sa/embed/mada?orderId={ORDER_ID}&ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}`
 
-##### STCPay Payment
+#### STCPay Payment
 
 `https://sandbox.sgate.sa/embed/stcpay?orderId={ORDER_ID}&ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}`
 
-##### Non-SAR Currency Payment
-
-`https://sandbox.sgate.sa/embed/intl-card?orderId={ORDER_ID}&ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}`
-
-##### Tamara Payment
+#### Tamara Payment
 
 `https://sandbox.sgate.sa/embed/tamara?orderId={ORDER_ID}&ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}`
 
-##### Tabby Payment
+#### Tabby Payment
 
 `https://sandbox.sgate.sa/embed/tabby?orderId={ORDER_ID}&ticket={ORDER_TICKET}&returnURL={RETURN_URL}&language={LANGUAGE}`
 
-##### Parameter Description
+#### Parameter Description
 
 - `{ORDER_ID}`: The order ID returned by the payment system after the payment order is successfully created.
 - `{ORDER_TICKET}`: TICKET returned by the payment system after successfully creating a payment order
 - `{RETURN_URL}`: After the user completes the payment, the URL address of the interface is returned. RETURN_URL needs to be URLencoded
 - `{LANGUAGE}`: The default language of the checkout page, optional EN (English), AR (Arabic)
 
-#### Embed Payment Link Into Iframe
+### Embed Payment Link Into Iframe
 
 * Sample code:
 
