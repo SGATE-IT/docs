@@ -5,20 +5,20 @@
     --vp-home-hero-image-filter: blur(40px);
 
     --vp-c-brand: #cb4100;
+    --vp-c-brand-1: #cb4100;
     --vp-c-brand-dark: #f26522;
 
     --vp-c-brand-light: #cb4100;
     --vp-button-brand-hover-bg: #bf3d00;
+
+
+    --vp-button-brand-border: #cb4100;
+    --vp-button-brand-bg: #f26522;
 }
 
 .image-src {
     max-width: 300px !important;
     max-height: 300px !important;
-}
-
-.custom-block.tip {
-    border-color: #4565d8;
-    color: #4565d8;
 }
 
 @media (min-width: 640px) {

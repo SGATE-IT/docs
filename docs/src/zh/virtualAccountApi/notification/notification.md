@@ -69,15 +69,15 @@
     "data": {
         "uuid": "0FE4B054-A1FE-11ED-9A3D-F23C925C00BC",
         "transactiontime": "2023-01-29 01:56:13",
-        "account": "SA9080000000000000000000",
+        "account": "SA9080000000000000000001",
         "amount": 50,
-        "currency": "OMR",
+        "currency": "SAR",
         "exchangeinfo": {
             "custname": "Trust Gate",
-            "custacc": "SA9080000000000000000000",
+            "custacc": "SA9080000000000000000002",
             "bankbic": "RJHISARI",
             "channelreference": "2024042500060801002869000004",
-            "paymentremarks": "B2B/FRACCT/SA9080000000000000000000/Trust Gate/B2B"
+            "paymentremarks": "B2B/FRACCT/SA9080000000000000000002/Trust Gate/B2B"
         }
     },
     "time": 1714448388
