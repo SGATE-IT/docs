@@ -41,7 +41,7 @@
 | orderId                | string   | 订单所属商户 ID                                    | "M000001T2022101023455774363043"                                                                                        |
 | merchantId             | string   | 商户 ID                                            | "M000001"                                                                                                               |
 | amount                 | number   | 订单金额，注意这里是数字类型，浮点数，最多两位小数 | 3.23                                                                                                                    |
-| currency               | string   | 货币类型货币种类，三位大写字母                     | "SAR",  "AED", "BHD",  "EGP",   "KWD", "OMR", "QAR"                                                                     |
+| currency               | string   | 货币类型货币种类，三位大写字母                     | "SAR"<br>"KWD"<br>"BHD"<br>"AED"<br>"OMR"<br>"QAR"                                                                      |
 | deviceId               | string   | 支付用户的设备 ID                                  | "a13382f5-4dcf-4ef5-9e81-33a836a610a9"                                                                                  |
 | clientIp               | string   | 支付用户的 IP                                      | "192.168.0.1"                                                                                                           |
 | userAgent              | string   | 支付用户的 UserAgent                               | "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" |

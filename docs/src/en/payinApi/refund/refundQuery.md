@@ -33,22 +33,22 @@ The response parameters are as follows:
 
 - **Response Body**
 
-| **Parameter**       | **Type** | **Description**                                                                                         | **Example**                                                  |
-| ------------------- | -------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| amount              | number   | Order amount, note that this is a numeric type, floating point number, up to two decimal places         | 3.23                                                         |
-| id                  | string   | Chargeback ID, globally unique                                                                          | "M948164T2023072607034709567189_R1"                          |
-| merchantId          | string   | Merchant ID                                                                                             | "M948164"                                                    |
-| orderId             | string   | The order ID                                                                                            | "M948164T2023072607034709567189"                             |
-| merchantRefundId    | string   | Merchant refund order ID                                                                                | "TEST934759263495634"                                        |
-| refundTransactionId | string   | Refund operation transaction ID                                                                         | "M948164T2023072607034709567189_2"                           |
-| originTransactionId | string   | Order transaction ID                                                                                    | "M948164T2023072607034709567189_1"                           |
-| paymentMethod       | string   | Payment method: <br> stcpay <br> mastercard <br> applePay <br> tap                                      | "mastercard"                                                 |
-| status              | string   | Refund status: <br> pending: Refund in progress <br> success: Refund completed <br> fail: Refund failed | "pending"                                                    |
-| currency            | string   | currency type currency type, three uppercase letters                                                    | "SAR"<br>"AED"<br>"BHD"<br>"EGP"<br>"KWD"<br>"OMR"<br >"QAR" |
-| reason              | string   | Reason for refund                                                                                       | "Return Shipping Fee"                                        |
-| finishedAt          | string   | Refund completion time                                                                                  | "2023-07-27T11:38:11.000Z"                                   |
-| createdAt           | string   | Creation time                                                                                           | "2023-07-26T04:06:33.227Z"                                   |
-| updatedAt           | string   | Update time                                                                                             | "2023-07-26T04:06:33.227Z"                                   |
+| **Parameter**       | **Type** | **Description**                                                                                         | **Example**                                        |
+| ------------------- | -------- | ------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| amount              | number   | Order amount, note that this is a numeric type, floating point number, up to two decimal places         | 3.23                                               |
+| id                  | string   | Chargeback ID, globally unique                                                                          | "M948164T2023072607034709567189_R1"                |
+| merchantId          | string   | Merchant ID                                                                                             | "M948164"                                          |
+| orderId             | string   | The order ID                                                                                            | "M948164T2023072607034709567189"                   |
+| merchantRefundId    | string   | Merchant refund order ID                                                                                | "TEST934759263495634"                              |
+| refundTransactionId | string   | Refund operation transaction ID                                                                         | "M948164T2023072607034709567189_2"                 |
+| originTransactionId | string   | Order transaction ID                                                                                    | "M948164T2023072607034709567189_1"                 |
+| paymentMethod       | string   | Payment method: <br> stcpay <br> mastercard <br> applePay <br> tap                                      | "mastercard"                                       |
+| status              | string   | Refund status: <br> pending: Refund in progress <br> success: Refund completed <br> fail: Refund failed | "pending"                                          |
+| currency            | string   | currency type currency type, three uppercase letters                                                    | "SAR"<br>"KWD"<br>"BHD"<br>"AED"<br>"OMR"<br>"QAR" |
+| reason              | string   | Reason for refund                                                                                       | "Return Shipping Fee"                              |
+| finishedAt          | string   | Refund completion time                                                                                  | "2023-07-27T11:38:11.000Z"                         |
+| createdAt           | string   | Creation time                                                                                           | "2023-07-26T04:06:33.227Z"                         |
+| updatedAt           | string   | Update time                                                                                             | "2023-07-26T04:06:33.227Z"                         |
 
 **Response Parameter Example**
 

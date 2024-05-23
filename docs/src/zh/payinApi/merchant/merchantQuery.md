@@ -33,44 +33,44 @@
 
 - **Response Body**
 
-| **参数**                             | **类型** | **描述**                                            | **示例**                                        |
-| ------------------------------------ | -------- | --------------------------------------------------- | ----------------------------------------------- |
-| invoicePrefix                        | string   | 发票前缀                                            | "Sand00"                                        |
-| id                                   | string   | 商户 ID                                             | "M448726"                                       |
-| name                                 | string   | 商户名称                                            | "GCCPayMerchant"                                |
-| status                               | string   | 商户状态：enableddisabled                           | "enabled"                                       |
-| ownerId                              | string   | 登陆用户名                                          | "U771297"                                       |
-| name_en                              | string   | 用户名称                                            | "Sandbox"                                       |
-| CR_file                              | string   | 证件文件地址                                        |                                                 |
-| CR_number                            | string   | 营业执照编号                                        |                                                 |
-| CR_vatNumber                         | string   | 增值税编号                                          |                                                 |
-| CR_expiredAt                         | string   | 证件过期时间                                        | "2023-04-21T00:00:00.000Z"                      |
-| address                              | string   | 企业营业地址                                        | "SAR", "AED", "BHD", "EGP", "KWD", "OMR", "QAR" |
-| telephone                            | string   | 联系电话                                            | "900000000"                                     |
-| scope                                | string   | 营业范围                                            |                                                 |
-| legalPerson                          | string   | 法人                                                | "Sandbox"                                       |
-| mcc                                  | string   | MCC                                                 | "123333"                                        |
-| agencyId                             | string   | 代理商 ID                                           | "A936252"                                       |
-| currencys                            | string   | 商户可使用币种                                      | "SAR,KWD,AED,BHD,EGP,OMR,QAR"                   |
-| addressFile                          | string   | 商户营业地址信息文件 URL                            |                                                 |
-| vatFile                              | string   | 商户税务文件 URL                                    |                                                 |
-| nationalId                           | string   | 商户营业执照文件 URL                                |                                                 |
-| logoFile                             | string   | 商户 LOGO URL                                       |                                                 |
-| website                              | string   | 商户网站地址                                        | `https://xxx`                                   |
-| email                                | string   | 商户邮箱                                            | `info@gmail.com`                                |
-| city                                 | string   | 商户所在城市                                        |                                                 |
-| district                             | string   | 商户所在区域                                        |                                                 |
-| street                               | string   | 商户所在街道                                        |                                                 |
-| zipcode                              | string   | 邮政编码                                            |                                                 |
-| feeRate                              | number   | 手续费费率                                          |                                                 |
-| statementStatus                      | string   | 对账方式： <br> hand：手动对账 <br> daily：每日对账 | "daily"                                         |
-| bankCardWhiteList                    | string   | 卡号白名单                                          |                                                 |
-| createdAt                            | string   | 生成时间                                            | "2022-11-08T23:20:19.000Z"                      |
-| updatedAt                            | string   | 更新时间                                            | "2022-12-07T23:26:49.000Z"                      |
-| owner                                | object   | 所属人信息                                          |                                                 |
-| &nbsp;&nbsp;&nbsp;&nbsp;owner.id     | string   | 所属人 ID                                           |                                                 |
-| &nbsp;&nbsp;&nbsp;&nbsp;owner.name   | string   | 所属人名称                                          |                                                 |
-| &nbsp;&nbsp;&nbsp;&nbsp;owner.mobile | string   | 所属手机号                                          |                                                 |
+| **参数**                             | **类型** | **描述**                                            | **示例**                   |
+| ------------------------------------ | -------- | --------------------------------------------------- | -------------------------- |
+| invoicePrefix                        | string   | 发票前缀                                            | "Sand00"                   |
+| id                                   | string   | 商户 ID                                             | "M448726"                  |
+| name                                 | string   | 商户名称                                            | "GCCPayMerchant"           |
+| status                               | string   | 商户状态：enableddisabled                           | "enabled"                  |
+| ownerId                              | string   | 登陆用户名                                          | "U771297"                  |
+| name_en                              | string   | 用户名称                                            | "Sandbox"                  |
+| CR_file                              | string   | 证件文件地址                                        |                            |
+| CR_number                            | string   | 营业执照编号                                        |                            |
+| CR_vatNumber                         | string   | 增值税编号                                          |                            |
+| CR_expiredAt                         | string   | 证件过期时间                                        | "2023-04-21T00:00:00.000Z" |
+| address                              | string   | 企业营业地址                                        |                            |
+| telephone                            | string   | 联系电话                                            | "900000000"                |
+| scope                                | string   | 营业范围                                            |                            |
+| legalPerson                          | string   | 法人                                                | "Sandbox"                  |
+| mcc                                  | string   | MCC                                                 | "123333"                   |
+| agencyId                             | string   | 代理商 ID                                           | "A936252"                  |
+| currencys                            | string   | 商户可使用币种                                      | "SAR,KWD,BHD,AED,OMR,QAR"  |
+| addressFile                          | string   | 商户营业地址信息文件 URL                            |                            |
+| vatFile                              | string   | 商户税务文件 URL                                    |                            |
+| nationalId                           | string   | 商户营业执照文件 URL                                |                            |
+| logoFile                             | string   | 商户 LOGO URL                                       |                            |
+| website                              | string   | 商户网站地址                                        | `https://xxx`              |
+| email                                | string   | 商户邮箱                                            | `info@gmail.com`           |
+| city                                 | string   | 商户所在城市                                        |                            |
+| district                             | string   | 商户所在区域                                        |                            |
+| street                               | string   | 商户所在街道                                        |                            |
+| zipcode                              | string   | 邮政编码                                            |                            |
+| feeRate                              | number   | 手续费费率                                          |                            |
+| statementStatus                      | string   | 对账方式： <br> hand：手动对账 <br> daily：每日对账 | "daily"                    |
+| bankCardWhiteList                    | string   | 卡号白名单                                          |                            |
+| createdAt                            | string   | 生成时间                                            | "2022-11-08T23:20:19.000Z" |
+| updatedAt                            | string   | 更新时间                                            | "2022-12-07T23:26:49.000Z" |
+| owner                                | object   | 所属人信息                                          |                            |
+| &nbsp;&nbsp;&nbsp;&nbsp;owner.id     | string   | 所属人 ID                                           |                            |
+| &nbsp;&nbsp;&nbsp;&nbsp;owner.name   | string   | 所属人名称                                          |                            |
+| &nbsp;&nbsp;&nbsp;&nbsp;owner.mobile | string   | 所属手机号                                          |                            |
 
 **响应参数示例**
 
@@ -92,7 +92,7 @@
   "legalPerson": "test", // 法人
   "mcc": "1111", // MCC
   "agencyId": "A936252", // 代理商ID
-  "currencys": "SAR,AED,BHD,EGP,KWD,OMR,QAR,USD", // 商户可使用币种
+  "currencys": "SAR,KWD,BHD,AED,OMR,QAR", // 商户可使用币种
   "addressFile": null, // 商户营业地址信息文件URL
   "vatFile": "2023-03-20/82/8217650e21bb2b8624af1cd83525fdcf.png", // 商户税务文件URL
   "nationalId": null, // 商户营业执照文件URL

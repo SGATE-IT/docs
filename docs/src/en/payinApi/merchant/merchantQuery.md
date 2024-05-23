@@ -33,44 +33,44 @@ The response parameters are as follows:
 
 - **Response Body**
 
-| **Parameter**                        | **Type** | **Description**                                                                          | **Example**                                     |
-| ------------------------------------ | -------- | ---------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| invoicePrefix                        | string   | Invoice prefix                                                                           | "Sand00"                                        |
-| id                                   | string   | Merchant ID                                                                              | "M448726"                                       |
-| name                                 | string   | Merchant name                                                                            | "GCCPayMerchant"                                |
-| status                               | string   | Merchant status: enableddisabled                                                         | "enabled"                                       |
-| ownerId                              | string   | Login user name                                                                          | "U771297"                                       |
-| name_en                              | string   | username                                                                                 | "Sandbox"                                       |
-| CR_file                              | string   | Certificate file address                                                                 |                                                 |
-| CR_number                            | string   | Business license number                                                                  |                                                 |
-| CR_vatNumber                         | string   | VAT number                                                                               |                                                 |
-| CR_expiredAt                         | string   | Certificate expiration time                                                              | "2023-04-21T00:00:00.000Z"                      |
-| address                              | string   | Company business address                                                                 | "SAR", "AED", "BHD", "EGP", "KWD", "OMR", "QAR" |
-| telephone                            | string   | Contact number                                                                           | "900000000"                                     |
-| scope                                | string   | business scope                                                                           |                                                 |
-| legalPerson                          | string   | legal person                                                                             | "Sandbox"                                       |
-| mcc                                  | string   | MCC                                                                                      | "123333"                                        |
-| agencyId                             | string   | Agency ID                                                                                | "A936252"                                       |
-| currencies                           | string   | Currencies that merchants can use                                                        | "SAR,KWD,AED,BHD,EGP,OMR,QAR"                   |
-| addressFile                          | string   | Merchant business address information file URL                                           |                                                 |
-| vatFile                              | string   | Merchant tax file URL                                                                    |                                                 |
-| nationalId                           | string   | Merchant business license file URL                                                       |                                                 |
-| logoFile                             | string   | Merchant LOGO URL                                                                        |                                                 |
-| website                              | string   | Merchant website address                                                                 | `https://xxx`                                   |
-| email                                | string   | Merchant email                                                                           | `info@gmail.com`                                |
-| city                                 | string   | The city where the merchant is located                                                   |                                                 |
-| district                             | string   | The district where the merchant is located                                               |                                                 |
-| street                               | string   | The street where the merchant is located                                                 |                                                 |
-| zipcode                              | string   | zip code                                                                                 |                                                 |
-| feeRate                              | number   | fee rate                                                                                 |                                                 |
-| statementStatus                      | string   | Reconciliation method: <br> hand: manual reconciliation <br> daily: daily reconciliation | "daily"                                         |
-| bankCardWhiteList                    | string   | Card number whitelist                                                                    |                                                 |
-| createdAt                            | string   | Generation time                                                                          | "2022-11-08T23:20:19.000Z"                      |
-| updatedAt                            | string   | Update time                                                                              | "2022-12-07T23:26:49.000Z"                      |
-| owner                                | object   | owner information                                                                        |                                                 |
-| &nbsp;&nbsp;&nbsp;&nbsp;owner.id     | string   | Owner ID                                                                                 |                                                 |
-| &nbsp;&nbsp;&nbsp;&nbsp;owner.name   | string   | Owner name                                                                               |                                                 |
-| &nbsp;&nbsp;&nbsp;&nbsp;owner.mobile | string   | Mobile phone number                                                                      |                                                 |
+| **Parameter**                        | **Type** | **Description**                                                                          | **Example**                |
+| ------------------------------------ | -------- | ---------------------------------------------------------------------------------------- | -------------------------- |
+| invoicePrefix                        | string   | Invoice prefix                                                                           | "Sand00"                   |
+| id                                   | string   | Merchant ID                                                                              | "M448726"                  |
+| name                                 | string   | Merchant name                                                                            | "GCCPayMerchant"           |
+| status                               | string   | Merchant status: enableddisabled                                                         | "enabled"                  |
+| ownerId                              | string   | Login user name                                                                          | "U771297"                  |
+| name_en                              | string   | username                                                                                 | "Sandbox"                  |
+| CR_file                              | string   | Certificate file address                                                                 |                            |
+| CR_number                            | string   | Business license number                                                                  |                            |
+| CR_vatNumber                         | string   | VAT number                                                                               |                            |
+| CR_expiredAt                         | string   | Certificate expiration time                                                              | "2023-04-21T00:00:00.000Z" |
+| address                              | string   | Company business address                                                                 |                            |
+| telephone                            | string   | Contact number                                                                           | "900000000"                |
+| scope                                | string   | business scope                                                                           |                            |
+| legalPerson                          | string   | legal person                                                                             | "Sandbox"                  |
+| mcc                                  | string   | MCC                                                                                      | "123333"                   |
+| agencyId                             | string   | Agency ID                                                                                | "A936252"                  |
+| currencies                           | string   | Currencies that merchants can use                                                        | "SAR,KWD,BHD,AED,OMR,QAR"  |
+| addressFile                          | string   | Merchant business address information file URL                                           |                            |
+| vatFile                              | string   | Merchant tax file URL                                                                    |                            |
+| nationalId                           | string   | Merchant business license file URL                                                       |                            |
+| logoFile                             | string   | Merchant LOGO URL                                                                        |                            |
+| website                              | string   | Merchant website address                                                                 | `https://xxx`              |
+| email                                | string   | Merchant email                                                                           | `info@gmail.com`           |
+| city                                 | string   | The city where the merchant is located                                                   |                            |
+| district                             | string   | The district where the merchant is located                                               |                            |
+| street                               | string   | The street where the merchant is located                                                 |                            |
+| zipcode                              | string   | zip code                                                                                 |                            |
+| feeRate                              | number   | fee rate                                                                                 |                            |
+| statementStatus                      | string   | Reconciliation method: <br> hand: manual reconciliation <br> daily: daily reconciliation | "daily"                    |
+| bankCardWhiteList                    | string   | Card number whitelist                                                                    |                            |
+| createdAt                            | string   | Generation time                                                                          | "2022-11-08T23:20:19.000Z" |
+| updatedAt                            | string   | Update time                                                                              | "2022-12-07T23:26:49.000Z" |
+| owner                                | object   | owner information                                                                        |                            |
+| &nbsp;&nbsp;&nbsp;&nbsp;owner.id     | string   | Owner ID                                                                                 |                            |
+| &nbsp;&nbsp;&nbsp;&nbsp;owner.name   | string   | Owner name                                                                               |                            |
+| &nbsp;&nbsp;&nbsp;&nbsp;owner.mobile | string   | Mobile phone number                                                                      |                            |
 
 **Response Parameter Example**
 
@@ -92,7 +92,7 @@ The response parameters are as follows:
   "legalPerson": "test", // legal person
   "mcc": "1111", // MCC
   "agencyId": "A936252", //Agency ID
-  "currencys": "SAR,AED,BHD,EGP,KWD,OMR,QAR,USD", // Currencies that merchants can use
+  "currencys": "SAR,KWD,BHD,AED,OMR,QAR", // Currencies that merchants can use
   "addressFile": null, // Merchant business address information file URL
   "vatFile": "2023-03-20/82/8217650e21bb2b8624af1cd83525fdcf.png", // Merchant tax file URL
   "nationalId": null, // Merchant business license file URL
