@@ -12,6 +12,10 @@
               "link": "/en/payinApi/glossary/glossary"
             },
             {
+              "text": "Currency and Limits",
+              "link": "/en/payinApi/currency/currencyAndLimits"
+            },
+            {
               "text": "Call Method",
               "link": "/en/payinApi/callMethod/callMethod"
             },

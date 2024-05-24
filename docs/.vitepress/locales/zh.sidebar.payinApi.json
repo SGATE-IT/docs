@@ -12,6 +12,10 @@
               "link": "/zh/payinApi/glossary/glossary"
             },
             {
+              "text": "币种及限额",
+              "link": "/zh/payinApi/currency/currencyAndLimits"
+            },
+            {
               "text": "调用方法",
               "link": "/zh/payinApi/callMethod/callMethod"
             },
