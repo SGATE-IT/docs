@@ -29,9 +29,9 @@ The request parameters are as follows:
 
 - **Request Body**
 
-| **Parameter** | **Type** | **Required** | **Description**                                                                                                                                                                                                   | **Example** |
-| ------------- | -------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| value         | string   | Y            | Delivery status: <br> pending: not shipped<br> shipping: shipped overseas<br> domesticInStock: waiting for shipment domestically<br> contacting: in contact<br> delivering: delivering <br> delivered: signed for | "pending"   |
+| **Parameter** | **Type** | **Required** | **Description**                                                                                                                                                                                                               | **Example** |
+| ------------- | -------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| value         | string   | Y            | Delivery status: <br> `pending`: not shipped<br> `shipping`: shipped overseas<br> `domesticInStock`: waiting for shipment domestically<br> `contacting`: in contact<br> `delivering`: delivering <br> `delivered`: signed for | "pending"   |
 
 ### Response Parameters
 

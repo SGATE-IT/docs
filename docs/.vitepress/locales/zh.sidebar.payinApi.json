@@ -54,7 +54,8 @@
                     { "text": "设置境内物流信息", "link": "/zh/payinApi/logisticsAfterSale/logistics" },
                     { "text": "设置海外物流信息", "link": "/zh/payinApi/logisticsAfterSale/overseasLogistics" },
                     { "text": "设置投递状态", "link": "/zh/payinApi/logisticsAfterSale/deliveryStatus" },
-                    { "text": "设置售后状态", "link": "/zh/payinApi/logisticsAfterSale/afterSaleStatus" }
+                    { "text": "设置售后状态", "link": "/zh/payinApi/logisticsAfterSale/afterSaleStatus" },
+                    { "text": "设置发货电子邮件", "link": "/zh/payinApi/logisticsAfterSale/shippingEmail" }
                   ]
                 }
               ]

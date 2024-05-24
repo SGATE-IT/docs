@@ -29,11 +29,11 @@
 
 - **Request Body**
 
-| **参数**                                     | **类型** | **必填** | **描述**     | **示例** |
-| -------------------------------------------- | -------- | -------- | ------------ | -------- |
-| value                                        | object   | 是       | 境内物流信息 |          |
-| &nbsp;&nbsp;&nbsp;&nbsp;value.trackingURL    | string   | 是       | 物流追踪网址 |          |
-| &nbsp;&nbsp;&nbsp;&nbsp;value.trackingNumber | string   | 是       | 物流追踪编号 |          |
+| **参数**                                     | **类型** | **必填** | **描述**     |
+| -------------------------------------------- | -------- | -------- | ------------ |
+| value                                        | object   | 是       | 境内物流信息 |
+| &nbsp;&nbsp;&nbsp;&nbsp;value.trackingURL    | string   | 是       | 物流追踪网址 |
+| &nbsp;&nbsp;&nbsp;&nbsp;value.trackingNumber | string   | 是       | 物流追踪编号 |
 
 ### 响应参数
 

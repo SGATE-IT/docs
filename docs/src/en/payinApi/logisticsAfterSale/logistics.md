@@ -29,11 +29,11 @@ The request parameters are as follows:
 
 - **Request Body**
 
-| **Parameter**                                | **Type** | **Required** | **Description**                | **Example** |
-| -------------------------------------------- | -------- | ------------ | ------------------------------ | ----------- |
-| value                                        | object   | Y            | Domestic logistics information |             |
-| &nbsp;&nbsp;&nbsp;&nbsp;value.trackingURL    | string   | Y            | Logistics tracking website     |             |
-| &nbsp;&nbsp;&nbsp;&nbsp;value.trackingNumber | string   | Y            | Logistics tracking number      |             |
+| **Parameter**                                | **Type** | **Required** | **Description**                |
+| -------------------------------------------- | -------- | ------------ | ------------------------------ |
+| value                                        | object   | Y            | Domestic logistics information |
+| &nbsp;&nbsp;&nbsp;&nbsp;value.trackingURL    | string   | Y            | Logistics tracking website     |
+| &nbsp;&nbsp;&nbsp;&nbsp;value.trackingNumber | string   | Y            | Logistics tracking number      |
 
 ### Response Parameters
 

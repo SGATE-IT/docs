@@ -29,9 +29,9 @@ The request parameters are as follows:
 
 - **Request Body**
 
-| **Parameter** | **Type** | **Required** | **Description**                                                                                                                       | **Example** |
-| ------------- | -------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| value         | string   | Y            | After-sales status: <br> none: None <br> applying: Applying for after-sales <br> Returning: Returning <br> returned: Return completed | "none"      |
+| **Parameter** | **Type** | **Required** | **Description**                                                                                                                               | **Example** |
+| ------------- | -------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| value         | string   | Y            | After-sales status: <br> `none`: None <br> `applying`: Applying for after-sales <br> `returning`: Returning <br> `returned`: Return completed | "none"      |
 
 ### Response Parameters
 

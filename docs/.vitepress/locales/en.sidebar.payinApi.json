@@ -54,7 +54,8 @@
                     { "text": "Set Domestic Logistics Information", "link": "/en/payinApi/logisticsAfterSale/logistics" },
                     { "text": "Set Overseas Logistics Information", "link": "/en/payinApi/logisticsAfterSale/overseasLogistics" },
                     { "text": "Set Delivery Status", "link": "/en/payinApi/logisticsAfterSale/deliveryStatus" },
-                    { "text": "Set After-Aales Status", "link": "/en/payinApi/logisticsAfterSale/afterSaleStatus" }
+                    { "text": "Set After-Aales Status", "link": "/en/payinApi/logisticsAfterSale/afterSaleStatus" },
+                    { "text": "Set Up Shipping Email", "link": "/en/payinApi/logisticsAfterSale/shippingEmail" }
                   ]
                 }
               ]
