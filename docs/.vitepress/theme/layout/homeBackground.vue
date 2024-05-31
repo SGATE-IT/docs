@@ -3,27 +3,30 @@ import DefaultTheme from "vitepress/theme";
 import TweenLite from "gsap";
 import Circ from "gsap";
 import { useRouter, useRoute } from "vitepress";
+import { onMounted } from "vue";
 
 const { Layout } = DefaultTheme;
 
 // 监听路由切换
 useRouter().onAfterRouteChanged = (to) => {
-    if (to === "/zh/" || to === "/en/") {
-        initHeader();
-        initAnimation();
-        addListeners();
-    }
+  if (to === "/zh/" || to === "/en/") {
+    initHeader();
+    initAnimation();
+    addListeners();
+  }
 };
 
-let routeData = useRoute();
+onMounted(() => {
+  let routeData = useRoute();
 
-if (routeData.path === "/zh/" || routeData.path === "/en/") {
+  if (routeData.path === "/zh/" || routeData.path === "/en/") {
     setTimeout(() => {
-        initHeader();
-        initAnimation();
-        addListeners();
+      initHeader();
+      initAnimation();
+      addListeners();
     }, 1000);
-}
+  }
+});
 
 let width,
   height,
@@ -213,7 +216,6 @@ function Circle(pos, rad, color) {
 function getDistance(p1, p2) {
   return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
 }
-
 </script>
 
 <template>
