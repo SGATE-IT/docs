@@ -64,7 +64,8 @@
                             "collapsed": true,
                             "items": [
                                 { "text": "创建 OTP 发送任务", "link": "/zh/payoutApi/otp/sendOtp" },
-                                { "text": "验证 OTP 验证码", "link": "/zh/payoutApi/otp/checkOtp" }
+                                { "text": "验证 OTP 验证码", "link": "/zh/payoutApi/otp/checkOtp" },
+                                { "text": "查询 OTP 发送任务", "link": "/zh/payoutApi/otp/otpDetail" }
                             ]
                         },
                         {

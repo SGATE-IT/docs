@@ -64,7 +64,8 @@
                             "collapsed": true,
                             "items": [
                                 { "text": "Create OTP Task", "link": "/en/payoutApi/otp/sendOtp" },
-                                { "text": "Verify OTP Code", "link": "/en/payoutApi/otp/checkOtp" }
+                                { "text": "Verify OTP Code", "link": "/en/payoutApi/otp/checkOtp" },
+                                { "text": "Query OTP Task", "link": "/en/payoutApi/otp/otpDetail" }
                             ]
                         },
                         {
