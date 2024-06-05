@@ -63,7 +63,7 @@ HTTP 状态码为 `202` 返回 JSON 数据，HTTP 状态码为 `202` 时应当�
 | Custom_Name_E         | 客户英文名称                                          |
 | Custom_Name_A         | 客户阿语名称                                          |
 | Custom_Bank_Name      | 客户银行名称                                          |
-| Custom_Bank_Code      | 客户银行号                                            |
+| Custom_Bank_Code      | 客户银行 CODE                                         |
 | Custom_Card_No        | 客户银行卡号（卡号脱敏，只显示前六后四，中间用*代替） |
 | Custom_Iban           | 客户 IBAN                                             |
 | Custom_STCPay_Account | 客户 Stcpay 账号                                      |

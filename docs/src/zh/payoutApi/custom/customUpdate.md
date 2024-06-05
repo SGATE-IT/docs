@@ -45,7 +45,7 @@
 | name_e      | 否       | string   | -          | 客户英文名称                                                                                   |
 | name_a      | 否       | string   | -          | 客户阿拉伯文名称                                                                               |
 | identity    | 否       | string   | -          | 身份证号（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理）    |
-| bankcode    | 否       | string   | -          | 银行 CODE                                                                                      |
+| bankcode    | 否       | string   | -          | [银行 CODE](/zh/payoutApi/banks/bankList)                                                      |
 | cardno      | 否       | string   | -          | 银行账户（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理）    |
 | ibanaccount | 否       | string   | -          | IBAN                                                                                           |
 | stcaccount  | 否       | string   | -          | STCPay 账户（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理） |
@@ -67,8 +67,8 @@
 | identity          | string   | 身份证号（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理）       |
 | identitypic       | string   | 身份证照片 URL（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理） |
 | signpic           | string   | 签名照片 URL（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理）   |
-| bankname          | string   | 银行名称                                                                                             |
-| bankcode          | string   | 银行 CODE                                                                                            |
+| bankname          | string   | [银行名称](/zh/payoutApi/banks/bankList)                                                             |
+| bankcode          | string   | [银行 CODE](/zh/payoutApi/banks/bankList)                                                            |
 | cardno            | string   | 银行账户（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理）       |
 | ibanaccount       | string   | IBAN                                                                                                 |
 | stcaccount        | string   | STCPay 账户（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理）    |

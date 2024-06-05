@@ -38,7 +38,7 @@ If the customer account information is a bank account bankcode, cardno, or ibana
 | name_a        | Y            | string   | -                 | Customer Arabic Name                                                                                                                |
 | mercustomid   | Y            | string   | -                 | Merchant customer ID, requires the merchant to provide a unique ID                                                                  |
 | identity      | Y            | string   | -                 | ID number (sensitive information, encrypted with the [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key))   |
-| bankcode      | N            | string   | -                 | Bank CODE                                                                                                                           |
+| bankcode      | N            | string   | -                 | [Bank CODE](/en/payoutApi/banks/bankList)                                                                                            |
 | cardno        | N            | string   | -                 | Bank account (sensitive information, encrypted using [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key))   |
 | ibanaccount   | N            | string   | -                 | IBAN                                                                                                                                |
 | stcaccount    | N            | string   | -                 | STCPay account (sensitive information, encrypted using [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key)) |
@@ -72,8 +72,8 @@ The response parameters are as follows：
 | identity          | string   | ID number (sensitive information, encrypted with [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))            |
 | identitypic       | string   | ID card photo URL (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))   |
 | signpic           | string   | Signature photo URL (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key)) |
-| bankname          | string   | Bank Name                                                                                                                                            |
-| bankcode          | string   | Bank CODE                                                                                                                                            |
+| bankname          | string   | [Bank Name](/en/payoutApi/banks/bankList)                                                                                                             |
+| bankcode          | string   | [Bank CODE](/en/payoutApi/banks/bankList)                                                                                                             |
 | cardno            | string   | Bank account (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))        |
 | ibanaccount       | string   | IBAN                                                                                                                                                 |
 | stcaccount        | string   | STCPay account (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))      |

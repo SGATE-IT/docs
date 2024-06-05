@@ -48,8 +48,8 @@
 | identity          | string   | 身份证号（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理）       |
 | identitypic       | string   | 身份证照片 URL（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理） |
 | signpic           | string   | 签名照片 URL（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理）   |
-| bankname          | string   | 银行名称                                                                                             |
-| bankcode          | string   | 银行 CODE                                                                                            |
+| bankname          | string   | [银行名称](/zh/payoutApi/banks/bankList)                                                             |
+| bankcode          | string   | [银行 CODE](/zh/payoutApi/banks/bankList)                                                            |
 | cardno            | string   | 银行账户（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理）       |
 | ibanaccount       | string   | IBAN                                                                                                 |
 | stcaccount        | string   | STCPay 账户（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理）    |

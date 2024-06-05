@@ -24,21 +24,21 @@ The request parameters are as follows：
 
 - **Request Body**
 
-| **Parameter**     | **Required** | **Type** | **Default Value** | **Description**                                                                                     |
-| ------------ | -------- | -------- | ---------- | -------------------------------------------------------------------------------------------- |
-| pageno       | N       | number   | 1          | Page number                                                                                         |
-| pagesize     | N       | number   | 20         | Display the number of items per page, supporting a maximum of 100 items                                                                  |
-| starttime    | N       | number   | -          | Customer creation start time, second level timestamp                                                                 |
-| endtime      | N       | number   | -          | Customer creation end time, second level timestamp                                                                 |
-| mercustomids | N       | string   | -          | Merchant customer ID, multiple IDs separated by commas in English, examples: u001, u002                                        |
-| customids    | N       | string   | -          | System customer ID, multiple IDs separated by English commas, example: 1187, 2f131                                      |
-| identity     | N       | string   | -          | ID number (sensitive information, need [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key) encryption    |
-| cardno       | N       | string   | -          | Bank account (sensitive information, requires [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key) encryption processing)    |
-| bankcode     | N       | string   | -          | Bank CODE                                                                                    |
-| ibanaccount  | N       | string   | -          | IBAN                                                                                         |
-| name_e       | N       | string   | -          | Customer English name, supports fuzzy queries                                                                   |
-| status       | N       | number   | -          | [Customer status](/en/payoutApi/appendix/customStatus)                                              |
-| stcaccount   | N       | string   | -          | STCPay (sensitive information, requires [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key) encryption processing） |
+| **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                                                                                  |
+| ------------- | ------------ | -------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| pageno        | N            | number   | 1                 | Page number                                                                                                                                      |
+| pagesize      | N            | number   | 20                | Display the number of items per page, supporting a maximum of 100 items                                                                          |
+| starttime     | N            | number   | -                 | Customer creation start time, second level timestamp                                                                                             |
+| endtime       | N            | number   | -                 | Customer creation end time, second level timestamp                                                                                               |
+| mercustomids  | N            | string   | -                 | Merchant customer ID, multiple IDs separated by commas in English, examples: u001, u002                                                          |
+| customids     | N            | string   | -                 | System customer ID, multiple IDs separated by English commas, example: 1187, 2f131                                                               |
+| identity      | N            | string   | -                 | ID number (sensitive information, need [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key) encryption                    |
+| cardno        | N            | string   | -                 | Bank account (sensitive information, requires [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key) encryption processing) |
+| bankcode      | N            | string   | -                 | [Bank CODE](/en/payoutApi/banks/bankList)                                                                                                        |
+| ibanaccount   | N            | string   | -                 | IBAN                                                                                                                                             |
+| name_e        | N            | string   | -                 | Customer English name, supports fuzzy queries                                                                                                    |
+| status        | N            | number   | -                 | [Customer status](/en/payoutApi/appendix/customStatus)                                                                                           |
+| stcaccount    | N            | string   | -                 | STCPay (sensitive information, requires [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key) encryption processing）      |
 
 ### Response Parameter
 
@@ -55,8 +55,8 @@ The response parameters are as follows：
 | identity          | string   | ID number (sensitive information, encrypted with [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))            |
 | identitypic       | string   | ID card photo URL (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))   |
 | signpic           | string   | Signature photo URL (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key)) |
-| bankname          | string   | Bank Name                                                                                                                                            |
-| bankcode          | string   | Bank CODE                                                                                                                                            |
+| bankname          | string   | [Bank Name](/en/payoutApi/banks/bankList)                                                                                                            |
+| bankcode          | string   | [Bank CODE](/en/payoutApi/banks/bankList)                                                                                                            |
 | cardno            | string   | Bank account (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))        |
 | ibanaccount       | string   | IBAN                                                                                                                                                 |
 | stcaccount        | string   | STCPay account (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))      |
