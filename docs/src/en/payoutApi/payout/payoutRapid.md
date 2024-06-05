@@ -46,7 +46,7 @@ mercustomid is the merchant customer ID. The system will automatically perform t
 | ------------- | ------------ | -------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | name_e        | Y            | string   | -                 | Customer English Name                                                                                                                         |
 | name_a        | Y            | string   | -                 | Customer Arabic Name                                                                                                                          |
-| bankcode      | Y            | string   | -                 | Bank CODE                                                                                                                                     |
+| bankcode      | Y            | string   | -                 | [Bank CODE](/en/payoutApi/banks/bankList)                                                                                                     |
 | cardno        | N            | string   | -                 | Bank account (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key)) |
 | ibanaccount   | Y            | string   | -                 | IBAN                                                                                                                                          |
 
