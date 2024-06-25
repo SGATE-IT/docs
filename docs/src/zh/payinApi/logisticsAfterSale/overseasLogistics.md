@@ -29,11 +29,13 @@
 
 - **Request Body**
 
-| **参数**                                     | **类型** | **必填** | **描述**     |
-| -------------------------------------------- | -------- | -------- | ------------ |
-| value                                        | object   | 是       | 海外物流信息 |
-| &nbsp;&nbsp;&nbsp;&nbsp;value.trackingURL    | string   | 是       | 物流追踪网址 |
-| &nbsp;&nbsp;&nbsp;&nbsp;value.trackingNumber | string   | 是       | 物流追踪编号 |
+| **参数**                                      | **类型** | **必填** | **描述**     | **示例**             |
+| --------------------------------------------- | -------- | -------- | ------------ | -------------------- |
+| value                                         | object   | 是       | 海外物流信息 |                      |
+| &nbsp;&nbsp;&nbsp;&nbsp;value.trackingURL     | string   | 是       | 物流追踪网址 |                      |
+| &nbsp;&nbsp;&nbsp;&nbsp;value.trackingNumber  | string   | 是       | 物流追踪编号 |                      |
+| &nbsp;&nbsp;&nbsp;&nbsp;value.shippedAt       | string   | 否       | 发货时间     | 2019-08-24T14:15:22Z |
+| &nbsp;&nbsp;&nbsp;&nbsp;value.shippingCompany | string   | 否       | 物流公司     |                      |
 
 ### 响应参数
 
