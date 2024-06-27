@@ -5,3 +5,5 @@
 | 0      | Pending     | 已经提交申请 |
 | 1      | Transferred | 已经完成打款 |
 | 2      | Error       | 打款失败     |
+| 3      | Processing  | 打款中       |
+| 4      | Approved    | 财务审核通过 |
