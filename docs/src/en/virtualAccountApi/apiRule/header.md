@@ -1,5 +1,9 @@
 # Request/Response Header
 
+::: warning Attention
+HTTP headers are case-insensitive. When obtaining response header information, you need to pay attention to whether the library you are using performs special processing on upper and lower case.
+:::
+
 When successfully requesting/responding to interface messages, the following HTTP header information needs to be carried.
 
 * **V-Api-Key**

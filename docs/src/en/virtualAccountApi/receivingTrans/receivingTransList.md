@@ -26,11 +26,11 @@ The request parameters are as follows：
 
 | **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                         |
 | ------------- | ------------ | -------- | ----------------- | ----------------------------------------------------------------------- |
-| pageno        | N            | number   | 1                 | Page number                                                             |
+| pageno        | N            | number   | 1                 | Page number, supports up to 1000 pages                                  |
 | pagesize      | N            | number   | 20                | Display the number of items per page, supporting a maximum of 100 items |
 | starttime     | N            | number   | -                 | Transaction start time, second level timestamp                          |
 | endtime       | N            | number   | -                 | Transaction end time, second level timestamp                            |
-| account       | N            | string   | -                 | Receiving account, length 24 digits                                     |
+| account       | N            | string   | -                 | Receiving account, length limit 34 characters                           |
 
 ### Response Parameters
 
@@ -40,7 +40,7 @@ The response parameters are as follows:
 
 | **Parameter**                 | **Type** | **Description**                      |
 | ----------------------------- | -------- | ------------------------------------ |
-| uuid                          | string   | Trans ID                           |
+| uuid                          | string   | Trans ID                             |
 | transactiontime               | string   | transaction time YYYY-mm-dd HH:ii:ss |
 | account                       | string   | Receiving account                    |
 | amount                        | float    | Amount                               |
