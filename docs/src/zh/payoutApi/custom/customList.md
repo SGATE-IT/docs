@@ -24,21 +24,21 @@
 
 - **Request Body**
 
-| **参数**     | **必填** | **类型** | **默认值** | **描述**                                                                                     |
-| ------------ | -------- | -------- | ---------- | -------------------------------------------------------------------------------------------- |
-| pageno       | 否       | number   | 1          | 页码                                                                                         |
-| pagesize     | 否       | number   | 20         | 每页显示条数，最多支持100条                                                                  |
-| starttime    | 否       | number   | -          | 客户创建开始时间，秒级时间戳                                                                 |
-| endtime      | 否       | number   | -          | 客户创建结束时间，秒级时间戳                                                                 |
-| mercustomids | 否       | string   | -          | 商户客户 ID，多个 ID 以英文逗号分割，示例：u001, u002                                        |
-| customids    | 否       | string   | -          | 系统客户 ID，多个 ID 以英文逗号分割，示例：1187, 2f131                                       |
-| identity     | 否       | string   | -          | 身份证号（敏感信息，需[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理）    |
-| cardno       | 否       | string   | -          | 银行账户（敏感信息，需[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理）    |
-| bankcode     | 否       | string   | -          | [银行 CODE](/zh/payoutApi/banks/bankList)                                                    |
-| ibanaccount  | 否       | string   | -          | IBAN                                                                                         |
-| name_e       | 否       | string   | -          | 客户英文名称，支持模糊查询                                                                   |
-| status       | 否       | number   | -          | [客户状态](/zh/payoutApi/appendix/customStatus)                                              |
-| stcaccount   | 否       | string   | -          | STCPay 账户（敏感信息，需[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理） |
+| **参数**     | **必填** | **类型** | **默认值** | **描述**                                                                                                                                                                    |
+| ------------ | -------- | -------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| pageno       | 否       | number   | 1          | 页码，最多支持 1000 页                                                                                                                                                      |
+| pagesize     | 否       | number   | 20         | 每页显示条数，最多支持 100 条                                                                                                                                               |
+| starttime    | 否       | number   | -          | 客户创建开始时间，秒级时间戳                                                                                                                                                |
+| endtime      | 否       | number   | -          | 客户创建结束时间，秒级时间戳                                                                                                                                                |
+| mercustomids | 否       | string   | -          | 商户客户 ID，多个 ID 以英文逗号分割，长度限制 512 字符，示例：u001, u002                                                                                                    |
+| customids    | 否       | string   | -          | 系统客户 ID，多个 ID 以英文逗号分割，长度限制 512 字符，示例：1187, 2f131                                                                                                   |
+| identity     | 否       | string   | -          | 身份证号（敏感信息，需[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理），长度限制 64 字符                                                                 |
+| cardno       | 否       | string   | -          | 银行账户（敏感信息，需[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理），要求为数字，长度限制 13 ～ 19 字符                                               |
+| bankcode     | 否       | string   | -          | [银行 CODE](/zh/payoutApi/banks/bankList)                                                                                                                                   |
+| ibanaccount  | 否       | string   | -          | IBAN，字母和数字组成，长度限制 34 字符                                                                                                                                      |
+| name_e       | 否       | string   | -          | 客户英文名称，支持模糊查询，长度限制 64 字符                                                                                                                                |
+| status       | 否       | number   | -          | [客户状态](/zh/payoutApi/appendix/customStatus)                                                                                                                             |
+| stcaccount   | 否       | string   | -          | STCPay 账户（敏感信息，需[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理），支持格式：<br> 5xxxxxxxx <br> 9665xxxxxxxx <br> +9665xxxxxxxx <br> 05xxxxxxxx |
 
 ### 响应参数
 

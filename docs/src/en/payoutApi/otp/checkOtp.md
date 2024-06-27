@@ -28,11 +28,11 @@ The request parameters are as follows：
 
 - **Request Body**
 
-| **Parameters** | **Required** | **Type** | **Default Value** | **Description**                |
-| -------------- | ------------ | -------- | ----------------- | ------------------------------ |
-| mobile         | Y            | number   | -                 | Send verification phone number |
-| code           | Y            | string   | -                 | OTP                            |
-| sessionid      | Y            | string   | -                 | OTP sending voucher            |
+| **Parameters** | **Required** | **Type** | **Default Value** | **Description**                                            |
+| -------------- | ------------ | -------- | ----------------- | ---------------------------------------------------------- |
+| mobile         | Y            | number   | -                 | Send verification phone number, length limit 13 characters |
+| code           | Y            | string   | -                 | OTP，fixed length of 6 characters                          |
+| sessionid      | Y            | string   | -                 | OTP sending voucher，fixed length of 32 characters         |
 
 ### Response Parameters
 

@@ -50,6 +50,8 @@
 | 1303 | Please configure the payment account                                   |
 | 1304 | Bank account error                                                     |
 | 1305 | Please fill in the customer name                                       |
+| 1306 | Please fill in the customer bank                                       |
+| 1307 | STCPay account error                                                   |
 
 ### Payment
 

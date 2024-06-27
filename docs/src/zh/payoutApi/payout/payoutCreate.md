@@ -34,9 +34,9 @@
 
 | **参数**      | **必填** | **类型** | **默认值** | **描述**                                         |
 | ------------- | -------- | -------- | ---------- | ------------------------------------------------ |
-| customid      | 否       | string   | -          | 系统客户 ID                                      |
-| mercustomid   | 否       | string   | -          | 商户客户 ID                                      |
-| payeeuid      | 是       | string   | -          | 商户订单 ID，要求全局唯一，长度不得超过64位      |
+| customid      | 否       | string   | -          | 系统客户 ID，长度限制 64 字符                    |
+| mercustomid   | 否       | string   | -          | 商户客户 ID，长度限制 128 字符                   |
+| payeeuid      | 是       | string   | -          | 商户订单 ID，要求全局唯一，长度限制 64 字符      |
 | amount        | 是       | float    | -          | 付款金额，精确到小数点后两位                     |
 | currency      | 是       | string   | -          | [货币代码](/zh/payoutApi/appendix/currency)      |
 | paymentmethod | 是       | string   | -          | [付款方式](/zh/payoutApi/appendix/paymentMethod) |
@@ -62,6 +62,7 @@
 | **参数名**    | **类型** | **描述**                                             |
 | ------------- | -------- | ---------------------------------------------------- |
 | ticketid      | string   | 代付工单 ID                                          |
+| key           | string   | 代付工单 Key，每个代付工单唯一                       |
 | customid      | string   | 系统客户 ID                                          |
 | mercustomid   | string   | 商户客户 ID                                          |
 | payeeuid      | string   | 商户订单 ID                                          |
@@ -85,40 +86,42 @@
     "code": 200,
     "message": "Request succeeded.",
     "data": {
-        "ticketid": "15ba8",
-        "customid": "12ad4",
-        "mercustomid": "u004",
-        "payeeuid": "TEST1234567aa12sd2",
+        "ticketid": "17d59",
+        "key": "M4TBTQU20240626141958",
+        "customid": "13033",
+        "mercustomid": "u006",
+        "payeeuid": "PAY12345678",
         "trantype": "standard",
         "currency": "SAR",
-        "paymentmethod": "bankTransfer",
-        "amount": 2002,
-        "realamount": 2002,
-        "fee": 127.79,
+        "paymentmethod": "STCPay",
+        "amount": 18.75,
+        "realamount": 17.81,
+        "fee": 0.94,
+        "feeconfigid": 1,
         "status": 0,
-        "statusdesc": "2023-06-15 07:34:25",
+        "statusdesc": "2024-06-26 14:19:58",
         "confirmtime": 0,
         "custominfo": {
-            "customid": "12ad4",
-            "mercustomid": "u004",
-            "name_e": "updTest2",
-            "name_a": "usera",
-            "identity": "koRRcWj15/GjSowB2jfL1aagXcWZ2aRwRX5v/RjZ2robnH7abFUZXKLmyXsQHts0WGJBYhboqszYTqbT+iMOPvJ1flGIW4AAlLG6IoYscihUilKe0ieAYEyeTZE4ywlnS1cJRGsCDanzwLkRTsIl75uE3HSbkk6bAOGTwnASvjXJFe9ypx8Rj6NGuupwI9OfxDtr8NkIl5qKyOT5AzGKjhRZwoMl1gfzqJACef+HSKQNCikqYjKcoxeFQaCcmEwcWujDCHrk6+/SlN2NBpZdNlDmubPM7/JlsqudtKQp4HP+FNubwe9nZO2cPxvArBumGKIdsCv6yTOVqTEios43Tw==",
-            "identitypic": "clLxhBvq8ZuCHyYLdhDdqqJA6hZkJeGkbCwsWv2TRTOQ3q+MGw4SpNLmXGNdxy9+/gZh4kGS9zMAAy8eMPW+KqDGNYSFBvT5NEoHnGc11PHCrQ95yp7qFsh/I03+ZQxKIKRpLkmY/hqs9i0QJlNqji0Wx7Ne712Dyh9qflfxkKF1f8Pcey0dHA1j7SwAuBndAcTBpnI/FcKvKt6n0vHQ8c4tKHNhMd9xRzap3Mr+09mAXtjyy1QQbb+e93x+YBoLGqdCoZouHGCTVCuqmQSiIS5TdRRMWKh/SIvVJA7bQ7bWkusgVGZF4NZQ8Jd6OzTgcpuW3ZVREyuNBYpdaZCbkQ==",
+            "customid": "13033",
+            "mercustomid": "u006",
+            "name_e": "updTest32",
+            "name_a": "dbnuo",
+            "identity": "p/aFchx1MfO1BqrKTkiOs5FsAcynsiNUWjB3UABZYW2DssEt6EL2zU+r1g9tAwydbSAbMunA3zDcMut9vZ/dT8Nha1f+do35KivBBp1pTuI+kfaY8vja1pYmw6oEMUtpZyIWSu7kCg1bGjLX5IWCXZYdB0t3rCyzoAlomokwuZdHBKy/uEQzLsln6QU33MfayNxdGcGIYgpv4VCCiS7MejW9MP3Jh/y0Re/M5lW271xsES38J5RKEKhRUr1wAnp6vCkXZrn7Hd5tnxwUdHGHSGNK9/IV2cKICb3/GlsAq+sxHPDTOfkIhCvrOANKpuFqHUysJoGiFMc87Nc8J4raUQ==",
+            "identitypic": "fvL4hLLMcXtVA0NHDmZidAIY5yiwlZZcd26EfHEdZgX8CdbXPO8eWB4cDAyQ8Bz3xBzDqUL4u02Q/kRxVPLIh8dPZ2ooMX6SPdxH5FW2HHlJ7vm2mqz0XgRy+DLC731xRbuUuxms9SuDfxCGDwiCddPFpuvkqRiUdOdmW9kcP064Y5V+KA7M1PgQLSn2h2hfyREN2yos7njZDDwveIfNpGi+hR4AjjQXYmKLlsbjDz/5kNPRbWOrvmL7karJKsja2GRauj5GbHUBnqX05NJhQvSzen4UDDnY9BfBtcDuC9pEyUOyIIRMIB3VkLbUvlWMzuFeYD+u7iE35f2vBkPXqA==",
             "signpic": "",
             "bankname": "Riyad Bank",
             "bankcode": "1174c",
-            "cardno": "FMIWFZJJWR34P8rN9P1WDMj7+J9UNpzLD8B5ZJIV+0VYevwgOdchFMnLM4kJwefyQXiVzP9Xh9jOLupgWrLx6Xs3PzYB6DI0PyKYw0MbbgW0oX64wsfKymRROpjQ3BvsjJfnffbDrB7/td7X52+ju0f5spw99NQ3VS+3A3Q1pcsTtTTdZSLGfd9hranY3hVUvmKr1bZq0KIkqFEl6bQ7AK0J1xVd9qQZCh8iFJNPV50FXcXwV4t2Xtua7AVd6yi6fUFZN1gngz67+/r0CG1ffNF2ykFgqYRUzedRwIHl9kmADsMSXpbUTCL97IG60VdLZ+ICu/yY1h1zU0kin7K6pw==",
+            "cardno": "q7gmtfi1gieWi/d6XHqtTKzAHi6Wxoxm4C9FGDYvmgYK8l7kK2H3IwcWnpO8liyhDAwBG42gebVYcOURTxhnGIhRXptEdegtQk5k0CqrPUghfMbTtUMSlj+ztxaa+HsRDlNfau35LOBoGcpn1tNV0OMar6XnR40KN06fkngItbKQvj8MC605cr/EI7Jit2qzNsUTUvlbQG53XuXV6pq/JIhMSUrO8JNcVzPc5G4VdruO4d7C3BzFqkpg4C5zf2bL+PuiE8WLyCOJFsOoxDtubkSviBYKS8SI2qYTkyZvVeZTICbNJw71OouycTj/FE+/HqaLjN7ue4NjzFwodK6bHw==",
             "ibanaccount": "1234567892",
-            "stcaccount": "Do1W7v5LOya9dSz0IlLj2HxKsUG5WFDopMOysuY4us/1oHS1DwBrt7RPgjxTX2D1ZiArxBZL2I8MoSDXzkYM7j7+gNiLtrYvyeUcdU6DpRmvKAKzSJ4IUqJ0auf0SgmXupjcD9hcl7XG0qn5dOA59dRiGRy0xzWg++LF4dLUSplqlnVh4j+SlCmuJatCKOVOV70PD3M+cgmAjNW+VivaVFImc9VIzv30CITKEkGoJ37ByUpx3f3mBO6mZB4DoK0UQ6rEGt0ewBTphYePrf7HE0m5mflagAsIk6AXRSORTMF//Yv2UgD+tEcjhuADI8OIhfPzExPRVWDY7S8bz9B5tg==",
+            "stcaccount": "QYLZ+8VpsZc2E5jljmaBSFySy4dvOWI5Q6nne+egdk0CYOc0g3t9guwAXTSKZWjij5Luy4EHrTju9f6VPsh7P33AJf4rHu/E86lr7vHxgwrriLHgdz3tbrCWolP9kW/i0d2uVuUTq2HgGddYNJgOvd5sBcyLDMMnDERJXRNfGKoIR5igUCQWZIzqTZXUGOWdm8tysHT3vnJb+DnWb2GNA0vLvwW36pUi8qxhb4Gbttt3J+Rzz+K/KsiziUmNWU1F1cr7e6qSvOze6TicfIogDt21FRGB/y5qYYOUE+fMd7HKxnY3i3LUu0q6T+ldQ9jlp2am78wS7T0yi0TMeNf3wQ==",
             "status": 1,
-            "statusdesc": "2023-06-15 06:14:45",
+            "statusdesc": "Approved",
             "demand_perfection": [],
-            "created_at": 1686809574,
-            "updated_at": 1686812615
+            "created_at": 1707394806,
+            "updated_at": 1719400743
         },
-        "created_at": 1686814465,
-        "updated_at": 1686814465
+        "created_at": 1719400798,
+        "updated_at": 1719400798
     },
     "sensitiveFields": {
         "custominfo": [
@@ -129,6 +132,6 @@
             "cardno"
         ]
     },
-    "requestId": "0D56C58DC6698B9374EE10E13897DCB7"
+    "requestId": "8A1D33FFBC9F379C1C6F423FFF7B8A46"
 }
 ```

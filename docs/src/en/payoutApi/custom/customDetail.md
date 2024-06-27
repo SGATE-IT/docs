@@ -28,10 +28,10 @@ The request parameters are as follows：
 If one of the merchant customer ID and system customer ID is not transmitted, the interface will respond to parameter missing errors.
 :::
 
-| **parameter** | **Required** | **Type** | **Default Value** | **Description**      |
-| ------------- | ------------ | -------- | ----------------- | -------------------- |
-| mercustomid   | N            | string   | -                 | Merchant Customer ID |
-| customid      | N            | string   | -                 | System Customer ID   |
+| **parameter** | **Required** | **Type** | **Default Value** | **Description**                                   |
+| ------------- | ------------ | -------- | ----------------- | ------------------------------------------------- |
+| mercustomid   | N            | string   | -                 | Merchant customer ID, length limit 128 characters |
+| customid      | N            | string   | -                 | System customer ID, length limit 64 characters    |
 
 ### Response Parameters
 
@@ -41,19 +41,19 @@ The response parameters are as follows：
 
 | **Parameter**     | **Type** | **Description**                                                                                                                                      |
 | ----------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| customid          | string   | System Customer ID                                                                                                                                   |
-| mercustomid       | string   | Merchant Customer ID                                                                                                                                 |
-| name_e            | string   | Customer English Name                                                                                                                                |
-| name_a            | string   | Customer Arabic Name                                                                                                                                 |
+| customid          | string   | System customer ID                                                                                                                                   |
+| mercustomid       | string   | Merchant customer ID                                                                                                                                 |
+| name_e            | string   | Customer english name                                                                                                                                |
+| name_a            | string   | Customer arabic name                                                                                                                                 |
 | identity          | string   | ID number (sensitive information, encrypted with [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))            |
 | identitypic       | string   | ID card photo URL (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))   |
 | signpic           | string   | Signature photo URL (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key)) |
-| bankname          | string   | [Bank Name](/en/payoutApi/banks/bankList)                                                                                                            |
-| bankcode          | string   | [Bank CODE](/en/payoutApi/banks/bankList)                                                                                                            |
+| bankname          | string   | [Bank name](/en/payoutApi/banks/bankList)                                                                                                            |
+| bankcode          | string   | [Bank code](/en/payoutApi/banks/bankList)                                                                                                            |
 | cardno            | string   | Bank account (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))        |
 | ibanaccount       | string   | IBAN                                                                                                                                                 |
 | stcaccount        | string   | STCPay account (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))      |
-| status            | number   | [Customer Status](/en/payoutApi/appendix/customStatus)                                                                                               |
+| status            | number   | [Customer status](/en/payoutApi/appendix/customStatus)                                                                                               |
 | statusdesc        | string   | Customer status description                                                                                                                          |
 | demand_perfection | array    | What information does the user currently need to improve                                                                                             |
 | created_at        | number   | Creation time                                                                                                                                        |

@@ -30,7 +30,7 @@ The response parameters are as follows：
 
 | **Parameter** | **Type** | **Description** |
 | ------------------ | -------- | --------------- |
-| bankcode           | string   | Bank CODE       |
+| bankcode           | string   | Bank code       |
 | bankname           | string   | Bank name       |
 
 **Response parameter Example**

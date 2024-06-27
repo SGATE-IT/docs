@@ -24,10 +24,10 @@ The request parameters are as follows：
 
 - **Request Body**
 
-| **Parameters** | **Required** | **Type** | **Default Value** | **Description**                |
-| -------------- | ------------ | -------- | ----------------- | ------------------------------ |
-| mobile         | Y            | number   | -                 | Send verification phone number |
-| sessionid      | Y            | string   | -                 | OTP sending voucher            |
+| **Parameters** | **Required** | **Type** | **Default Value** | **Description**                                            |
+| -------------- | ------------ | -------- | ----------------- | ---------------------------------------------------------- |
+| mobile         | Y            | number   | -                 | Send verification phone number, length limit 13 characters |
+| sessionid      | Y            | string   | -                 | OTP sending voucher，fixed length of 32 characters         |
 
 ### Response Parameters
 

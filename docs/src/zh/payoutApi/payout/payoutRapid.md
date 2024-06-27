@@ -34,27 +34,27 @@ mercustomid 为商户客户 ID，系统会自动依据 mercustomid 做以下处�
 
 | **参数**      | **必填** | **类型** | **默认值** | **描述**                                         |
 | ------------- | -------- | -------- | ---------- | ------------------------------------------------ |
-| mercustomid   | 是       | string   | -          | 商户客户 ID                                      |
-| payeeuid      | 是       | string   | -          | 商户订单 ID，要求全局唯一，长度不得超过64位      |
+| mercustomid   | 是       | string   | -          | 商户客户 ID，长度限制 64 字符                    |
+| payeeuid      | 是       | string   | -          | 商户订单 ID，要求全局唯一，长度限制 64 字符      |
 | amount        | 是       | float    | -          | 付款金额，精确到小数点后两位                     |
 | currency      | 是       | string   | -          | [货币代码](/zh/payoutApi/appendix/currency)      |
 | paymentmethod | 是       | string   | -          | [付款方式](/zh/payoutApi/appendix/paymentMethod) |
 
 * 使用 **bankTransfer** 付款方式，需要额外传递的参数：
 
-| **参数**    | **必填** | **类型** | **默认值** | **描述**                                                                                    |
-| ----------- | -------- | -------- | ---------- | ------------------------------------------------------------------------------------------- |
-| name_e      | 是       | string   | -          | 客户英文名称                                                                                |
-| name_a      | 是       | string   | -          | 客户阿拉伯文名称                                                                            |
-| bankcode    | 是       | string   | -          | [银行 CODE](/zh/payoutApi/banks/bankList)                                                   |
-| cardno      | 否       | string   | -          | 银行账户（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理） |
-| ibanaccount | 是       | string   | -          | IBAN                                                                                        |
+| **参数**    | **必填** | **类型** | **默认值** | **描述**                                                                                                                        |
+| ----------- | -------- | -------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| name_e      | 是       | string   | -          | 客户英文名称，长度限制 64 字符                                                                                                  |
+| name_a      | 是       | string   | -          | 客户阿拉伯文名称，长度限制 64 字符                                                                                              |
+| bankcode    | 是       | string   | -          | [银行 CODE](/zh/payoutApi/banks/bankList)                                                                                       |
+| cardno      | 否       | string   | -          | 银行账户（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理），要求为数字，长度限制 13 ～ 19 字符 |
+| ibanaccount | 是       | string   | -          | IBAN，字母和数字组成，长度限制 34 字符                                                                                          |
 
 * 使用 **STCPay** 付款方式，需要额外传递的参数：
 
-| **参数**   | **必填** | **类型** | **默认值** | **描述**                                                                                       |
-| ---------- | -------- | -------- | ---------- | ---------------------------------------------------------------------------------------------- |
-| stcaccount | 是       | string   | -          | STCPay 账户（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理） |
+| **参数**   | **必填** | **类型** | **默认值** | **描述**                                                                                                                                                                      |
+| ---------- | -------- | -------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| stcaccount | 是       | string   | -          | STCPay 账户（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理），支持格式：<br> 5xxxxxxxx <br> 9665xxxxxxxx <br> +9665xxxxxxxx <br> 05xxxxxxxx |
 
 **请求参数示例**
 
@@ -78,6 +78,7 @@ mercustomid 为商户客户 ID，系统会自动依据 mercustomid 做以下处�
 | **参数名**    | **类型** | **描述**                                             |
 | ------------- | -------- | ---------------------------------------------------- |
 | ticketid      | string   | 代付工单 ID                                          |
+| key           | string   | 代付工单 Key，每个代付工单唯一                       |
 | customid      | string   | 系统客户 ID                                          |
 | mercustomid   | string   | 商户客户 ID                                          |
 | payeeuid      | string   | 商户订单 ID                                          |
@@ -101,40 +102,44 @@ mercustomid 为商户客户 ID，系统会自动依据 mercustomid 做以下处�
     "code": 200,
     "message": "Request succeeded.",
     "data": {
-        "ticketid": "15ba8",
-        "customid": "12ad4",
-        "mercustomid": "u004",
-        "payeeuid": "TEST1234567aa12sd2",
+        "ticketid": "17dd6",
+        "key": "M4TKKME20240626143819",
+        "customid": "130b0",
+        "mercustomid": "u0045",
+        "payeeuid": "PAY00000001",
         "trantype": "rapid",
         "currency": "SAR",
-        "paymentmethod": "bankTransfer",
-        "amount": 2002,
-        "realamount": 2002,
-        "fee": 127.79,
+        "paymentmethod": "STCPay",
+        "amount": 44.33,
+        "realamount": 42.11,
+        "fee": 2.22,
+        "feeconfigid": 1,
         "status": 0,
-        "statusdesc": "2023-06-15 07:34:25",
+        "statusdesc": "2024-06-26 14:38:19",
         "confirmtime": 0,
         "custominfo": {
-            "customid": "12ad4",
-            "mercustomid": "u004",
-            "name_e": "updTest2",
-            "name_a": "usera",
-            "identity": "koRRcWj15/GjSowB2jfL1aagXcWZ2aRwRX5v/RjZ2robnH7abFUZXKLmyXsQHts0WGJBYhboqszYTqbT+iMOPvJ1flGIW4AAlLG6IoYscihUilKe0ieAYEyeTZE4ywlnS1cJRGsCDanzwLkRTsIl75uE3HSbkk6bAOGTwnASvjXJFe9ypx8Rj6NGuupwI9OfxDtr8NkIl5qKyOT5AzGKjhRZwoMl1gfzqJACef+HSKQNCikqYjKcoxeFQaCcmEwcWujDCHrk6+/SlN2NBpZdNlDmubPM7/JlsqudtKQp4HP+FNubwe9nZO2cPxvArBumGKIdsCv6yTOVqTEios43Tw==",
-            "identitypic": "clLxhBvq8ZuCHyYLdhDdqqJA6hZkJeGkbCwsWv2TRTOQ3q+MGw4SpNLmXGNdxy9+/gZh4kGS9zMAAy8eMPW+KqDGNYSFBvT5NEoHnGc11PHCrQ95yp7qFsh/I03+ZQxKIKRpLkmY/hqs9i0QJlNqji0Wx7Ne712Dyh9qflfxkKF1f8Pcey0dHA1j7SwAuBndAcTBpnI/FcKvKt6n0vHQ8c4tKHNhMd9xRzap3Mr+09mAXtjyy1QQbb+e93x+YBoLGqdCoZouHGCTVCuqmQSiIS5TdRRMWKh/SIvVJA7bQ7bWkusgVGZF4NZQ8Jd6OzTgcpuW3ZVREyuNBYpdaZCbkQ==",
+            "customid": "130b0",
+            "mercustomid": "u0045",
+            "name_e": "useraa121",
+            "name_a": "userbb121",
+            "identity": "",
+            "identitypic": "",
             "signpic": "",
-            "bankname": "Riyad Bank",
-            "bankcode": "1174c",
-            "cardno": "FMIWFZJJWR34P8rN9P1WDMj7+J9UNpzLD8B5ZJIV+0VYevwgOdchFMnLM4kJwefyQXiVzP9Xh9jOLupgWrLx6Xs3PzYB6DI0PyKYw0MbbgW0oX64wsfKymRROpjQ3BvsjJfnffbDrB7/td7X52+ju0f5spw99NQ3VS+3A3Q1pcsTtTTdZSLGfd9hranY3hVUvmKr1bZq0KIkqFEl6bQ7AK0J1xVd9qQZCh8iFJNPV50FXcXwV4t2Xtua7AVd6yi6fUFZN1gngz67+/r0CG1ffNF2ykFgqYRUzedRwIHl9kmADsMSXpbUTCL97IG60VdLZ+ICu/yY1h1zU0kin7K6pw==",
+            "bankname": "The Saudi British Bank",
+            "bankcode": "11558",
+            "cardno": "",
             "ibanaccount": "1234567892",
-            "stcaccount": "Do1W7v5LOya9dSz0IlLj2HxKsUG5WFDopMOysuY4us/1oHS1DwBrt7RPgjxTX2D1ZiArxBZL2I8MoSDXzkYM7j7+gNiLtrYvyeUcdU6DpRmvKAKzSJ4IUqJ0auf0SgmXupjcD9hcl7XG0qn5dOA59dRiGRy0xzWg++LF4dLUSplqlnVh4j+SlCmuJatCKOVOV70PD3M+cgmAjNW+VivaVFImc9VIzv30CITKEkGoJ37ByUpx3f3mBO6mZB4DoK0UQ6rEGt0ewBTphYePrf7HE0m5mflagAsIk6AXRSORTMF//Yv2UgD+tEcjhuADI8OIhfPzExPRVWDY7S8bz9B5tg==",
+            "stcaccount": "HsMxmSUUqbD+uZEdEocdAqg+BBGknsOs/KeIaqqkUwYaKlv20g3J/YVhDYD+enecBLOP8tzpRPQU+E7bsw1FccP/jzb/rVUpgUPUqcflJMnxUiUacZrHWgq4U/0QclUrWfCrl+78av236LlobEgN7jgNDzuBpiApJhQrb1j3bzqFDmTapOHR3DNDyCOBkhkgkGjlFWz9p2duv4TgDNfmy3RbbV9dfpEI8PcteGTmqsBXKf0794SPvLAj+m4RO5iYwE6l8JoYlFXqEl+8Ruppt+ZH9Zv6whVgp5Qtl5tlalV9o0+t3Z4qg6jJcaVDmp0hMO4rCw07YV04FHCCUtth+g==",
             "status": 1,
-            "statusdesc": "2023-06-15 06:14:45",
-            "demand_perfection": [],
-            "created_at": 1686809574,
-            "updated_at": 1686812615
+            "statusdesc": "Customers create through quick payment",
+            "demand_perfection": [
+                "identitypic"
+            ],
+            "created_at": 1707395488,
+            "updated_at": 1719401899
         },
-        "created_at": 1686814465,
-        "updated_at": 1686814465
+        "created_at": 1719401899,
+        "updated_at": 1719401899
     },
     "sensitiveFields": {
         "custominfo": [
@@ -145,6 +150,6 @@ mercustomid 为商户客户 ID，系统会自动依据 mercustomid 做以下处�
             "cardno"
         ]
     },
-    "requestId": "0D56C58DC6698B9374EE10E13897DCB7"
+    "requestId": "FD82B523FCEA90F65E06B15EAA7C2290"
 }
 ```

@@ -81,7 +81,7 @@ Data type：`string`
 
 `GET` **request**：Body is an empty string.
 
-**File upload**：Body is an empty string.
+**File upload request**：Body is an empty string.
 
 ### Obtain Signature Data Summary
 

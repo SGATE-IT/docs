@@ -42,13 +42,13 @@ Joint debugging testing can be conducted using a test number. The test number wi
 The verification code of the test number and the returned `session ID` remain unchanged.
 
 | **Phone number**                                         | **OTP** | **sessionid**                    |
-| -------------------------------------------------------- | ---------- | -------------------------------- |
-| 512345678<br>0512345678<br>966512345678<br>+966512345678 | 123456     | 10290d703f8254593ff93533f00af153 |
-| 500000001<br>0500000001<br>966500000001<br>+966500000001 | 123456     | a3f551d80f05a0e3e9056869fda18485 |
-| 500000002<br>0500000002<br>966500000002<br>+966500000002 | 123456     | e8cffbb22c2e09af7004c92b82a4275f |
-| 500000003<br>0500000003<br>966500000003<br>+966500000003 | 123456     | 05121e9b019b6ac4bd938322dcaf73ef |
-| 500000004<br>0500000004<br>966500000004<br>+966500000004 | 123456     | 9e1aac7c1f6719e12e3384ced6782887 |
-| 500000005<br>0500000005<br>966500000005<br>+966500000005 | 123456     | c6cfc53d34b2c93eaaa9d430397dead0 |
+| -------------------------------------------------------- | ------- | -------------------------------- |
+| 512345678<br>0512345678<br>966512345678<br>+966512345678 | 123456  | 10290d703f8254593ff93533f00af153 |
+| 500000001<br>0500000001<br>966500000001<br>+966500000001 | 123456  | a3f551d80f05a0e3e9056869fda18485 |
+| 500000002<br>0500000002<br>966500000002<br>+966500000002 | 123456  | e8cffbb22c2e09af7004c92b82a4275f |
+| 500000003<br>0500000003<br>966500000003<br>+966500000003 | 123456  | 05121e9b019b6ac4bd938322dcaf73ef |
+| 500000004<br>0500000004<br>966500000004<br>+966500000004 | 123456  | 9e1aac7c1f6719e12e3384ced6782887 |
+| 500000005<br>0500000005<br>966500000005<br>+966500000005 | 123456  | c6cfc53d34b2c93eaaa9d430397dead0 |
 
 ### Message template
 
@@ -86,10 +86,10 @@ request parameters as following：
 
 - **Request Body**
 
-| **Parameter** | **Required** | **Type** | **Default value** | **Description**                |
-| ------------- | ------------ | -------- | ----------------- | ------------------------------ |
-| mobile        | Y            | string   | -                 | Send verification phone number |
-| appname       | Y            | string   | -                 | App name                       |
+| **Parameter** | **Required** | **Type** | **Default value** | **Description**                                            |
+| ------------- | ------------ | -------- | ----------------- | ---------------------------------------------------------- |
+| mobile        | Y            | string   | -                 | Send verification phone number, length limit 13 characters |
+| appname       | Y            | string   | -                 | App name, length limit 32 characters                       |
 
 ### Response parameters
 

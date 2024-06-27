@@ -29,19 +29,19 @@
 - **Request Body**
 
 ::: tip 提示
-客户账户信息如果是银行账户 bankcode、cardno、ibanaccount 必填。如果客户账户为 STCPay 账户则 stcaccount 必填。
+客户账户信息如果是银行账户 `bankcode`、`cardno`、`ibanaccount` 必填。如果客户账户为 STCPay 账户则 `stcaccount` 必填。
 :::
 
-| **参数**    | **必填** | **类型** | **默认值** | **描述**                                                                                       |
-| ----------- | -------- | -------- | ---------- | ---------------------------------------------------------------------------------------------- |
-| name_e      | 是       | string   | -          | 客户英文名称                                                                                   |
-| name_a      | 是       | string   | -          | 客户阿拉伯文名称                                                                               |
-| mercustomid | 是       | string   | -          | 商户客户 ID ，要求商户下唯一                                                                   |
-| identity    | 是       | string   | -          | 身份证号（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理）    |
-| bankcode    | 否       | string   | -          | [银行 CODE](/zh/payoutApi/banks/bankList)                                                      |
-| cardno      | 否       | string   | -          | 银行账户（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理）    |
-| ibanaccount | 否       | string   | -          | IBAN                                                                                           |
-| stcaccount  | 否       | string   | -          | STCPay 账户（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理） |
+| **参数**    | **必填** | **类型** | **默认值** | **描述**                                                                                                                                                                      |
+| ----------- | -------- | -------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name_e      | 是       | string   | -          | 客户英文名称，长度限制 64 字符                                                                                                                                                |
+| name_a      | 是       | string   | -          | 客户阿拉伯文名称，长度限制 64 字符                                                                                                                                            |
+| mercustomid | 是       | string   | -          | 商户客户 ID ，要求商户下唯一，长度限制 128 字符                                                                                                                               |
+| identity    | 是       | string   | -          | 身份证号（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理），长度限制 64 字符                                                                 |
+| bankcode    | 否       | string   | -          | [银行 CODE](/zh/payoutApi/banks/bankList)                                                                                                                                     |
+| cardno      | 否       | string   | -          | 银行账户（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理），要求为数字，长度限制 13 ～ 19 字符                                               |
+| ibanaccount | 否       | string   | -          | IBAN，字母和数字组成，长度限制 34 字符                                                                                                                                        |
+| stcaccount  | 否       | string   | -          | STCPay 账户（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理），支持格式：<br> 5xxxxxxxx <br> 9665xxxxxxxx <br> +9665xxxxxxxx <br> 05xxxxxxxx |
 
 **请求参数示例**
 

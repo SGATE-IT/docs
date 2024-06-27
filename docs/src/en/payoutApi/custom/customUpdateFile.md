@@ -37,13 +37,13 @@ The request parameters are as follows：
 If one of the merchant customer ID and system customer ID is not transmitted, the interface will respond to parameter missing errors.
 :::
 
-| **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                                                                   |
-| ------------- | ------------ | -------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| mercustomid   | N            | string   | -                 | Merchant Customer ID                                                                                                              |
-| customid      | N            | string   | -                 | System Customer ID                                                                                                                |
-| file          | Y            | file     | -                 | The file size cannot exceed 2048kb, and the file must be of image type as following：<br>jpeg<br>png<br>bmp<br>gif<br>svg<br>webp |
-| md5           | Y            | string   | -                 | MD5 value of the file                                                                                                             |
-| type          | Y            | string   | -                 | File type：<br>identitypic: ID card photo<br>signpic: Signature photo                                                             |
+| **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                                                                               |
+| ------------- | ------------ | -------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| mercustomid   | N            | string   | -                 | Merchant customer ID, length limit 128 characters                                                                                             |
+| customid      | N            | string   | -                 | System customer ID, length limit 64 characters                                                                                                |
+| file          | Y            | file     | -                 | The file size cannot exceed 2048kb, and the file must be of image type as following：<br>`jpeg`<br>`png`<br>`bmp`<br>`gif`<br>`svg`<br>`webp` |
+| md5           | Y            | string   | -                 | MD5 value of the file                                                                                                                         |
+| type          | Y            | string   | -                 | File type：<br>`identitypic`: ID card photo<br>`signpic`: Signature photo                                                                     |
 
 ### Response Parameters
 
@@ -62,12 +62,12 @@ The response parameters are as follows：
 | identity          | string   | ID number (sensitive information, encrypted with the [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))        |
 | identitypic       | string   | ID card photo URL (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))   |
 | signpic           | string   | Signature photo URL (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key)) |
-| bankname          | string   | [Bank Name](/en/payoutApi/banks/bankList)                                                                                                            |
-| bankcode          | string   | [Bank CODE](/en/payoutApi/banks/bankList)                                                                                                            |
+| bankname          | string   | [Bank name](/en/payoutApi/banks/bankList)                                                                                                            |
+| bankcode          | string   | [Bank code](/en/payoutApi/banks/bankList)                                                                                                            |
 | cardno            | string   | Bank account (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))        |
 | ibanaccount       | string   | IBAN                                                                                                                                                 |
 | stcaccount        | string   | STCPay account (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))      |
-| status            | number   | [customer status](/en/payoutApi/appendix/customStatus)                                                                                               |
+| status            | number   | [Customer status](/en/payoutApi/appendix/customStatus)                                                                                               |
 | statusdesc        | string   | Customer Status Description                                                                                                                          |
 | demand_perfection | array    | What information does the user currently need to improve                                                                                             |
 | created_at        | number   | Creation time                                                                                                                                        |

@@ -29,10 +29,10 @@
 代付工单 ID 和商户订单 ID 传其中一个，如果都不传接口会响应参数缺失错误。
 :::
 
-| **参数** | **必填** | **类型** | **默认值** | **描述**    |
-| -------- | -------- | -------- | ---------- | ----------- |
-| ticketid | 否       | string   | -          | 代付工单 ID |
-| payeeuid | 否       | string   | -          | 商户订单 ID |
+| **参数** | **必填** | **类型** | **默认值** | **描述**                      |
+| -------- | -------- | -------- | ---------- | ----------------------------- |
+| ticketid | 否       | string   | -          | 代付工单 ID，长度限制 64 字符 |
+| payeeuid | 否       | string   | -          | 商户订单 ID，长度限制 64 字符 |
 
 **请求参数示例**
 
@@ -55,6 +55,7 @@
 | **参数名**    | **类型** | **描述**                                             |
 | ------------- | -------- | ---------------------------------------------------- |
 | ticketid      | string   | 代付工单 ID                                          |
+| key           | string   | 代付工单 Key，每个代付工单唯一                       |
 | customid      | string   | 系统客户 ID                                          |
 | mercustomid   | string   | 商户客户 ID                                          |
 | payeeuid      | string   | 商户订单 ID                                          |
@@ -78,40 +79,42 @@
     "code": 200,
     "message": "Request succeeded.",
     "data": {
-        "ticketid": "15b2b",
+        "ticketid": "17877",
+        "key": "M4TAW2S20240129052424",
         "customid": "12ad4",
         "mercustomid": "u004",
-        "payeeuid": "TEST1234567aa12sd1",
+        "payeeuid": "PPP1231s234sss23",
         "trantype": "standard",
         "currency": "SAR",
-        "paymentmethod": "bankTransfer",
-        "amount": 2002,
-        "realamount": 2002,
-        "fee": 127.79,
+        "paymentmethod": "STCPay",
+        "amount": 18.75,
+        "realamount": 17.81,
+        "fee": 0.94,
+        "feeconfigid": 1,
         "status": 0,
-        "statusdesc": "",
+        "statusdesc": "2024-01-29 05:24:24",
         "confirmtime": 0,
         "custominfo": {
             "customid": "12ad4",
             "mercustomid": "u004",
-            "name_e": "updTest2",
-            "name_a": "usera",
-            "identity": "Rm1XLBip1jqmtVP64nPy+j9Nsi2FPQbmwH3OeIxXwm0xxilOJ5CgmHv9mRhG2rCzOj0xJh20ZxFEYNobECjZsU5wTzSkjSFEpmxWxENbPcwDBDtUXQY2U0Pv1zqPwaltSOjzo7/0UzKOJIVTExO27Hp3vm/OcE2Hj4R1mdFo1QibR/H/J7OslnVWR24J6coEYu452aojDZm0rKEgegDhTPgMwHxz8MUM6+ynY+wGaKb32Ad8r14NgvlW3aslCquMuS68IiXl3vbiQ4Pr6uMYkJ8qyllNU2W4cdWCZdqbCYRMXUcAYuUZ4zoqPTMDN659VAUMBJB9zHYfuo6RZcSmUg==",
-            "identitypic": "I3ZJ/OhjmWj0mPRaKzKLTk38UA3z3MZOsq/2uSJtuM1IY9z9OFqXqgGSvk+NwR0GfayfO0kTdetesFW5a3f6C11xL21LJsAe1zrb6RqqXjlCa8/phgV77eyY5C/AJ8X0a5J5Q5WJodmh2A0AmeEAEbeySt0HsOqMO6bYYplcZV29abLfYa+45814aQXiVLAPNG63O+sMvT2WUyR3GlUoZ7NZK7JpBd0CnG/CXuZHRDbLoY8r1pej18hHDG0RNVkxqI+H7+glFjrIh/4QbmLmP46M5Sjs0k4NB/zRqhUDlFmQsIg1JWYmsLQTmQYBK7vwOGC7hT5riRTF2wKmHRuNRg==",
+            "name_e": "useraa",
+            "name_a": "userbb",
+            "identity": "ZEITHUotd2N8RI49iCLxq8ETZ37QHiIKGUJ0RZ5OCIoQzdUz0DqbcRMRxmVkpsruScSg3U/6Pp7PCUjJ43Bj1l1j55hk6uRg3/yfTXEbX32BZhwCD0bzokHOOu5+JWD6YcsIxxdGBMIngEPeY4V2hAoC6DIgq4eR1puyZp8taYOyU1XEbgVV4TSZ12ORPD4uS55Htvxn69MzWjRKqtPzvwV6MVlAUy14G9rH/OnNLIySDl7anE382y7+6acCTgorbTzTdz8YP/O4q/Hp+gbVh7nBXn0uwPj26NyHLBCuRXkbL+id5xFXkxfBrHBRoq4QhgRA69Y/FkKQgOjeUwrfWQ==",
+            "identitypic": "WjY9aDbqNEmhKwwhCIPVVXMyV95oXARpe9zZSlmSwlNNxSYD//fUwjtrl1HtUqfOBVY3vP2UgxyfB9p293jolKlPkjcr2Xbkce4CJQWeUelAgpDIoLqGTYY4tTiTo0MJGikHp7X9qKr4wbEDAn8ix0akyROWTG3gLyUROK5AFSz/5fQrQgRsh+fffkFvew4xCuEAJv8LpkxzSEJQthnnS28BnDpSgUA2iML/HboXuiY7G1avO+U8ETwQn0LaZPMK/QuVQ2V87JkmZKSyPdYrIgPqzVRCyPg6iooLIZkaiIJ1Q5gAb1HQGtCxpahYjnFCHO+5d/jj9WcfpeGobqYFjw==",
             "signpic": "",
             "bankname": "Riyad Bank",
             "bankcode": "1174c",
-            "cardno": "mQWxh+ypJe+DSn9o5/bdumuCsc+IMvj+5z32xr2anPs6sgqxQu4Zgt2yXs7Ye8Ptr9UFmbPnt5onxkhYQ6iPArmV3kqkJwOA8MiAuDiYwn3+eoiF2EdWCx0otF6YkC7tA0ESO98DL7I1BpDJNCdaDOrrppZS7syb0qtBosvBC/YvRIRrspMsGXzL/vAMI7GvT4wj7RyIiqEE48dSCXT9YLvx7OiQf33fQbrv36zoeYolOSoQLRTe+oTpcum9ACccTI1aS6/A2qOlPEQ5EkPrmxDljmWPUBotdwrmRmy1p0DJK7SwgeofPxGsrGo1Lcw7S7ShqdWUHScgaWIIH7miBQ==",
+            "cardno": "E3NXOnyWzUb3oFVZ6ATT5mxOwxbyYzavxyc2hXMlohmqfo5qXPpnmmVucyknUa8tFg6A870IF74NLggCS7gBRvmHYl54QY/Q6CKrWKt3c4GsNtVyb2pOolRklOzXjS4O+Y/uaTffc+vOKV6tlG+E+Km9PmznpSkxWCE+rPsqnDZylaQBjuulxh3b5TGhMtnRsJhIhjkqMq9J0e6fY0yryeFAz4sQw94xd/usQ5dFYTZJLPU2ukPcbCa+DRB/OQLe5nLHacuIFyajbN24rq+5UyRId6N3qEpHzfl+f8qIv5nTit0kkwh1RESrqbHvtDx0dB+EHQu17Kq0E/gRpzwsnA==",
             "ibanaccount": "1234567892",
-            "stcaccount": "iXyvq7ArPI1bofHHTtjHQ4dz9cYtE1wicUIbIl1b9aw82BqAXcOKVeDu9tniFRfTPKhtXVKMpEPmReHyw7tx8fAjxrLOSIJEdCvNIB7hSrC6HlDThTD/JZ3bqMO6sxdalj5zF7QY/IUbrRRm/ALW/xam/73IYz3CHxQXRz3nOUsG07yOZuid2l7fzqmflMQCijiNoXMRcZjqb1uMO3xOFeZc8SiFAfHTcombR3NmgJFmMTMNEs5SH/CUbzYHKDgrkq8vs6x10LJP9ox3FlC8C1W3B5p5FPWYvUaS6+PkLdOECvjwIu/bS3K0hrxv/hQjCfWMTfySkPsB0V78Wu7rtA==",
+            "stcaccount": "CW5tgmBTFG+qoONAqIG/XCKFBC2pQTbMLOvP5W4Ym3+wrZcSxhJ2B26Xncaqdfvw0A5Ny8xklN3Y8tOgfSeeVvFQSjwR9Ba7TpuCQl7kvSTUGkXdLyMJd4zksmdM0MI9fl3iRX0IPoZ8Seoy0faguDseXstMb3pTWBepRlIKsM/w5DH8f7jyZp3HeQrcUQ41VqS7yAlxXjwSmMpAbmfNe0S0vs6eBg0WduEeICCgCwf2TnIDkk0KXITzXh6cKv+fAgVZB/a0xYTfu1aLHrpP2rGcniOKRsJCSXpmdoNiUsfIYZd4YzjEf7hEPviXBlf+5cn53vlWamHgiywm5WD1ZQ==",
             "status": 1,
-            "statusdesc": "2023-06-15 06:14:45",
+            "statusdesc": "fggfhhf",
             "demand_perfection": [],
-            "created_at": 1686809574,
-            "updated_at": 1686812615
+            "created_at": 1686798774,
+            "updated_at": 1706258310
         },
-        "created_at": 1686813277,
-        "updated_at": 1686813277
+        "created_at": 1706495064,
+        "updated_at": 1719198062
     },
     "sensitiveFields": {
         "custominfo": [
@@ -122,6 +125,6 @@
             "cardno"
         ]
     },
-    "requestId": "8A926C296BE22E04324A0419F544FD7E"
+    "requestId": "2D22866A748BF5098936CA3ED891B205"
 }
 ```
