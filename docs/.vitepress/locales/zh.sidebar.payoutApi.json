@@ -90,7 +90,8 @@
                         { "text": "代付工单状态", "link": "/zh/payoutApi/appendix/paymentStatus" },
                         { "text": "代付工单交易类型", "link": "/zh/payoutApi/appendix/tranType" },
                         { "text": "付款方式", "link": "/zh/payoutApi/appendix/paymentMethod" },
-                        { "text": "支持币种", "link": "/zh/payoutApi/appendix/currency" }
+                        { "text": "支持币种", "link": "/zh/payoutApi/appendix/currency" },
+                        { "text": "测试账户", "link": "/zh/payoutApi/appendix/testAccount" }
                     ]
                 }
             ]

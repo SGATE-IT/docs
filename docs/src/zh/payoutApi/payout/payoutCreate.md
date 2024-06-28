@@ -29,7 +29,8 @@
 - **Request Body**
 
 ::: tip 提示
-商户客户 ID 和系统客户 ID 传其中一个，如果都不传接口会响应参数缺失错误。
+1. 商户客户 ID 和系统客户 ID 传其中一个，如果都不传接口会响应参数缺失错误。
+2. 沙箱环境中为填写了[测试账户](/zh/payoutApi/appendix/testAccount)的客户创建代付工单，会自动完成付款流程，触发[回调通知](/zh/payoutApi/notification/notification)。
 :::
 
 | **参数**      | **必填** | **类型** | **默认值** | **描述**                                         |

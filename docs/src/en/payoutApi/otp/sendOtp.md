@@ -34,7 +34,7 @@ For the same mobile number, use different formats to send requests. The valid mo
 ### Test account
 
 ::: warning
-The test number only supports use in the testing environment, and all mobile phone numbers that have passed the format verification in the production environment will be sent SMS normally.
+The test number only supports use in the sandbox environment, and all mobile phone numbers that have passed the format verification in the production environment will be sent SMS normally.
 :::
 
 Joint debugging testing can be conducted using a test number. The test number will not actually send text messages, and other number systems will attempt to send text messages.

@@ -28,6 +28,7 @@ The request parameters are as follows：
 mercustomid is the merchant customer ID. The system will automatically perform the following processing based on mercustomid:
 1. When there is a customer associated with mercustomid under the merchant, the customer information will be updated based on the submitted customer information, and a payment work order will be created for the customer.
 2. When there is no associated customer with mercustomid under the merchant, a new customer will be created. After the customer is created, it will be in the approved status, and a payment work order will be created for the new customer.
+3. When creating a rapid payment ticket in the sandbox environment and using a [test account](/en/payoutApi/appendix/testAccount), the customer is also in the approved status, but the payment result follows the "Automatic Payment Result" in the document and triggers a [callback notification](/en/payoutApi/notification/notification).
 :::
 
 * **Must** pass parameters:
@@ -45,7 +46,7 @@ mercustomid is the merchant customer ID. The system will automatically perform t
 | **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                                                                                                                                   |
 | ------------- | ------------ | -------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name_e        | Y            | string   | -                 | Customer english name, length limit 64 characters                                                                                                                                                 |
-| name_a        | Y            | string   | -                 | Customer arabic name, length limit 64 characters                                                                                                                                                  |
+| name_a        | Y            | string   | -                 | Customer arabic name, length limit 64 characters. if the customer does not have an arabic name, you can fill in the customer english name                                                         |
 | bankcode      | Y            | string   | -                 | [Bank code](/en/payoutApi/banks/bankList)                                                                                                                                                         |
 | cardno        | N            | string   | -                 | Bank account (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key)), must be a number, length limit 13 to 19 characters |
 | ibanaccount   | Y            | string   | -                 | IBAN, letters and numbers, length limit 34 characters                                                                                                                                             |

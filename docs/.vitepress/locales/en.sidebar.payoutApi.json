@@ -90,7 +90,8 @@
                         { "text": "Payment Order Status", "link": "/en/payoutApi/appendix/paymentStatus" },
                         { "text": "Payment Order Transaction Type", "link": "/en/payoutApi/appendix/tranType" },
                         { "text": "Payment Method", "link": "/en/payoutApi/appendix/paymentMethod" },
-                        { "text": "Support Currency", "link": "/en/payoutApi/appendix/currency" }
+                        { "text": "Support Currency", "link": "/en/payoutApi/appendix/currency" },
+                        { "text": "Test Account", "link": "/en/payoutApi/appendix/testAccount" }
                     ]
                 }
             ]

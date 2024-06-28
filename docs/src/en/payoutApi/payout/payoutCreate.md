@@ -29,7 +29,8 @@ The request parameters are as follows：
 - **Request Body**
 
 ::: tip TIP
-If one of the merchant customer ID and system customer ID is not transmitted, the interface will respond to parameter missing errors.
+1. If one of the merchant customer ID and system customer ID is not transmitted, the interface will respond to parameter missing errors.
+2. The sandbox environment creates a payment ticket for a customer who has filled in a [test account](/en/payoutApi/appendix/testAccount), which will automatically complete the payment process and trigger a [callback notification](/en/payoutApi/notification/notification).
 :::
 
 | **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                          |

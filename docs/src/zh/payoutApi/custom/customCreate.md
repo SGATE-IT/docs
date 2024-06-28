@@ -29,13 +29,14 @@
 - **Request Body**
 
 ::: tip 提示
-客户账户信息如果是银行账户 `bankcode`、`cardno`、`ibanaccount` 必填。如果客户账户为 STCPay 账户则 `stcaccount` 必填。
+1. 客户账户信息如果是银行账户 `bankcode`、`cardno`、`ibanaccount` 必填。如果客户账户为 STCPay 账户则 `stcaccount` 必填。
+2. 沙箱环境中可以通过[测试账户](/zh/payoutApi/appendix/testAccount)来模拟客户的审核状态，当使用[测试账户](/zh/payoutApi/appendix/testAccount)创建的客户完成[资料更新](/zh/payoutApi/custom/customUpdateFile)时，会自动审批客户，触发[回调通知](/zh/payoutApi/notification/notification)。
 :::
 
 | **参数**    | **必填** | **类型** | **默认值** | **描述**                                                                                                                                                                      |
 | ----------- | -------- | -------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name_e      | 是       | string   | -          | 客户英文名称，长度限制 64 字符                                                                                                                                                |
-| name_a      | 是       | string   | -          | 客户阿拉伯文名称，长度限制 64 字符                                                                                                                                            |
+| name_a      | 是       | string   | -          | 客户阿拉伯文名称，长度限制 64 字符，如果客户无阿拉伯文名称可以填写为客户英文名称                                                                                              |
 | mercustomid | 是       | string   | -          | 商户客户 ID ，要求商户下唯一，长度限制 128 字符                                                                                                                               |
 | identity    | 是       | string   | -          | 身份证号（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理），长度限制 64 字符                                                                 |
 | bankcode    | 否       | string   | -          | [银行 CODE](/zh/payoutApi/banks/bankList)                                                                                                                                     |

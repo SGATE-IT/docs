@@ -34,7 +34,8 @@
 - **Request Body**
 
 ::: tip 提示
-商户客户 ID 和系统客户 ID 传其中一个，如果都不传接口会响应参数缺失错误。
+1. 商户客户 ID 和系统客户 ID 传其中一个，如果都不传接口会响应参数缺失错误。
+2. 沙箱环境中如果更新的客户信息中账户信息为[测试账户](/zh/payoutApi/appendix/testAccount)，则会自动审批客户，触发[回调通知](/zh/payoutApi/notification/notification)。
 :::
 
 | **参数**    | **必填** | **类型** | **默认值** | **描述**                                                                                             |

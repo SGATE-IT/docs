@@ -29,13 +29,14 @@ The request parameters are as follows：
 - **Request Body**
 
 ::: tip
-If the customer account information is a bank account `bankcode`、 `cardno`、 `ibanacount` it is mandatory. If the customer account is an STCPay account `stcacount` is mandatory
+1. If the customer account information is a bank account `bankcode`、 `cardno`、 `ibanacount` it is mandatory. If the customer account is an STCPay account `stcacount` is mandatory.
+2. In the sandbox environment, you can use a [test account](/en/payoutApi/appendix/testAccount) to simulate the customer review status. When a customer created using a [test account](/en/payoutApi/appendix/testAccount) completes [profile update](/zh/payoutApi/custom/customUpdateFile), the customer will be automatically approved and a [callback notification](/zh/payoutApi/notification/notification) will be triggered.
 :::
 
 | **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                                                                                                                                                            |
 | ------------- | ------------ | -------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name_e        | Y            | string   | -                 | Customer english name, length limit 64 characters                                                                                                                                                                          |
-| name_a        | Y            | string   | -                 | Customer arabic name, length limit 64 characters                                                                                                                                                                           |
+| name_a        | Y            | string   | -                 | Customer arabic name, length limit 64 characters. if the customer does not have an arabic name, you can fill in the customer english name                                                                                |
 | mercustomid   | Y            | string   | -                 | Merchant customer ID, requires the merchant to provide a unique ID, length limit 128 characters                                                                                                                            |
 | identity      | Y            | string   | -                 | ID number (sensitive information, encrypted with the [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key)), length limit 64 characters                                                              |
 | bankcode      | N            | string   | -                 | [Bank code](/en/payoutApi/banks/bankList)                                                                                                                                                                                  |

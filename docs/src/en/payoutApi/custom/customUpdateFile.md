@@ -34,7 +34,8 @@ The request parameters are as follows：
 - **Request Body**
 
 ::: tip 
-If one of the merchant customer ID and system customer ID is not transmitted, the interface will respond to parameter missing errors.
+1. If one of the merchant customer ID and system customer ID is not transmitted, the interface will respond to parameter missing errors.
+2. In the sandbox environment, if the account information in the updated customer information is a [test account](/en/payoutApi/appendix/testAccount), the customer will be automatically approved and a [callback notification](/en/payoutApi/notification/notification) will be triggered.
 :::
 
 | **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                                                                               |
