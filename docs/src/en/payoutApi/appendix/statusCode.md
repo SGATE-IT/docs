@@ -55,15 +55,16 @@
 
 ### Payment
 
-| Code | Description                                             |
-| ---- | ------------------------------------------------------- |
-| 1400 | Payeeuid duplicate in request                           |
-| 1401 | Payeeuid duplicate in global                            |
-| 1402 | Insufficient balance                                    |
-| 1403 | Unsupported payment method                              |
-| 1404 | The payment amount on behalf needs to be greater than 0 |
-| 1405 | Merchant balance operation failed                       |
-| 1406 | Unsupported currency code                               |
+| Code | Description                                                            |
+| ---- | ---------------------------------------------------------------------- |
+| 1400 | Payeeuid duplicate in request                                          |
+| 1401 | Payeeuid duplicate in global                                           |
+| 1402 | Insufficient balance                                                   |
+| 1403 | Unsupported payment method                                             |
+| 1404 | The payment amount on behalf needs to be greater than 0                |
+| 1405 | Merchant balance operation failed                                      |
+| 1406 | The current status of the payment order does not allow this operation. |
+| 1407 | Unsupported currency code                                              |
 
 ### File
 
