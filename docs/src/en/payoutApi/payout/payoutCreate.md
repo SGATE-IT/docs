@@ -31,6 +31,7 @@ The request parameters are as follows：
 ::: tip TIP
 1. If one of the merchant customer ID and system customer ID is not transmitted, the interface will respond to parameter missing errors.
 2. The sandbox environment creates a payment ticket for a customer who has filled in a [test account](/en/payoutApi/appendix/testAccount), which will automatically complete the payment process and trigger a [callback notification](/en/payoutApi/notification/notification).
+3. STCPay payment only supports SAR currency.
 :::
 
 | **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                          |
@@ -68,10 +69,10 @@ The response parameters are as follows:
 | mercustomid   | string   | Merchant customer ID                                                                                |
 | payeeuid      | string   | Merchant order ID                                                                                   |
 | trantype      | string   | [Transaction type](/en/payoutApi/appendix/tranType)                                                 |
-| currency      | string   | [Currency code](/en/payoutApi/appendix/currency)                                                    |
+| currency      | string   | Returns the [currency code](/en/payoutApi/appendix/currency) when applying for payout               |
 | paymentmethod | string   | [payment method](/en/payoutApi/appendix/paymentMethod)                                              |
-| amount        | float    | Payment amount                                                                                      |
-| realamount    | float    | Actual amount received                                                                              |
+| amount        | float    | Total amount paid by the payer                                                                      |
+| realamount    | float    | The actual amount received by the payee                                                             |
 | fee           | float    | Handling fee                                                                                        |
 | status        | number   | [Payment order status](/en/payoutApi/appendix/paymentStatus)                                        |
 | statusdesc    | string   | Status description                                                                                  |

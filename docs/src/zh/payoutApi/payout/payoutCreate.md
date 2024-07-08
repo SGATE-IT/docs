@@ -31,6 +31,7 @@
 ::: tip 提示
 1. 商户客户 ID 和系统客户 ID 传其中一个，如果都不传接口会响应参数缺失错误。
 2. 沙箱环境中为填写了[测试账户](/zh/payoutApi/appendix/testAccount)的客户创建代付工单，会自动完成付款流程，触发[回调通知](/zh/payoutApi/notification/notification)。
+3. STCPay 付款只支持 SAR 货币。
 :::
 
 | **参数**      | **必填** | **类型** | **默认值** | **描述**                                         |
@@ -60,25 +61,25 @@
 
 - **Response Body**
 
-| **参数名**    | **类型** | **描述**                                             |
-| ------------- | -------- | ---------------------------------------------------- |
-| ticketid      | string   | 代付工单 ID                                          |
-| key           | string   | 代付工单 Key，每个代付工单唯一                       |
-| customid      | string   | 系统客户 ID                                          |
-| mercustomid   | string   | 商户客户 ID                                          |
-| payeeuid      | string   | 商户订单 ID                                          |
-| trantype      | string   | [交易类型](/zh/payoutApi/appendix/tranType)          |
-| currency      | string   | [货币代码](/zh/payoutApi/appendix/currency)          |
-| paymentmethod | string   | [付款方式](/zh/payoutApi/appendix/paymentMethod)     |
-| amount        | float    | 打款金额                                             |
-| realamount    | float    | 实际到账金额                                         |
-| fee           | float    | 手续费                                               |
-| status        | number   | [代付工单状态](/zh/payoutApi/appendix/paymentStatus) |
-| statusdesc    | string   | 状态说明                                             |
-| confirmtime   | number   | 打款完成时间                                         |
-| custominfo    | object   | 代付工单创建时客户数据快照，数据结构同客户数据       |
-| created_at    | number   | 创建时间                                             |
-| updated_at    | number   | 更新时间                                             |
+| **参数名**    | **类型** | **描述**                                                                  |
+| ------------- | -------- | ------------------------------------------------------------------------- |
+| ticketid      | string   | 代付工单 ID                                                               |
+| key           | string   | 代付工单 Key，每个代付工单唯一                                            |
+| customid      | string   | 系统客户 ID                                                               |
+| mercustomid   | string   | 商户客户 ID                                                               |
+| payeeuid      | string   | 商户订单 ID                                                               |
+| trantype      | string   | [交易类型](/zh/payoutApi/appendix/tranType)                               |
+| currency      | string   | 返回货币类型为申请 payout 时的[货币代码](/zh/payoutApi/appendix/currency) |
+| paymentmethod | string   | [付款方式](/zh/payoutApi/appendix/paymentMethod)                          |
+| amount        | float    | 付款人支付总金额                                                          |
+| realamount    | float    | 收款人实际到账金额                                                        |
+| fee           | float    | 手续费                                                                    |
+| status        | number   | [代付工单状态](/zh/payoutApi/appendix/paymentStatus)                      |
+| statusdesc    | string   | 状态说明                                                                  |
+| confirmtime   | number   | 打款完成时间                                                              |
+| custominfo    | object   | 代付工单创建时客户数据快照，数据结构同客户数据                            |
+| created_at    | number   | 创建时间                                                                  |
+| updated_at    | number   | 更新时间                                                                  |
 
 **响应参数示例**
 

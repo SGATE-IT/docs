@@ -63,6 +63,7 @@
 | 1403 | Unsupported payment method                              |
 | 1404 | The payment amount on behalf needs to be greater than 0 |
 | 1405 | Merchant balance operation failed                       |
+| 1406 | Unsupported currency code                               |
 
 ### File
 

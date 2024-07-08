@@ -46,7 +46,8 @@
                             "text": "Bank",
                             "collapsed": false,
                             "items": [
-                                { "text": "Query Bank List", "link": "/en/payoutApi/banks/bankList" }
+                                { "text": "Query Bank List", "link": "/en/payoutApi/banks/bankList" },
+                                { "text": "Query Exchange Rate", "link": "/en/payoutApi/banks/exchangeRateList" }
                             ]
                         },
                         {

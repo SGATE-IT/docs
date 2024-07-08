@@ -29,6 +29,7 @@ mercustomid is the merchant customer ID. The system will automatically perform t
 1. When there is a customer associated with mercustomid under the merchant, the customer information will be updated based on the submitted customer information, and a payment work order will be created for the customer.
 2. When there is no associated customer with mercustomid under the merchant, a new customer will be created. After the customer is created, it will be in the approved status, and a payment work order will be created for the new customer.
 3. When creating a rapid payment ticket in the sandbox environment and using a [test account](/en/payoutApi/appendix/testAccount), the customer is also in the approved status, but the payment result follows the "Automatic Payment Result" in the document and triggers a [callback notification](/en/payoutApi/notification/notification).
+4. STCPay payment only supports SAR currency.
 :::
 
 * **Must** pass parameters:
@@ -84,10 +85,10 @@ The response parameters are as follows:
 | mercustomid   | string   | Merchant customer ID                                                                                |
 | payeeuid      | string   | Merchant order ID                                                                                   |
 | trantype      | string   | [Transaction type](/en/payoutApi/appendix/tranType)                                                 |
-| currency      | string   | [Currency code](/en/payoutApi/appendix/currency)                                                    |
+| currency      | string   | Returns the [currency code](/en/payoutApi/appendix/currency) when applying for payout               |
 | paymentmethod | string   | [payment method](/en/payoutApi/appendix/paymentMethod)                                              |
-| amount        | float    | Payment amount                                                                                      |
-| realamount    | float    | Actual amount received                                                                              |
+| amount        | float    | Total amount paid by the payer                                                                      |
+| realamount    | float    | The actual amount received by the payee                                                             |
 | fee           | float    | Handling fee                                                                                        |
 | status        | number   | [Payment order status](/en/payoutApi/appendix/paymentStatus)                                        |
 | statusdesc    | string   | Status description                                                                                  |

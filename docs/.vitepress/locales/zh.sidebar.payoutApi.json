@@ -46,7 +46,8 @@
                             "text": "银行",
                             "collapsed": false,
                             "items": [
-                                { "text": "查询银行列表", "link": "/zh/payoutApi/banks/bankList" }
+                                { "text": "查询银行列表", "link": "/zh/payoutApi/banks/bankList" },
+                                { "text": "查询汇率", "link": "/zh/payoutApi/banks/exchangeRateList" }
                             ]
                         },
                         {

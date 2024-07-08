@@ -20,7 +20,7 @@ The request parameters are as follows:
 
 - **Header**
 
-  - [_View request/response headers](/en/payoutApi/apiRule/header)
+  - [_View request/response headers_](/en/payoutApi/apiRule/header)
 
 ### Response Parameters
 
