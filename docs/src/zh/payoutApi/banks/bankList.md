@@ -266,7 +266,7 @@
         {
             "country": "ARE",
             "bankcode": "4e859",
-            "bankname": "AL AHLI BANK OF KUWAIT K S C P DUBAI BRA NCH"
+            "bankname": "AL AHLI BANK OF KUWAIT KSCP DUBAI BRA NCH"
         },
         {
             "country": "ARE",
@@ -281,7 +281,7 @@
         {
             "country": "ARE",
             "bankcode": "4e9d0",
-            "bankname": "AL KHALIJI FRANCE S A"
+            "bankname": "AL KHALIJI FRANCE SA"
         },
         {
             "country": "ARE",
@@ -316,7 +316,7 @@
         {
             "country": "ARE",
             "bankcode": "4ed3b",
-            "bankname": "Al Ahli Bank Of Kuwait K S C"
+            "bankname": "Al Ahli Bank Of Kuwait KSC"
         },
         {
             "country": "ARE",
@@ -451,12 +451,12 @@
         {
             "country": "ARE",
             "bankcode": "4fa6a",
-            "bankname": "CENTRAL BANK OF THE U A E"
+            "bankname": "CENTRAL BANK OF THE UAE"
         },
         {
             "country": "ARE",
             "bankcode": "4fae7",
-            "bankname": "CITIBANK N A"
+            "bankname": "CITIBANK NA"
         },
         {
             "country": "ARE",
@@ -531,7 +531,7 @@
         {
             "country": "ARE",
             "bankcode": "5023a",
-            "bankname": "EMIRATES INVESTMENT BANK P J S C"
+            "bankname": "EMIRATES INVESTMENT BANK PJSC"
         },
         {
             "country": "ARE",
@@ -551,7 +551,7 @@
         {
             "country": "ARE",
             "bankcode": "5042e",
-            "bankname": "FINANCE HOUSE L L C"
+            "bankname": "FINANCE HOUSE LLC"
         },
         {
             "country": "ARE",
@@ -606,7 +606,7 @@
         {
             "country": "ARE",
             "bankcode": "5098d",
-            "bankname": "GULF INTERNATIONAL BANK B S C"
+            "bankname": "GULF INTERNATIONAL BANK BSC"
         },
         {
             "country": "ARE",
@@ -736,12 +736,12 @@
         {
             "country": "ARE",
             "bankcode": "5163f",
-            "bankname": "NATIONAL BANK OF KUWAIT S A K"
+            "bankname": "NATIONAL BANK OF KUWAIT SAK"
         },
         {
             "country": "ARE",
             "bankcode": "516bc",
-            "bankname": "NATIONAL BANK OF OMAN S A O G"
+            "bankname": "NATIONAL BANK OF OMAN SAOG"
         },
         {
             "country": "ARE",
@@ -876,25 +876,20 @@
         {
             "country": "ARE",
             "bankcode": "523eb",
-            "bankname": "WIO BANK P J S C"
+            "bankname": "WIO BANK PJSC"
         },
         {
             "country": "ARE",
             "bankcode": "52468",
-            "bankname": "Wio Bank PJSC"
-        },
-        {
-            "country": "ARE",
-            "bankcode": "524e5",
             "bankname": "ZAND BANK"
         },
         {
             "country": "ARE",
-            "bankcode": "52562",
-            "bankname": "ZAND BANK P J S C"
+            "bankcode": "524e5",
+            "bankname": "ZAND BANK PJSC"
         }
     ],
     "sensitiveFields": {},
-    "requestId": "4C49D6276563F49D1C8AACA1DB2ABF86"
+    "requestId": "633A57E792BEC3F121740B578566F006"
 }
 ```
