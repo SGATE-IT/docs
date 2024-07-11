@@ -22,6 +22,13 @@ The request parameters are as follows:
 
   - [_View request/response headers_](/en/payoutApi/apiRule/header)
 
+- **Request Body**
+
+| **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                                                  |
+| ------------- | ------------ | -------- | ----------------- | ---------------------------------------------------------------------------------------------------------------- |
+| country       | N            | string   | SAU               | Bank country:<br>` ALL `: All Banks<br>` SAU `: Saudi Arabia<br>` KWT `: Kuwait<br>` ARE `: United Arab Emirates |
+
+
 ### Response Parameters
 
 The response parameters are as follows：
@@ -29,9 +36,9 @@ The response parameters are as follows：
 - **Response Body**
 
 | **Parameter** | **Type** | **Description** |
-| ------------------ | -------- | --------------- |
-| bankcode           | string   | Bank code       |
-| bankname           | string   | Bank name       |
+| ------------- | -------- | --------------- |
+| bankcode      | string   | Bank code       |
+| bankname      | string   | Bank name       |
 
 **Response parameter Example**
 
