@@ -39,11 +39,11 @@
 
 - **Response Body**
 
-| **参数名** | **类型** | **描述**       |
-| ---------- | -------- | -------------- |
-| country    | string   | 银行所属国家： |
-| bankcode   | string   | 银行 CODE      |
-| bankname   | string   | 银行名称       |
+| **参数名** | **类型** | **描述**     |
+| ---------- | -------- | ------------ |
+| country    | string   | 银行所属国家 |
+| bankcode   | string   | 银行 CODE    |
+| bankname   | string   | 银行名称     |
 
 **响应参数示例**
 
