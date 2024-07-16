@@ -2,7 +2,7 @@
 
 ## Function Description
 
-- Query the list of supported banks
+- Query the list of supported banks, and return the list of banks supported by Saudi Arabia by default
 
 ## Query Bank List API
 
@@ -23,6 +23,10 @@ The request parameters are as follows:
   - [_View request/response headers_](/en/payoutApi/apiRule/header)
 
 - **Request Body**
+
+::: tip TIP
+Without country the default is to return the list of banks supported by Saudi Arabia.
+:::
 
 | **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                                                  |
 | ------------- | ------------ | -------- | ----------------- | ---------------------------------------------------------------------------------------------------------------- |
