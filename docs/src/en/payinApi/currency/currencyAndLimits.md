@@ -5,12 +5,12 @@ All limits are gateway transaction limits. If the user's bank card has a limit a
 :::
 
 ::: tip
-STCPay single payment cannot exceed 3000 SAR
+STCPay single payment cannot exceed 10000 SAR
 :::
 
 | **Country**          | **Currency** | **Minimum Payment Amount** | **Maximum Payment Limit** |
 | -------------------- | ------------ | -------------------------- | ------------------------- |
-| Saudi Arabia         | SAR          | 0.1                        | Unlimited                 |
+| Saudi Arabia         | SAR          | 0.1                        | 10000                     |
 | Kuwait               | KWD          | 0.25                       | Unlimited                 |
 | Bahrain              | BHD          | 0.1                        | 3000                      |
 | United Arab Emirates | AED          | 0.1                        | 29000                     |
