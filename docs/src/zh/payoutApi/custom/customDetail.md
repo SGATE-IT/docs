@@ -55,6 +55,8 @@
 | stcaccount        | string   | STCPay 账户（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理）    |
 | status            | number   | [客户状态](/zh/payoutApi/appendix/customStatus)                                                      |
 | statusdesc        | string   | 客户状态说明                                                                                         |
+| autoapproval      | number   | 是否开启自动审批：<br> `0`：不开启 <br> `1`：开启                                                    |
+| otpappname        | string   | 发送 OTP 验证的产品名称                                                                              |
 | demand_perfection | array    | 用户当前待完善哪些资料                                                                               |
 | created_at        | number   | 创建时间                                                                                             |
 | updated_at        | number   | 更新时间                                                                                             |
@@ -80,6 +82,8 @@
         "stcaccount": "",
         "status": 4,
         "statusdesc": "2023-06-15 06:12:54",
+        "autoapproval": 1,
+        "otpappname": "test",
         "demand_perfection": [
             "identitypic"
         ],

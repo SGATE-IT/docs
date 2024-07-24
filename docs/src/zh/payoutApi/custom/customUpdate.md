@@ -37,6 +37,7 @@
 ::: tip 提示
 1. 商户客户 ID 和系统客户 ID 传其中一个，如果都不传接口会响应参数缺失错误。
 2. 沙箱环境中如果更新的客户信息中账户信息为[测试账户](/zh/payoutApi/appendix/testAccount)，则会自动审批客户，触发[回调通知](/zh/payoutApi/notification/notification)。
+3. 沙箱环境中如果使用[测试账户](/zh/payoutApi/appendix/testAccount)来模拟客户的审核状态，该客户会强制关闭自动审批功能。
 :::
 
 | **参数**    | **必填** | **类型** | **默认值** | **描述**                                                                                                                                                                      |
@@ -75,6 +76,8 @@
 | stcaccount        | string   | STCPay 账户（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理）    |
 | status            | number   | [客户状态](/zh/payoutApi/appendix/customStatus)                                                      |
 | statusdesc        | string   | 客户状态说明                                                                                         |
+| autoapproval      | number   | 是否开启自动审批：<br> `0`：不开启 <br> `1`：开启                                                    |
+| otpappname        | string   | 发送 OTP 验证的产品名称                                                                              |
 | demand_perfection | array    | 用户当前待完善哪些资料                                                                               |
 | created_at        | number   | 创建时间                                                                                             |
 | updated_at        | number   | 更新时间                                                                                             |
@@ -100,6 +103,8 @@
         "stcaccount": "ied6668pUXSRLj3eIWENQSLy3IzheI/lZntPehScFdjsnSeXJtiHVROuT3+e+rAXKFclxCyuD2+n44IHLh/pjgHZEr4Vr9T2qZR1HRnj3uvESaT/yPbRLx1hynUknd2YnGfsM01ZUfUztlmhSArAQ48SPB7py4aIMZin8kOi4ak/z1bY0Yqh1iVK+9Qa07CFfBY80vBgqg0gu4ysil4HLsuC0XahYMNdqAJqY8EJ3bbssae+B52I6QjQ5a+5xll8O5JczIBsJJimGh34OZ1/t7Wtd1WyRRKeXcdIfSccOBaWtdH1cSLDj1xqLg0T7HU/whyZRVOB1fxedd/ceg3quA==",
         "status": 4,
         "statusdesc": "2023-06-15 06:12:54",
+        "autoapproval": 1,
+        "otpappname": "test",
         "demand_perfection": [
             "identitypic"
         ],

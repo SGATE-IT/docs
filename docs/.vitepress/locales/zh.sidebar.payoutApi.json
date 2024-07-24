@@ -39,7 +39,9 @@
                                 { "text": "查询客户列表", "link": "/zh/payoutApi/custom/customList" },
                                 { "text": "查询单个客户", "link": "/zh/payoutApi/custom/customDetail" },
                                 { "text": "更新客户", "link": "/zh/payoutApi/custom/customUpdate" },
-                                { "text": "更新客户资料", "link": "/zh/payoutApi/custom/customUpdateFile" }
+                                { "text": "更新客户资料", "link": "/zh/payoutApi/custom/customUpdateFile" },
+                                { "text": "重新发送 STCPay 账户认证", "link": "/zh/payoutApi/custom/resendSTCPayAccounAuth" },
+                                { "text": "提交 STCPay 账户认证", "link": "/zh/payoutApi/custom/submitSTCPayAccounAuth" }
                             ]
                         },
                         {
