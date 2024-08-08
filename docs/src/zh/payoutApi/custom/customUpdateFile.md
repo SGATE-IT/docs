@@ -9,7 +9,7 @@
 目前客户强制需要完善的资料为身份证照片。如果客户未被**封禁**，当客户更新资料后并且**已设置身份证照片**，客户状态会重置为**待审核**状态。
 
 ::: warning 注意
-1. 如果提交的更新数据与客户现有数据一致，则客户信息保持不变，不做状态转变。
+1. 如果提交的更新数据与客户现有数据一致，则客户信息保持不变，**不做状态转变**。
 2. 客户资料变更不影响该客户已经创建的代付单，代付单会继续按照创建时的客户信息进行处理。
 :::
 
@@ -35,7 +35,7 @@
 
 ::: tip 提示
 1. 商户客户 ID 和系统客户 ID 传其中一个，如果都不传接口会响应参数缺失错误。
-2. 沙箱环境中如果更新的客户信息中账户信息为[测试账户](/zh/payoutApi/appendix/testAccount)，则会自动审批客户，触发[回调通知](/zh/payoutApi/notification/notification)。
+2. 沙箱环境中可以通过[测试账户](/zh/payoutApi/appendix/testAccount)来模拟客户的审核状态。
 :::
 
 | **参数**    | **必填** | **类型** | **默认值** | **描述**                                                                                             |
@@ -70,6 +70,8 @@
 | stcaccount        | string   | STCPay 账户（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理）    |
 | status            | number   | [客户状态](/zh/payoutApi/appendix/customStatus)                                                      |
 | statusdesc        | string   | 客户状态说明                                                                                         |
+| autoapproval      | number   | 是否开启自动审批：<br> `0`：不开启 <br> `1`：开启                                                    |
+| otpappname        | string   | 发送 OTP 验证的产品名称                                                                              |
 | demand_perfection | array    | 用户当前待完善哪些资料                                                                               |
 | created_at        | number   | 创建时间                                                                                             |
 | updated_at        | number   | 更新时间                                                                                             |
@@ -95,6 +97,8 @@
         "stcaccount": "W1pNqEGNzONfUPfixrH61nJsgh8iFI1pv1e0VFo/rNZO6d34fFPwj/SPMqajWRjOFp8IJjBJZWOMbFALS8nTx93lhIJddtEWkNPf3t+qKSlyehORZhF/5RYzvmAu7ThV/124BOzSs/LsX7u8ZKzhudpVU6GWFZr+0GgwzDZNr/SdVm9S2ec621wSuUVgzu3ahINg/7ko5RuVzkK6eUPZ+R/v8xnRowH6SCjKfuNtHONU/7u0si1gryL8D7cb1NYy2yAx7FxWexRFyDendPZB0TsISMwAqV29RSDxG+AfJDvbsfs3mZia352avZmEpxcxILntqncjOdRnVrjEheq8sQ==",
         "status": 0,
         "statusdesc": "2023-06-15 06:14:45",
+        "autoapproval": 1,
+        "otpappname": "test",
         "demand_perfection": [],
         "created_at": 1686809574,
         "updated_at": 1686809685
