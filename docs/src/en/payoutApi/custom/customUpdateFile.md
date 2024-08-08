@@ -6,11 +6,11 @@
 
 ### Customer Status Description
 
-At present, the mandatory information that customers need to improve is ID card photos. If the customer has not been **prohibited**, their status will be reset to **pending audit** when they update their information and have set their ID card photo.
+Currently, the mandatory information that customers need to complete is the ID card photo. If the customer has not been **banned**, when the customer updates the information and **has set the ID card photo**, the customer status will be reset to **pending**.
 
 ::: warning 
-1. If the submitted updated data is consistent with the customer's existing data, the customer information remains unchanged and there is no status change
-2. The change of customer information does not affect the payment order already created by the customer, and the payment order will continue to be processed according to the customer information at the time of creation.
+1. If the updated data submitted is consistent with the customer's existing data, the customer information remains unchanged and **no status change** is made.
+2. Changes to customer information do not affect the payment orders that have been created for the customer. The payment orders will continue to be processed according to the customer information at the time of creation.
 :::
 
 ## Update Customer Profile API
@@ -35,7 +35,7 @@ The request parameters are as follows：
 
 ::: tip 
 1. If one of the merchant customer ID and system customer ID is not transmitted, the interface will respond to parameter missing errors.
-2. In the sandbox environment, if the account information in the updated customer information is a [test account](/en/payoutApi/appendix/testAccount), the customer will be automatically approved and a [callback notification](/en/payoutApi/notification/notification) will be triggered.
+2. In the sandbox environment, you can use the [test account](/en/payoutApi/appendix/testAccount) to simulate the customer's review status.
 :::
 
 | **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                                                                               |
@@ -70,6 +70,8 @@ The response parameters are as follows：
 | stcaccount        | string   | STCPay account (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))      |
 | status            | number   | [Customer status](/en/payoutApi/appendix/customStatus)                                                                                               |
 | statusdesc        | string   | Customer Status Description                                                                                                                          |
+| autoapproval      | number   | Whether to enable automatic approval: <br> `0`: Disable <br> `1`: Enable                                                                             |
+| otpappname        | string   | Product name for sending OTP verification                                                                                                            |
 | demand_perfection | array    | What information does the user currently need to improve                                                                                             |
 | created_at        | number   | Creation time                                                                                                                                        |
 | updated_at        | number   | Update time                                                                                                                                          |
@@ -95,6 +97,8 @@ The response parameters are as follows：
         "stcaccount": "W1pNqEGNzONfUPfixrH61nJsgh8iFI1pv1e0VFo/rNZO6d34fFPwj/SPMqajWRjOFp8IJjBJZWOMbFALS8nTx93lhIJddtEWkNPf3t+qKSlyehORZhF/5RYzvmAu7ThV/124BOzSs/LsX7u8ZKzhudpVU6GWFZr+0GgwzDZNr/SdVm9S2ec621wSuUVgzu3ahINg/7ko5RuVzkK6eUPZ+R/v8xnRowH6SCjKfuNtHONU/7u0si1gryL8D7cb1NYy2yAx7FxWexRFyDendPZB0TsISMwAqV29RSDxG+AfJDvbsfs3mZia352avZmEpxcxILntqncjOdRnVrjEheq8sQ==",
         "status": 0,
         "statusdesc": "2023-06-15 06:14:45",
+        "autoapproval": 1,
+        "otpappname": "test",
         "demand_perfection": [],
         "created_at": 1686809574,
         "updated_at": 1686809685

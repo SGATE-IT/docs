@@ -39,7 +39,9 @@
                                 { "text": "Query Customer List", "link": "/en/payoutApi/custom/customList" },
                                 { "text": "Query Customer Detail", "link": "/en/payoutApi/custom/customDetail" },
                                 { "text": "Update Customer", "link": "/en/payoutApi/custom/customUpdate" },
-                                { "text": "Update Customer Information", "link": "/en/payoutApi/custom/customUpdateFile" }
+                                { "text": "Update Customer Information", "link": "/en/payoutApi/custom/customUpdateFile" },
+                                { "text": "Resend STCPay Account Verification", "link": "/en/payoutApi/custom/resendSTCPayAccounAuth" },
+                                { "text": "Submit STCPay Account Verification", "link": "/en/payoutApi/custom/submitSTCPayAccounAuth" }
                             ]
                         },
                         {

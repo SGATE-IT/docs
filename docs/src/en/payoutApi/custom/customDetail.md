@@ -55,6 +55,8 @@ The response parameters are as follows：
 | stcaccount        | string   | STCPay account (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))      |
 | status            | number   | [Customer status](/en/payoutApi/appendix/customStatus)                                                                                               |
 | statusdesc        | string   | Customer status description                                                                                                                          |
+| autoapproval      | number   | Whether to enable automatic approval: <br> `0`: Disable <br> `1`: Enable                                                                             |
+| otpappname        | string   | Product name for sending OTP verification                                                                                                            |
 | demand_perfection | array    | What information does the user currently need to improve                                                                                             |
 | created_at        | number   | Creation time                                                                                                                                        |
 | updated_at        | number   | Update time                                                                                                                                          |
@@ -80,6 +82,8 @@ The response parameters are as follows：
         "stcaccount": "",
         "status": 4,
         "statusdesc": "2023-06-15 06:12:54",
+        "autoapproval": 1,
+        "otpappname": "test",
         "demand_perfection": [
             "identitypic"
         ],

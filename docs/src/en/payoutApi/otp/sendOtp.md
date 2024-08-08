@@ -1,9 +1,5 @@
 # Create OTP Task
 
-::: warning
-This feature needs to be configured and activated in the background in advance
-:::
-
 ## Function Description
 
 Support sending a text message containing an OTP code to Saudi phone numbers to verify their legitimacy.

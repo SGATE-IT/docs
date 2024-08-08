@@ -36,8 +36,6 @@ The request parameters are as follows：
 
 ### Response Parameters
 
-The response parameters are as following：
-
 - **Response Body**
 
 The successful verification returns a code of `200` with no other response values.

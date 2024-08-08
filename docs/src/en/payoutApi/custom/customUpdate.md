@@ -6,12 +6,12 @@
 
 ### Customer Status Description
 
-After updating customer data, if the current customer status is not in a **prohibit** or **pending** status, it will transition to a **pending audit** status.
+After updating customer data, if the current customer status is not in a **banned** or **pending** status, it will transition to a **pending** status.
 
 ::: warning 
-1. If the submitted updated data is consistent with the customer's existing data, the customer information remains unchanged and no status changes are made.
-2. The change of customer information does not affect the payment order already created by the customer, and the payment order will continue to be processed according to the customer information at the time of creation.
-3. At least one bank account and STCPay account must exist in the customer account information. If the user currently only has an STCPay account, the STCPay account cannot be modified to be empty.
+1. If the updated data submitted is consistent with the customer's existing data, the customer information remains unchanged and **no status change** is made.
+2. Changes to customer information do not affect the payment orders that have been created for the customer. The payment orders will continue to be processed according to the customer information at the time of creation.
+3. There must be at least one bank account and STCPay account in the customer account information. If the user currently only has a STCPay account, the STCPay account cannot be modified to empty.
 :::
 
 ## Update Customer API
@@ -35,8 +35,11 @@ The request parameters are as follows：
 - **Request Body**
 
 ::: tip 
-1. If one of the merchant customer ID and system customer ID is not transmitted, the interface will respond to parameter missing errors.
-2. In the sandbox environment, if the account information in the updated customer information is a [test account](/en/payoutApi/appendix/testAccount), the customer will be automatically approved and a [callback notification](/en/payoutApi/notification/notification) will be triggered.
+1. Pass either the merchant customer ID or the system customer ID. If neither is passed, the interface will respond with a missing parameter error.
+2. In the sandbox environment, you can use the [test account](/en/payoutApi/appendix/testAccount) to simulate the customer's review status.
+3. You can contact the system administrator to add the product name for sending OTP verification. Multiple product names are supported, and the default name is the background company name.
+4. When the automatic approval function is turned on, if the customer adds or updates `stcaccount`, the `stcaccount` set by the customer will be automatically [created OTP sending task](/en/payoutApi/otp/sendOtp)
+5. The modification of `otpappname` needs to match the background configuration, **and the modification will not affect the customer status**.
 :::
 
 | **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                                                                                                                                                            |
@@ -50,6 +53,7 @@ The request parameters are as follows：
 | cardno        | N            | string   | -                 | Bank account (sensitive information, encrypted using [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key)), must be a number, length limit 13 to 19 characters                                      |
 | ibanaccount   | N            | string   | -                 | IBAN, letters and numbers, length limit 34 characters                                                                                                                                                                      |
 | stcaccount    | N            | string   | -                 | STCPay account (sensitive information, encrypted using [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key)), supported formats:<br> 5xxxxxxxx <br> 9665xxxxxxxx <br> +9665xxxxxxxx <br> 05xxxxxxxx |
+| otpappname    | N            | string   | -                 | The product name for sending OTP verification, which needs to match the background configuration. The default name is the background company name, with a length limit of 32 characters                                    |
 
 ### Response Parameters
 
@@ -75,6 +79,8 @@ The response parameters are as follows：
 | stcaccount        | string   | STCPay account (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))      |
 | status            | number   | [Customer status](/en/payoutApi/appendix/customStatus)                                                                                               |
 | statusdesc        | string   | Customer status description                                                                                                                          |
+| autoapproval      | number   | Whether to enable automatic approval: <br> `0`: Disable <br> `1`: Enable                                                                             |
+| otpappname        | string   | Product name for sending OTP verification                                                                                                            |
 | demand_perfection | array    | What information does the user currently need to improve                                                                                             |
 | created_at        | number   | Creation time                                                                                                                                        |
 | updated_at        | number   | Update time                                                                                                                                          |
@@ -100,6 +106,8 @@ The response parameters are as follows：
         "stcaccount": "ied6668pUXSRLj3eIWENQSLy3IzheI/lZntPehScFdjsnSeXJtiHVROuT3+e+rAXKFclxCyuD2+n44IHLh/pjgHZEr4Vr9T2qZR1HRnj3uvESaT/yPbRLx1hynUknd2YnGfsM01ZUfUztlmhSArAQ48SPB7py4aIMZin8kOi4ak/z1bY0Yqh1iVK+9Qa07CFfBY80vBgqg0gu4ysil4HLsuC0XahYMNdqAJqY8EJ3bbssae+B52I6QjQ5a+5xll8O5JczIBsJJimGh34OZ1/t7Wtd1WyRRKeXcdIfSccOBaWtdH1cSLDj1xqLg0T7HU/whyZRVOB1fxedd/ceg3quA==",
         "status": 4,
         "statusdesc": "2023-06-15 06:12:54",
+        "autoapproval": 1,
+        "otpappname": "test",
         "demand_perfection": [
             "identitypic"
         ],

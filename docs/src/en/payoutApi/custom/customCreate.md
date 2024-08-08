@@ -2,11 +2,11 @@
 
 ## Function Description
 
-- Create a customer under the merchant
+- Create a customer under a merchant
 
 ### Customer Status Description
 
-The initial state of creating a customer is **information to be improved**, and after the merchant completes the customer information, it changes to **pending audit**. After the pending audit state, the system auditor can perform operations such as **successful audit**, **failed audit**, and **prohibit** on the data.
+The initial status of creating a customer is **incomplete**. After the merchant completes the customer information, it will be changed to **pending**. In the pending review status, the system reviewer can perform operations such as **normal**, **reject**, and **banned** on the data.
 
 ## Create customer API
 
@@ -29,20 +29,24 @@ The request parameters are as follows：
 - **Request Body**
 
 ::: tip
-1. If the customer account information is a bank account `bankcode`、 `cardno`、 `ibanacount` it is mandatory. If the customer account is an STCPay account `stcacount` is mandatory.
-2. In the sandbox environment, you can use a [test account](/en/payoutApi/appendix/testAccount) to simulate the customer review status. When a customer created using a [test account](/en/payoutApi/appendix/testAccount) completes [profile update](/zh/payoutApi/custom/customUpdateFile), the customer will be automatically approved and a [callback notification](/zh/payoutApi/notification/notification) will be triggered.
+1. If the customer account information is a bank account, `bankcode`, `cardno`, `ibanaccount` are required. If the customer account is a STCPay account, `stcaccount` is required.
+2. In the sandbox environment, you can use the [test account](/en/payoutApi/appendix/testAccount) to simulate the customer's review status.
+3. You can contact the system administrator to add the product name for sending OTP verification. Multiple product names are supported. The default name is the background company name.
+4. When the automatic approval function is enabled, if the customer updates `stcaccount`, the customer's `stcaccount` will be automatically [create OTP send task](/en/payoutApi/otp/sendOtp)
 :::
 
 | **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                                                                                                                                                            |
 | ------------- | ------------ | -------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name_e        | Y            | string   | -                 | Customer english name, length limit 64 characters                                                                                                                                                                          |
-| name_a        | Y            | string   | -                 | Customer arabic name, length limit 64 characters. if the customer does not have an arabic name, you can fill in the customer english name                                                                                |
+| name_a        | Y            | string   | -                 | Customer arabic name, length limit 64 characters. if the customer does not have an arabic name, you can fill in the customer english name                                                                                  |
 | mercustomid   | Y            | string   | -                 | Merchant customer ID, requires the merchant to provide a unique ID, length limit 128 characters                                                                                                                            |
 | identity      | Y            | string   | -                 | ID number (sensitive information, encrypted with the [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key)), length limit 64 characters                                                              |
 | bankcode      | N            | string   | -                 | [Bank code](/en/payoutApi/banks/bankList)                                                                                                                                                                                  |
 | cardno        | N            | string   | -                 | Bank account (sensitive information, encrypted using [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key)), must be a number, length limit 13 to 19 characters                                      |
 | ibanaccount   | N            | string   | -                 | IBAN, letters and numbers, length limit 34 characters                                                                                                                                                                      |
 | stcaccount    | N            | string   | -                 | STCPay account (sensitive information, encrypted using [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key)), supported formats:<br> 5xxxxxxxx <br> 9665xxxxxxxx <br> +9665xxxxxxxx <br> 05xxxxxxxx |
+| autoapproval  | N            | number   | 0                 | Whether to enable automatic approval: <br> `0`: Disable <br> `1`: Enable                                                                                                                                                   |
+| otpappname    | N            | string   | -                 | The product name for sending OTP verification, which needs to match the background configuration. The default name is the background company name, with a length limit of 32 characters                                    |
 
 **Request Parameter Example**
 
@@ -80,6 +84,8 @@ The response parameters are as follows：
 | stcaccount        | string   | STCPay account (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))      |
 | status            | number   | [Customer status](/en/payoutApi/appendix/customStatus)                                                                                               |
 | statusdesc        | string   | Customer status description                                                                                                                          |
+| autoapproval      | number   | Whether to enable automatic approval: <br> `0`: Disable <br> `1`: Enable                                                                             |
+| otpappname        | string   | Product name for sending OTP verification                                                                                                            |
 | demand_perfection | array    | What information does the user currently need to improve                                                                                             |
 | created_at        | number   | Creation time                                                                                                                                        |
 | updated_at        | number   | Update time                                                                                                                                          |
@@ -105,6 +111,8 @@ The response parameters are as follows：
         "stcaccount": "",
         "status": 4,
         "statusdesc": "2023-06-15 06:12:54",
+        "autoapproval": 1,
+        "otpappname": "test",
         "demand_perfection": [
             "identitypic"
         ],

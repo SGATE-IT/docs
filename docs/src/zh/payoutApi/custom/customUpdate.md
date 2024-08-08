@@ -9,7 +9,7 @@
 客户数据更新后，如果当前客户状态如果不是**封禁**状态或**待完善资料**状态，则会转变为**待审核状态**。
 
 ::: warning 注意
-1. 如果提交的更新数据与客户现有数据一致，则客户信息保持不变，不做状态转变。
+1. 如果提交的更新数据与客户现有数据一致，则客户信息保持不变，**不做状态转变**。
 2. 客户资料变更不影响该客户已经创建的代付单，代付单会继续按照创建时的客户信息进行处理。
 3. 客户账户信息中银行账户、STCPay 账户需要至少存在一个，如果用户当前只有 STCPay 账户，则 STCPay 账户不可修改为空。
 :::
@@ -36,8 +36,10 @@
 
 ::: tip 提示
 1. 商户客户 ID 和系统客户 ID 传其中一个，如果都不传接口会响应参数缺失错误。
-2. 沙箱环境中如果更新的客户信息中账户信息为[测试账户](/zh/payoutApi/appendix/testAccount)，则会自动审批客户，触发[回调通知](/zh/payoutApi/notification/notification)。
-3. 沙箱环境中如果使用[测试账户](/zh/payoutApi/appendix/testAccount)来模拟客户的审核状态，该客户会强制关闭自动审批功能。
+2. 沙箱环境中可以通过[测试账户](/zh/payoutApi/appendix/testAccount)来模拟客户的审核状态。
+3. 发送 OTP 验证的产品名称可以联系系统管理员添加，支持多个产品名称，默认名称为后台公司名称。
+4. 当开启自动审批功能，客户新增或更新了 `stcaccount`，会对客户设置的 `stcaccount` 自动[创建 OTP 发送任务](/zh/payoutApi/otp/sendOtp)
+5. `otpappname` 的修改需要与后台配置匹配，**修改不会影响客户状态**。
 :::
 
 | **参数**    | **必填** | **类型** | **默认值** | **描述**                                                                                                                                                                      |
@@ -51,6 +53,7 @@
 | cardno      | 否       | string   | -          | 银行账户（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理），要求为数字，长度限制 13 ～ 19 字符                                               |
 | ibanaccount | 否       | string   | -          | IBAN，字母和数字组成，长度限制 34 字符                                                                                                                                        |
 | stcaccount  | 否       | string   | -          | STCPay 账户（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理），支持格式：<br> 5xxxxxxxx <br> 9665xxxxxxxx <br> +9665xxxxxxxx <br> 05xxxxxxxx |
+| otpappname  | 否       | string   | -          | 发送 OTP 验证的产品名称，需要与后台配置匹配，默认名称为后台公司名称，长度限制 32 字符                                                                                         |
 
 ### 响应参数
 

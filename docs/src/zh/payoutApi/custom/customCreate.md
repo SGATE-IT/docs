@@ -30,10 +30,9 @@
 
 ::: tip 提示
 1. 客户账户信息如果是银行账户 `bankcode`、`cardno`、`ibanaccount` 必填。如果客户账户为 STCPay 账户则 `stcaccount` 必填。
-2. 沙箱环境中可以通过[测试账户](/zh/payoutApi/appendix/testAccount)来模拟客户的审核状态，当使用[测试账户](/zh/payoutApi/appendix/testAccount)创建的客户完成[资料更新](/zh/payoutApi/custom/customUpdateFile)时，会自动审批客户，触发[回调通知](/zh/payoutApi/notification/notification)。
-3. 沙箱环境中如果使用[测试账户](/zh/payoutApi/appendix/testAccount)来模拟客户的审核状态，该客户会强制关闭自动审批功能。
-4. 发送 OTP 验证的产品名称可以联系系统管理员添加，支持多个产品名称，默认名称为后台公司名称。
-5. 当开启自动审批功能，客户完成[资料更新](/zh/payoutApi/custom/customUpdateFile)时，会对客户设置的 `stcaccount` 自动[创建 OTP 发送任务](/zh/payoutApi/otp/sendOtp)
+2. 沙箱环境中可以通过[测试账户](/zh/payoutApi/appendix/testAccount)来模拟客户的审核状态。
+3. 发送 OTP 验证的产品名称可以联系系统管理员添加，支持多个产品名称，默认名称为后台公司名称。
+4. 当开启自动审批功能，客户新增或更新了 `stcaccount`，会对客户设置的 `stcaccount` 自动[创建 OTP 发送任务](/zh/payoutApi/otp/sendOtp)
 :::
 
 | **参数**     | **必填** | **类型** | **默认值** | **描述**                                                                                                                                                                      |
@@ -47,7 +46,7 @@
 | ibanaccount  | 否       | string   | -          | IBAN，字母和数字组成，长度限制 34 字符                                                                                                                                        |
 | stcaccount   | 否       | string   | -          | STCPay 账户（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理），支持格式：<br> 5xxxxxxxx <br> 9665xxxxxxxx <br> +9665xxxxxxxx <br> 05xxxxxxxx |
 | autoapproval | 否       | number   | 0          | 是否开启自动审批：<br> `0`：不开启 <br> `1`：开启                                                                                                                             |
-| otpappname   | 否       | string   | -          | 发送 OTP 验证的产品名称，需要与后台配置匹配，默认名称为后台公司名称                                                                                                           |
+| otpappname   | 否       | string   | -          | 发送 OTP 验证的产品名称，需要与后台配置匹配，默认名称为后台公司名称，长度限制 32 字符                                                                                         |
 
 **请求参数示例**
 
