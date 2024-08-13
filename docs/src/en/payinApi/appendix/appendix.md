@@ -12,7 +12,7 @@
 
 | Test Mobile Phone Number | Test Verification Code |
 | ------------------------ | ---------------------- |
-| 0548220713               | 12345                  |
+| 548220713                | 12345                  |
 
 ## Demo Download
 
