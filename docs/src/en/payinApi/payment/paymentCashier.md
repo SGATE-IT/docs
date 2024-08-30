@@ -36,10 +36,6 @@ The request parameters are as follows:
 
 - **Request Body**
 
-::: danger WARN
-In the Tamara and Tabby scenarios, orders need to report `customer` and `products` data.
-:::
-
 | **Parameter**                                             | **Type**        | **Required** | **Description**                                                                                                                     | **Example**                                              |
 | --------------------------------------------------------- | --------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
 | merchantOrderId                                           | string          | Y            | Merchant payment order ID, cannot be repeated, ensure unique                                                                        | "2022102218233400123"                                    |
@@ -174,10 +170,6 @@ The response parameters are as follows:
 
 ### Payment Link Rules
 
-::: danger WARN
-In the Tamara and Tabby scenarios, orders need to report `customer` and `products` data.
-:::
-
 #### Standard Checkout Payment Link URL
 
 ::: tip
@@ -233,10 +225,6 @@ Standard Checkout Payment Link, automatically jump according to the payment meth
 ![img](/images/payinApi_en/create-iframe-order.svg)
 
 ### Create Payment Order
-
-::: danger WARN
-In the Tamara and Tabby scenarios, orders need to report `customer` and `products` data.
-:::
 
 - Refer to [Create Order API](/en/payinApi/payment/paymentCashier.html#create-order-api) to create a payment order in the payment system
 

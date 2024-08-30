@@ -36,10 +36,6 @@
 
 - **Request Body**
 
-::: danger 注意
-Tamara、Tabby 场景中，订单需要上报 `customer`、`products` 数据。
-:::
-
 | **参数**                                                  | **类型**        | **必填** | **描述**                                                                              | **示例**                                           |
 | --------------------------------------------------------- | --------------- | -------- | ------------------------------------------------------------------------------------- | -------------------------------------------------- |
 | merchantOrderId                                           | string          | 是       | 商户支付订单 ID，不能重复，确保唯一                                                   | "2022102218233400123"                              |
@@ -174,10 +170,6 @@ Tamara、Tabby 场景中，订单需要上报 `customer`、`products` 数据。
 
 ### 付款链接规则
 
-::: danger 注意
-Tamara、Tabby 场景中，订单需要上报 `customer`、`products` 数据。
-:::
-
 #### 标准收银台付款链接 URL
 
 ::: tip 提示
@@ -233,10 +225,6 @@ Tamara、Tabby 场景中，订单需要上报 `customer`、`products` 数据。
 ![img](/images/payinApi_zh/create-iframe-order.svg)
 
 ### 创建支付订单
-
-::: danger 注意
-Tamara、Tabby 场景中，订单需要上报 `customer`、`products` 数据。
-:::
 
 - 参照[创建订单 API](/zh/payinApi/payment/paymentCashier#创建订单-api) 在支付系统创建支付订单
 
