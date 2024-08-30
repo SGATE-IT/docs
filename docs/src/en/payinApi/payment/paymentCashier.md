@@ -36,6 +36,10 @@ The request parameters are as follows:
 
 - **Request Body**
 
+::: danger WARN
+You need to upload the corresponding `customer`, `product` and `beneficiary` information, otherwise a pop-up window will appear on the cashier side to guide the payee to fill in the information.
+:::
+
 | **Parameter**                                             | **Type**        | **Required** | **Description**                                                                                                                     | **Example**                                              |
 | --------------------------------------------------------- | --------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
 | merchantOrderId                                           | string          | Y            | Merchant payment order ID, cannot be repeated, ensure unique                                                                        | "2022102218233400123"                                    |
@@ -170,6 +174,10 @@ The response parameters are as follows:
 
 ### Payment Link Rules
 
+::: danger WARN
+You need to upload the corresponding `customer`, `product` and `beneficiary` information, otherwise a pop-up window will appear on the cashier side to guide the payee to fill in the information.
+:::
+
 #### Standard Checkout Payment Link URL
 
 ::: tip
@@ -225,6 +233,10 @@ Standard Checkout Payment Link, automatically jump according to the payment meth
 ![img](/images/payinApi_en/create-iframe-order.svg)
 
 ### Create Payment Order
+
+::: danger WARN
+You need to upload the corresponding `customer`, `product` and `beneficiary` information, otherwise a pop-up window will appear on the cashier side to guide the payee to fill in the information.
+:::
 
 - Refer to [Create Order API](/en/payinApi/payment/paymentCashier.html#create-order-api) to create a payment order in the payment system
 
