@@ -37,7 +37,8 @@ The request parameters are as follows:
 - **Request Body**
 
 ::: danger WARN
-You need to upload the corresponding `customer`, `product` and `beneficiary` information, otherwise a pop-up window will appear on the cashier side to guide the payee to fill in the information.
+1. You need to upload the corresponding `customer`, `product` and `beneficiary` information, otherwise a pop-up window will appear on the cashier side to guide the payee to fill in the information.
+2. `customer` information needs to upload additional `uuid`, `email` or `mobile` fields.
 :::
 
 | **Parameter**                                             | **Type**        | **Required** | **Description**                                                                                                                     | **Example**                                              |
@@ -175,7 +176,8 @@ The response parameters are as follows:
 ### Payment Link Rules
 
 ::: danger WARN
-You need to upload the corresponding `customer`, `product` and `beneficiary` information, otherwise a pop-up window will appear on the cashier side to guide the payee to fill in the information.
+1. You need to upload the corresponding `customer`, `product` and `beneficiary` information, otherwise a pop-up window will appear on the cashier side to guide the payee to fill in the information.
+2. `customer` information needs to upload additional `uuid`, `email` or `mobile` fields.
 :::
 
 #### Standard Checkout Payment Link URL
@@ -235,7 +237,8 @@ Standard Checkout Payment Link, automatically jump according to the payment meth
 ### Create Payment Order
 
 ::: danger WARN
-You need to upload the corresponding `customer`, `product` and `beneficiary` information, otherwise a pop-up window will appear on the cashier side to guide the payee to fill in the information.
+1. You need to upload the corresponding `customer`, `product` and `beneficiary` information, otherwise a pop-up window will appear on the cashier side to guide the payee to fill in the information.
+2. `customer` information needs to upload additional `uuid`, `email` or `mobile` fields.
 :::
 
 - Refer to [Create Order API](/en/payinApi/payment/paymentCashier.html#create-order-api) to create a payment order in the payment system

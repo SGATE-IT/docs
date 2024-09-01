@@ -37,7 +37,8 @@
 - **Request Body**
 
 ::: danger 注意
-需要上传对应的 `customer`、`product` 和 `beneficiary` 信息，否则在收银台侧会弹窗引导付款人填写信息。
+1. 需要上传对应的 `customer`、`product` 和 `beneficiary` 信息，否则在收银台侧会弹窗引导付款人填写信息。
+2. `customer` 信息需要额外上传 `uuid`、`email` 或 `mobile` 字段。
 :::
 
 | **参数**                                                  | **类型**        | **必填** | **描述**                                                                              | **示例**                                           |
@@ -175,7 +176,8 @@
 ### 付款链接规则
 
 ::: danger 注意
-需要上传对应的 `customer`、`product` 和 `beneficiary` 信息，否则在收银台侧会弹窗引导付款人填写信息。
+1. 需要上传对应的 `customer`、`product` 和 `beneficiary` 信息，否则在收银台侧会弹窗引导付款人填写信息。
+2. `customer` 信息需要额外上传 `uuid`、`email` 或 `mobile` 字段。
 :::
 
 #### 标准收银台付款链接 URL
@@ -235,7 +237,8 @@
 ### 创建支付订单
 
 ::: danger 注意
-需要上传对应的 `customer`、`product` 和 `beneficiary` 信息，否则在收银台侧会弹窗引导付款人填写信息。
+1. 需要上传对应的 `customer`、`product` 和 `beneficiary` 信息，否则在收银台侧会弹窗引导付款人填写信息。
+2. `customer` 信息需要额外上传 `uuid`、`email` 或 `mobile` 字段。
 :::
 
 - 参照[创建订单 API](/zh/payinApi/payment/paymentCashier#创建订单-api) 在支付系统创建支付订单
