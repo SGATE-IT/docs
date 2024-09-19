@@ -40,42 +40,41 @@
 
 | **参数名**                    | **类型** | **描述**                     |
 | ----------------------------- | -------- | ---------------------------- |
-| uuid                          | string   | 交易 ID                      |
+| uuid                          | string   | SGate 交易流水号             |
 | transactiontime               | string   | 交易时间 YYYY-mm-dd HH:ii:ss |
-| account                       | string   | 收款账户                     |
+| account                       | string   | 收款人账户的 IBAN            |
 | amount                        | float    | 交易金额                     |
 | currency                      | string   | 交易货币                     |
 | exchangeinfo                  | object   | 交易信息                     |
-| exchangeinfo.custname         | string   | 银行侧商户名称               |
-| exchangeinfo.custacc          | string   | 银行侧账户                   |
-| exchangeinfo.bankbic          | string   | 银行侧识别码                 |
-| exchangeinfo.channelreference | string   | 银行侧流水号                 |
-| exchangeinfo.paymentremarks   | string   | 银行侧备注                   |
-
+| exchangeinfo.custname         | string   | 付款人名称                   |
+| exchangeinfo.custacc          | string   | 付款人账户的 IBAN            |
+| exchangeinfo.bankbic          | string   | 付款人账户银行识别码         |
+| exchangeinfo.channelreference | string   | 收款人银行流水号             |
+| exchangeinfo.paymentremarks   | string   | 收款人银行备注               |
 
 **响应参数示例**
 
 ```json
 {
-    "code": 200,
-    "message": "Request succeeded.",
-    "data": [
-        {
-            "uuid": "0FE4B054-A1FE-11ED-9A3D-F23C925C00BC",
-            "transactiontime": "2023-01-29 01:56:13",
-            "account": "SA9080000000000000000001",
-            "amount": 50,
-            "currency": "SAR",
-            "exchangeinfo": {
-                "custname": "Trust Gate",
-                "custacc": "SA9080000000000000000002",
-                "bankbic": "RJHISARI",
-                "channelreference": "2024042500060801002869000004",
-                "paymentremarks": "B2B/FRACCT/SA9080000000000000000002/Trust Gate/B2B"
-            }
-        }
-    ],
-    "sensitiveFields": {},
-    "requestId": "4833DD916F788D654AABC9B5BDDECD49"
+  "code": 200,
+  "message": "Request succeeded.",
+  "data": [
+    {
+      "uuid": "0FE4B054-A1FE-11ED-9A3D-F23C925C00BC",
+      "transactiontime": "2023-01-29 01:56:13",
+      "account": "SA9080000000000000000001",
+      "amount": 50,
+      "currency": "SAR",
+      "exchangeinfo": {
+        "custname": "Muhammad Ali",
+        "custacc": "SA9080000000000000000002",
+        "bankbic": "RJHISARI",
+        "channelreference": "2024042500060801002869000004",
+        "paymentremarks": "B2B/FRACCT/SA9080000000000000000002/Muhammad Ali/B2B"
+      }
+    }
+  ],
+  "sensitiveFields": {},
+  "requestId": "4833DD916F788D654AABC9B5BDDECD49"
 }
 ```

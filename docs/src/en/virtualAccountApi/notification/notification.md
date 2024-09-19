@@ -73,11 +73,11 @@ The response data is the payment transaction. The data structure is consistent w
         "amount": 50,
         "currency": "SAR",
         "exchangeinfo": {
-            "custname": "Trust Gate",
+            "custname": "Muhammad Ali",
             "custacc": "SA9080000000000000000002",
             "bankbic": "RJHISARI",
             "channelreference": "2024042500060801002869000004",
-            "paymentremarks": "B2B/FRACCT/SA9080000000000000000002/Trust Gate/B2B"
+            "paymentremarks": "B2B/FRACCT/SA9080000000000000000002/Muhammad Ali/B2B"
         }
     },
     "time": 1714448388
