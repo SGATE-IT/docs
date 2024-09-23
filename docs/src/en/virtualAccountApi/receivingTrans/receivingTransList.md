@@ -31,6 +31,7 @@ The request parameters are as follows：
 | starttime     | N            | number   | -                 | Transaction start time, second level timestamp                          |
 | endtime       | N            | number   | -                 | Transaction end time, second level timestamp                            |
 | account       | N            | string   | -                 | Receiving account, length limit 34 characters                           |
+| uuid          | N            | string   | -                 | SGate transaction serial number, length limit 36 characters             |
 
 ### Response Parameters
 
