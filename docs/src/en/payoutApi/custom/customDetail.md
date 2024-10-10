@@ -45,6 +45,7 @@ The response parameters are as follows：
 | mercustomid       | string   | Merchant customer ID                                                                                                                                 |
 | name_e            | string   | Customer english name                                                                                                                                |
 | name_a            | string   | Customer arabic name                                                                                                                                 |
+| address           | string   | Address information bound to the customer bank card                                                                                                  |
 | identity          | string   | ID number (sensitive information, encrypted with [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))            |
 | identitypic       | string   | ID card photo URL (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))   |
 | signpic           | string   | Signature photo URL (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key)) |
@@ -52,6 +53,7 @@ The response parameters are as follows：
 | bankcode          | string   | [Bank code](/en/payoutApi/banks/bankList)                                                                                                            |
 | cardno            | string   | Bank account (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))        |
 | ibanaccount       | string   | IBAN                                                                                                                                                 |
+| swiftcode         | string   | Swift code corresponding to the customer bank account                                                                                                |
 | stcaccount        | string   | STCPay account (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))      |
 | status            | number   | [Customer status](/en/payoutApi/appendix/customStatus)                                                                                               |
 | statusdesc        | string   | Customer status description                                                                                                                          |
@@ -72,6 +74,7 @@ The response parameters are as follows：
         "mercustomid": "u004",
         "name_e": "usera",
         "name_a": "usera",
+        "address": "Saudi Arabia",
         "identity": "noGsqF+6wpnfchtRtiIjkuzL3t6YPFv3rqK1KobZf5cVnLRCZ7HjxoqMHoD9b+YHasd1izzd58GPJAl5DswpI8f4PxauKBv9ba45us0PlUZAUurpc0/8FmZrx/xuDTz+rtfGBUckUBiwz0iZXdbJ46PYAPdB9Hlz27Nn7eYU9UXBiluuISBKt/1Q1aJ4nKfhjvONntmDXOUyP719hD8BIyjD3aYYK96OxwIrPCbT4nDMbA/qQdhboOVPQTdom774OWUjlVv32bU7Ck1jzmERvsMptCkveb/Qjr4b/9Z6ZKDIx0VtPPzHDtffNwRohfpEv9RiKzG4RM52Mfr3jV78Eg==",
         "identitypic": "",
         "signpic": "",
@@ -79,6 +82,7 @@ The response parameters are as follows：
         "bankcode": "1174c",
         "cardno": "jH8+rl4v3EqKOZWgyacTtNhGGdP+DvyRpeVhDuXhvEam4pcI2vuPEUMtAaYD6LOpZ85z8sHZd344dDzTLmNuIOMs9GnvdrV0RA2kCqwHHIkgRshci1CHE/S4Ds+MBNdCcs+eeVYGHMa/PH2dZRIsYpdkGw17ldUxF8TL2gcRyNZvF/VWz3ZduuKUwFZ3eYeqLmMoAwQcslPZNcAPW28vXhiPw4DSyPc9jp1wRJWVLLVaTXYrSnx5847I0WscR++O052XSuSUPLlKsjhNVXKPW/3QPkAHifvIRxwgEb2tv9y7Clxp8GrD1K+vpojs3yhSpaUiPiVb6MEgXZq2In0rBA==",
         "ibanaccount": "1234567892",
+        "swiftcode": "ABNACNSHXXX",
         "stcaccount": "",
         "status": 4,
         "statusdesc": "2023-06-15 06:12:54",

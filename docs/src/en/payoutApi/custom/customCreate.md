@@ -29,11 +29,13 @@ The request parameters are as follows：
 - **Request Body**
 
 ::: tip
+
 1. If the customer account information is a bank account, `bankcode`, `cardno`, `ibanaccount` are required. If the customer account is a STCPay account, `stcaccount` is required.
-2. In the sandbox environment, you can use the [test account](/en/payoutApi/appendix/testAccount) to simulate the customer's review status.
-3. You can contact the system administrator to add the product name for sending OTP verification. Multiple product names are supported. The default name is the background company name.
-4. When the automatic approval function is enabled, if the customer updates `stcaccount`, the customer's `stcaccount` will be automatically [create OTP send task](/en/payoutApi/otp/sendOtp)
-:::
+2. To pay in KWD or AED currency, customer need to fill in the `address` or `swiftcode` information.
+3. In the sandbox environment, you can use the [test account](/en/payoutApi/appendix/testAccount) to simulate the customer's review status.
+4. You can contact the system administrator to add the product name for sending OTP verification. Multiple product names are supported. The default name is the background company name.
+5. When the automatic approval function is enabled, if the customer updates `stcaccount`, the customer's `stcaccount` will be automatically [create OTP send task](/en/payoutApi/otp/sendOtp)
+   :::
 
 | **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                                                                                                                                                            |
 | ------------- | ------------ | -------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -45,6 +47,8 @@ The request parameters are as follows：
 | cardno        | N            | string   | -                 | Bank account (sensitive information, encrypted using [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key)), must be a number, length limit 13 to 19 characters                                      |
 | ibanaccount   | N            | string   | -                 | IBAN, letters and numbers, length limit 34 characters                                                                                                                                                                      |
 | stcaccount    | N            | string   | -                 | STCPay account (sensitive information, encrypted using [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key)), supported formats:<br> 5xxxxxxxx <br> 9665xxxxxxxx <br> +9665xxxxxxxx <br> 05xxxxxxxx |
+| address       | N            | string   | -                 | Address information bound to the customer bank card, length limit 255 characters                                                                                                                                           |
+| swiftcode     | N            | string   | -                 | Swift code corresponding to the customer bank account, length limit 32 characters                                                                                                                                          |
 | autoapproval  | N            | number   | 0                 | Whether to enable automatic approval: <br> `0`: Disable <br> `1`: Enable                                                                                                                                                   |
 | otpappname    | N            | string   | -                 | The product name for sending OTP verification, which needs to match the background configuration. The default name is the background company name, with a length limit of 32 characters                                    |
 
@@ -52,13 +56,13 @@ The request parameters are as follows：
 
 ```json
 {
-    "name_e":"usera",
-    "name_a":"usera",
-    "mercustomid":"u001",
-    "identity":"z9LnjQJuvqDnaWsrLgrO1GxT2z7fww/sxNxWjrMTinFgT5dNrn1CbpRMy99qc1GnyqzlwBytZf6oa4fOQO5kHQwR4DVMRpmii81MqgAuWBQJktCG5mAgd5yzUO2kLZyHDfy5J7Y2pMyqmFzvMPiD1tIxPezgcExXEKxcPKs1tvOr+7zgTbNtnvfm1VW+BzIVmJYmaXBW4ZhEdJqz+dxdSyZIdUdbV1oc46xiuIxZOn3hxYMy0XnGjNJNT9TSW299pSSDBpVbCoWg9u4okMI222adQyikyfz+TlSsVNTHnnB8C+rf+Kjc6ZPszCdu+KTjiYOTkRlJIUbHe0bM02pOjg==",
-    "bankcode":"1174c",
-    "cardno":"Zh4EkxILOkTNwk4PcEerZjpmmTu6IorKDC1jpm4l3hMuEI4zWJ2pyafiTDNaIoN6VOh8ivWxJBeOD2N6uXiPwJ6qyreVMhDsYa8nHK58l2JM6BC1teG0Q61ZPknXloB6aaDgDSQetbdomggAH+cu7masFnLU+YmI1umP/p7DhePYjT69Yq3vJ2wBEUp0dVIaINB0c4uB/bapmWb3zmBcSW1To2RopXlNIggjk1qdLUtxXmaYdzkyRJbevpBHARaA/BwIm3e1/ZwO+WUETBmhci96ciPBuf/NzyhUp9UHPgNoajdAwwdN5FUEA9E1KE6uwHdWMAICy/pWzsaOjoQpOQ==",
-    "ibanaccount":"1234567892"
+  "name_e": "usera",
+  "name_a": "usera",
+  "mercustomid": "u001",
+  "identity": "z9LnjQJuvqDnaWsrLgrO1GxT2z7fww/sxNxWjrMTinFgT5dNrn1CbpRMy99qc1GnyqzlwBytZf6oa4fOQO5kHQwR4DVMRpmii81MqgAuWBQJktCG5mAgd5yzUO2kLZyHDfy5J7Y2pMyqmFzvMPiD1tIxPezgcExXEKxcPKs1tvOr+7zgTbNtnvfm1VW+BzIVmJYmaXBW4ZhEdJqz+dxdSyZIdUdbV1oc46xiuIxZOn3hxYMy0XnGjNJNT9TSW299pSSDBpVbCoWg9u4okMI222adQyikyfz+TlSsVNTHnnB8C+rf+Kjc6ZPszCdu+KTjiYOTkRlJIUbHe0bM02pOjg==",
+  "bankcode": "1174c",
+  "cardno": "Zh4EkxILOkTNwk4PcEerZjpmmTu6IorKDC1jpm4l3hMuEI4zWJ2pyafiTDNaIoN6VOh8ivWxJBeOD2N6uXiPwJ6qyreVMhDsYa8nHK58l2JM6BC1teG0Q61ZPknXloB6aaDgDSQetbdomggAH+cu7masFnLU+YmI1umP/p7DhePYjT69Yq3vJ2wBEUp0dVIaINB0c4uB/bapmWb3zmBcSW1To2RopXlNIggjk1qdLUtxXmaYdzkyRJbevpBHARaA/BwIm3e1/ZwO+WUETBmhci96ciPBuf/NzyhUp9UHPgNoajdAwwdN5FUEA9E1KE6uwHdWMAICy/pWzsaOjoQpOQ==",
+  "ibanaccount": "1234567892"
 }
 ```
 
@@ -74,6 +78,7 @@ The response parameters are as follows：
 | mercustomid       | string   | Merchant customer ID                                                                                                                                 |
 | name_e            | string   | Customer english name                                                                                                                                |
 | name_a            | string   | Customer arabic name                                                                                                                                 |
+| address           | string   | Address information bound to the customer bank card                                                                                                  |
 | identity          | string   | ID number (sensitive information, encrypted with [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))            |
 | identitypic       | string   | ID card photo URL (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))   |
 | signpic           | string   | Signature photo URL (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key)) |
@@ -81,6 +86,7 @@ The response parameters are as follows：
 | bankcode          | string   | [Bank code](/en/payoutApi/banks/bankList)                                                                                                            |
 | cardno            | string   | Bank account (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))        |
 | ibanaccount       | string   | IBAN                                                                                                                                                 |
+| swiftcode         | string   | Swift code corresponding to the customer bank account                                                                                                |
 | stcaccount        | string   | STCPay account (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))      |
 | status            | number   | [Customer status](/en/payoutApi/appendix/customStatus)                                                                                               |
 | statusdesc        | string   | Customer status description                                                                                                                          |
@@ -94,38 +100,38 @@ The response parameters are as follows：
 
 ```json
 {
-    "code": 200,
-    "message": "Request succeeded.",
-    "data": {
-        "customid": "12ad4",
-        "mercustomid": "u004",
-        "name_e": "usera",
-        "name_a": "usera",
-        "identity": "s0YhJVboAqQj8kLCkTqCttAwpP39nR5VaaTy8pWFwSQDjSYei7YqZAbcoeckAD40bgliH9sSXre9PafDDpHfdkKX22X0lvJzIcpL8PGSpWQT2XloHjKxExRhiq/AgzEnwV9kq66b2hqi56O2djjzYOXOz/BpYKqvqWG7ak47OLV2hDR6r0hzhZsdvvvCeo21lMafUGd6hmf6TElqDntIfgFNTGSbxkV3kKlXnNX0hdHPmGtnfqbIuxo+yAHeJdffxA/6iHzSsW92t/bvtB9hV5ON+v4s/VpVZCRYmj0AIs9bQ+Ed+hNXtlmLuyaxfRdYVG6nl1MhVGJG0QioO4sNag==",
-        "identitypic": "",
-        "signpic": "",
-        "bankname": "Riyad Bank",
-        "bankcode": "1174c",
-        "cardno": "W0jEosfhj/TfHAjjxyIaCWHZVfdwL/2rsXj4xoXzuPWZN2nKLYmlogABKjuNF9930fmyCyt3cGZD4MRgwjf8/ZZKb0HqQLAtw+rfc/2PRViXkdq4vr3iTGyH4W7MW4n0yw6rREZUf+9/R96zyqA5iky0A0kz2suAiKBQjsQGZ1PBCGYPxmzDnpolk76Bhvpm2YNgQnvRCLUQIOCIdq4Aj9rmV0MzfhilTZ3MhIe4WqW7eubFwq0+3CF484uSVemkdRYPVZ17umbCDTRENdzkTKUIZwxTxRTMfHyUr5Sx75RyBpJDzoReluIKnX9tzQ/jb+/V4Eiv39FD4l5/Zp8trA==",
-        "ibanaccount": "1234567892",
-        "stcaccount": "",
-        "status": 4,
-        "statusdesc": "2023-06-15 06:12:54",
-        "autoapproval": 1,
-        "otpappname": "test",
-        "demand_perfection": [
-            "identitypic"
-        ],
-        "created_at": 1686809574,
-        "updated_at": 1686809574
-    },
-    "sensitiveFields": [
-        "identity",
-        "identitypic",
-        "signpic",
-        "stcaccount",
-        "cardno"
-    ],
-    "requestId": "91A8340E7AEE8EC99D06EB46DF92A19F"
+  "code": 200,
+  "message": "Request succeeded.",
+  "data": {
+    "customid": "12ad4",
+    "mercustomid": "u004",
+    "name_e": "usera",
+    "name_a": "usera",
+    "address": "Saudi Arabia",
+    "identity": "s0YhJVboAqQj8kLCkTqCttAwpP39nR5VaaTy8pWFwSQDjSYei7YqZAbcoeckAD40bgliH9sSXre9PafDDpHfdkKX22X0lvJzIcpL8PGSpWQT2XloHjKxExRhiq/AgzEnwV9kq66b2hqi56O2djjzYOXOz/BpYKqvqWG7ak47OLV2hDR6r0hzhZsdvvvCeo21lMafUGd6hmf6TElqDntIfgFNTGSbxkV3kKlXnNX0hdHPmGtnfqbIuxo+yAHeJdffxA/6iHzSsW92t/bvtB9hV5ON+v4s/VpVZCRYmj0AIs9bQ+Ed+hNXtlmLuyaxfRdYVG6nl1MhVGJG0QioO4sNag==",
+    "identitypic": "",
+    "signpic": "",
+    "bankname": "Riyad Bank",
+    "bankcode": "1174c",
+    "cardno": "W0jEosfhj/TfHAjjxyIaCWHZVfdwL/2rsXj4xoXzuPWZN2nKLYmlogABKjuNF9930fmyCyt3cGZD4MRgwjf8/ZZKb0HqQLAtw+rfc/2PRViXkdq4vr3iTGyH4W7MW4n0yw6rREZUf+9/R96zyqA5iky0A0kz2suAiKBQjsQGZ1PBCGYPxmzDnpolk76Bhvpm2YNgQnvRCLUQIOCIdq4Aj9rmV0MzfhilTZ3MhIe4WqW7eubFwq0+3CF484uSVemkdRYPVZ17umbCDTRENdzkTKUIZwxTxRTMfHyUr5Sx75RyBpJDzoReluIKnX9tzQ/jb+/V4Eiv39FD4l5/Zp8trA==",
+    "ibanaccount": "1234567892",
+    "swiftcode": "ABNACNSHXXX",
+    "stcaccount": "",
+    "status": 4,
+    "statusdesc": "2023-06-15 06:12:54",
+    "autoapproval": 1,
+    "otpappname": "test",
+    "demand_perfection": ["identitypic"],
+    "created_at": 1686809574,
+    "updated_at": 1686809574
+  },
+  "sensitiveFields": [
+    "identity",
+    "identitypic",
+    "signpic",
+    "stcaccount",
+    "cardno"
+  ],
+  "requestId": "91A8340E7AEE8EC99D06EB46DF92A19F"
 }
 ```

@@ -45,6 +45,7 @@
 | mercustomid       | string   | 商户客户 ID                                                                                          |
 | name_e            | string   | 客户英文名称                                                                                         |
 | name_a            | string   | 客户阿拉伯文名称                                                                                     |
+| address           | string   | 客户银行卡绑定的地址信息                                                                             |
 | identity          | string   | 身份证号（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理）       |
 | identitypic       | string   | 身份证照片 URL（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理） |
 | signpic           | string   | 签名照片 URL（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理）   |
@@ -52,6 +53,7 @@
 | bankcode          | string   | [银行 CODE](/zh/payoutApi/banks/bankList)                                                            |
 | cardno            | string   | 银行账户（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理）       |
 | ibanaccount       | string   | IBAN                                                                                                 |
+| swiftcode         | string   | 客户银行账户对应的 Swift Code                                                                        |
 | stcaccount        | string   | STCPay 账户（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理）    |
 | status            | number   | [客户状态](/zh/payoutApi/appendix/customStatus)                                                      |
 | statusdesc        | string   | 客户状态说明                                                                                         |
@@ -72,6 +74,7 @@
         "mercustomid": "u004",
         "name_e": "usera",
         "name_a": "usera",
+        "address": "Saudi Arabia",
         "identity": "noGsqF+6wpnfchtRtiIjkuzL3t6YPFv3rqK1KobZf5cVnLRCZ7HjxoqMHoD9b+YHasd1izzd58GPJAl5DswpI8f4PxauKBv9ba45us0PlUZAUurpc0/8FmZrx/xuDTz+rtfGBUckUBiwz0iZXdbJ46PYAPdB9Hlz27Nn7eYU9UXBiluuISBKt/1Q1aJ4nKfhjvONntmDXOUyP719hD8BIyjD3aYYK96OxwIrPCbT4nDMbA/qQdhboOVPQTdom774OWUjlVv32bU7Ck1jzmERvsMptCkveb/Qjr4b/9Z6ZKDIx0VtPPzHDtffNwRohfpEv9RiKzG4RM52Mfr3jV78Eg==",
         "identitypic": "",
         "signpic": "",
@@ -79,6 +82,7 @@
         "bankcode": "1174c",
         "cardno": "jH8+rl4v3EqKOZWgyacTtNhGGdP+DvyRpeVhDuXhvEam4pcI2vuPEUMtAaYD6LOpZ85z8sHZd344dDzTLmNuIOMs9GnvdrV0RA2kCqwHHIkgRshci1CHE/S4Ds+MBNdCcs+eeVYGHMa/PH2dZRIsYpdkGw17ldUxF8TL2gcRyNZvF/VWz3ZduuKUwFZ3eYeqLmMoAwQcslPZNcAPW28vXhiPw4DSyPc9jp1wRJWVLLVaTXYrSnx5847I0WscR++O052XSuSUPLlKsjhNVXKPW/3QPkAHifvIRxwgEb2tv9y7Clxp8GrD1K+vpojs3yhSpaUiPiVb6MEgXZq2In0rBA==",
         "ibanaccount": "1234567892",
+        "swiftcode": "ABNACNSHXXX",
         "stcaccount": "",
         "status": 4,
         "statusdesc": "2023-06-15 06:12:54",

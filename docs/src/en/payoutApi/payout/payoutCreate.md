@@ -30,8 +30,9 @@ The request parameters are as follows：
 
 ::: tip TIP
 1. If one of the merchant customer ID and system customer ID is not transmitted, the interface will respond to parameter missing errors.
-2. The sandbox environment creates a payment ticket for a customer who has filled in a [test account](/en/payoutApi/appendix/testAccount), which will automatically complete the payment process and trigger a [callback notification](/en/payoutApi/notification/notification).
-3. STCPay payment only supports SAR currency.
+2. To pay in KWD or AED currency, customer need to fill in the `address` or `swiftcode` information.
+3. The sandbox environment creates a payment ticket for a customer who has filled in a [test account](/en/payoutApi/appendix/testAccount), which will automatically complete the payment process and trigger a [callback notification](/en/payoutApi/notification/notification).
+4. STCPay payment only supports SAR currency.
 :::
 
 | **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                          |
@@ -108,6 +109,7 @@ The response parameters are as follows:
             "mercustomid": "u006",
             "name_e": "updTest32",
             "name_a": "dbnuo",
+            "address": "Saudi Arabia",
             "identity": "p/aFchx1MfO1BqrKTkiOs5FsAcynsiNUWjB3UABZYW2DssEt6EL2zU+r1g9tAwydbSAbMunA3zDcMut9vZ/dT8Nha1f+do35KivBBp1pTuI+kfaY8vja1pYmw6oEMUtpZyIWSu7kCg1bGjLX5IWCXZYdB0t3rCyzoAlomokwuZdHBKy/uEQzLsln6QU33MfayNxdGcGIYgpv4VCCiS7MejW9MP3Jh/y0Re/M5lW271xsES38J5RKEKhRUr1wAnp6vCkXZrn7Hd5tnxwUdHGHSGNK9/IV2cKICb3/GlsAq+sxHPDTOfkIhCvrOANKpuFqHUysJoGiFMc87Nc8J4raUQ==",
             "identitypic": "fvL4hLLMcXtVA0NHDmZidAIY5yiwlZZcd26EfHEdZgX8CdbXPO8eWB4cDAyQ8Bz3xBzDqUL4u02Q/kRxVPLIh8dPZ2ooMX6SPdxH5FW2HHlJ7vm2mqz0XgRy+DLC731xRbuUuxms9SuDfxCGDwiCddPFpuvkqRiUdOdmW9kcP064Y5V+KA7M1PgQLSn2h2hfyREN2yos7njZDDwveIfNpGi+hR4AjjQXYmKLlsbjDz/5kNPRbWOrvmL7karJKsja2GRauj5GbHUBnqX05NJhQvSzen4UDDnY9BfBtcDuC9pEyUOyIIRMIB3VkLbUvlWMzuFeYD+u7iE35f2vBkPXqA==",
             "signpic": "",
@@ -115,6 +117,7 @@ The response parameters are as follows:
             "bankcode": "1174c",
             "cardno": "q7gmtfi1gieWi/d6XHqtTKzAHi6Wxoxm4C9FGDYvmgYK8l7kK2H3IwcWnpO8liyhDAwBG42gebVYcOURTxhnGIhRXptEdegtQk5k0CqrPUghfMbTtUMSlj+ztxaa+HsRDlNfau35LOBoGcpn1tNV0OMar6XnR40KN06fkngItbKQvj8MC605cr/EI7Jit2qzNsUTUvlbQG53XuXV6pq/JIhMSUrO8JNcVzPc5G4VdruO4d7C3BzFqkpg4C5zf2bL+PuiE8WLyCOJFsOoxDtubkSviBYKS8SI2qYTkyZvVeZTICbNJw71OouycTj/FE+/HqaLjN7ue4NjzFwodK6bHw==",
             "ibanaccount": "1234567892",
+            "swiftcode": "ABNACNSHXXX",
             "stcaccount": "QYLZ+8VpsZc2E5jljmaBSFySy4dvOWI5Q6nne+egdk0CYOc0g3t9guwAXTSKZWjij5Luy4EHrTju9f6VPsh7P33AJf4rHu/E86lr7vHxgwrriLHgdz3tbrCWolP9kW/i0d2uVuUTq2HgGddYNJgOvd5sBcyLDMMnDERJXRNfGKoIR5igUCQWZIzqTZXUGOWdm8tysHT3vnJb+DnWb2GNA0vLvwW36pUi8qxhb4Gbttt3J+Rzz+K/KsiziUmNWU1F1cr7e6qSvOze6TicfIogDt21FRGB/y5qYYOUE+fMd7HKxnY3i3LUu0q6T+ldQ9jlp2am78wS7T0yi0TMeNf3wQ==",
             "status": 1,
             "statusdesc": "Approved",

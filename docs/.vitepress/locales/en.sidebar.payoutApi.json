@@ -57,9 +57,9 @@
                             "collapsed": false,
                             "items": [
                                 { "text": "Create Payment Order", "link": "/en/payoutApi/payout/payoutCreate" },
+                                { "text": "Create Rapid Payment Order", "link": "/en/payoutApi/payout/payoutRapid" },
                                 { "text": "Query Payment Order List", "link": "/en/payoutApi/payout/payoutList" },
-                                { "text": "Query Payment Order Detail", "link": "/en/payoutApi/payout/payoutDetail" },
-                                { "text": "Create Rapid Payment Order", "link": "/en/payoutApi/payout/payoutRapid" }
+                                { "text": "Query Payment Order Detail", "link": "/en/payoutApi/payout/payoutDetail" }
                             ]
                         },
                         {

@@ -30,6 +30,7 @@ mercustomid is the merchant customer ID. The system will automatically perform t
 2. When there is no associated customer with mercustomid under the merchant, a new customer will be created. After the customer is created, it will be in the approved status, and a payment work order will be created for the new customer.
 3. When creating a rapid payment ticket in the sandbox environment and using a [test account](/en/payoutApi/appendix/testAccount), the customer is also in the approved status, but the payment result follows the "Automatic Payment Result" in the document and triggers a [callback notification](/en/payoutApi/notification/notification).
 4. STCPay payment only supports SAR currency.
+5. To pay in KWD or AED currency, customer need to fill in the `address` or `swiftcode` information.
 :::
 
 * **Must** pass parameters:
@@ -51,6 +52,8 @@ mercustomid is the merchant customer ID. The system will automatically perform t
 | bankcode      | Y            | string   | -                 | [Bank code](/en/payoutApi/banks/bankList)                                                                                                                                                         |
 | cardno        | N            | string   | -                 | Bank account (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key)), must be a number, length limit 13 to 19 characters |
 | ibanaccount   | Y            | string   | -                 | IBAN, letters and numbers, length limit 34 characters                                                                                                                                             |
+| address       | N            | string   | -                 | Address information bound to the customer bank card, length limit 255 characters                                                                                                                                           |
+| swiftcode     | N            | string   | -                 | Swift code corresponding to the customer bank account, length limit 32 characters                                                                                                                                          |
 
 * When using **STCPay** payment method, additional parameters need to be passed:
 
@@ -124,6 +127,7 @@ The response parameters are as follows:
             "mercustomid": "u0045",
             "name_e": "useraa121",
             "name_a": "userbb121",
+            "address": "Saudi Arabia",
             "identity": "",
             "identitypic": "",
             "signpic": "",
@@ -131,6 +135,7 @@ The response parameters are as follows:
             "bankcode": "11558",
             "cardno": "",
             "ibanaccount": "1234567892",
+            "swiftcode": "ABNACNSHXXX",
             "stcaccount": "HsMxmSUUqbD+uZEdEocdAqg+BBGknsOs/KeIaqqkUwYaKlv20g3J/YVhDYD+enecBLOP8tzpRPQU+E7bsw1FccP/jzb/rVUpgUPUqcflJMnxUiUacZrHWgq4U/0QclUrWfCrl+78av236LlobEgN7jgNDzuBpiApJhQrb1j3bzqFDmTapOHR3DNDyCOBkhkgkGjlFWz9p2duv4TgDNfmy3RbbV9dfpEI8PcteGTmqsBXKf0794SPvLAj+m4RO5iYwE6l8JoYlFXqEl+8Ruppt+ZH9Zv6whVgp5Qtl5tlalV9o0+t3Z4qg6jJcaVDmp0hMO4rCw07YV04FHCCUtth+g==",
             "status": 1,
             "statusdesc": "Customers create through quick payment",
