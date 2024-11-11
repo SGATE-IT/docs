@@ -73,7 +73,7 @@ The response data is the customer information after the changed status. The cust
         "mercustomid":"",
         "name_e":"updTest2",
         "name_a":"test1a",
-        "address": "Saudi Arabia",
+        "address": "Saudi Arausbia",
         "identity":"iE86CxKwnRt4B1+msYXD90MYMplDXJ1VnsEEc8X/A46PJciuLctA4kE7YrIuOJLzHC4e4SFYVtJ45fBkGsTs4UdhUu9ridfWIAyQ556zi6dIOPPjNMkCe2mNWK/Cpah5/2w2ZtDg0zqbx4mEJrowVg77RbzlFBcXYN+jQIhla9i7WtGTf4U4Kb15CwMFiOUu4IMxVuMkycubWOLh05/eMY/0Kwd49L8PvWJBJM9xVQvq+elK0u8EteQDi5UDnakGyjx5P/9m+UzzkpcahsE0HD73k7TLowf2B3rQDzFXnT5CuKtqmNwh1oNXae8jPOUxYc1TMfHStplL1YbHCyhnig==",
         "identitypic":"o7v9h/NA4F1fCVEuZyJ3oNw6O8+vsGtEsjKDthAE1JtBy9TKzucO+L29waWHTeRkE4nRUvN6OJiCAkf+h+KJWJ2PI+YROoZjQvIRioBIoFxnIpMIbQyNbUgxFJlSrUK1cnGuxu7+juIkNYzxwfIsRzkvc9g7pp7xkmj04AQZ8KyMukV0HOGFlRxNex5+k36zmq/aAuOsOGr7PByRCRE76RiFrs6K1X/rQFjqSm9rI4d+QlpgLEDNv55i/5rqH++yglubHnYRuqCjka9N9+dOOh9kEpA9MepKrLuyodBvE3QDzT1kAMaLX+sdAh7F8vH/675hkZ1NNhx3OlkXk79hxw==",
         "signpic":"",
