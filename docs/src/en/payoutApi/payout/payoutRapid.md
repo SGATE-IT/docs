@@ -42,6 +42,7 @@ mercustomid is the merchant customer ID. The system will automatically perform t
 | amount        | Y            | float    | -                 | Payment amount, accurate to two decimal places                                           |
 | currency      | Y            | string   | -                 | [Currency code](/en/payoutApi/appendix/currency)                                         |
 | paymentmethod | Y            | string   | -                 | [Payment method](/en/payoutApi/appendix/paymentMethod)                                   |
+| remark        | N            | string   | -                 | Remark, length limit 80 characters                                                       |
 
 * When using **bankTransfer** payment method, additional parameters need to be passed:
 
@@ -96,6 +97,7 @@ The response parameters are as follows:
 | status        | number   | [Payment order status](/en/payoutApi/appendix/paymentStatus)                                        |
 | statusdesc    | string   | Status description                                                                                  |
 | confirmtime   | number   | Payment completion time                                                                             |
+| remark        | string   | Remark                                                                                              |
 | custominfo    | object   | Customer data snapshot when creating a payment order, with the same data structure as customer data |
 | created_at    | number   | Creation time                                                                                       |
 | updated_at    | number   | Update time                                                                                         |
@@ -122,6 +124,7 @@ The response parameters are as follows:
         "status": 0,
         "statusdesc": "2024-06-26 14:38:19",
         "confirmtime": 0,
+        "remark": "",
         "custominfo": {
             "customid": "130b0",
             "mercustomid": "u0045",

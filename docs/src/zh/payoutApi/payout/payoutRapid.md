@@ -43,6 +43,7 @@ mercustomid 为商户客户 ID，系统会自动依据 mercustomid 做以下处�
 | amount        | 是       | float    | -          | 付款金额，精确到小数点后两位                     |
 | currency      | 是       | string   | -          | [货币代码](/zh/payoutApi/appendix/currency)      |
 | paymentmethod | 是       | string   | -          | [付款方式](/zh/payoutApi/appendix/paymentMethod) |
+| remark        | 否       | string   | -          | 备注，长度限制 80 字符                           |
 
 - 使用 **bankTransfer** 付款方式，需要额外传递的参数：
 
@@ -97,6 +98,7 @@ mercustomid 为商户客户 ID，系统会自动依据 mercustomid 做以下处�
 | status        | number   | [代付工单状态](/zh/payoutApi/appendix/paymentStatus)                      |
 | statusdesc    | string   | 状态说明                                                                  |
 | confirmtime   | number   | 打款完成时间                                                              |
+| remark        | string   | 备注                                                                      |
 | custominfo    | object   | 代付工单创建时客户数据快照，数据结构同客户数据                            |
 | created_at    | number   | 创建时间                                                                  |
 | updated_at    | number   | 更新时间                                                                  |
@@ -123,6 +125,7 @@ mercustomid 为商户客户 ID，系统会自动依据 mercustomid 做以下处�
     "status": 0,
     "statusdesc": "2024-06-26 14:38:19",
     "confirmtime": 0,
+    "remark": "",
     "custominfo": {
       "customid": "130b0",
       "mercustomid": "u0045",
