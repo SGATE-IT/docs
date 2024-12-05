@@ -22,7 +22,7 @@ The request parameters are as follows：
 
   - [_View request/response headers_](/en/payoutApi/apiRule/header)
 
-- **Request Body**
+- **Request Path**
 
 ::: tip 
 If one of the merchant customer ID and system customer ID is not transmitted, the interface will respond to parameter missing errors.

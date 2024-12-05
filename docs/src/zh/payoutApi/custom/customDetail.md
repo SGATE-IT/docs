@@ -22,7 +22,7 @@
 
   - [_查看请求/响应头_](/zh/payoutApi/apiRule/header)
 
-- **Request Body**
+- **Request Path**
 
 ::: tip 提示
 商户客户 ID 和系统客户 ID 传其中一个，如果都不传接口会响应参数缺失错误。

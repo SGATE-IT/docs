@@ -22,7 +22,7 @@ The request parameters are as follows：
 
   - [_View request/response headers_](/en/payoutApi/apiRule/header)
 
-- **Request Body**
+- **Request Path**
 
 ::: tip 
 If either the proxy payment work order ID or the merchant order ID is not transmitted to the interface, it will respond with a parameter missing error.

@@ -22,7 +22,7 @@
 
   - [_查看请求/响应头_](/zh/payoutApi/apiRule/header)
 
-- **Request Body**
+- **Request Path**
 
 ::: tip 提示
 不带有 country 默认返回沙特支持的银行列表。
