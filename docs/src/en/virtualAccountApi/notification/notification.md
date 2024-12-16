@@ -151,3 +151,32 @@ This callback data will add a new field `review_reason`, which will record the r
     "time": 1714448388
 }
 ```
+
+## Event: Transactions Can Be Settled
+
+**Event Identifier**:` SETTLE_TRANS_NOTIFICATION`
+
+This event will be triggered after the virtual account transfer and receipt can be settled.
+
+The response data is the payment transaction, example:
+
+```json
+{
+    "event": "SETTLE_TRANS_NOTIFICATION",
+    "data": {
+        "uuid": "0FE4B054-A1FE-11ED-9A3D-F23C925C00BC",
+        "transactiontime": "2023-01-29 01:56:13",
+        "account": "SA9080000000000000000001",
+        "amount": 50,
+        "currency": "SAR",
+        "exchangeinfo": {
+            "custname": "Muhammad Ali",
+            "custacc": "SA9080000000000000000002",
+            "bankbic": "RJHISARI",
+            "channelreference": "2024042500060801002869000004",
+            "paymentremarks": "B2B/FRACCT/SA9080000000000000000002/Muhammad Ali/B2B"
+        }
+    },
+    "time": 1714448388
+}
+```
