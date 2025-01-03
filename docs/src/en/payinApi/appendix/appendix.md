@@ -4,9 +4,9 @@
 
 | Card number      | Cardholder name         | Validity period (MM/YY) | CVV | Whether to support 3DS |
 | ---------------- | ----------------------- | ----------------------- | --- | ---------------------- |
-| 5123450000000008 | `SGate_{MERCHANT_NAME}` | 01 / 39                 | 100 | Y                      |
+| 5123450000000008 | `SGate {MER_NAME}` | 01 / 39                 | 100 | Y                      |
 
-- where `{MERCHANT_NAME}` is the English name of the merchant
+- where `{MER_NAME}` is the English name of the merchant
 
 ## STCPAY test account information
 
