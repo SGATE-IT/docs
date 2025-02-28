@@ -92,7 +92,7 @@ export default {
       },
     },
     footer: {
-      copyright: "版权所有 © 2020 - 2024 SGate",
+      copyright: "版权所有 © 2020 - 2025 SGate",
     },
   },
 };
