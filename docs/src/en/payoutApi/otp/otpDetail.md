@@ -22,7 +22,7 @@ The request parameters are as follows：
 
   - [_View request/response headers_](/en/payoutApi/apiRule/header)
 
-- **Request Body**
+- **Request Path**
 
 | **Parameters** | **Required** | **Type** | **Default Value** | **Description**                                            |
 | -------------- | ------------ | -------- | ----------------- | ---------------------------------------------------------- |

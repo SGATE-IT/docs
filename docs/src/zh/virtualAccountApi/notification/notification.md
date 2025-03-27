@@ -59,13 +59,110 @@
 
 **事件标识**: `RECEIVING_TRANS_NOTIFICATION`
 
-虚拟账户转账收款到账后会触发此事件。
+虚拟账户转账收款到账后会触发此事件。**该事件表示系统接收到了一笔到账通知，需要进行后续处理**。
 
 响应数据为收款交易。数据结构与**查询转账收款交易**接口保持一致，示例：
 
 ```json
 {
     "event": "RECEIVING_TRANS_NOTIFICATION",
+    "data": {
+        "uuid": "0FE4B054-A1FE-11ED-9A3D-F23C925C00BC",
+        "transactiontime": "2023-01-29 01:56:13",
+        "account": "SA9080000000000000000001",
+        "amount": 50,
+        "currency": "SAR",
+        "exchangeinfo": {
+            "custname": "Muhammad Ali",
+            "custacc": "SA9080000000000000000002",
+            "bankbic": "RJHISARI",
+            "channelreference": "2024042500060801002869000004",
+            "paymentremarks": "B2B/FRACCT/SA9080000000000000000002/Muhammad Ali/B2B"
+        }
+    },
+    "time": 1714448388
+}
+```
+
+## 事件：交易已被确认
+
+**事件标识**: `CONFIRMED_TRANS_NOTIFICATION`
+
+虚拟账户转账收款到账后，系统确认后会触发此事件。
+
+响应数据为收款交易，示例：
+
+::: tip 注意
+此次回调数据中会新增字段 `review_reason` ，该字段会记录系统确认交易时的备注消息。
+:::
+
+```json
+{
+    "event": "CONFIRMED_TRANS_NOTIFICATION",
+    "data": {
+        "uuid": "0FE4B054-A1FE-11ED-9A3D-F23C925C00BC",
+        "transactiontime": "2023-01-29 01:56:13",
+        "account": "SA9080000000000000000001",
+        "amount": 50,
+        "currency": "SAR",
+        "exchangeinfo": {
+            "custname": "Muhammad Ali",
+            "custacc": "SA9080000000000000000002",
+            "bankbic": "RJHISARI",
+            "channelreference": "2024042500060801002869000004",
+            "paymentremarks": "B2B/FRACCT/SA9080000000000000000002/Muhammad Ali/B2B"
+        },
+        "review_reason": ""
+    },
+    "time": 1714448388
+}
+```
+
+## 事件：交易已被拒绝
+
+**事件标识**: `REJECT_TRANS_NOTIFICATION`
+
+虚拟账户转账收款到账后，系统拒绝交易后会触发此事件。
+
+响应数据为收款交易，示例：
+
+::: tip 注意
+此次回调数据中会新增字段 `review_reason` ，该字段会记录系统拒绝交易时的备注消息。
+:::
+
+```json
+{
+    "event": "REJECT_TRANS_NOTIFICATION",
+    "data": {
+        "uuid": "0FE4B054-A1FE-11ED-9A3D-F23C925C00BC",
+        "transactiontime": "2023-01-29 01:56:13",
+        "account": "SA9080000000000000000001",
+        "amount": 50,
+        "currency": "SAR",
+        "exchangeinfo": {
+            "custname": "Muhammad Ali",
+            "custacc": "SA9080000000000000000002",
+            "bankbic": "RJHISARI",
+            "channelreference": "2024042500060801002869000004",
+            "paymentremarks": "B2B/FRACCT/SA9080000000000000000002/Muhammad Ali/B2B"
+        },
+        "review_reason": "User information mismatch"
+    },
+    "time": 1714448388
+}
+```
+
+## 事件：交易可结算
+
+**事件标识**: `SETTLE_TRANS_NOTIFICATION`
+
+虚拟账户转账收款可结算后会触发此事件。
+
+响应数据为收款交易，示例：
+
+```json
+{
+    "event": "SETTLE_TRANS_NOTIFICATION",
     "data": {
         "uuid": "0FE4B054-A1FE-11ED-9A3D-F23C925C00BC",
         "transactiontime": "2023-01-29 01:56:13",

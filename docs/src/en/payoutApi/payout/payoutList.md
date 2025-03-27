@@ -22,7 +22,7 @@ The request parameters are as follows：
 
   - [_View request/response headers_](/en/payoutApi/apiRule/header)
 
-- **Request Body**
+- **Request Path**
 
 | **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                     |
 | ------------- | ------------ | -------- | ----------------- | ----------------------------------------------------------------------------------- |
@@ -57,6 +57,7 @@ The response parameters are as follows：：
 | status        | number   | [Payment order status](/en/payoutApi/appendix/paymentStatus)                                        |
 | statusdesc    | string   | Status description                                                                                  |
 | confirmtime   | number   | Payment completion time                                                                             |
+| remark        | string   | Remark                                                                                              |
 | custominfo    | object   | Customer data snapshot when creating a payment order, with the same data structure as customer data |
 | created_at    | number   | Creation time                                                                                       |
 | updated_at    | number   | Update time                                                                                         |
@@ -84,6 +85,7 @@ The response parameters are as follows：：
             "status": 0,
             "statusdesc": "",
             "confirmtime": 0,
+            "remark": "",
             "custominfo": {
                 "customid": "12ad4",
                 "mercustomid": "u004",
