@@ -60,6 +60,7 @@
 | mercustomid       | string   | 商户客户 ID                                                                                          |
 | name_e            | string   | 客户英文名称                                                                                         |
 | name_a            | string   | 客户阿拉伯文名称                                                                                     |
+| mobile            | string   | 客户手机号                                                                                           |
 | address           | string   | 客户银行卡绑定的地址信息                                                                             |
 | identity          | string   | 身份证号（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理）       |
 | identitypic       | string   | 身份证照片 URL（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理） |
@@ -89,6 +90,7 @@
         "mercustomid": "u004",
         "name_e": "updTest2",
         "name_a": "usera",
+        "mobile": "Dl6W1H0FxS/M86t9beRVietvkH2ZwIZNO4AwVJI5BGJfh/hJ83n3oXkfABfYCH/4SgklJVQ7aSqiHQ+8LIbUh5ycjfqTCGRpKgfk5Ae2/9NRsOpcnfl9GMo2oP4AiS4NEdJBybtSm+gDCxRrDqyAIpLq6ycXJT3BGqtKPu1xsqzdYQuJovdERg/8GqKn57r2MI3jXGIhdInL61SNuAFImOTVCBXA0ZXsho0Txtp1zJj+t6raQbCvynNgYHNIqrUh6Kta8mezJGqfLtw0RE7VzgWGFKb3caEzdAZERF3BHx49qR72MvIHtRBpoxfvf9VB9cZf2yn/+yo9iaDqMLxsug==",
         "address": "Saudi Arabia",
         "identity": "NbX4Ex6OsXEujrdo3p3fqKPlI1607Z59xwRIZDwlaHlHtUNLSJCP6Hp9TQVVZt66Pw+7LLENT84l6TiH7owxgY+jUl5qfRs4+ooNb3Hb4tWgXcUBi3f8NDKI3KNL5FdiXXsaqy/l8uWZoiDuRuwfQCZEUJPl3yacVfwgq8IwUO4Gqld9iN6ciyxAT16w/rkafV56gNDaWNrLet8/3HxaCUXmYfs1SpYyUwi3Hn2uI1sDme9MLZtPUo/0Nwbq5MyR5IANq4O6Enw1K3LQ4g9ZmmS7QpY7iFGT/3zKFAsycjD8focAmM9+quITspykDR3p0y9Pvs6PWMXiR5FjhAaRsw==",
         "identitypic": "S6U6BDjYfqgHxJVGfgrRNoK+lMM050wJaxZZJ68k6dnLpyoqETiSbLvjVmmFnfdTnzQRKu3qXAKRe/PJYDq4EgT5G2hS0iS3UtvkHKgjACcDvgPqVIGDpH4ru7UbopZwJNRfrBLlVcV+N+wWMqii/r1t5wTGdx8yupy/3jhZX7hhO8HFl+BvR4JSgdPWNH00zu4sTi/w2P5wEayIzK4ya/Be7w0ULbhFgoczNRrdo9hoIbewH529s74OApked4/U3uaquCjjv6h+m+U/P9efRTsOl+5u/AmYxO4mTI2C+k8SY8lK9JUBI+1wVQm/Sj81UcXAFLN2IjFYo/bbrZuOww==",
@@ -112,6 +114,7 @@
         "identitypic",
         "signpic",
         "stcaccount",
+        "mobile",
         "cardno"
     ],
     "requestId": "B299710699082B7D5EA8E6C793E74649"

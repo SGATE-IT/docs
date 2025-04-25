@@ -37,20 +37,21 @@ The request parameters are as follows：
 5. When the automatic approval function is enabled, if the customer updates `stcaccount`, the customer's `stcaccount` will be automatically [create OTP send task](/en/payoutApi/otp/sendOtp)
    :::
 
-| **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                                                                                                                                                            |
-| ------------- | ------------ | -------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name_e        | Y            | string   | -                 | Customer english name, length limit 64 characters                                                                                                                                                                          |
-| name_a        | Y            | string   | -                 | Customer arabic name, length limit 64 characters. if the customer does not have an arabic name, you can fill in the customer english name                                                                                  |
-| mercustomid   | Y            | string   | -                 | Merchant customer ID, requires the merchant to provide a unique ID, length limit 128 characters                                                                                                                            |
-| identity      | Y            | string   | -                 | ID number (sensitive information, encrypted with the [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key)), length limit 64 characters                                                              |
-| bankcode      | N            | string   | -                 | [Bank code](/en/payoutApi/banks/bankList)                                                                                                                                                                                  |
-| cardno        | N            | string   | -                 | Bank account (sensitive information, encrypted using [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key)), must be a number, length limit 13 to 19 characters                                      |
-| ibanaccount   | N            | string   | -                 | IBAN, letters and numbers, length limit 34 characters                                                                                                                                                                      |
-| stcaccount    | N            | string   | -                 | STCPay account (sensitive information, encrypted using [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key)), supported formats:<br> 5xxxxxxxx <br> 9665xxxxxxxx <br> +9665xxxxxxxx <br> 05xxxxxxxx |
-| address       | N            | string   | -                 | Address information bound to the customer bank card, length limit 255 characters                                                                                                                                           |
-| swiftcode     | N            | string   | -                 | Swift code corresponding to the customer bank account, length limit 32 characters                                                                                                                                          |
-| autoapproval  | N            | number   | 0                 | Whether to enable automatic approval: <br> `0`: Disable <br> `1`: Enable                                                                                                                                                   |
-| otpappname    | N            | string   | -                 | The product name for sending OTP verification, which needs to match the background configuration. The default name is the background company name, with a length limit of 32 characters                                    |
+| **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                                                                                                                                                             |
+| ------------- | ------------ | -------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name_e        | Y            | string   | -                 | Customer english name, length limit 64 characters                                                                                                                                                                           |
+| name_a        | Y            | string   | -                 | Customer arabic name, length limit 64 characters. if the customer does not have an arabic name, you can fill in the customer english name                                                                                   |
+| mercustomid   | Y            | string   | -                 | Merchant customer ID, requires the merchant to provide a unique ID, length limit 128 characters                                                                                                                             |
+| identity      | Y            | string   | -                 | ID number (sensitive information, encrypted with the [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key)), length limit 64 characters                                                               |
+| bankcode      | N            | string   | -                 | [Bank code](/en/payoutApi/banks/bankList)                                                                                                                                                                                   |
+| cardno        | N            | string   | -                 | Bank account (sensitive information, encrypted using [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key)), must be a number, length limit 13 to 19 characters                                       |
+| ibanaccount   | N            | string   | -                 | IBAN, letters and numbers, length limit 34 characters                                                                                                                                                                       |
+| stcaccount    | N            | string   | -                 | STCPay account (sensitive information, encrypted using [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key)), supported formats:<br> 5xxxxxxxx <br> 9665xxxxxxxx <br> +9665xxxxxxxx <br> 05xxxxxxxx  |
+| address       | N            | string   | -                 | Address information bound to the customer bank card, length limit 255 characters                                                                                                                                            |
+| swiftcode     | N            | string   | -                 | Swift code corresponding to the customer bank account, length limit 32 characters                                                                                                                                           |
+| mobile        | N            | string   | -                 | Customer mobile (sensitive information, encrypted using [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key)), supported formats:<br> 5xxxxxxxx <br> 9665xxxxxxxx <br> +9665xxxxxxxx <br> 05xxxxxxxx |
+| autoapproval  | N            | number   | 0                 | Whether to enable automatic approval: <br> `0`: Disable <br> `1`: Enable                                                                                                                                                    |
+| otpappname    | N            | string   | -                 | The product name for sending OTP verification, which needs to match the background configuration. The default name is the background company name, with a length limit of 32 characters                                     |
 
 **Request Parameter Example**
 
@@ -78,6 +79,7 @@ The response parameters are as follows：
 | mercustomid       | string   | Merchant customer ID                                                                                                                                 |
 | name_e            | string   | Customer english name                                                                                                                                |
 | name_a            | string   | Customer arabic name                                                                                                                                 |
+| mobile            | string   | Customer mobile                                                                                                                                      |
 | address           | string   | Address information bound to the customer bank card                                                                                                  |
 | identity          | string   | ID number (sensitive information, encrypted with [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))            |
 | identitypic       | string   | ID card photo URL (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))   |
@@ -107,6 +109,7 @@ The response parameters are as follows：
     "mercustomid": "u004",
     "name_e": "usera",
     "name_a": "usera",
+    "mobile": "Dl6W1H0FxS/M86t9beRVietvkH2ZwIZNO4AwVJI5BGJfh/hJ83n3oXkfABfYCH/4SgklJVQ7aSqiHQ+8LIbUh5ycjfqTCGRpKgfk5Ae2/9NRsOpcnfl9GMo2oP4AiS4NEdJBybtSm+gDCxRrDqyAIpLq6ycXJT3BGqtKPu1xsqzdYQuJovdERg/8GqKn57r2MI3jXGIhdInL61SNuAFImOTVCBXA0ZXsho0Txtp1zJj+t6raQbCvynNgYHNIqrUh6Kta8mezJGqfLtw0RE7VzgWGFKb3caEzdAZERF3BHx49qR72MvIHtRBpoxfvf9VB9cZf2yn/+yo9iaDqMLxsug==",
     "address": "Saudi Arabia",
     "identity": "s0YhJVboAqQj8kLCkTqCttAwpP39nR5VaaTy8pWFwSQDjSYei7YqZAbcoeckAD40bgliH9sSXre9PafDDpHfdkKX22X0lvJzIcpL8PGSpWQT2XloHjKxExRhiq/AgzEnwV9kq66b2hqi56O2djjzYOXOz/BpYKqvqWG7ak47OLV2hDR6r0hzhZsdvvvCeo21lMafUGd6hmf6TElqDntIfgFNTGSbxkV3kKlXnNX0hdHPmGtnfqbIuxo+yAHeJdffxA/6iHzSsW92t/bvtB9hV5ON+v4s/VpVZCRYmj0AIs9bQ+Ed+hNXtlmLuyaxfRdYVG6nl1MhVGJG0QioO4sNag==",
     "identitypic": "",
@@ -130,6 +133,7 @@ The response parameters are as follows：
     "identitypic",
     "signpic",
     "stcaccount",
+    "mobile",
     "cardno"
   ],
   "requestId": "91A8340E7AEE8EC99D06EB46DF92A19F"

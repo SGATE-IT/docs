@@ -45,6 +45,7 @@ The response parameters are as follows：
 | mercustomid       | string   | Merchant customer ID                                                                                                                                 |
 | name_e            | string   | Customer english name                                                                                                                                |
 | name_a            | string   | Customer arabic name                                                                                                                                 |
+| mobile            | string   | Customer mobile                                                                                                                                      |
 | address           | string   | Address information bound to the customer bank card                                                                                                  |
 | identity          | string   | ID number (sensitive information, encrypted with [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))            |
 | identitypic       | string   | ID card photo URL (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key))   |
@@ -74,6 +75,7 @@ The response parameters are as follows：
         "mercustomid": "u004",
         "name_e": "usera",
         "name_a": "usera",
+        "mobile": "Dl6W1H0FxS/M86t9beRVietvkH2ZwIZNO4AwVJI5BGJfh/hJ83n3oXkfABfYCH/4SgklJVQ7aSqiHQ+8LIbUh5ycjfqTCGRpKgfk5Ae2/9NRsOpcnfl9GMo2oP4AiS4NEdJBybtSm+gDCxRrDqyAIpLq6ycXJT3BGqtKPu1xsqzdYQuJovdERg/8GqKn57r2MI3jXGIhdInL61SNuAFImOTVCBXA0ZXsho0Txtp1zJj+t6raQbCvynNgYHNIqrUh6Kta8mezJGqfLtw0RE7VzgWGFKb3caEzdAZERF3BHx49qR72MvIHtRBpoxfvf9VB9cZf2yn/+yo9iaDqMLxsug==",
         "address": "Saudi Arabia",
         "identity": "noGsqF+6wpnfchtRtiIjkuzL3t6YPFv3rqK1KobZf5cVnLRCZ7HjxoqMHoD9b+YHasd1izzd58GPJAl5DswpI8f4PxauKBv9ba45us0PlUZAUurpc0/8FmZrx/xuDTz+rtfGBUckUBiwz0iZXdbJ46PYAPdB9Hlz27Nn7eYU9UXBiluuISBKt/1Q1aJ4nKfhjvONntmDXOUyP719hD8BIyjD3aYYK96OxwIrPCbT4nDMbA/qQdhboOVPQTdom774OWUjlVv32bU7Ck1jzmERvsMptCkveb/Qjr4b/9Z6ZKDIx0VtPPzHDtffNwRohfpEv9RiKzG4RM52Mfr3jV78Eg==",
         "identitypic": "",
@@ -99,6 +101,7 @@ The response parameters are as follows：
         "identitypic",
         "signpic",
         "stcaccount",
+        "mobile",
         "cardno"
     ],
     "requestId": "13AB5E3E15526172EF73CB2939D08535"

@@ -57,6 +57,7 @@
 | stcaccount  | 否       | string   | -          | STCPay 账户（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理），支持格式：<br> 5xxxxxxxx <br> 9665xxxxxxxx <br> +9665xxxxxxxx <br> 05xxxxxxxx |
 | address     | 否       | string   | -          | 客户银行卡绑定的地址信息，长度限制 255 字符                                                                                                                                   |
 | swiftcode   | 否       | string   | -          | 客户银行账户对应的 Swift Code，长度限制 32 字符                                                                                                                               |
+| mobile      | 否       | string   | -          | 客户手机号（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理），支持格式：<br> 5xxxxxxxx <br> 9665xxxxxxxx <br> +9665xxxxxxxx <br> 05xxxxxxxx  |
 | otpappname  | 否       | string   | -          | 发送 OTP 验证的产品名称，需要与后台配置匹配，默认名称为后台公司名称，长度限制 32 字符                                                                                         |
 
 ### 响应参数
@@ -73,6 +74,7 @@
 | mercustomid       | string   | 商户客户 ID                                                                                          |
 | name_e            | string   | 客户英文名称                                                                                         |
 | name_a            | string   | 客户阿拉伯文名称                                                                                     |
+| mobile            | string   | 客户手机号                                                                                           |
 | address           | string   | 客户银行卡绑定的地址信息                                                                             |
 | identity          | string   | 身份证号（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理）       |
 | identitypic       | string   | 身份证照片 URL（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理） |
@@ -102,6 +104,7 @@
     "mercustomid": "u004",
     "name_e": "updTest2",
     "name_a": "usera",
+    "mobile": "Dl6W1H0FxS/M86t9beRVietvkH2ZwIZNO4AwVJI5BGJfh/hJ83n3oXkfABfYCH/4SgklJVQ7aSqiHQ+8LIbUh5ycjfqTCGRpKgfk5Ae2/9NRsOpcnfl9GMo2oP4AiS4NEdJBybtSm+gDCxRrDqyAIpLq6ycXJT3BGqtKPu1xsqzdYQuJovdERg/8GqKn57r2MI3jXGIhdInL61SNuAFImOTVCBXA0ZXsho0Txtp1zJj+t6raQbCvynNgYHNIqrUh6Kta8mezJGqfLtw0RE7VzgWGFKb3caEzdAZERF3BHx49qR72MvIHtRBpoxfvf9VB9cZf2yn/+yo9iaDqMLxsug==",
     "address": "Saudi Arabia",
     "identity": "EgWVcEXDN90VwHClP1rl5qlX7yiDtedet7ACDUwHWBty0doC7xUV5eSYizInT0PNdAlcOg6JNVTujxKDgIv3bKvCaePHDmoD2pSZBed7WhrwTlwSdBM2FAPrf/PVAX74DiHyz1KZk7w81Xk4HP7VtMatAZX2ZVAjwbxo5Oj76xkCkm2N8RSoCX0tTXdsNP3zAb0ORZw2aucZUg4PLDKkvnsEI5SyPuhdhntN24/4nR5SmDoYwMyZ3Zlz4zArTL4M3NengD12C5Ewz4jcmwoAx/GmQsssjY6oDbgCeG1CsJlLgG9T4avL/TcA7d5vgAA9yU38WFJBCR8/kFUU3za5yg==",
     "identitypic": "",
@@ -125,6 +128,7 @@
     "identitypic",
     "signpic",
     "stcaccount",
+    "mobile",
     "cardno"
   ],
   "requestId": "3684DFCB66E8A8D6DC18E6FF8626C93D"

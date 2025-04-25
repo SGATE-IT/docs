@@ -49,6 +49,7 @@
 | stcaccount   | 否       | string   | -          | STCPay 账户（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理），支持格式：<br> 5xxxxxxxx <br> 9665xxxxxxxx <br> +9665xxxxxxxx <br> 05xxxxxxxx |
 | address      | 否       | string   | -          | 客户银行卡绑定的地址信息，长度限制 255 字符                                                                                                                                   |
 | swiftcode    | 否       | string   | -          | 客户银行账户对应的 Swift Code，长度限制 32 字符                                                                                                                               |
+| mobile       | 否       | string   | -          | 客户手机号（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理），支持格式：<br> 5xxxxxxxx <br> 9665xxxxxxxx <br> +9665xxxxxxxx <br> 05xxxxxxxx  |
 | autoapproval | 否       | number   | 0          | 是否开启自动审批：<br> `0`：不开启 <br> `1`：开启                                                                                                                             |
 | otpappname   | 否       | string   | -          | 发送 OTP 验证的产品名称，需要与后台配置匹配，默认名称为后台公司名称，长度限制 32 字符                                                                                         |
 
@@ -78,6 +79,7 @@
 | mercustomid       | string   | 商户客户 ID                                                                                          |
 | name_e            | string   | 客户英文名称                                                                                         |
 | name_a            | string   | 客户阿拉伯文名称                                                                                     |
+| mobile            | string   | 客户手机号                                                                                           |
 | address           | string   | 客户银行卡绑定的地址信息                                                                             |
 | identity          | string   | 身份证号（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理）       |
 | identitypic       | string   | 身份证照片 URL（敏感信息，使用[商户公钥](/zh/payoutApi/apiRule/certificateKey#商户公-私钥)加密处理） |
@@ -107,6 +109,7 @@
     "mercustomid": "u004",
     "name_e": "usera",
     "name_a": "usera",
+    "mobile": "Dl6W1H0FxS/M86t9beRVietvkH2ZwIZNO4AwVJI5BGJfh/hJ83n3oXkfABfYCH/4SgklJVQ7aSqiHQ+8LIbUh5ycjfqTCGRpKgfk5Ae2/9NRsOpcnfl9GMo2oP4AiS4NEdJBybtSm+gDCxRrDqyAIpLq6ycXJT3BGqtKPu1xsqzdYQuJovdERg/8GqKn57r2MI3jXGIhdInL61SNuAFImOTVCBXA0ZXsho0Txtp1zJj+t6raQbCvynNgYHNIqrUh6Kta8mezJGqfLtw0RE7VzgWGFKb3caEzdAZERF3BHx49qR72MvIHtRBpoxfvf9VB9cZf2yn/+yo9iaDqMLxsug==",
     "address": "Saudi Arabia",
     "identity": "s0YhJVboAqQj8kLCkTqCttAwpP39nR5VaaTy8pWFwSQDjSYei7YqZAbcoeckAD40bgliH9sSXre9PafDDpHfdkKX22X0lvJzIcpL8PGSpWQT2XloHjKxExRhiq/AgzEnwV9kq66b2hqi56O2djjzYOXOz/BpYKqvqWG7ak47OLV2hDR6r0hzhZsdvvvCeo21lMafUGd6hmf6TElqDntIfgFNTGSbxkV3kKlXnNX0hdHPmGtnfqbIuxo+yAHeJdffxA/6iHzSsW92t/bvtB9hV5ON+v4s/VpVZCRYmj0AIs9bQ+Ed+hNXtlmLuyaxfRdYVG6nl1MhVGJG0QioO4sNag==",
     "identitypic": "",
@@ -130,6 +133,7 @@
     "identitypic",
     "signpic",
     "stcaccount",
+    "mobile",
     "cardno"
   ],
   "requestId": "91A8340E7AEE8EC99D06EB46DF92A19F"
