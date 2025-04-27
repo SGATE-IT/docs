@@ -42,20 +42,22 @@
 
 ### Customer
 
-| Code | Description                                                                                |
-| ---- | ------------------------------------------------------------------------------------------ |
-| 1300 | The current status of the customer is not available for this operation                     |
-| 1301 | Request for duplicate business customer ID                                                 |
-| 1302 | Duplicate customer ID under merchant                                                       |
-| 1303 | Please configure the payment account                                                       |
-| 1304 | Bank account error                                                                         |
-| 1305 | Please fill in the customer name                                                           |
-| 1306 | Please fill in the customer bank                                                           |
-| 1307 | STCPay account error                                                                       |
-| 1308 | The customer has not enabled automatic approval                                            |
-| 1309 | 客The current STCPay account approval status of the customer cannot perform this operation |
-| 1310 | The current automatic approval status does not allow this operation                        |
-| 1311 | Customer information has been changed, please try again                                    |
+| Code | Description                                                                              |
+| ---- | ---------------------------------------------------------------------------------------- |
+| 1300 | The current status of the customer is not available for this operation                   |
+| 1301 | Request for duplicate business customer ID                                               |
+| 1302 | Duplicate customer ID under merchant                                                     |
+| 1303 | Please configure the payment account                                                     |
+| 1304 | Bank account error                                                                       |
+| 1305 | Please fill in the customer name                                                         |
+| 1306 | Please fill in the customer bank                                                         |
+| 1307 | STCPay account error                                                                     |
+| 1308 | The customer has not enabled automatic approval                                          |
+| 1309 | The current STCPay account approval status of the customer cannot perform this operation |
+| 1310 | The current automatic approval status does not allow this operation                      |
+| 1311 | Customer information has been changed, please try again                                  |
+| 1312 | Please fill in the customer address information or swift code                            |
+| 1313 | Customer mobile number error                                                             |
 
 ### Payment
 
