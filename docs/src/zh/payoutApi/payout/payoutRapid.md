@@ -153,7 +153,7 @@ mercustomid 为商户客户 ID，系统会自动依据 mercustomid 做以下处�
     "updated_at": 1719401899
   },
   "sensitiveFields": {
-    "custominfo": ["identity", "identitypic", "signpic", "stcaccount", "cardno"]
+    "custominfo": ["identity", "identitypic", "signpic", "stcaccount", "mobile", "cardno"]
   },
   "requestId": "FD82B523FCEA90F65E06B15EAA7C2290"
 }

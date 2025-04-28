@@ -121,7 +121,7 @@
     "updated_at": 1719198062
   },
   "sensitiveFields": {
-    "custominfo": ["identity", "identitypic", "signpic", "stcaccount", "cardno"]
+    "custominfo": ["identity", "identitypic", "signpic", "stcaccount", "mobile", "cardno"]
   },
   "requestId": "2D22866A748BF5098936CA3ED891B205"
 }

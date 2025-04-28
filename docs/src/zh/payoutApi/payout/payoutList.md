@@ -118,6 +118,7 @@
             "identitypic",
             "signpic",
             "stcaccount",
+            "mobile", 
             "cardno"
         ]
     },

@@ -118,6 +118,7 @@ The response parameters are as follows：：
             "identitypic",
             "signpic",
             "stcaccount",
+            "mobile", 
             "cardno"
         ]
     },

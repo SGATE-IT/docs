@@ -153,7 +153,7 @@ The response parameters are as follows:
     "updated_at": 1719401899
   },
   "sensitiveFields": {
-    "custominfo": ["identity", "identitypic", "signpic", "stcaccount", "cardno"]
+    "custominfo": ["identity", "identitypic", "signpic", "stcaccount", "mobile", "cardno"]
   },
   "requestId": "FD82B523FCEA90F65E06B15EAA7C2290"
 }
