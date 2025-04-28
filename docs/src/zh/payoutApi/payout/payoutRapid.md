@@ -34,16 +34,17 @@ mercustomid 为商户客户 ID，系统会自动依据 mercustomid 做以下处�
 5. 代付 KWD 或 AED 货币，需要客户信息填写 `address` 或者 `swiftcode`。
    :::
 
-- **必须**传递的参数：
+- **支持**传递的参数：
 
-| **参数**      | **必填** | **类型** | **默认值** | **描述**                                         |
-| ------------- | -------- | -------- | ---------- | ------------------------------------------------ |
-| mercustomid   | 是       | string   | -          | 商户客户 ID，长度限制 64 字符                    |
-| payeeuid      | 是       | string   | -          | 商户订单 ID，要求全局唯一，长度限制 64 字符      |
-| amount        | 是       | float    | -          | 付款金额，精确到小数点后两位                     |
-| currency      | 是       | string   | -          | [货币代码](/zh/payoutApi/appendix/currency)      |
-| paymentmethod | 是       | string   | -          | [付款方式](/zh/payoutApi/appendix/paymentMethod) |
-| remark        | 否       | string   | -          | 备注，长度限制 80 字符                           |
+| **参数**      | **必填** | **类型** | **默认值** | **描述**                                                                                                                                                                     |
+| ------------- | -------- | -------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| mercustomid   | 是       | string   | -          | 商户客户 ID，长度限制 64 字符                                                                                                                                                |
+| payeeuid      | 是       | string   | -          | 商户订单 ID，要求全局唯一，长度限制 64 字符                                                                                                                                  |
+| amount        | 是       | float    | -          | 付款金额，精确到小数点后两位                                                                                                                                                 |
+| currency      | 是       | string   | -          | [货币代码](/zh/payoutApi/appendix/currency)                                                                                                                                  |
+| paymentmethod | 是       | string   | -          | [付款方式](/zh/payoutApi/appendix/paymentMethod)                                                                                                                             |
+| mobile        | 否       | string   | -          | 客户手机号（敏感信息，使用[系统公钥](/zh/payoutApi/apiRule/certificateKey#系统公钥)加密处理），支持格式：<br> 5xxxxxxxx <br> 9665xxxxxxxx <br> +9665xxxxxxxx <br> 05xxxxxxxx |
+| remark        | 否       | string   | -          | 备注，长度限制 80 字符                                                                                                                                                       |
 
 - 使用 **bankTransfer** 付款方式，需要额外传递的参数：
 

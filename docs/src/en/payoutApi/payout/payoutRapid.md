@@ -26,25 +26,27 @@ The request parameters are as follows：
 
 ::: tip TIP
 mercustomid is the merchant customer ID. The system will automatically perform the following processing based on mercustomid:
+
 1. When there is a customer associated with mercustomid under the merchant, the customer information will be updated based on the submitted customer information, and a payment work order will be created for the customer.
 2. When there is no associated customer with mercustomid under the merchant, a new customer will be created. After the customer is created, it will be in the approved status, and a payment work order will be created for the new customer.
 3. When creating a rapid payment ticket in the sandbox environment and using a [test account](/en/payoutApi/appendix/testAccount), the customer is also in the approved status, but the payment result follows the "Automatic Payment Result" in the document and triggers a [callback notification](/en/payoutApi/notification/notification).
 4. STCPay payment only supports SAR currency.
 5. To pay in KWD or AED currency, customer need to fill in the `address` or `swiftcode` information.
-:::
+   :::
 
-* **Must** pass parameters:
+- **Supported** pass parameters:
 
-| **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                          |
-| ------------- | ------------ | -------- | ----------------- | ---------------------------------------------------------------------------------------- |
-| mercustomid   | Y            | string   | -                 | Merchant customer ID, length limit 128 characters                                        |
-| payeeuid      | Y            | string   | -                 | Merchant order ID, which must be globally unique and has a length limit of 64 characters |
-| amount        | Y            | float    | -                 | Payment amount, accurate to two decimal places                                           |
-| currency      | Y            | string   | -                 | [Currency code](/en/payoutApi/appendix/currency)                                         |
-| paymentmethod | Y            | string   | -                 | [Payment method](/en/payoutApi/appendix/paymentMethod)                                   |
-| remark        | N            | string   | -                 | Remark, length limit 80 characters                                                       |
+| **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                                                                                                                                                             |
+| ------------- | ------------ | -------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| mercustomid   | Y            | string   | -                 | Merchant customer ID, length limit 128 characters                                                                                                                                                                           |
+| payeeuid      | Y            | string   | -                 | Merchant order ID, which must be globally unique and has a length limit of 64 characters                                                                                                                                    |
+| amount        | Y            | float    | -                 | Payment amount, accurate to two decimal places                                                                                                                                                                              |
+| currency      | Y            | string   | -                 | [Currency code](/en/payoutApi/appendix/currency)                                                                                                                                                                            |
+| paymentmethod | Y            | string   | -                 | [Payment method](/en/payoutApi/appendix/paymentMethod)                                                                                                                                                                      |
+| mobile        | N            | string   | -                 | Customer mobile (sensitive information, encrypted using [system public key](/en/payoutApi/apiRule/certificateKey#system-public-key)), supported formats:<br> 5xxxxxxxx <br> 9665xxxxxxxx <br> +9665xxxxxxxx <br> 05xxxxxxxx |
+| remark        | N            | string   | -                 | Remark, length limit 80 characters                                                                                                                                                                                          |
 
-* When using **bankTransfer** payment method, additional parameters need to be passed:
+- When using **bankTransfer** payment method, additional parameters need to be passed:
 
 | **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                                                                                                                                   |
 | ------------- | ------------ | -------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -53,10 +55,10 @@ mercustomid is the merchant customer ID. The system will automatically perform t
 | bankcode      | Y            | string   | -                 | [Bank code](/en/payoutApi/banks/bankList)                                                                                                                                                         |
 | cardno        | N            | string   | -                 | Bank account (sensitive information, encrypted using [merchant public key](/en/payoutApi/apiRule/certificateKey#merchant-public-private-key)), must be a number, length limit 13 to 19 characters |
 | ibanaccount   | Y            | string   | -                 | IBAN, letters and numbers, length limit 34 characters                                                                                                                                             |
-| address       | N            | string   | -                 | Address information bound to the customer bank card, length limit 255 characters                                                                                                                                           |
-| swiftcode     | N            | string   | -                 | Swift code corresponding to the customer bank account, length limit 32 characters                                                                                                                                          |
+| address       | N            | string   | -                 | Address information bound to the customer bank card, length limit 255 characters                                                                                                                  |
+| swiftcode     | N            | string   | -                 | Swift code corresponding to the customer bank account, length limit 32 characters                                                                                                                 |
 
-* When using **STCPay** payment method, additional parameters need to be passed:
+- When using **STCPay** payment method, additional parameters need to be passed:
 
 | **Parameter** | **Required** | **Type** | **Default Value** | **Description**                                                                                                                                                                                                                        |
 | ------------- | ------------ | -------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -66,12 +68,12 @@ mercustomid is the merchant customer ID. The system will automatically perform t
 
 ```json
 {
-    "mercustomid":"u0043",
-    "payeeuid":"payeeuid1",
-    "amount":33.33,
-    "currency":"SAR",
-    "paymentmethod":"STCPay",
-    "stcaccount":"j+7ehQuYum6eK+1CgMAyVnbJLZl5bU3I1q/Egyh2BNkqLyingkjeFuX+an2mkqZ2IaK1038zNhz7lvnix+R4C7gGM/hWSwZ2/OReoO4CTKfB8KH+XyYNEKgkd+5BIE/w35ssJNgCHy7BlqZz9sm2hboz6DOZAcY/Sv7eya328yChDllr8MlUY87x+yTN+EEjiUajvFA3RB7Lx/+DcQgkx58fmlrq4JhwlqnjKJllSimnqwK9DB6nKsNQAHONLzGndl4nAaL441EGyP0tVU+roSd0uJU1hpc+Gq9HKLr1N3rt1Y7QEd9+wHwZ3EBf0dUdIq94gC1ZuZ0VU+pBRim40Q=="
+  "mercustomid": "u0043",
+  "payeeuid": "payeeuid1",
+  "amount": 33.33,
+  "currency": "SAR",
+  "paymentmethod": "STCPay",
+  "stcaccount": "j+7ehQuYum6eK+1CgMAyVnbJLZl5bU3I1q/Egyh2BNkqLyingkjeFuX+an2mkqZ2IaK1038zNhz7lvnix+R4C7gGM/hWSwZ2/OReoO4CTKfB8KH+XyYNEKgkd+5BIE/w35ssJNgCHy7BlqZz9sm2hboz6DOZAcY/Sv7eya328yChDllr8MlUY87x+yTN+EEjiUajvFA3RB7Lx/+DcQgkx58fmlrq4JhwlqnjKJllSimnqwK9DB6nKsNQAHONLzGndl4nAaL441EGyP0tVU+roSd0uJU1hpc+Gq9HKLr1N3rt1Y7QEd9+wHwZ3EBf0dUdIq94gC1ZuZ0VU+pBRim40Q=="
 }
 ```
 
@@ -106,61 +108,53 @@ The response parameters are as follows:
 
 ```json
 {
-    "code": 200,
-    "message": "Request succeeded.",
-    "data": {
-        "ticketid": "17dd6",
-        "key": "M4TKKME20240626143819",
-        "customid": "130b0",
-        "mercustomid": "u0045",
-        "payeeuid": "PAY00000001",
-        "trantype": "rapid",
-        "currency": "SAR",
-        "paymentmethod": "STCPay",
-        "amount": 44.33,
-        "realamount": 42.11,
-        "fee": 2.22,
-        "feeconfigid": 1,
-        "status": 0,
-        "statusdesc": "2024-06-26 14:38:19",
-        "confirmtime": 0,
-        "remark": "",
-        "custominfo": {
-            "customid": "130b0",
-            "mercustomid": "u0045",
-            "name_e": "useraa121",
-            "name_a": "userbb121",
-            "mobile": "Dl6W1H0FxS/M86t9beRVietvkH2ZwIZNO4AwVJI5BGJfh/hJ83n3oXkfABfYCH/4SgklJVQ7aSqiHQ+8LIbUh5ycjfqTCGRpKgfk5Ae2/9NRsOpcnfl9GMo2oP4AiS4NEdJBybtSm+gDCxRrDqyAIpLq6ycXJT3BGqtKPu1xsqzdYQuJovdERg/8GqKn57r2MI3jXGIhdInL61SNuAFImOTVCBXA0ZXsho0Txtp1zJj+t6raQbCvynNgYHNIqrUh6Kta8mezJGqfLtw0RE7VzgWGFKb3caEzdAZERF3BHx49qR72MvIHtRBpoxfvf9VB9cZf2yn/+yo9iaDqMLxsug==",
-            "address": "Saudi Arabia",
-            "identity": "",
-            "identitypic": "",
-            "signpic": "",
-            "bankname": "The Saudi British Bank",
-            "bankcode": "11558",
-            "cardno": "",
-            "ibanaccount": "1234567892",
-            "swiftcode": "ABNACNSHXXX",
-            "stcaccount": "HsMxmSUUqbD+uZEdEocdAqg+BBGknsOs/KeIaqqkUwYaKlv20g3J/YVhDYD+enecBLOP8tzpRPQU+E7bsw1FccP/jzb/rVUpgUPUqcflJMnxUiUacZrHWgq4U/0QclUrWfCrl+78av236LlobEgN7jgNDzuBpiApJhQrb1j3bzqFDmTapOHR3DNDyCOBkhkgkGjlFWz9p2duv4TgDNfmy3RbbV9dfpEI8PcteGTmqsBXKf0794SPvLAj+m4RO5iYwE6l8JoYlFXqEl+8Ruppt+ZH9Zv6whVgp5Qtl5tlalV9o0+t3Z4qg6jJcaVDmp0hMO4rCw07YV04FHCCUtth+g==",
-            "status": 1,
-            "statusdesc": "Customers create through quick payment",
-            "demand_perfection": [
-                "identitypic"
-            ],
-            "created_at": 1707395488,
-            "updated_at": 1719401899
-        },
-        "created_at": 1719401899,
-        "updated_at": 1719401899
+  "code": 200,
+  "message": "Request succeeded.",
+  "data": {
+    "ticketid": "17dd6",
+    "key": "M4TKKME20240626143819",
+    "customid": "130b0",
+    "mercustomid": "u0045",
+    "payeeuid": "PAY00000001",
+    "trantype": "rapid",
+    "currency": "SAR",
+    "paymentmethod": "STCPay",
+    "amount": 44.33,
+    "realamount": 42.11,
+    "fee": 2.22,
+    "feeconfigid": 1,
+    "status": 0,
+    "statusdesc": "2024-06-26 14:38:19",
+    "confirmtime": 0,
+    "remark": "",
+    "custominfo": {
+      "customid": "130b0",
+      "mercustomid": "u0045",
+      "name_e": "useraa121",
+      "name_a": "userbb121",
+      "mobile": "Dl6W1H0FxS/M86t9beRVietvkH2ZwIZNO4AwVJI5BGJfh/hJ83n3oXkfABfYCH/4SgklJVQ7aSqiHQ+8LIbUh5ycjfqTCGRpKgfk5Ae2/9NRsOpcnfl9GMo2oP4AiS4NEdJBybtSm+gDCxRrDqyAIpLq6ycXJT3BGqtKPu1xsqzdYQuJovdERg/8GqKn57r2MI3jXGIhdInL61SNuAFImOTVCBXA0ZXsho0Txtp1zJj+t6raQbCvynNgYHNIqrUh6Kta8mezJGqfLtw0RE7VzgWGFKb3caEzdAZERF3BHx49qR72MvIHtRBpoxfvf9VB9cZf2yn/+yo9iaDqMLxsug==",
+      "address": "Saudi Arabia",
+      "identity": "",
+      "identitypic": "",
+      "signpic": "",
+      "bankname": "The Saudi British Bank",
+      "bankcode": "11558",
+      "cardno": "",
+      "ibanaccount": "1234567892",
+      "swiftcode": "ABNACNSHXXX",
+      "stcaccount": "HsMxmSUUqbD+uZEdEocdAqg+BBGknsOs/KeIaqqkUwYaKlv20g3J/YVhDYD+enecBLOP8tzpRPQU+E7bsw1FccP/jzb/rVUpgUPUqcflJMnxUiUacZrHWgq4U/0QclUrWfCrl+78av236LlobEgN7jgNDzuBpiApJhQrb1j3bzqFDmTapOHR3DNDyCOBkhkgkGjlFWz9p2duv4TgDNfmy3RbbV9dfpEI8PcteGTmqsBXKf0794SPvLAj+m4RO5iYwE6l8JoYlFXqEl+8Ruppt+ZH9Zv6whVgp5Qtl5tlalV9o0+t3Z4qg6jJcaVDmp0hMO4rCw07YV04FHCCUtth+g==",
+      "status": 1,
+      "statusdesc": "Customers create through quick payment",
+      "demand_perfection": ["identitypic"],
+      "created_at": 1707395488,
+      "updated_at": 1719401899
     },
-    "sensitiveFields": {
-        "custominfo": [
-            "identity",
-            "identitypic",
-            "signpic",
-            "stcaccount",
-            "cardno"
-        ]
-    },
-    "requestId": "FD82B523FCEA90F65E06B15EAA7C2290"
+    "created_at": 1719401899,
+    "updated_at": 1719401899
+  },
+  "sensitiveFields": {
+    "custominfo": ["identity", "identitypic", "signpic", "stcaccount", "cardno"]
+  },
+  "requestId": "FD82B523FCEA90F65E06B15EAA7C2290"
 }
 ```
