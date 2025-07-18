@@ -113,6 +113,11 @@
             "bankname": "Gulf International Bank Saudi Aribia (GIB-SA)"
         },
         {
+            "country": "SAU",
+            "bankcode": "11b34",
+            "bankname": "STC Bank"
+        },
+        {
             "country": "KWT",
             "bankcode": "2fda0",
             "bankname": "KW banks"
