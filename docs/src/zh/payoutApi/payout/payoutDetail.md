@@ -33,18 +33,6 @@
 | ticketid | 否       | string   | -          | 代付工单 ID，长度限制 64 字符 |
 | payeeuid | 否       | string   | -          | 商户订单 ID，长度限制 64 字符 |
 
-**请求参数示例**
-
-```json
-{
-  "mercustomid": "u004",
-  "payeeuid": "TEST1234567aa12sd2",
-  "amount": 2002,
-  "currency": "SAR",
-  "paymentmethod": "bankTransfer"
-}
-```
-
 ### 响应参数
 
 响应参数如下：

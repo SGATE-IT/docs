@@ -33,18 +33,6 @@ If either the proxy payment work order ID or the merchant order ID is not transm
 | ticketid      | N            | string   | -                 | Payment order ID, length limit 64 characters  |
 | payeeuid      | N            | string   | -                 | Merchant order ID, length limit 64 characters |
 
-**Request Parameter Example**
-
-```json
-{
-    "mercustomid":"u004",
-    "payeeuid":"TEST1234567aa12sd2",
-    "amount":2002,
-    "currency":"SAR",
-    "paymentmethod":"bankTransfer"
-}
-```
-
 ### Response Parameters
 
 The response parameters are as follows：
